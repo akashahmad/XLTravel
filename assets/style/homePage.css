@@ -17,8 +17,8 @@
   border-radius: 8px;
   transition: 0.2s;
 }
-.nav-bar .active{
-    background-color: #40d0d3;
+.nav-bar .active {
+  background-color: #40d0d3;
 }
 .header-main .nav-bar ul li:hover {
   background-color: #40d0d3;
@@ -201,6 +201,9 @@
 
 /* Responsive */
 @media (max-width: 1199px) and (min-width: 320px) {
+  .header-logo img {
+    width: 127px;
+  }
   .search-bar .search-bar-inner .search-icon {
     width: 100%;
   }
@@ -286,7 +289,7 @@
     width: 100%;
     height: 100%;
     position: fixed;
-    top: 84px;
+    top: 60px;
     left: 0;
     width: 100%;
     transform: translateX(100%);
