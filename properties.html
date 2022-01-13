@@ -1,0 +1,2206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style/style.css" />
+    <link rel="stylesheet" href="./assets/style/homePage.css" />
+    <link rel="stylesheet" href="./assets/style/calendar.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>Properties</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div
+        class="header-main d-flex justify-content-between align-items-center container-main py-3 px-3 px-lg-0"
+      >
+        <div class="header-logo">
+          <img
+            class="cursor-pointer"
+            src="assets/images/Group 40231.png"
+            alt="xlTravel-Logo"
+          />
+        </div>
+        <div>
+          <nav class="nav-bar d-none d-lg-block">
+            <ul class="d-flex align-items-center list-unstyled">
+              <li>Home</li>
+              <li class="active">Properties</li>
+              <li>Blog</li>
+              <li>FAQs</li>
+              <li>Contact</li>
+              <li>Become a host</li>
+              <img
+                class="mr-4 cursor-pointer"
+                src="./assets/images/englandFlag.png"
+                alt="Flag"
+              />
+              <img
+                class="mr-4 cursor-pointer"
+                src="./assets/images/germanyFlag.png"
+                alt="Flag"
+              />
+              <img
+                class="mr-4 cursor-pointer"
+                src="./assets/images/argentinaFlag.png"
+                alt="Flag"
+              />
+              <img
+                class="mr-4 cursor-pointer"
+                src="./assets/images/person.png"
+                alt="Person"
+              />
+            </ul>
+          </nav>
+          <div class="d-block d-lg-none">
+            <input type="checkbox" id="openSideMenu" class="openSideMenu" />
+            <label for="openSideMenu" class="menuIconToggle">
+              <div class="hamb-line dia part-1"></div>
+              <div class="hamb-line hor"></div>
+              <div class="hamb-line dia part-2"></div>
+            </label>
+            <nav class="mobile-nav">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Properties</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Become a host</a></li>
+                <div class="ml-4 d-flex mt-5">
+                  <img
+                class="mr-4 cursor-pointer"
+                src="./assets/images/englandFlag.png"
+                alt="Flag"
+              />
+              <img
+                class="mr-4 cursor-pointer"
+                src="./assets/images/germanyFlag.png"
+                alt="Flag"
+              />
+              <img
+                class="mr-4 cursor-pointer"
+                src="./assets/images/argentinaFlag.png"
+                alt="Flag"
+              />
+                </div>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+    <section class="hero-section">
+      <div class="position-relative">
+        <div class="search-bar container-main">
+          <div
+            class="search-bar-inner w-62 d-flex flex-column flex-lg-row align-items-center justify-content-between"
+          >
+            <div class="search-border-inner border-right px-5 py-4 py-lg-0">
+              Dar es Salaam
+            </div>
+            <div class="search-border-inner border-right px-5 py-4 py-lg-0">
+              Feb 14 - 21, 2021
+            </div>
+            <div class="search-border-inner px-5 py-4 py-lg-0">4 guests</div>
+            <div
+              class="search-icon background-color-yellow d-flex justify-content-center align-items-center cursor-pointer"
+            >
+              <div class="px-5">
+                <img src="./assets/images/icons/search.png" alt="search" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="properite-image-slider container-main">
+      <div class="properite-image-slider-wrapper">
+        <div class="properite-image-slider-text">
+          <p class="color-tealish">
+            Home
+            <span
+              ><img
+                style="height: 18px"
+                src="./assets/images/icons/next-tealish.png"
+                alt="next-icon"
+            /></span>
+            Chaicago
+          </p>
+          <div class="d-flex flex-column flex-lg-row justify-content-between">
+            <div>
+              <div class="d-flex align-items-center mt-2">
+                <div>
+                  <p class="font-weight-bold mr-2 opacity-9">
+                    Modern And Luxury Apartment
+                  </p>
+                </div>
+                <div>
+                  <button class="tealish-button font-weight-normal font-size-9">
+                    RARE FIND
+                  </button>
+                </div>
+              </div>
+              <p class="font-size-11 dark-gray mt-1">
+                Chicago, Illinois, United States of America
+              </p>
+            </div>
+            <div class="d-flex align-items-center py-4 py-lg-0">
+              <div class="d-flex mr-3">
+                <div class="mr-3">
+                  <p class="font-weight-bold font-size-14 opacity-9">
+                    Excellent
+                  </p>
+                  <p class="font-size-11 dark-gray opacity-9">4,347 reviews</p>
+                </div>
+                <div
+                  class="position-relative d-flex justify-content-center align-items-center"
+                >
+                  <img
+                    class=""
+                    src="./assets/images/icons/Rectangle.png"
+                    alt="rectangle"
+                  />
+                  <p
+                    class="properite-image-slider-text-rectangle position-absolute text-white"
+                  >
+                    8.4
+                  </p>
+                </div>
+              </div>
+              <div class="border-left">
+                <p class="color-tealish font-size-18 ml-3 py-2">€ 1496/night</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="properite-image-collage mt-2 mt-lg-5">
+          <div class="d-flex justify-content-between">
+            <div class="w-60">
+              <div class="properite-collage-first-image position-relative">
+                <img
+                  class="position-absolute"
+                  style="height: 46px; top: 43px; left: -10px"
+                  src="./assets/images/icons/yellow-badge.png"
+                  alt="yellow-badge"
+                />
+                <p
+                  class="position-absolute text-white"
+                  style="height: 46px; top: 51px; left: 3px"
+                >
+                  Top Value
+                </p>
+              </div>
+            </div>
+            <div class="w-39">
+              <div class="properite-collage-second-image"></div>
+              <div class="properite-collage-third-image"></div>
+            </div>
+          </div>
+          <div class="properite-collage-four-image mt-1"></div>
+          <div
+            class="image-slider d-flex justify-content-between align-items-center mt-3"
+          >
+            <div class="w-16 rounded">
+              <div class="imageOne-slider"></div>
+            </div>
+            <div class="w-16 rounded">
+              <div class="imageOne-slider"></div>
+            </div>
+            <div class="w-16 rounded">
+              <div class="imageOne-slider"></div>
+            </div>
+            <div class="w-16 rounded">
+              <div class="imageOne-slider"></div>
+            </div>
+            <div class="w-16 rounded">
+              <div class="imageOne-slider"></div>
+            </div>
+            <div class="w-16 rounded">
+              <div class="imageOne-slider"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="properite-detail container-main mt-4">
+      <div class="properite-detail-wrapper">
+        <div class="d-flex justify-content-between px-3 px-lg-0">
+          <div class="w-68 rounded bg-white box-shadow px-3 py-3">
+            <div class="d-flex justify-content-between border-bottom pb-3">
+              <div class="properite-detail-left-side">
+                <div>
+                  <div>
+                    <p class="font-weight-bold font-size-11">
+                      Property ID:
+                      <span class="color-tealish font-weight-500"
+                        >RH-5077-Property</span
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex align-items-center">
+                <img
+                  class="mr-2 cursor-pointer"
+                  style="height: 16px"
+                  src="./assets/images/icons/share.png"
+                  alt="share"
+                />
+                <img
+                  class="mr-2 cursor-pointer"
+                  style="height: 16px"
+                  src="./assets/images/icons/bigHeart.png"
+                  alt="heart"
+                />
+                <img
+                  class="mr-2 cursor-pointer"
+                  style="height: 26px"
+                  src="./assets/images/icons/swap_horiz_black_24dp.png"
+                  alt="swipe"
+                />
+                <img
+                  class="cursor-pointer"
+                  style="height: 16px"
+                  src="./assets/images/icons/printer.png"
+                  alt="printer"
+                />
+              </div>
+            </div>
+            <!-- facalities  -->
+            <div class="d-none d-lg-block pt-4">
+              <div class="d-flex align-items-center">
+                <div class="mr-3">
+                  <p class="font-weight-500 font-size-11">Bedrooms</p>
+                  <div class="d-flex align-items-center mt-2">
+                    <div class="mr-2">
+                      <img
+                        src="./assets/images/icons/hotel-bed-fill.png"
+                        alt="hotel-bed"
+                      />
+                    </div>
+                    <div>
+                      <p class="dark-gray font-weight-500 font-size-10">2</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="mr-3">
+                  <p class="font-weight-500 font-size-11">Bathrooms</p>
+                  <div class="d-flex align-items-center mt-2">
+                    <div class="mr-2">
+                      <img
+                        src="./assets/images/icons/bathRoom.png"
+                        alt="bathRoom"
+                      />
+                    </div>
+                    <div>
+                      <p class="dark-gray font-weight-500 font-size-10">2</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="mr-3">
+                  <p class="font-weight-500 font-size-11">Guests</p>
+                  <div class="d-flex align-items-center mt-2">
+                    <div class="mr-2">
+                      <img src="./assets/images/icons/guest.png" alt="guest" />
+                    </div>
+                    <div>
+                      <p class="dark-gray font-weight-500 font-size-10">2</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="mr-3">
+                  <p class="font-weight-500 font-size-11">Parking</p>
+                  <div class="d-flex align-items-center mt-2">
+                    <div class="mr-2">
+                      <img
+                        src="./assets/images/icons/parked-car.png"
+                        alt="parked-car"
+                      />
+                    </div>
+                    <div>
+                      <p class="dark-gray font-weight-500 font-size-10">2</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="mr-3">
+                  <p class="font-weight-500 font-size-11">Min stay</p>
+                  <div class="d-flex align-items-center mt-2">
+                    <div class="mr-2">
+                      <img src="./assets/images/icons/house.png" alt="house" />
+                    </div>
+                    <div>
+                      <p class="dark-gray font-weight-500 font-size-10">2</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="mr-3">
+                  <p class="font-weight-500 font-size-11">Year build</p>
+                  <div class="d-flex align-items-center mt-2">
+                    <div class="mr-2">
+                      <img src="./assets/images/icons/wide.png" alt="wide" />
+                    </div>
+                    <div>
+                      <p class="dark-gray font-weight-500 font-size-10">2022</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="mr-3">
+                  <p class="font-weight-500 font-size-11">Area</p>
+                  <div class="d-flex align-items-center mt-2">
+                    <div class="mr-2">
+                      <img
+                        src="./assets/images/icons/hotel-bed-fill.png"
+                        alt="hotel-bed"
+                      />
+                    </div>
+                    <div>
+                      <p class="dark-gray font-weight-500 font-size-10">2634</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-block d-lg-none pt-4">
+              <div class="d-flex justify-content-center">
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Facilities
+                  </button>
+                  <div
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <div class="dropdown-item">
+                       <div class="d-flex align-items-end justify-content-between">
+                      <p class="font-weight-500 font-size-11">Bedrooms</p>
+                      <div class="d-flex align-items-center mt-2">
+                        <div class="mr-2">
+                          <img
+                            src="./assets/images/icons/hotel-bed-fill.png"
+                            alt="hotel-bed"
+                          />
+                        </div>
+                        <div>
+                          <p class="dark-gray font-weight-500 font-size-10">2</p>
+                        </div>
+                      </div>
+                    </div></div>
+                    <div class="dropdown-item">
+                      <div class="d-flex align-items-end justify-content-between">
+                        <p class="font-weight-500 font-size-11">Bathrooms</p>
+                        <div class="d-flex align-items-center mt-2">
+                          <div class="mr-2">
+                            <img
+                              src="./assets/images/icons/bathRoom.png"
+                              alt="bathRoom"
+                            />
+                          </div>
+                          <div>
+                            <p class="dark-gray font-weight-500 font-size-10">2</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dropdown-item">
+                    <div class="d-flex align-items-end justify-content-between">
+                      <p class="font-weight-500 font-size-11">Guests</p>
+                      <div class="d-flex align-items-center mt-2">
+                        <div class="mr-2">
+                          <img src="./assets/images/icons/guest.png" alt="guest" />
+                        </div>
+                        <div>
+                          <p class="dark-gray font-weight-500 font-size-10">2</p>
+                        </div>
+                      </div>
+                    </div></div>
+                    <div class="dropdown-item">
+                      <div class="d-flex align-items-end justify-content-between">
+                        <p class="font-weight-500 font-size-11">Parking</p>
+                        <div class="d-flex align-items-center mt-2">
+                          <div class="mr-2">
+                            <img
+                              src="./assets/images/icons/parked-car.png"
+                              alt="parked-car"
+                            />
+                          </div>
+                          <div>
+                            <p class="dark-gray font-weight-500 font-size-10">2</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dropdown-item">
+                      <div class="d-flex align-items-end justify-content-between">
+                        <p class="font-weight-500 font-size-11">Min stay</p>
+                        <div class="d-flex align-items-center mt-2">
+                          <div class="mr-2">
+                            <img src="./assets/images/icons/house.png" alt="house" />
+                          </div>
+                          <div>
+                            <p class="dark-gray font-weight-500 font-size-10">2</p>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="dropdown-item">
+                      <div class="d-flex align-items-end justify-content-between">
+                        <p class="font-weight-500 font-size-11">Year build</p>
+                        <div class="d-flex align-items-center mt-2">
+                          <div class="mr-2">
+                            <img src="./assets/images/icons/wide.png" alt="wide" />
+                          </div>
+                          <div>
+                            <p class="dark-gray font-weight-500 font-size-10">2022</p>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                      <div class="dropdown-item">
+                        <div class="d-flex align-items-end justify-content-between">
+                          <p class="font-weight-500 font-size-11">Area</p>
+                          <div class="d-flex align-items-center mt-2">
+                            <div class="mr-2">
+                              <img
+                                src="./assets/images/icons/hotel-bed-fill.png"
+                                alt="hotel-bed"
+                              />
+                            </div>
+                            <div>
+                              <p class="dark-gray font-weight-500 font-size-10">2634</p>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="py-4">
+              <p class="color-tealish font-weight-bold font-size-12">
+                Description
+              </p>
+              <p
+                class="font-size-10 pt-2 dark-gray font-weight-500 opacity-8 line-height-19"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum
+              </p>
+            </div>
+            <div class="d-flex justify-content-between">
+              <!-- Best Thing About -->
+              <div class="col-8 p-0">
+                <div>
+                  <p class="font-weight-bold font-size-11">Best Thing About</p>
+                </div>
+                <div class="d-flex flex-wrap">
+                  <div class="col-4 p-0 mt-3">
+                    <p class="dark-gray font-size-10 opacity-8">
+                      <img
+                        class="mr-1"
+                        style="height: 9px"
+                        src="./assets/images/icons/tick.png"
+                        alt="tick"
+                      />Free Parking
+                    </p>
+                  </div>
+                  <div class="col-4 p-0 mt-3">
+                    <p class="dark-gray font-size-10 opacity-8">
+                      <img
+                        class="mr-1"
+                        style="height: 9px"
+                        src="./assets/images/icons/tick.png"
+                        alt="tick"
+                      />Free Parking
+                    </p>
+                  </div>
+                  <div class="col-4 p-0 mt-3">
+                    <p class="dark-gray font-size-10 opacity-8">
+                      <img
+                        class="mr-1"
+                        style="height: 9px"
+                        src="./assets/images/icons/tick.png"
+                        alt="tick"
+                      />Free Parking
+                    </p>
+                  </div>
+                  <div class="col-4 p-0 mt-3">
+                    <p class="dark-gray font-size-10 opacity-8">
+                      <img
+                        class="mr-1"
+                        style="height: 9px"
+                        src="./assets/images/icons/tick.png"
+                        alt="tick"
+                      />Free Wi-Fi
+                    </p>
+                  </div>
+                  <div class="col-4 p-0 mt-3">
+                    <p class="dark-gray font-size-10 opacity-8">
+                      <img
+                        class="mr-1"
+                        style="height: 9px"
+                        src="./assets/images/icons/tick.png"
+                        alt="tick"
+                      />Free Wi-Fi
+                    </p>
+                  </div>
+                  <div class="col-4 p-0 mt-3">
+                    <p class="dark-gray font-size-10 opacity-8">
+                      <img
+                        class="mr-1"
+                        style="height: 9px"
+                        src="./assets/images/icons/tick.png"
+                        alt="tick"
+                      />Free Wi-Fi
+                    </p>
+                  </div>
+                  <div class="col-4 p-0 mt-3">
+                    <p class="dark-gray font-size-10 opacity-8">
+                      <img
+                        class="mr-1"
+                        style="height: 9px"
+                        src="./assets/images/icons/tick.png"
+                        alt="tick"
+                      />Gym
+                    </p>
+                  </div>
+                  <div class="col-4 p-0 mt-3">
+                    <p class="dark-gray font-size-10 opacity-8">
+                      <img
+                        class="mr-1"
+                        style="height: 9px"
+                        src="./assets/images/icons/tick.png"
+                        alt="tick"
+                      />Gym
+                    </p>
+                  </div>
+                  <div class="col-4 p-0 mt-3">
+                    <p class="dark-gray font-size-10 opacity-8">
+                      <img
+                        class="mr-1"
+                        style="height: 9px"
+                        src="./assets/images/icons/tick.png"
+                        alt="tick"
+                      />Gym
+                    </p>
+                  </div>
+                  <div class="col-4 p-0 mt-3">
+                    <p class="dark-gray font-size-10 opacity-8">
+                      <img
+                        class="mr-1"
+                        style="height: 9px"
+                        src="./assets/images/icons/tick.png"
+                        alt="tick"
+                      />Sea View
+                    </p>
+                  </div>
+                  <div class="col-4 p-0 mt-3">
+                    <p class="dark-gray font-size-10 opacity-8">
+                      <img
+                        class="mr-1"
+                        style="height: 9px"
+                        src="./assets/images/icons/tick.png"
+                        alt="tick"
+                      />Sea View
+                    </p>
+                  </div>
+                  <div class="col-4 p-0 mt-3">
+                    <p class="dark-gray font-size-10 opacity-8">
+                      <img
+                        class="mr-1"
+                        style="height: 9px"
+                        src="./assets/images/icons/tick.png"
+                        alt="tick"
+                      />Sea View
+                    </p>
+                  </div>
+                  <div class="col-4 p-0 mt-3">
+                    <p class="dark-gray font-size-10 opacity-8">
+                      <img
+                        class="mr-1"
+                        style="height: 9px"
+                        src="./assets/images/icons/tick.png"
+                        alt="tick"
+                      />Pool
+                    </p>
+                  </div>
+                  <div class="col-4 p-0 mt-3">
+                    <p class="dark-gray font-size-10 opacity-8">
+                      <img
+                        class="mr-1"
+                        style="height: 9px"
+                        src="./assets/images/icons/tick.png"
+                        alt="tick"
+                      />Pool
+                    </p>
+                  </div>
+                  <div class="col-4 p-0 mt-3">
+                    <p class="dark-gray font-size-10 opacity-8">
+                      <img
+                        class="mr-1"
+                        style="height: 9px"
+                        src="./assets/images/icons/tick.png"
+                        alt="tick"
+                      />Pool
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Best Thing About Ends-->
+              <!-- Top Reason to Book-->
+              <div class="col-4 p-0">
+                <div>
+                  <p class="font-weight-bold font-size-11">
+                    Top reasons to book
+                  </p>
+                </div>
+                <p class="font-weight-bold font-size-10 mt-3">Kids Stay Free</p>
+                <p class="font-size-10 mt-1 dark-gray opacity-8">
+                  Children 2 and under stay for free when using an available
+                  crib
+                </p>
+                <p class="font-weight-bold font-size-10 mt-3">Guests Love It</p>
+                <p class="font-size-10 mt-1 dark-gray opacity-8">
+                  Guests give this property an exceptional rating of 10/10
+                </p>
+                <p class="font-weight-bold font-size-10 mt-3">Very Clean</p>
+                <p class="font-size-10 mt-1 dark-gray opacity-8">
+                  Guests rate the cleanliness 10.0/10
+                </p>
+              </div>
+              <!-- Top Reason to Book End-->
+            </div>
+            <!-- Slider -->
+            <div class="slider-properite mt-4">
+              <p class="font-weight-bold font-size-10">Rooms</p>
+              <div class="text-center my-3">
+                <div class="row mx-auto my-auto">
+                  <div
+                    id="recipeCarousel"
+                    class="carousel slide w-100"
+                    data-ride="carousel"
+                  >
+                    <div class="carousel-inner w-100" role="listbox">
+                      <div class="carousel-item active">
+                        <div class="col-lg-4">
+                          <div class="card card-body">
+                            <div
+                              class="rounded"
+                              style="
+                                background-color: rgb(197, 241, 242);
+                                width: 40px;
+                                height: 30px;
+                              "
+                            >
+                              <img
+                                style="height: 20px; width: 20px"
+                                src="./assets/images/icons/bed.png"
+                                alt="bed"
+                              />
+                            </div>
+                            <p
+                              class="font-weight-bold font-size-10 text-left mt-2"
+                            >
+                              Bedroom 1
+                            </p>
+                            <p
+                              class="font-size-10 text-left dark-gray opacity-8"
+                            >
+                              1 king bed
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="col-lg-4">
+                          <div class="card card-body">
+                            <div
+                              class="rounded"
+                              style="
+                                background-color: rgb(197, 241, 242);
+                                width: 40px;
+                                height: 30px;
+                              "
+                            >
+                              <img
+                                style="height: 20px; width: 20px"
+                                src="./assets/images/icons/bed.png"
+                                alt="bed"
+                              />
+                            </div>
+                            <p
+                              class="font-weight-bold font-size-10 text-left mt-2"
+                            >
+                              Bedroom 1
+                            </p>
+                            <p
+                              class="font-size-10 text-left dark-gray opacity-8"
+                            >
+                              1 queen bed
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="col-lg-4">
+                          <div class="card card-body">
+                            <div
+                              class="rounded"
+                              style="
+                                background-color: rgb(197, 241, 242);
+                                width: 40px;
+                                height: 30px;
+                              "
+                            >
+                              <img
+                                style="height: 20px; width: 20px"
+                                src="./assets/images/icons/bed.png"
+                                alt="bed"
+                              />
+                            </div>
+                            <p
+                              class="font-weight-bold font-size-10 text-left mt-2"
+                            >
+                              Bedroom 1
+                            </p>
+                            <p
+                              class="font-size-10 text-left dark-gray opacity-8"
+                            >
+                              1 queen bed
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="col-lg-4">
+                          <div class="card card-body">
+                            <div
+                              class="rounded"
+                              style="
+                                background-color: rgb(197, 241, 242);
+                                width: 40px;
+                                height: 30px;
+                              "
+                            >
+                              <img
+                                style="height: 20px; width: 20px"
+                                src="./assets/images/icons/bed.png"
+                                alt="bed"
+                              />
+                            </div>
+                            <p
+                              class="font-weight-bold font-size-10 text-left mt-2"
+                            >
+                              Bedroom 1
+                            </p>
+                            <p
+                              class="font-size-10 text-left dark-gray opacity-8"
+                            >
+                              1 queen bed
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="col-lg-4">
+                          <div class="card card-body">
+                            <div
+                              class="rounded"
+                              style="
+                                background-color: rgb(197, 241, 242);
+                                width: 40px;
+                                height: 30px;
+                              "
+                            >
+                              <img
+                                style="height: 20px; width: 20px"
+                                src="./assets/images/icons/bed.png"
+                                alt="bed"
+                              />
+                            </div>
+                            <p
+                              class="font-weight-bold font-size-10 text-left mt-2"
+                            >
+                              Bedroom 1
+                            </p>
+                            <p
+                              class="font-size-10 text-left dark-gray opacity-8"
+                            >
+                              1 queen bed
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="col-lg-4">
+                          <div class="card card-body">
+                            <div
+                              class="rounded"
+                              style="
+                                background-color: rgb(197, 241, 242);
+                                width: 40px;
+                                height: 30px;
+                              "
+                            >
+                              <img
+                                style="height: 20px; width: 20px"
+                                src="./assets/images/icons/bed.png"
+                                alt="bed"
+                              />
+                            </div>
+                            <p
+                              class="font-weight-bold font-size-10 text-left mt-2"
+                            >
+                              Bedroom 1
+                            </p>
+                            <p
+                              class="font-size-10 text-left dark-gray opacity-8"
+                            >
+                              1 queen bed
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <a
+                    class="carousel-control-prev w-auto"
+                    href="#recipeCarousel"
+                    role="button"
+                    data-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon bg-dark border border-dark rounded-circle"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="sr-only">Previous</span>
+                  </a> -->
+                    <a
+                      class="carousel-control-next w-auto"
+                      href="#recipeCarousel"
+                      role="button"
+                      data-slide="next"
+                    >
+                      <span
+                        class="carousel-control-next-icon bg-dark border border-dark rounded-circle"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Slider Ends -->
+            <!-- Home Page Facalities -->
+            <div class="properite-facalities">
+              <div class="col-12 p-0">
+                <div>
+                  <p class="font-weight-bold font-size-11">
+                    General amenities & facilities
+                  </p>
+                </div>
+                <div class="d-flex flex-wrap">
+                  <div class="p-0 mt-3 mr-4">
+                    <p class="dark-gray font-size-10 opacity-8">
+                      <img
+                        class="mr-1"
+                        style="height: 9px"
+                        src="./assets/images/icons/tick.png"
+                        alt="tick"
+                      />Air Conditioning
+                    </p>
+                  </div>
+                  <div class="p-0 mt-3 mr-4">
+                    <p class="dark-gray font-size-10 opacity-8">
+                      <img
+                        class="mr-1"
+                        style="height: 9px"
+                        src="./assets/images/icons/tick.png"
+                        alt="tick"
+                      />Cable TV
+                    </p>
+                  </div>
+                  <div class="p-0 mt-3 mr-4">
+                    <p class="dark-gray font-size-10 opacity-8">
+                      <img
+                        class="mr-1"
+                        style="height: 9px"
+                        src="./assets/images/icons/tick.png"
+                        alt="tick"
+                      />Coffee Maker
+                    </p>
+                  </div>
+                  <div class="p-0 mt-3 mr-4">
+                    <p class="dark-gray font-size-10 opacity-8">
+                      <img
+                        class="mr-1"
+                        style="height: 9px"
+                        src="./assets/images/icons/tick.png"
+                        alt="tick"
+                      />Elevator
+                    </p>
+                  </div>
+                  <div class="p-0 mt-3 mr-4">
+                    <p class="dark-gray font-size-10 opacity-8">
+                      <img
+                        class="mr-1"
+                        style="height: 9px"
+                        src="./assets/images/icons/tick.png"
+                        alt="tick"
+                      />Free Parking
+                    </p>
+                  </div>
+                  <div class="p-0 mt-3 mr-4">
+                    <p class="dark-gray font-size-10 opacity-8">
+                      <img
+                        class="mr-1"
+                        style="height: 9px"
+                        src="./assets/images/icons/tick.png"
+                        alt="tick"
+                      />Iron
+                    </p>
+                  </div>
+                  <div class="p-0 mt-3 mr-4">
+                    <p class="dark-gray font-size-10 opacity-8">
+                      <img
+                        class="mr-1"
+                        style="height: 9px"
+                        src="./assets/images/icons/tick.png"
+                        alt="tick"
+                      />Hair Dryer
+                    </p>
+                  </div>
+                  <div class="p-0 mt-3 mr-4">
+                    <p class="dark-gray font-size-10 opacity-8">
+                      <img
+                        class="mr-1"
+                        style="height: 9px"
+                        src="./assets/images/icons/tick.png"
+                        alt="tick"
+                      />Heating
+                    </p>
+                  </div>
+                  <div class="p-0 mt-3 mr-4">
+                    <p class="dark-gray font-size-10 opacity-8">
+                      <img
+                        class="mr-1"
+                        style="height: 9px"
+                        src="./assets/images/icons/tick.png"
+                        alt="tick"
+                      />Hot water
+                    </p>
+                  </div>
+                  <div class="p-0 mt-3 mr-4">
+                    <p class="dark-gray font-size-10 opacity-8">
+                      <img
+                        class="mr-1"
+                        style="height: 9px"
+                        src="./assets/images/icons/tick.png"
+                        alt="tick"
+                      />Kitchen and dining
+                    </p>
+                  </div>
+                  <div class="p-0 mt-3 mr-4">
+                    <p class="dark-gray font-size-10 opacity-8">
+                      <img
+                        class="mr-1"
+                        style="height: 9px"
+                        src="./assets/images/icons/tick.png"
+                        alt="tick"
+                      />Laptop Friendly
+                    </p>
+                  </div>
+                  <div class="p-0 mt-3 mr-4">
+                    <p class="dark-gray font-size-10 opacity-8">
+                      <img
+                        class="mr-1"
+                        style="height: 9px"
+                        src="./assets/images/icons/tick.png"
+                        alt="tick"
+                      />Microwave
+                    </p>
+                  </div>
+                  <div class="p-0 mt-3 mr-4">
+                    <p class="dark-gray font-size-10 opacity-8">
+                      <img
+                        class="mr-1"
+                        style="height: 9px"
+                        src="./assets/images/icons/tick.png"
+                        alt="tick"
+                      />Wireless Internet
+                    </p>
+                  </div>
+                </div>
+                <div class="text-center mt-4">
+                  <button class="yellow-button">Show all 76 amenities</button>
+                </div>
+              </div>
+            </div>
+            <!-- Home Page Facalities End-->
+            <!-- calendar -->
+            <div class="properite-property-avaliability">
+              <div class="col-12 p-0 mt-5">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <p class="font-weight-bold font-size-11">
+                      Property Availability
+                    </p>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                      <div class="gray-dot mr-1"></div>
+                      <div class="dark-gray opacity-8 font-size-10 mr-2">
+                        Past
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <div class="blue-dot mr-1"></div>
+                      <div class="dark-gray opacity-8 font-size-10 mr-2">
+                        Available
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <div class="red-dot mr-1"></div>
+                      <div class="dark-gray opacity-8 font-size-10 mr-2">
+                        Booked
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="d-flex flex-column flex-lg-row justify-content-between">
+                    <div class="calendar">
+                      <div id="calendar"></div>
+                    </div>
+                    <div class="calendar">
+                      <div id="calendar-two"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- calendar End-->
+            <!-- Banner -->
+            <div
+              class="Banner d-flex justify-content-between align-items-center box-shadow rounded py-1 px-2 my-3"
+            >
+              <div class="d-flex align-items-center">
+                <img
+                  class="mr-1"
+                  style="height: 10px"
+                  src="./assets/images/icons/information.png"
+                  alt="information"
+                />
+                <p class="dark-gray opacity-8 font-size-8">
+                  Your dates are popular among travelers.
+                </p>
+              </div>
+              <div>
+                <p class="dark-gray opacity-8 font-size-8">
+                  Popular Destination! Properties in Dubai are being booked
+                  every minute.
+                </p>
+              </div>
+              <!-- Banner Ends-->
+            </div>
+            <!-- Banner Ends -->
+            <!-- Rules -->
+            <div class="rules d-flex">
+              <div class="col-7">
+                <div class="mt-4">
+                  <p class="font-weight-bold font-size-11">Property Rules</p>
+                </div>
+                <p class="dark-gray font-size-12 opacity-8 mt-3">
+                  <img
+                    class="mr-2"
+                    style="height: 9px"
+                    src="./assets/images/icons/tick.png"
+                    alt="tick"
+                  />Check-in: 2:00PM - 12:00AM
+                </p>
+                <p class="dark-gray font-size-12 opacity-8 mt-3">
+                  <img
+                    class="mr-2"
+                    style="height: 9px"
+                    src="./assets/images/icons/tick.png"
+                    alt="tick"
+                  />Checkout: 12:00PM
+                </p>
+                <p class="dark-gray font-size-12 opacity-8 mt-3">
+                  <img
+                    class="mr-2"
+                    style="height: 9px"
+                    src="./assets/images/icons/tick.png"
+                    alt="tick"
+                  />No smoking
+                </p>
+                <p class="dark-gray font-size-12 opacity-8 mt-3">
+                  <img
+                    class="mr-2"
+                    style="height: 9px"
+                    src="./assets/images/icons/tick.png"
+                    alt="tick"
+                  />No pets
+                </p>
+                <p class="dark-gray font-size-12 opacity-8 mt-3">
+                  <img
+                    class="mr-2"
+                    style="height: 9px"
+                    src="./assets/images/icons/tick.png"
+                    alt="tick"
+                  />No parties or events
+                </p>
+                <p class="dark-gray font-size-12 opacity-8 mt-3">
+                  <img
+                    class="mr-2"
+                    style="height: 9px"
+                    src="./assets/images/icons/tick.png"
+                    alt="tick"
+                  />Minimum age of primary renter: 18
+                </p>
+              </div>
+              <div class="col-5">
+                <div class="mt-4">
+                  <p class="font-weight-bold font-size-11">Health & Safety</p>
+                </div>
+                <div class="d-flex align-items-center mt-3">
+                  <img
+                    class="mr-2"
+                    style="height: 9px"
+                    src="./assets/images/icons/tick.png"
+                    alt="tick"
+                  />
+                  <p class="dark-gray font-size-12 opacity-8">
+                    Airbnb's social-distancing and other COVID-19 related
+                    guidelines apply
+                  </p>
+                </div>
+                <div class="d-flex align-items-center mt-3">
+                  <img
+                    class="mr-2"
+                    style="height: 9px"
+                    src="./assets/images/icons/tick.png"
+                    alt="tick"
+                  />
+                  <p class="dark-gray font-size-12 opacity-8">
+                    No carbon monoxide alarm
+                  </p>
+                </div>
+                <div class="d-flex align-items-center mt-3">
+                  <img
+                    class="mr-2"
+                    style="height: 9px"
+                    src="./assets/images/icons/tick.png"
+                    alt="tick"
+                  />
+                  <p class="dark-gray font-size-12 opacity-8">No smoke alarm</p>
+                </div>
+                <div class="d-flex align-items-center mt-3">
+                  <img
+                    class="mr-2"
+                    style="height: 9px"
+                    src="./assets/images/icons/tick.png"
+                    alt="tick"
+                  />
+                  <p class="dark-gray font-size-12 opacity-8">
+                    Security camera/recording device
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Rules End-->
+
+            <!-- Progress Section -->
+            <div class="properite-progress mt-5">
+              <div>
+                <p class="font-weight-bold font-size-12 pb-3">
+                  What people love about Modern and luxury apartment
+                </p>
+                <div class="d-flex align-items-center pb-2">
+                  <img
+                    class="mr-2"
+                    style="height: 10px"
+                    src="./assets/images/icons/tealishStart.png"
+                    alt="Star"
+                  />
+                  <p class="font-weight-bold font-size-12 opacity-9">
+                    4.5 . 18 Reviews
+                  </p>
+                </div>
+                <div class="reviews-section d-flex flex-column flex-lg-row justify-content-between">
+                  <div class="reviews-section-inner">
+                    <div
+                      class="d-flex justify-content-between align-items-center py-2"
+                    > 
+                      <div class="col-5 px-0">
+                        <p class="font-weight-bold font-size-9 opacity-8">
+                          Cleanliness
+                        </p>
+                      </div>
+                      <div class="col-7 p-0">
+                        <div class="progress-bar-inner position-relative">
+                          <div class="progress">
+                            <div
+                              class="progress-bar"
+                              role="progressbar"
+                              style="width: 75%"
+                              aria-valuenow="25"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                            <span
+                              class="position-absolute right-0"
+                              style="top: -5px; right: 0px"
+                            >
+                              <p class="font-weight-bold font-size-9 opacity-8">
+                                4.8
+                              </p>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between align-items-center py-2"
+                    >
+                      <div class="col-5 px-0">
+                        <p class="font-weight-bold font-size-9 opacity-8">
+                          Communication
+                        </p>
+                      </div>
+                      <div class="col-7 p-0">
+                        <div class="progress-bar-inner position-relative">
+                          <div class="progress">
+                            <div
+                              class="progress-bar"
+                              role="progressbar"
+                              style="width: 68%"
+                              aria-valuenow="25"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                            <span
+                              class="position-absolute right-0"
+                              style="top: -5px; right: 0px"
+                            >
+                              <p class="font-weight-bold font-size-9 opacity-8">
+                                3.8
+                              </p>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between align-items-center py-2"
+                    >
+                      <div class="col-5 px-0">
+                        <p class="font-weight-bold font-size-9 opacity-8">
+                          Check in
+                        </p>
+                      </div>
+                      <div class="col-7 p-0">
+                        <div class="progress-bar-inner position-relative">
+                          <div class="progress">
+                            <div
+                              class="progress-bar"
+                              role="progressbar"
+                              style="width: 71%"
+                              aria-valuenow="25"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                            <span
+                              class="position-absolute right-0"
+                              style="top: -5px; right: 0px"
+                            >
+                              <p class="font-weight-bold font-size-9 opacity-8">
+                                4.2
+                              </p>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="reviews-section-inner">
+                    <div class="reviews">
+                      <div
+                        class="d-flex justify-content-between align-items-center py-2"
+                      >
+                        <div class="col-5 px-0">
+                          <p class="font-weight-bold font-size-9 opacity-8">
+                            Accuracy
+                          </p>
+                        </div>
+                        <div class="col-7 p-0">
+                          <div class="progress-bar-inner position-relative">
+                            <div class="progress">
+                              <div
+                                class="progress-bar"
+                                role="progressbar"
+                                style="width: 35%"
+                                aria-valuenow="25"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              ></div>
+                              <span
+                                class="position-absolute right-0"
+                                style="top: -5px; right: 0px"
+                              >
+                                <p
+                                  class="font-weight-bold font-size-9 opacity-8"
+                                >
+                                  2.5
+                                </p>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="d-flex justify-content-between align-items-center py-2"
+                      >
+                        <div class="col-5 px-0">
+                          <p class="font-weight-bold font-size-9 opacity-8">
+                            Location
+                          </p>
+                        </div>
+                        <div class="col-7 p-0">
+                          <div class="progress-bar-inner position-relative">
+                            <div class="progress">
+                              <div
+                                class="progress-bar"
+                                role="progressbar"
+                                style="width: 70%"
+                                aria-valuenow="25"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              ></div>
+                              <span
+                                class="position-absolute right-0"
+                                style="top: -5px; right: 0px"
+                              >
+                                <p
+                                  class="font-weight-bold font-size-9 opacity-8"
+                                >
+                                  3
+                                </p>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="d-flex justify-content-between align-items-center py-2"
+                      >
+                        <div class="col-5 px-0">
+                          <p class="font-weight-bold font-size-9 opacity-8">
+                            Value
+                          </p>
+                        </div>
+                        <div class="col-7 p-0">
+                          <div class="progress-bar-inner position-relative">
+                            <div class="progress">
+                              <div
+                                class="progress-bar"
+                                role="progressbar"
+                                style="width: 100%"
+                                aria-valuenow="25"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              ></div>
+                              <span
+                                class="position-absolute right-0"
+                                style="top: -5px; right: 0px"
+                              >
+                                <p
+                                  class="font-weight-bold font-size-9 opacity-8"
+                                >
+                                  5
+                                </p>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Comment Section -->
+                <div class="comments-section">
+                  <div
+                    class="comments-section-inner d-flex justify-content-between"
+                  >
+                    <div class="w-45">
+                      <div class="single-comment mt-4">
+                        <div class="d-flex align-items-center">
+                          <img
+                            src="./assets/images/comment-image.png"
+                            alt="comment-image"
+                          />
+                          <div class="ml-2">
+                            <p class="font-weight-bold font-size-9 opacity-9">
+                              John Doe
+                            </p>
+                            <p class="font-size-9 opacity-8 dark-gray">
+                              Joined in may 2022
+                            </p>
+                          </div>
+                        </div>
+                        <p class="font-size-9 opacity-8 dark-gray pt-3">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua. Ut enim ad minim veniam, quis
+                        </p>
+                        <span class="read-more-button">Read More</span>
+                      </div>
+                      <div class="single-comment mt-4">
+                        <div class="d-flex align-items-center">
+                          <img
+                            src="./assets/images/comment-image.png"
+                            alt="comment-image"
+                          />
+                          <div class="ml-2">
+                            <p class="font-weight-bold font-size-9 opacity-9">
+                              John Doe
+                            </p>
+                            <p class="font-size-9 opacity-8 dark-gray">
+                              Joined in may 2022
+                            </p>
+                          </div>
+                        </div>
+                        <p class="font-size-9 opacity-8 dark-gray pt-3">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua. Ut enim ad minim veniam, quis
+                        </p>
+                        <span class="read-more-button">Read More</span>
+                      </div>
+                    </div>
+                    <div class="w-45">
+                      <div class="single-comment mt-4">
+                        <div class="d-flex align-items-center">
+                          <img
+                            src="./assets/images/comment-image.png"
+                            alt="comment-image"
+                          />
+                          <div class="ml-2">
+                            <p class="font-weight-bold font-size-9 opacity-9">
+                              John Doe
+                            </p>
+                            <p class="font-size-9 opacity-8 dark-gray">
+                              Joined in may 2022
+                            </p>
+                          </div>
+                        </div>
+                        <p class="font-size-9 opacity-8 dark-gray pt-3">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua. Ut enim ad minim veniam, quis
+                        </p>
+                        <span class="read-more-button">Read More</span>
+                      </div>
+                      <div class="single-comment mt-4">
+                        <div class="d-flex align-items-center">
+                          <img
+                            src="./assets/images/comment-image.png"
+                            alt="comment-image"
+                          />
+                          <div class="ml-2">
+                            <p class="font-weight-bold font-size-9 opacity-9">
+                              John Doe
+                            </p>
+                            <p class="font-size-9 opacity-8 dark-gray">
+                              Joined in may 2022
+                            </p>
+                          </div>
+                        </div>
+                        <p class="font-size-9 opacity-8 dark-gray pt-3">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua. Ut enim ad minim veniam, quis
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button class="yellow-button font-weight-500">
+                      Show all 18 reviews
+                    </button>
+                  </div>
+                </div>
+                <!-- Comment Section Ends-->
+              </div>
+            </div>
+            <!-- Progress Section Ends-->
+
+            <!-- Video Section -->
+            <div class="video-section mt-4">
+              <p class="font-weight-bold font-size-11 py-3">Property Video</p>
+              <iframe
+                class="rounded"
+                width="100%"
+                height="240"
+                src="https://www.youtube.com/embed/Tq8RBFS8OqI"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- Video Section End-->
+
+            <!-- Map Section -->
+            <div class="map-section mt-4">
+              <p class="font-weight-bold font-size-11 py-3">Property on map</p>
+              <div class="map-section-image">
+              </div>
+            </div>
+            <!-- Map Section End-->
+
+            <!-- Property Surroundings -->
+            <div class="property-surroundings-section">
+              <div class="property-surroundings-inner">
+                <div
+                  class="d-flex justify-content-between align-items-center pt-4"
+                >
+                  <div>
+                    <p class="font-weight-bold font-size-11">
+                      Property surroundings*
+                    </p>
+                    <p class="font-weight-normal font-size-10 dark-gray py-1">
+                      Guests love walking around the neighborhood
+                    </p>
+                    <p class="font-weight-normal font-size-10 color-tealish">
+                      Excellent location Show map
+                    </p>
+                  </div>
+                  <div>
+                    <button class="small-yellow-button font-weight-500">
+                      See Availability
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="property-surroundings-property-list d-flex justify-content-between mt-4"
+                >
+                  <div class="w-48">
+                    <div class="nearby">
+                      <div class="d-flex align-items-center">
+                        <img
+                          style="height: 15px"
+                          src="./assets/images/icons/walk.png"
+                          alt="walking-man"
+                        />
+                        <p class="font-weight-600 font-size-11 opacity-9 ml-2">
+                          Whats Nearby
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex justify-content-between py-3 border-bottom"
+                      >
+                        <p class="font-size-10 font-weight-normal dark-gray">
+                          Lost Mine Miniature Golf Course
+                        </p>
+                        <p
+                          class="font-size-10 font-weight-normal dark-gray opacity-8"
+                        >
+                          0.1 km
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex justify-content-between py-3 border-bottom"
+                      >
+                        <p class="font-size-10 font-weight-normal dark-gray">
+                          Lost Mine Miniature Golf Course
+                        </p>
+                        <p
+                          class="font-size-10 font-weight-normal dark-gray opacity-8"
+                        >
+                          0.1 km
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex justify-content-between py-3 border-bottom"
+                      >
+                        <p class="font-size-10 font-weight-normal dark-gray">
+                          Lost Mine Miniature Golf Course
+                        </p>
+                        <p
+                          class="font-size-10 font-weight-normal dark-gray opacity-8"
+                        >
+                          0.1 km
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex justify-content-between py-3 border-bottom"
+                      >
+                        <p class="font-size-10 font-weight-normal dark-gray">
+                          Lost Mine Miniature Golf Course
+                        </p>
+                        <p
+                          class="font-size-10 font-weight-normal dark-gray opacity-8"
+                        >
+                          0.1 km
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex justify-content-between py-3 border-bottom"
+                      >
+                        <p class="font-size-10 font-weight-normal dark-gray">
+                          Lost Mine Miniature Golf Course
+                        </p>
+                        <p
+                          class="font-size-10 font-weight-normal dark-gray opacity-8"
+                        >
+                          0.1 km
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex justify-content-between py-3 border-bottom"
+                      >
+                        <p class="font-size-10 font-weight-normal dark-gray">
+                          Lost Mine Miniature Golf Course
+                        </p>
+                        <p
+                          class="font-size-10 font-weight-normal dark-gray opacity-8"
+                        >
+                          0.1 km
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex justify-content-between py-3 border-bottom"
+                      >
+                        <p class="font-size-10 font-weight-normal dark-gray">
+                          Lost Mine Miniature Golf Course
+                        </p>
+                        <p
+                          class="font-size-10 font-weight-normal dark-gray opacity-8"
+                        >
+                          0.1 km
+                        </p>
+                      </div>
+                    </div>
+                    <div class="nearby">
+                      <div class="d-flex align-items-center margin-top-31">
+                        <img
+                          style="height: 15px"
+                          src="./assets/images/icons/fork.png"
+                          alt="walking-man"
+                        />
+                        <p class="font-weight-600 font-size-11 opacity-9 ml-2">
+                          Restaurants & cafe
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex justify-content-between py-3 border-bottom"
+                      >
+                        <p class="font-size-10 font-weight-normal dark-gray">
+                          Lost Mine Miniature Golf Course
+                        </p>
+                        <p
+                          class="font-size-10 font-weight-normal dark-gray opacity-8"
+                        >
+                          0.1 km
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex justify-content-between py-3 border-bottom"
+                      >
+                        <p class="font-size-10 font-weight-normal dark-gray">
+                          Lost Mine Miniature Golf Course
+                        </p>
+                        <p
+                          class="font-size-10 font-weight-normal dark-gray opacity-8"
+                        >
+                          0.1 km
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex justify-content-between py-3 border-bottom"
+                      >
+                        <p class="font-size-10 font-weight-normal dark-gray">
+                          Lost Mine Miniature Golf Course
+                        </p>
+                        <p
+                          class="font-size-10 font-weight-normal dark-gray opacity-8"
+                        >
+                          0.1 km
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-48">
+                    <div class="attractions">
+                      <div class="d-flex align-items-center">
+                        <img
+                          style="height: 15px"
+                          src="./assets/images/icons/top-three.png"
+                          alt="Attraction"
+                        />
+                        <p class="font-weight-600 font-size-11 opacity-9 ml-2">
+                          Top attractions
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex justify-content-between py-3 border-bottom"
+                      >
+                        <p class="font-size-10 font-weight-normal dark-gray">
+                          Lost Mine Miniature Golf Course
+                        </p>
+                        <p
+                          class="font-size-10 font-weight-normal dark-gray opacity-8"
+                        >
+                          0.1 km
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex justify-content-between py-3 border-bottom"
+                      >
+                        <p class="font-size-10 font-weight-normal dark-gray">
+                          Lost Mine Miniature Golf Course
+                        </p>
+                        <p
+                          class="font-size-10 font-weight-normal dark-gray opacity-8"
+                        >
+                          0.1 km
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex justify-content-between py-3 border-bottom"
+                      >
+                        <p class="font-size-10 font-weight-normal dark-gray">
+                          Lost Mine Miniature Golf Course
+                        </p>
+                        <p
+                          class="font-size-10 font-weight-normal dark-gray opacity-8"
+                        >
+                          0.1 km
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex justify-content-between py-3 border-bottom"
+                      >
+                        <p class="font-size-10 font-weight-normal dark-gray">
+                          Lost Mine Miniature Golf Course
+                        </p>
+                        <p
+                          class="font-size-10 font-weight-normal dark-gray opacity-8"
+                        >
+                          0.1 km
+                        </p>
+                      </div>
+                    </div>
+                    <div class="sunbed">
+                      <div class="d-flex align-items-center margin-top-31">
+                        <img
+                          style="height: 15px"
+                          src="./assets/images/icons/sunbed.png"
+                          alt="Sun-bed"
+                        />
+                        <p class="font-weight-600 font-size-11 opacity-9 ml-2">
+                          Restaurants & cafe
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex justify-content-between py-3 border-bottom"
+                      >
+                        <p class="font-size-10 font-weight-normal dark-gray">
+                          Lost Mine Miniature Golf Course
+                        </p>
+                        <p
+                          class="font-size-10 font-weight-normal dark-gray opacity-8"
+                        >
+                          0.1 km
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex justify-content-between py-3 border-bottom"
+                      >
+                        <p class="font-size-10 font-weight-normal dark-gray">
+                          Lost Mine Miniature Golf Course
+                        </p>
+                        <p
+                          class="font-size-10 font-weight-normal dark-gray opacity-8"
+                        >
+                          0.1 km
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex justify-content-between py-3 border-bottom"
+                      >
+                        <p class="font-size-10 font-weight-normal dark-gray">
+                          Lost Mine Miniature Golf Course
+                        </p>
+                        <p
+                          class="font-size-10 font-weight-normal dark-gray opacity-8"
+                        >
+                          0.1 km
+                        </p>
+                      </div>
+                    </div>
+                    <div class="closet-airplane">
+                      <div class="d-flex align-items-center margin-top-31">
+                        <img
+                          style="height: 15px"
+                          src="./assets/images/icons/airplane.png"
+                          alt="airplane"
+                        />
+                        <p class="font-weight-600 font-size-11 opacity-9 ml-2">
+                          Closest airport
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex justify-content-between py-3 border-bottom"
+                      >
+                        <p class="font-size-10 font-weight-normal dark-gray">
+                          Lost Mine Miniature Golf Course
+                        </p>
+                        <p
+                          class="font-size-10 font-weight-normal dark-gray opacity-8"
+                        >
+                          0.1 km
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex justify-content-between py-3 border-bottom"
+                      >
+                        <p class="font-size-10 font-weight-normal dark-gray">
+                          Lost Mine Miniature Golf Course
+                        </p>
+                        <p
+                          class="font-size-10 font-weight-normal dark-gray opacity-8"
+                        >
+                          0.1 km
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex justify-content-between py-3 border-bottom"
+                      >
+                        <p class="font-size-10 font-weight-normal dark-gray">
+                          Lost Mine Miniature Golf Course
+                        </p>
+                        <p
+                          class="font-size-10 font-weight-normal dark-gray opacity-8"
+                        >
+                          0.1 km
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Property Surroundings Ends-->
+            <!-- Banner -->
+            <div
+              class="Banner d-flex justify-content-between align-items-center box-shadow rounded py-1 px-2 my-3"
+            >
+              <div class="d-flex align-items-center">
+                <img
+                  class="mr-1"
+                  style="height: 10px"
+                  src="./assets/images/icons/information.png"
+                  alt="information"
+                />
+                <p class="dark-gray opacity-8 font-size-8">
+                  Don't miss out! Properties in Dubai are being booked every
+                  minute.
+                </p>
+              </div>
+              <!-- Banner Ends-->
+            </div>
+            <!-- Banner Ends -->
+          </div>
+          <div class="cards-right w-31">
+            <div class="hosted-card bg-white box-shadow rounded py-3 px-3">
+              <div class="d-flex flex-column flex-lg-row align-items-center">
+                <img
+                  src="./assets/images/comment-image.png"
+                  alt="comment-image"
+                />
+                <div class="ml-2">
+                  <p class="font-weight-bold font-size-10 opacity-9 text-center">
+                    Hosted by John Doe
+                  </p>
+                  <p class="font-size-9 opacity-8 dark-gray text-center">
+                    Joined in may 2022
+                  </p>
+                </div>
+              </div>
+              <div class="mt-3">
+                <div class="d-flex flex-column flex-lg-row ">
+                  <div class="d-flex align-items-center mr-3">
+                    <img
+                      src="./assets/images/icons/red-star.png"
+                      alt="red-star"
+                    />
+                    <p class="color-light-gray font-size-10 ml-1 opacity-8">
+                      18 Reviews
+                    </p>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <img src="./assets/images/icons/shield.png" alt="shield" />
+                    <p class="color-light-gray font-size-10 ml-1 opacity-8">
+                      Identity Verfied
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-3">
+                <p class="font-size-9 opacity-8 dark-gray">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis
+                </p>
+                <span class="read-more-button">Read More</span>
+              </div>
+              <div class="mt-3">
+                <p class="font-weight-bold font-size-10 opacity-9">
+                  During your stay
+                </p>
+                <p class="font-size-9 opacity-8 dark-gray mt-2">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis
+                </p>
+              </div>
+              <div class="mt-3">
+                <button class="small-yellow-button font-weight-500">
+                  Contact Host
+                </button>
+              </div>
+              <div class="mt-2">
+                <p class="font-weight-bold font-size-9 opacity-9">
+                  Response time: within an hour
+                </p>
+              </div>
+            </div>
+            <div class="hosted-card-second box-shadow rounded py-3 px-1 px-lg-3 mt-3">
+              <div class="d-flex flex-column flex-lg-row align-items-center justify-content-between">
+                <p class="text-white font-weight-normal font-size-10">
+                  € 72/Night
+                </p>
+                <div>
+                  <p class="text-white font-weight-normal font-size-9">
+                    <span class="ml-1"
+                      ><img
+                        style="height: 10px"
+                        src="./assets/images/icons/yellowStar.png"
+                        alt="star" /></span
+                    >4.55 (38 reviews)
+                  </p>
+                </div>
+              </div>
+              <div class="properite-form">
+                <form>
+                  <div>
+                    <label class="font-size-11 font-weight-600 mt-3">Name</label
+                    ><br />
+                    <input
+                      class="properite-form-input pb-2 border-bottom-gray"
+                      placeholder="Enter Full Name"
+                      type="text"
+                    /><br />
+                  </div>
+                  <div>
+                    <label class="font-size-11 font-weight-600 mt-3"
+                      >Email</label
+                    ><br />
+                    <input
+                      class="properite-form-input pb-2 border-bottom-gray"
+                      placeholder="Enter Email"
+                      type="email"
+                    /><br />
+                  </div>
+                  <div>
+                    <label class="font-size-11 font-weight-600 mt-3"
+                      >Phone</label
+                    ><br />
+                    <input
+                      class="properite-form-input pb-2 border-bottom-gray"
+                      placeholder="1-800-123-4567"
+                      type="number"
+                    /><br />
+                  </div>
+                  <div>
+                    <label class="font-size-11 font-weight-600 mt-3"
+                      >Country</label
+                    ><br />
+                    <input
+                      class="properite-form-input pb-2 border-bottom-gray"
+                      placeholder="Enter Country name"
+                      type="text"
+                    /><br />
+                  </div>
+                  <div class="d-flex flex-column flex-lg-row justify-content-between">
+                    <div class="w-45">
+                      <label class="font-size-11 font-weight-600 mt-3"
+                        >Adults</label
+                      ><br />
+                      <input
+                        class="properite-form-input-number pb-2 border-bottom-gray"
+                        placeholder="1"
+                        type="number"
+                      /><br />
+                    </div>
+                    <div class="w-45">
+                      <label class="font-size-11 font-weight-600 mt-3"
+                        >Children</label
+                      ><br />
+                      <input
+                        class="properite-form-input-number pb-2 border-bottom-gray"
+                        placeholder="0"
+                        type="number"
+                      /><br />
+                    </div>
+                  </div>
+                  <div class="d-flex mt-3">
+                    <input class="mr-2" type="checkbox" />
+                    <p class="dark-gray opacity-8 font-size-8">
+                      I agree with the general terms and conditions of the
+                      company and the personal data protection policy.
+                    </p>
+                  </div>
+                  <div class="text-center mt-3">
+                    <button class="form-button-button w-90">Reserve</button>
+                  </div>
+                  <div class="d-flex justify-content-end mt-2">
+                    <p class="dark-gray opacity-8 font-size-8">
+                      You won't be charged nothing.
+                    </p>
+                  </div>
+                </form>
+                <div class="charges border-bottom pb-4">
+                  <div class="d-flex justify-content-between opacity-9 mt-3">
+                    <p
+                      class="font-size-11 font-weight-500 text-decoration-underline"
+                    >
+                      € 75x7 nights
+                    </p>
+                    <p class="font-size-11 font-weight-500 color-light-gray">
+                      € 528
+                    </p>
+                  </div>
+                  <div class="d-flex justify-content-between opacity-9 mt-3">
+                    <p
+                      class="font-size-11 font-weight-500 text-decoration-underline"
+                    >
+                      Weekly discount
+                    </p>
+                    <p class="font-size-11 font-weight-500 color-light-gray">
+                      -€ 21
+                    </p>
+                  </div>
+                  <div class="d-flex justify-content-between opacity-9 mt-3">
+                    <p
+                      class="font-size-11 font-weight-500 text-decoration-underline"
+                    >
+                      Cleaning fee
+                    </p>
+                    <p class="font-size-11 font-weight-500 color-light-gray">
+                      € 26
+                    </p>
+                  </div>
+                  <div class="d-flex justify-content-between opacity-9 mt-3">
+                    <p
+                      class="font-size-11 font-weight-500 text-decoration-underline"
+                    >
+                      Booking fee
+                    </p>
+                    <p class="font-size-11 font-weight-500 color-light-gray">
+                      0
+                    </p>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between opacity-9 mt-3">
+                  <p
+                    class="font-size-12 font-weight-600 text-decoration-underline"
+                  >
+                    Total
+                  </p>
+                  <p class="font-size-12 font-weight-600 color-light-gray">
+                    € 625
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Carousel Script -->
+    <script>
+      $("#recipeCarousel").carousel({
+        interval: 10000,
+      });
+
+      $(".carousel .carousel-item").each(function () {
+        var minPerSlide = 3;
+        var next = $(this).next();
+        if (!next.length) {
+          next = $(this).siblings(":first");
+        }
+        next.children(":first-child").clone().appendTo($(this));
+
+        for (var i = 0; i < minPerSlide; i++) {
+          next = next.next();
+          if (!next.length) {
+            next = $(this).siblings(":first");
+          }
+
+          next.children(":first-child").clone().appendTo($(this));
+        }
+      });
+    </script>
+    <script src="./calender.js"></script>
+    <!-- Carousel Script End-->
+  </body>
+</html>
