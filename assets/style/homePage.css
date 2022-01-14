@@ -195,13 +195,13 @@
 .properite-form-input-number ::-webkit-input-placeholder {
   padding-left: 10px;
 }
-.form-button-button {
+.form-yellow-button {
   outline: none;
   cursor: pointer;
   border: none;
   border-radius: 9px;
   background-color: #ffc044;
-  padding: 4px 0px;
+  padding: 6px 0px;
   font-size: 14px;
   font-weight: 500;
   transition: transform 0.2s;
@@ -215,6 +215,14 @@
   .header-logo img {
     width: 127px;
   }
+  .hero-section {
+    min-height: 66px;
+    position: relative;
+    top: 62px;
+}
+.search-bar{
+    top: 51px;
+}
   .search-bar .search-bar-inner .search-icon {
     width: 100%;
   }
@@ -222,7 +230,7 @@
     width: 100%;
   }
   .properite-image-slider .properite-image-slider-wrapper {
-    padding-top: 290px;
+    padding-top: 356px;
     width: 100%;
     margin: 0 auto;
     padding-right: 30px;
@@ -265,6 +273,7 @@
     border: none;
     padding: 2px 43px;
   }
+
   .calendar {
     width: 100%;
   }
@@ -417,6 +426,11 @@
     transform: rotate(-135deg);
     margin-top: -9px;
     transition: all 0.25s;
+  }
+  /* Right Side Form */
+  .properite-form-input-number{
+    width: 119px;
+    padding: 9px 9px;
   }
   /* Carousel */
   .carousel-control-next {
