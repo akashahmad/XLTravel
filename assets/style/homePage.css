@@ -182,15 +182,23 @@
   color: #848280;
   font-weight: 500;
 }
-.properite-form-input-number {
+.select-outer{
+  border: none;
   background-color: white;
   border-radius: 10px;
   outline: none;
   border: none;
-  width: 86px;
-  padding: 5px 9px;
+  padding: 0px 0px;
   font-size: 11px;
   color: grey;
+}
+.properite-form-input-number {
+  background-color: white;
+  border-radius: 10px;
+  width: 86px;
+  border: none;
+  outline: none;
+  padding: 6px 6px;
 }
 .properite-form-input-number ::-webkit-input-placeholder {
   padding-left: 10px;
