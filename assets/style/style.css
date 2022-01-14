@@ -124,6 +124,7 @@ color:#848280
 }
 .w-90{
   width: 90%;
+  margin: 0 auto;
 }
 /* Font Weight */
 .font-weight-600 {

@@ -69,7 +69,7 @@
 /* Home Page Image Slider */
 .properite-image-slider .properite-image-slider-wrapper {
   padding-top: 92px;
-  width: 62%;
+  width: 90%;
   margin: 0 auto;
 }
 /* properite-image-collage */
@@ -107,7 +107,7 @@
 
 /* Home page width */
 .properite-detail .properite-detail-wrapper {
-  width: 62%;
+  width: 90%;
   margin: 0 auto;
 }
 @media (max-width: 768px) {
@@ -146,7 +146,8 @@
   right: -34px !important;
 }
 .carousel-item .card-body{
-  padding: 10px 6px;
+    padding: 14px 20px;
+    border-radius: 12px;
 }
 /* Slider Ends */
 
