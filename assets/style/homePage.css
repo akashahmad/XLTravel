@@ -17,6 +17,11 @@
   border-radius: 8px;
   transition: 0.2s;
 }
+.header-main .nav-bar ul li a{
+  text-decoration: none;
+  list-style: none;
+  color: white;
+}
 .nav-bar .active {
   background-color: #40d0d3;
 }
@@ -56,6 +61,10 @@
 }
 .search-bar .search-bar-inner .search-icon:hover {
   background-color: #ce9930;
+}
+/* Properties Detail Left Side */
+.properite-detail .progress-detial-left-side{
+  width: 68%;
 }
 /* Home Page Image Slider */
 .properite-image-slider .properite-image-slider-wrapper {
@@ -153,14 +162,11 @@
 .reviews-section .reviews-section-inner {
   width: 45%;
 }
-/* Map Section */
-.map-section .map-section-image {
-  background-image: url("../images/googleMap.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 244px;
-}
+
 /* Right SIde Cards */
+.cards-right{
+  width: 31%;
+}
 .cards-right .hosted-card-second {
   background-image: linear-gradient(#40d0d3, #ffffff);
 }
@@ -169,8 +175,8 @@
   border-right: none;
   border-left: none;
   background-color: transparent;
+  outline: none;
 }
-
 .properite-form ::-webkit-input-placeholder {
   font-size: 10px;
   color: #848280;
@@ -182,7 +188,9 @@
   outline: none;
   border: none;
   width: 86px;
-  padding: 0px 3px;
+  padding: 5px 9px;
+  font-size: 11px;
+  color: grey;
 }
 .properite-form-input-number ::-webkit-input-placeholder {
   padding-left: 10px;
@@ -208,6 +216,9 @@
     width: 127px;
   }
   .search-bar .search-bar-inner .search-icon {
+    width: 100%;
+  }
+  .properite-detail .progress-detial-left-side{
     width: 100%;
   }
   .properite-image-slider .properite-image-slider-wrapper {
@@ -242,6 +253,10 @@
     width: 100%;
     margin: 0 auto;
   }
+  /* Right side cards */
+.cards-right{
+  width: 100%;
+}
   .dropdown-item {
     padding: 0.25rem 0.5rem !important;
   }
@@ -268,10 +283,6 @@
   }
   .properite-form .properite-form-input {
     width: 100%;
-  }
-  /* map section */
-  .map-section .map-section-image {
-    min-height: 110px;
   }
   /* Hamburger  */
   .top-item {

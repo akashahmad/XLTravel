@@ -15,6 +15,11 @@
   cursor: pointer;
   transition: 0.2s;
 }
+.header-main .nav-bar ul li a{
+  text-decoration: none;
+  list-style: none;
+  color: #b2b2b2;
+}
 .header-main .nav-bar ul li:hover {
   transform: scale(1.3);
 }
