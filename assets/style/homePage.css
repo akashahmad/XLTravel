@@ -136,6 +136,9 @@
 .carousel-control-next {
   right: -34px !important;
 }
+.carousel-item .card-body{
+  padding: 10px 6px;
+}
 /* Slider Ends */
 
 /* ProgressBar  */

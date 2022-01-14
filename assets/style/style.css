@@ -185,7 +185,10 @@ color:#848280
 .text-decoration-underline{
   text-decoration: underline;
 }
-
+/* opacity */
+.opacity-1{
+  opacity: 1;
+}
 /* Media Query */
 @media (max-width: 1199px) and (min-width: 320px) {
   .small-yellow-button{
