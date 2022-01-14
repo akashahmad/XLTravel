@@ -101,7 +101,7 @@
   background-image: url("../images/homePageSmallOmageSlider.png");
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 81px;
+  min-height: 119px;
 }
 /* Slider */
 
@@ -196,13 +196,16 @@
 .properite-form-input-number {
   background-color: white;
   border-radius: 10px;
-  width: 86px;
+  width: 95%;
   border: none;
   outline: none;
-  padding: 6px 6px;
+  padding: 6px 14px;
 }
 .properite-form-input-number ::-webkit-input-placeholder {
   padding-left: 10px;
+}
+.properite-form .properite-form-input{
+  width: 100%;
 }
 .form-yellow-button {
   outline: none;
