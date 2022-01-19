@@ -63,6 +63,9 @@
   background-color: #ce9930;
 }
 /* Properties Detail Left Side */
+.properite-detail {
+  padding-bottom: 150px;
+}
 .properite-detail .progress-detial-left-side{
   width: 68%;
 }
