@@ -1868,29 +1868,29 @@ $(function(){
 		var list = $(".b-notes__list");
 		var title = $(".b-app__title");
 
-		$.getJSON("https://dl.dropboxusercontent.com/u/27474693/db.json", function(data) {
+		// $.getJSON("https://dl.dropboxusercontent.com/u/27474693/db.json", function(data) {
 
-			$.each(data.days, function(){
-				var obj = this;
+		// 	$.each(data.days, function(){
+		// 		var obj = this;
 				
-				if(date == obj.day) {
-					var items = obj.data;
+		// 		if(date == obj.day) {
+		// 			var items = obj.data;
 					
-					list.html('');
+		// 			list.html('');
 
-					$.each(items, function(){
-						var html = "<li><span>"+ this.time +"</span>"+this.title+"</li>";
-						list.append(html);
-					});
+		// 			$.each(items, function(){
+		// 				var html = "<li><span>"+ this.time +"</span>"+this.title+"</li>";
+		// 				list.append(html);
+		// 			});
 
-					return false;
-				} else {
-					list.html('');
-				}
+		// 			return false;
+		// 		} else {
+		// 			list.html('');
+		// 		}
 
-				title.html(formatTitle);
-			})
+		// 		title.html(formatTitle);
+		// 	})
 
-		});
+		// });
 	}
 });
