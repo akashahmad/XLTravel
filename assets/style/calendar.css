@@ -1004,8 +1004,9 @@ body {
   background-image: url("../images/icons/right-arrow.png");
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 50px;
   color: transparent !important;
+  min-height: 60px;
+
 }
 tr:first-child th:hover,
 .datepicker tfoot tr th:hover {
