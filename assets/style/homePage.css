@@ -13,11 +13,11 @@
   cursor: pointer;
   color: white;
   font-size: 16px;
-  padding: 7px 10px;
+  padding: 9px 10px;
   border-radius: 8px;
   transition: 0.2s;
 }
-.header-main .nav-bar ul li a{
+.header-main .nav-bar ul li a {
   text-decoration: none;
   list-style: none;
   color: white;
@@ -51,25 +51,29 @@
 }
 .search-bar .search-bar-inner {
   background-color: white;
-  border-radius: 12px;
+  border-radius: 60px;
   box-shadow: 6px 26px 35px 0 rgba(0, 0, 0, 0.04);
 }
 .search-bar .search-bar-inner .search-icon {
-  min-height: 70px;
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 12px;
+  border-radius: 50px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-right: 11px;
 }
 .search-bar .search-bar-inner .search-icon:hover {
   background-color: #ce9930;
+}
+.search-bar .search-bar-inner .search-icon img {
+  padding: 16px 18px;
 }
 /* Properties Detail Left Side */
 .properite-detail {
   padding-bottom: 150px;
 }
-.facalities-icons-main .single-facality{
+.facalities-icons-main .single-facality {
   margin-right: 28px;
 }
-.properite-detail .progress-detial-left-side{
+.properite-detail .progress-detial-left-side {
   width: 68%;
 }
 /* Home Page Image Slider */
@@ -102,6 +106,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 137px;
+  margin-top: 1px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 .image-slider .imageOne-slider {
   background-image: url("../images/homePageSmallOmageSlider.png");
@@ -151,9 +158,9 @@
 .carousel-control-next {
   right: -34px !important;
 }
-.carousel-item .card-body{
-    padding: 14px 20px;
-    border-radius: 12px;
+.carousel-item .card-body {
+  padding: 14px 20px;
+  border-radius: 12px;
 }
 /* Slider Ends */
 
@@ -163,7 +170,7 @@
   width: 80%;
 }
 .properite-progress .progress-bar {
-  background-color: #808080;
+  background-color: #222222;
   opacity: 0.8;
 }
 .reviews-section .reviews-section-inner {
@@ -171,7 +178,7 @@
 }
 
 /* Right SIde Cards */
-.cards-right{
+.cards-right {
   width: 31%;
 }
 .cards-right .hosted-card-second {
@@ -189,7 +196,7 @@
   color: #848280;
   font-weight: 500;
 }
-.select-outer{
+.select-outer {
   border: none;
   background-color: white;
   border-radius: 10px;
@@ -199,18 +206,98 @@
   font-size: 11px;
   color: grey;
 }
+.select-outer select{
+  border: none !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='rgb(182, 182, 182)' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 8px;
+  border-radius: 2px;
+  margin-right: 2rem;
+  padding-right: 2rem;
+}
+
+/* CheckBox */
+.cb-label {
+  display: block;
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.cb-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 19px;
+  width: 19px;
+  background-color: transparent;
+  border: 1.5px solid #ffc044;
+  border-radius: 5px;
+}
+
+/* On mouse-over, add a grey background color */
+
+/* When the checkbox is checked, add a blue background */
+.cb-label input:checked ~ .checkmark {
+  background-color: transparent;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.cb-label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.cb-label .checkmark:after {
+  left: 6px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid black;
+  border-width: 0 1.2px 1.2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* CheckBox End */
+
 .properite-form-input-number {
   background-color: white;
-  border-radius: 10px;
+  border-radius: 13px;
   width: 95%;
   border: none;
   outline: none;
-  padding: 6px 14px;
+  padding: 12px 14px;
 }
 .properite-form-input-number ::-webkit-input-placeholder {
   padding-left: 10px;
 }
-.properite-form .properite-form-input{
+.properite-form .properite-form-input {
   width: 100%;
 }
 .form-yellow-button {
@@ -219,32 +306,36 @@
   border: none;
   border-radius: 9px;
   background-color: #ffc044;
-  padding: 6px 0px;
+  padding: 9px 0px;
   font-size: 14px;
   font-weight: 500;
   transition: transform 0.2s;
 }
-.form-button-button:hover {
+.form-yellow-button:hover {
   transform: scale(1.1);
 }
 
 /* Responsive */
 @media (max-width: 1199px) and (min-width: 320px) {
   .header-logo img {
-    width: 127px;
+    height: 30px;
   }
   .hero-section {
     min-height: 66px;
     position: relative;
     top: 62px;
-}
-.search-bar{
+  }
+  .search-bar {
     top: 51px;
-}
+  }
   .search-bar .search-bar-inner .search-icon {
     width: 100%;
+    margin: 0px 0px;
   }
-  .properite-detail .progress-detial-left-side{
+  .search-bar .search-bar-inner {
+    border-radius: 12px;
+  }
+  .properite-detail .progress-detial-left-side {
     width: 100%;
   }
   .properite-image-slider .properite-image-slider-wrapper {
@@ -280,9 +371,9 @@
     margin: 0 auto;
   }
   /* Right side cards */
-.cards-right{
-  width: 100%;
-}
+  .cards-right {
+    width: 100%;
+  }
   .dropdown-item {
     padding: 0.25rem 0.5rem !important;
   }
@@ -446,7 +537,7 @@
     transition: all 0.25s;
   }
   /* Right Side Form */
-  .properite-form-input-number{
+  .properite-form-input-number {
     width: 119px;
     padding: 9px 9px;
   }

@@ -32,7 +32,7 @@ body p {
   background-color: #ffc044;
   font-weight: 600;
   transition: transform 0.2s;
-  padding: 8px 16px;
+  padding: 12px 16px;
   font-size: 11px;
 }
 .small-yellow-button:hover {
@@ -103,7 +103,7 @@ body p {
   width: 31%;
 }
 .w-39 {
-  width: 39.5%;
+  width: 39.85%;
 }
 .w-48 {
   width: 48%;
@@ -170,6 +170,10 @@ body p {
 /* Rounded Corners */
 .rounded-lg {
   border-radius: 15px;
+}
+.rounded-lg-top {
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
 }
 /* box shadow */
 .box-shadow {
