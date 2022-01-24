@@ -126,6 +126,9 @@ body p {
   margin: 0 auto;
 }
 /* Font Weight */
+.font-weight-700 {
+  font-weight: 700;
+}
 .font-weight-600 {
   font-weight: 600;
 }

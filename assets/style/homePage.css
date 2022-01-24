@@ -4,6 +4,7 @@
   left: 0;
   right: 0;
   top: 0;
+  z-index: 200;
 }
 .header-main .nav-bar ul {
   margin: 0px;
@@ -36,18 +37,26 @@
 }
 /* Hero Section */
 .hero-section {
-  background-image: url("../images/homepageHeroImage.png");
+  background-image: url("../images/rvr-header-bg-03.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  min-height: 249px;
+  min-height: 327px;
   width: 100%;
+}
+.rh_banner__cover{
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 327px;
+  background: rgba(0, 0, 0, 0.5);
 }
 .search-bar {
   position: absolute;
   left: 0;
   right: 0;
-  top: 210px;
+  top: 290px;
 }
 .search-bar .search-bar-inner {
   background-color: white;
@@ -110,11 +119,15 @@
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-.image-slider .imageOne-slider {
-  background-image: url("../images/homePageSmallOmageSlider.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 119px;
+.image-slider .image-slider-hero img{
+  height: 110px;
+  border-radius: 12px;
+  opacity: 0.7;
+  transition:  0.2s ease-in-out;
+  cursor: pointer;
+}
+.image-slider .image-slider-hero img:hover{
+ opacity: 1;
 }
 /* Slider */
 
@@ -166,7 +179,7 @@
 
 /* ProgressBar  */
 .properite-progress .progress {
-  height: 5px;
+  height: 4px;
   width: 80%;
 }
 .properite-progress .progress-bar {
@@ -203,23 +216,48 @@
   outline: none;
   border: none;
   padding: 0px 0px;
-  font-size: 11px;
-  color: grey;
 }
-.select-outer select{
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
+  width: 100% !important;
+}
+.properite-form-input-number{
+  padding: 2px 7px !important;
+  outline: none !important;
+}
+.btn-light:not(:disabled):not(.disabled).active, .btn-light:not(:disabled):not(.disabled):active, .show>.btn-light.dropdown-toggle{
+  background-color: transparent !important;
   border: none !important;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background: transparent;
-  background-image: url("data:image/svg+xml;utf8,<svg fill='rgb(182, 182, 182)' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
-  background-repeat: no-repeat;
-  background-position-x: 100%;
-  background-position-y: 8px;
-  border-radius: 2px;
-  margin-right: 2rem;
-  padding-right: 2rem;
+  outline: none !important;
 }
-
+.bootstrap-select .dropdown-menu.inner{
+  background-color: #40d0d3;
+}
+.dropdown-item.active, .dropdown-item:active{
+  background-color: #36afb1 !important;
+}
+.dropdown-adult-children .dropdown-menu{
+  padding: 0px 0px;
+  min-height: 70px !important;
+  transform: translate3d(0px, 33px, 0px) !important;
+}
+.dropdown-adult-children .dropdown-menu .inner{
+  transform: unset !important;
+}
+.dropdown-adult-children .btn-light{
+  background-color: transparent !important;
+  outline: none;
+  border: none !important;
+}
+.dropdown-adult-children .dropdown-menu ul li a{
+font-size: 13px;
+}
+.dropdown-adult-children .dropdown-menu a:hover{
+  background-color:#36afb1 !important; ;
+}
+.btn:not(:disabled):not(.disabled){
+  font-size: 13px;
+  color: #808080;
+}
 /* CheckBox */
 .cb-label {
   display: block;
@@ -325,6 +363,9 @@
     position: relative;
     top: 62px;
   }
+  .rh_banner__cover{
+    height: 66px;
+  }
   .search-bar {
     top: 51px;
   }
@@ -339,7 +380,7 @@
     width: 100%;
   }
   .properite-image-slider .properite-image-slider-wrapper {
-    padding-top: 356px;
+    padding-top: 283px;
     width: 100%;
     margin: 0 auto;
     padding-right: 30px;
@@ -363,8 +404,9 @@
   .properite-image-collage .properite-collage-four-image {
     min-height: 60px;
   }
-  .image-slider .imageOne-slider {
-    min-height: 31px;
+  .image-slider .image-slider-hero img{ 
+    height: 32px;
+    border-radius: 7px;
   }
   .properite-detail .properite-detail-wrapper {
     width: 100%;
