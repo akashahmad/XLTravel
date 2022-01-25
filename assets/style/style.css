@@ -11,7 +11,6 @@ body p {
 }
 /* Common Classes */
 .yellow-button {
-  outline: none;
   cursor: pointer;
   border: none;
   border-radius: 9px;
@@ -19,7 +18,11 @@ body p {
   padding: 9px 19px;
   font-size: 14px;
   font-weight: 500;
+  outline: none;
   transition: transform 0.2s;
+}
+.yellow-button:focus{
+  outline: none !important;
 }
 .yellow-button:hover {
   transform: scale(1.1);
@@ -28,6 +31,7 @@ body p {
   outline: none;
   cursor: pointer;
   border: none;
+  outline: none;
   border-radius: 9px;
   background-color: #ffc044;
   font-weight: 600;
@@ -35,10 +39,14 @@ body p {
   padding: 12px 16px;
   font-size: 11px;
 }
+.small-yellow-button:focus{
+  outline: none !important;
+}
 .small-yellow-button:hover {
   transform: scale(1.1);
 }
 .tealish-button {
+  outline: none;
   color: white;
   outline: none;
   cursor: pointer;
@@ -53,10 +61,14 @@ body p {
 .tealish-button:hover {
   transform: scale(1.1);
 }
+.tealish-button:focus{
+  outline: none !important;
+}
 .read-more-button {
   font-size: 9px;
   text-decoration: underline;
   cursor: pointer;
+  outline: none;
 }
 .read-more-button:hover {
   text-decoration: unset;
