@@ -219,5 +219,6 @@ body p {
 @media (max-width: 1199px) and (min-width: 320px) {
   .small-yellow-button {
     font-size: 8px;
+    padding: 5px 10px;
   }
 }

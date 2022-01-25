@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/style/style.css" />
-    <link rel="stylesheet" href="./assets/style/homePage.css" />
+    <link rel="stylesheet" href="./assets/style/propertyDetail.css" />
     <link rel="stylesheet" href="./assets/style/calendar.css" />
     <link
       rel="stylesheet"
@@ -1385,7 +1385,7 @@
             <!-- calendar End-->
             <!-- Banner -->
             <div
-              class="Banner d-flex flex-column flex-lg-row justify-content-between align-items-center box-shadow rounded py-1 px-2 my-3"
+              class="Banner d-flex flex-column flex-lg-row justify-content-between align-items-lg-center box-shadow rounded py-1 px-2 my-3"
             >
               <div class="d-flex align-items-center">
                 <img
@@ -1408,8 +1408,8 @@
             </div>
             <!-- Banner Ends -->
             <!-- Rules -->
-            <div class="rules d-flex">
-              <div class="col-7 p-0">
+            <div class="rules d-flex flex-column flex-lg-row">
+              <div class="col-12 col-lg-7 p-0">
                 <div class="mt-4">
                   <p class="font-weight-bold font-size-11">Property Rules</p>
                 </div>
@@ -1476,7 +1476,7 @@
                   </p>
                 </div>
               </div>
-              <div class="col-5">
+              <div class="col-12 col-lg-5 px-0">
                 <div class="mt-4">
                   <p class="font-weight-bold font-size-11">Health & Safety</p>
                 </div>
@@ -1917,7 +1917,6 @@
               <iframe
                 class="rounded"
                 width="100%"
-                height="375"
                 src="https://www.youtube.com/embed/Tq8RBFS8OqI"
                 title="YouTube video player"
                 frameborder="0"
@@ -1934,7 +1933,6 @@
                 class="rounded"
                 src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319"
                 width="100%"
-                height="375"
                 frameborder="0"
                 style="border: 0"
               ></iframe>
@@ -1965,9 +1963,9 @@
                   </div>
                 </div>
                 <div
-                  class="property-surroundings-property-list d-flex justify-content-between mt-4"
+                  class="property-surroundings-property-list d-flex flex-column flex-lg-row justify-content-between mt-4"
                 >
-                  <div class="w-48">
+                  <div class="property-surrounding-list">
                     <div class="nearby">
                       <div class="d-flex align-items-center">
                         <img
@@ -2151,7 +2149,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="w-48">
+                  <div class="property-surrounding-list">
                     <div class="attractions">
                       <div class="d-flex align-items-center">
                         <img
@@ -2550,7 +2548,9 @@
                           >Adults</label
                         ><br />
                         <div class="select-outer">
-                          <select class="selectpicker properite-form-input-number" >
+                          <select
+                            class="selectpicker properite-form-input-number"
+                          >
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -2675,7 +2675,7 @@
         }
       });
     </script>
-    <script src="./calender.js"></script>    
+    <script src="./calender.js"></script>
     <!-- Carousel Script End-->
   </body>
 </html>

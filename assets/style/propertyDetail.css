@@ -195,7 +195,13 @@
 .reviews-section .reviews-section-inner {
   width: 45%;
 }
-
+/* video secion */
+.video-section iframe{
+  height:375px;
+}
+.map-section iframe{
+  height:375px;
+}
 /* Right SIde Cards */
 .cards-right {
   width: 31%;
@@ -375,6 +381,10 @@
 outline: none !important;
 }
 
+.property-surrounding-list{
+  width: 47%;
+  margin: 0 auto;
+}
 /* Responsive */
 @media (max-width: 1199px) and (min-width: 320px) {
   .header-logo img {
@@ -436,6 +446,12 @@ outline: none !important;
   .properite-detail .properite-detail-wrapper {
     width: 100%;
     margin: 0 auto;
+  }
+  .video-section iframe{
+    height:200px;
+  }
+  .map-section iframe{
+    height:200px;
   }
   /* Right side cards */
   .cards-right {
@@ -607,6 +623,9 @@ outline: none !important;
   .properite-form-input-number {
     width: 119px;
     padding: 9px 9px;
+  }
+  .property-surrounding-list{
+    width: 100%;
   }
   /* Carousel */
   .carousel-control-next {
