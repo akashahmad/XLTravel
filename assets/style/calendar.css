@@ -1,21 +1,21 @@
 /* Calendar Css */
 .gray-dot {
-  height: 5px;
-  width: 5px;
+  height:9px;
+  width: 9px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
 }
 .blue-dot {
-  height: 5px;
-  width: 5px;
+  height: 9px;
+  width: 9px;
   background-color: #40d0d3;
   border-radius: 50%;
   display: inline-block;
 }
 .red-dot {
-  height: 5px;
-  width: 5px;
+  height: 9px;
+  width: 9px;
   background-color: #ff0034;
   border-radius: 50%;
   display: inline-block;
@@ -1030,8 +1030,12 @@ tr:first-child th:hover,
   background-color: #f6f6f6f6;
   border-radius: 12px;
 }
+#calendar-three {
+  background-color: #f6f6f6f6;
+  border-radius: 12px;
+}
 .calendar {
-  width: 48%;
+  width:32%;
 }
 @media (max-width: 1199px) and (min-width: 320px) {
   .calendar {
