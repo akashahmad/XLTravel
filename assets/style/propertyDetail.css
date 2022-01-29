@@ -152,6 +152,13 @@ padding: 0px;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 399px;
+
+}
+.property-image-collage .image-collage-hover{
+  transition: transform 0.2s;
+}
+.property-image-collage .image-collage-hover:hover{
+  transform: scale(1.02);
 }
 .property-image-collage .property-collage-second-image {
   background-image: url("../images/second-image.png");
@@ -497,6 +504,9 @@ outline: none !important;
   .search-bar .search-bar-inner .search-icon {
     border-radius: unset;
   }
+  .search-bar{
+    margin-top:70px;
+  }
   .property-detail .property-detail-wrapper {
     width: 100%;
     margin: 0 auto;
@@ -567,7 +577,7 @@ outline: none !important;
     width: 100%;
     height: 100%;
     position: fixed;
-    top: 38px;
+    top: 78px;
     left: 0;
     width: 100%;
     transform: translateX(100%);
