@@ -126,23 +126,22 @@
 }
 .lg-sub-html {
   background-color: white;
-  color: black !important;
+  color: black;
   width: 258px;
-  height: 68%;
+  height: 68vh;
   border-radius: 12px;
-  color: rgb(238, 238, 238);
   font-size: 16px;
   padding: 7px 37px;
-  position: fixed;
+  position: absolute !important;
   left: unset !important;
-  right: 125px !important;
+  right: 10px !important;
   text-align: center;
+  top: 100px;
   z-index: 1080;
-  top: 96px !important;
 }
 .lg-outer.lg-pull-caption-up.lg-thumb-open .lg-sub-html {
   bottom: unset !important;
-}
+} 
 .lg-backdrop {
   background-color: rgba(0, 0, 0, 0.836);
 }
