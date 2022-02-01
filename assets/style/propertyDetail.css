@@ -156,6 +156,9 @@ header {
   opacity: 0.9;
   color: #40d0d3;
 }
+.propery-page-listing li img {
+  margin-top: 3px;
+}
 /* Home Page Image Slider */
 .property-image-slider .property-image-slider-wrapper {
   padding-top: 45px;

@@ -141,7 +141,7 @@
 }
 .lg-outer.lg-pull-caption-up.lg-thumb-open .lg-sub-html {
   bottom: unset !important;
-} 
+}
 .lg-backdrop {
   background-color: rgba(0, 0, 0, 0.836);
 }
@@ -162,7 +162,7 @@
   .lg-img-wrap {
   transform: translate3d(-148px, 0px, 0px) !important;
 } */
-.lg-outer .lg-img-wrap:before{
+.lg-outer .lg-img-wrap:before {
   margin-right: -298px !important;
 }
 .lg-actions .lg-next {
@@ -180,6 +180,6 @@
 .lg-outer.lg-visible {
   background-color: rgba(0, 0, 0, 0.39);
 }
-.lg-inner{
+.lg-inner {
   transition-duration: 800ms !important;
 }
