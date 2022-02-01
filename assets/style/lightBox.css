@@ -157,10 +157,13 @@
 .lg-outer .lg-thumb-outer {
   background-color: transparent !important;
 }
-.lg-outer.lg-use-transition-for-zoom
+/* .lg-outer.lg-use-transition-for-zoom
   .lg-item.lg-complete.lg-zoomable
   .lg-img-wrap {
   transform: translate3d(-148px, 0px, 0px) !important;
+} */
+.lg-outer .lg-img-wrap:before{
+  margin-right: -298px !important;
 }
 .lg-actions .lg-next {
   right: 310px !important;
@@ -176,4 +179,7 @@
 }
 .lg-outer.lg-visible {
   background-color: rgba(0, 0, 0, 0.39);
+}
+.lg-inner{
+  transition-duration: 800ms !important;
 }
