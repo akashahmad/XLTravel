@@ -1841,6 +1841,21 @@ $(function(){
 		}
 
 	});
+	$("#calendar-mobile").datepicker({
+		todayHighlight: true,
+		weekStart: 1
+	}).on({
+
+		'changeDate': function(e) {
+
+			if(typeof(e.date) == "undefined") return false;
+
+			var milliseconds = Date.parse(e.date);
+
+			setCelendarDay(milliseconds);
+		}
+
+	});
     $("#calendar-two").datepicker({
 		todayHighlight: true,
 		weekStart: 1

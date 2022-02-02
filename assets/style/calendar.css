@@ -1026,6 +1026,10 @@ tr:first-child th:hover,
   background-color: #f6f6f6f6;
   border-radius: 12px;
 }
+#calendar-mobile{
+  background-color: #f6f6f6f6;
+  border-radius: 12px;
+}
 #calendar-two {
   background-color: #f6f6f6f6;
   border-radius: 12px;
@@ -1043,6 +1047,10 @@ tr:first-child th:hover,
   }
   .table-condensed .prev {
     right: 84px;
+  }
+  .calendar-text-past div{
+  font-size: 14px !important;
+  margin-right: 12px;
   }
 }
 /* Calendar Css Ends */
