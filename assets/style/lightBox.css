@@ -183,3 +183,18 @@
 .lg-inner {
   transition-duration: 800ms !important;
 }
+.lg-toolbar .lg-autoplay-button{
+  display: none;
+}
+.lg-toolbar .lg-fullscreen{
+display: none;
+}
+.lg-toolbar .lg-download{
+  display: none;
+}
+.lg-toolbar #lg-zoom-out{
+  display: none;
+}
+.lg-toolbar #lg-actual-size{
+display: none;
+}

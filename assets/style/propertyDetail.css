@@ -484,7 +484,7 @@ header {
     z-index: 9999;
     margin: 0px;
   }
-  .property-detail-left-side .country-detail{
+  .property-detail-left-side .country-detail {
     font-size: 12px;
   }
   .rating-hero-section {
@@ -493,17 +493,17 @@ header {
     position: relative;
     top: -28px;
   }
-  .swiper-slide .single-comment{
+  .swiper-slide .single-comment {
     border-radius: 12px;
-    border: 1px solid rgba(0,0,0,.125);
+    border: 1px solid rgba(0, 0, 0, 0.125);
     margin-left: 3px;
-    }
-    .rooms-slider{
-     width: 100% !important;
-    }
-    .reviews-button button{
-      width: 100%;
-    }
+  }
+  .rooms-slider {
+    width: 100% !important;
+  }
+  .reviews-button button {
+    width: 100%;
+  }
   .property-image-collage .property-collage-first-image {
     min-height: 231px;
   }
@@ -526,7 +526,7 @@ header {
   .property-detail .progress-detial-left-side {
     width: 100%;
   }
-  .property-image-slider{
+  .property-image-slider {
     overflow: hidden;
   }
   .property-image-slider .property-image-slider-wrapper {
@@ -638,19 +638,29 @@ header {
   .cards-right .hosted-card .host-name {
     font-size: 14px;
   }
-  .cards-right .hosted-card .join-date{
+  .cards-right .hosted-card .join-date {
     font-size: 13px;
   }
-  .cards-right .hosted-card .response-time{ 
+  .cards-right .hosted-card .response-time {
     font-size: 13px;
     font-weight: 500;
+  }
+  .reservation-header{
+    position: sticky;
+    top: 0;
+  }
+  .reserve-form-mobile{
+    display: none;
+  }
+  .reserve-card-mobile{
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    overflow-y: scroll;
   }
   .calendar {
     width: 100%;
   }
-  /* .rules p {
-    font-size: 8px !important;
-  } */
   .property-facalities p {
     font-size: 8px !important;
   }
@@ -680,12 +690,12 @@ header {
   .header-main {
     background-color: white;
   }
-  .Price-form-mobile{
+  .Price-form-mobile {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 9999;
+    z-index: 100;
   }
   header {
     margin: 0;
@@ -832,6 +842,148 @@ header {
   .carousel-control-next {
     right: -17px !important;
   }
+  /* mobile carousel hero section */
+  /* Position the image container (needed to position the left and right arrows) */
+  .mobile-carousel-hero-section {
+    position: relative;
+  }
+
+  /* Hide the images by default */
+  .mobile-carousel-hero-section .mySlides {
+    display: none;
+  }
+
+  /* Add a pointer when hovering over the thumbnail images */
+  .mobile-carousel-hero-section .cursor {
+    cursor: pointer;
+  }
+
+  /* Next & previous buttons */
+  .mobile-carousel-hero-section .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white !important;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* Position the "next button" to the right */
+  .mobile-carousel-hero-section .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .mobile-carousel-hero-section .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  /* Number text (1/3 etc) */
+  .mobile-carousel-hero-section .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #505050ab;
+    border-radius: 11px;
+  }
+
+  /* Container for image text */
+  .mobile-carousel-hero-section .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+
+  .mobile-carousel-hero-section .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Six columns side by side */
+  .mobile-carousel-hero-section .column {
+    float: left;
+    width: 16.66%;
+  }
+
+  /* Add a transparency effect for thumnbail images */
+  .mobile-carousel-hero-section .demo {
+    opacity: 0.6;
+  }
+
+  .mobile-carousel-hero-section .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  
+  .image-gallery-mobile .grid-container {
+    display: grid;
+    grid-gap: 5px;
+    padding: 5px;
+  }
+  
+  .image-gallery-mobile .grid-item {
+    text-align: center;
+    font-size: 30px;
+  }
+  
+  .image-gallery-mobile .item1 {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+  
+  .image-gallery-mobile .item2 {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+  }
+  
+  .image-gallery-mobile .item5 {
+    grid-column: 1 / span 3;
+    grid-row: 3;
+  }
+  .image-gallery-mobile{
+    position: fixed;
+    inset: 0;
+    top: 50px;
+    overflow-y: scroll;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 99;
+    z-index: 450;
+  }
+  .modal-body{
+    padding: 0px !important;
+  }
+  .modal-dialog .modal-content{
+    top: 140px !important;
+  }
+  #image-gallery-carousel{
+display: none;
+  }
+  .image-gallery-mobile .gallery-header{
+    background-color: white;
+    min-height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 110;
+  }
+  .image-gallery-mobile .img-thumbnail{
+    border: none !important;
+    background-color: transparent !important;
+  }
 }
 /* Swipper */
 .swiper-container {
@@ -861,4 +1013,20 @@ header {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+}
+/* Testing Gallery */
+.btn:focus,
+.btn:active,
+button:focus,
+button:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+#image-gallery .modal-footer {
+  display: block;
+}
+
+.thumb {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
