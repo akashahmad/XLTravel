@@ -357,6 +357,7 @@ header {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  font-weight: 100;
 }
 
 /* Hide the browser's default checkbox */
