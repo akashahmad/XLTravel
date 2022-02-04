@@ -273,12 +273,111 @@ body p {
 .text-decoration-underline {
   text-decoration: underline;
 }
+/* Search Box */
 
+.search-box a {
+  text-decoration: none;
+}
+.search-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 50px;
+  padding: 3px 5px;
+  width: 18%;
+  transition: width 0.2s;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.11);
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.search-btn {
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #ffc044 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+  border: none;
+}
+
+.search-input {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: black;
+  font-size: 20px;
+  transition: 0.4s;
+  line-height: 50px;
+}
+.search-bar .bootstrap-select > .dropdown-toggle.bs-placeholder,
+.bootstrap-select > .dropdown-toggle.bs-placeholder:active,
+.bootstrap-select > .dropdown-toggle.bs-placeholder:focus,
+.bootstrap-select > .dropdown-toggle.bs-placeholder:hover {
+  font-size: 9px !important;
+  padding: 0px !important;
+}
+.search-bar .bootstrap-select .dropdown-toggle .filter-option{
+  font-size: 9px !important;
+}
+.search-bar .bootstrap-select .dropdown-toggle .filter-option {
+  text-align: center;
+}
+.search-bar .dropdown-toggle::after {
+  display: none;
+}
+.search-bar .bootstrap-select .dropdown-menu{
+  padding: 0px;
+}
+.search-bar .btn:not(:disabled):not(.disabled){
+  padding: 0px !important;
+}
+.search-box .search-box-single-element {
+  width: 30%;
+}
+#search-bar-inner-elements {
+  width: 100%;
+  display: none;
+  transition: display 0.3s;
+}
+.search-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.search-box .search-lable {
+  font-weight: 500;
+  font-size: 13px;
+}
+.search-box input,
+input::-webkit-input-placeholder {
+  font-size: 9px;
+  text-align: center;
+}
+
+.search-box:hover .search-bar-inner {
+  display: block;
+}
+.search-bar-inner span{
+  font-size: 9px;
+  color: #999;
+}
 /* Media Query */
 @media (max-width: 1199px) and (min-width: 320px) {
   .small-yellow-button {
     font-size: 14px;
-    padding:10px 0px;
+    padding: 10px 0px;
     width: 100%;
   }
   .yellow-button-fix-width {
@@ -310,5 +409,13 @@ body p {
   }
   .font-size-10 {
     font-size: 13px;
+  }
+  .search-box {
+    width: 92% !important;
+    padding: 4px 6px;
+  }
+  .search-btn {
+    width: 37px;
+    height: 37px;
   }
 }

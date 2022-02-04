@@ -57,11 +57,6 @@ header {
 .search-bar {
   margin-top: 40px;
 }
-.search-bar .search-bar-inner {
-  background-color: white;
-  border-radius: 60px;
-  box-shadow: 6px 26px 35px 0 rgba(0, 0, 0, 0.04);
-}
 .search-bar .search-bar-inner .search-border-inner {
   width: 29%;
   height: 34px;
@@ -161,7 +156,7 @@ header {
 }
 /* Home Page Image Slider */
 .property-image-slider .property-image-slider-wrapper {
-  padding-top: 45px;
+  padding-top: 100px;
   width: 90%;
   margin: 0 auto;
 }
@@ -475,15 +470,7 @@ header {
   .rh_banner__cover {
     height: 66px;
   }
-  .search-bar {
-    display: none;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 60px;
-    z-index: 9999;
-    margin: 0px;
-  }
+
   .property-detail-left-side .country-detail {
     font-size: 12px;
   }
@@ -533,7 +520,7 @@ header {
     width: 100%;
     margin: 0 auto;
     margin-top: 0px;
-    padding-top: 0px;
+    padding-top: 55px;
   }
   .search-bar-inner .search-border-inner {
     border-right: none !important;
@@ -544,11 +531,6 @@ header {
   .search-bar .search-bar-inner .search-icon {
     border-radius: 12px;
     margin: 15px 0px;
-  }
-  .search-bar .search-bar-inner {
-    width: 86%;
-    margin: 0 auto;
-    padding: 20px 0px;
   }
   .search-bar
     .search-bar-inner
@@ -645,14 +627,14 @@ header {
     font-size: 13px;
     font-weight: 500;
   }
-  .reservation-header{
+  .reservation-header {
     position: sticky;
     top: 0;
   }
-  .reserve-form-mobile{
+  .reserve-form-mobile {
     display: none;
   }
-  .reserve-card-mobile{
+  .reserve-card-mobile {
     position: fixed;
     inset: 0;
     z-index: 200;
@@ -843,118 +825,54 @@ header {
     right: -17px !important;
   }
   /* mobile carousel hero section */
-  /* Position the image container (needed to position the left and right arrows) */
-  .mobile-carousel-hero-section {
-    position: relative;
+  .swiper-container-hero-section .swiper-wrapper {
+    height: unset !important;
   }
-
-  /* Hide the images by default */
-  .mobile-carousel-hero-section .mySlides {
-    display: none;
+  .swiper-container-hero-section .swiper-button-next, .swiper-button-prev{
+    top: 48% !important;
+    height: 19px !important;
   }
-
-  /* Add a pointer when hovering over the thumbnail images */
-  .mobile-carousel-hero-section .cursor {
-    cursor: pointer;
   }
-
-  /* Next & previous buttons */
-  .mobile-carousel-hero-section .prev,
-  .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white !important;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-  }
-
-  /* Position the "next button" to the right */
-  .mobile-carousel-hero-section .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-
-  /* On hover, add a black background color with a little bit see-through */
-  .mobile-carousel-hero-section .prev:hover,
-  .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-
-  /* Number text (1/3 etc) */
-  .mobile-carousel-hero-section .numbertext {
-    color: #f2f2f2;
+  .swiper-container-hero-section .numbertext {
+    color: black;
     font-size: 12px;
     padding: 8px 12px;
     position: absolute;
-    bottom: 10px;
-    right: 10px;
-    background-color: #505050ab;
-    border-radius: 11px;
+    bottom: 6px;
+    right: 9px;
+    background-color: rgba(8, 5, 5, 0.486);
+    border-radius: 15px;
   }
-
-  /* Container for image text */
-  .mobile-carousel-hero-section .caption-container {
-    text-align: center;
-    background-color: #222;
-    padding: 2px 16px;
-    color: white;
+  .swiper-container-hero-section .swiper-slide {
+    width: 100% !important;
+    margin: 0px !important;
   }
-
-  .mobile-carousel-hero-section .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-  /* Six columns side by side */
-  .mobile-carousel-hero-section .column {
-    float: left;
-    width: 16.66%;
-  }
-
-  /* Add a transparency effect for thumnbail images */
-  .mobile-carousel-hero-section .demo {
-    opacity: 0.6;
-  }
-
-  .mobile-carousel-hero-section .active,
-  .demo:hover {
-    opacity: 1;
-  }
-  
   .image-gallery-mobile .grid-container {
     display: grid;
     grid-gap: 5px;
     padding: 5px;
   }
-  
+
   .image-gallery-mobile .grid-item {
     text-align: center;
     font-size: 30px;
   }
-  
+
   .image-gallery-mobile .item1 {
     grid-column: 1 / span 2;
     grid-row: 1;
   }
-  
+
   .image-gallery-mobile .item2 {
     grid-column: 3;
     grid-row: 1 / span 2;
   }
-  
+
   .image-gallery-mobile .item5 {
     grid-column: 1 / span 3;
     grid-row: 3;
   }
-  .image-gallery-mobile{
+  .image-gallery-mobile {
     position: fixed;
     inset: 0;
     top: 50px;
@@ -963,16 +881,16 @@ header {
     z-index: 99;
     z-index: 450;
   }
-  .modal-body{
+  .modal-body {
     padding: 0px !important;
   }
-  .modal-dialog .modal-content{
+  .modal-dialog .modal-content {
     top: 140px !important;
   }
-  #image-gallery-carousel{
-display: none;
+  #image-gallery-carousel {
+    display: none;
   }
-  .image-gallery-mobile .gallery-header{
+  .image-gallery-mobile .gallery-header {
     background-color: white;
     min-height: 50px;
     width: 100%;
@@ -980,11 +898,10 @@ display: none;
     top: 0;
     z-index: 110;
   }
-  .image-gallery-mobile .img-thumbnail{
+  .image-gallery-mobile .img-thumbnail {
     border: none !important;
     background-color: transparent !important;
   }
-}
 /* Swipper */
 .swiper-container {
   width: 100%;

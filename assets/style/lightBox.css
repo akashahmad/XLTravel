@@ -145,7 +145,7 @@
   top: 15.4%;
 }
 .lg-outer .lg-item.lg-complete.lg-zoomable .lg-image{
-  height: 68vh  0.3s ease 0s  !important ;
+  height: 68vh !important ;
 }
 .lg-backdrop {
   background-color: rgba(0, 0, 0, 0.836);
