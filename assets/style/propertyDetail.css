@@ -899,9 +899,10 @@ header {
     top: 0;
     z-index: 110;
   }
-  .image-gallery-mobile .img-thumbnail {
+  .image-gallery-mobile .thumbnail {
     border: none !important;
     background-color: transparent !important;
+    margin-bottom: 0px !important;
   }
 /* Swipper */
 .swiper-container {

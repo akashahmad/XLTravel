@@ -13,7 +13,6 @@ var options = {
 	opens: "right"
 };
 
-
 	$('[data-datepicker=separateRange]')
 		.daterangepicker(options)
 		.on('apply.daterangepicker' ,function(ev, picker) {
