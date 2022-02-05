@@ -18,7 +18,7 @@ var options = {
 		.on('apply.daterangepicker' ,function(ev, picker) {
 			var boolStart = this.name.match(/value_from_start_/g) == null ? false : true;
 			var boolEnd = this.name.match(/value_from_end_/g) == null ? false : true;
-
+			
 			var mainName = this.name.replace('value_from_start_', '');
 			if(boolEnd) {
 				mainName = this.name.replace('value_from_end_', '');
@@ -37,10 +37,8 @@ var options = {
 			if(boolEnd) {
 				mainName = this.name.replace('value_from_end_', '');
 			}
-
 			var startDate = $(this).closest('form').find('[name=value_from_start_'+ mainName +']').val();
 			var endDate = $(this).closest('form').find('[name=value_from_end_'+ mainName +']').val();
-
 			$('[name=daterangepicker_start]').val(startDate).trigger('change').trigger('keyup');
 			$('[name=daterangepicker_end]').val(endDate).trigger('change').trigger('keyup');
 			

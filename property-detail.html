@@ -7,6 +7,7 @@
 <!------ Include the above in your HEAD tag ---------->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,10 +40,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css" rel="stylesheet" />
   <!-- Date Picker -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/2.1.24/daterangepicker.min.css" rel="stylesheet"/>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/2.1.24/moment.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/2.1.24/daterangepicker.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/2.1.24/daterangepicker.min.css"
+    rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/2.1.24/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/2.1.24/daterangepicker.min.js"></script>
   <title>Property Detail</title>
 </head>
 
@@ -113,31 +115,37 @@
   </header>
   <!-- Header End -->
   <section class="hero-section">
-    <div class="position-relative">
-      <form class="search-bar container-main">
+    <div 
+    data-aos="fade-down"
+    data-aos-easing="linear"
+    data-aos-duration="600" class="position-relative">
+      <form class="search-bar container-main"
+        id="outside-click-search-bar">
         <div class="search-box my-4 cursor-pointer" id="search-box-inner" onclick="ShowSearchBar()">
           <p class="search-text pl-3" id="search-text-property-detail">Search</p>
           <div class="search-bar-inner" id="search-bar-inner-elements">
             <div class="d-flex">
-          <div class="search-box-single-element border-right py-2 text-center d-flex flex-column">
-            <p class="search-lable">Location</p>
-              <select class="selectpicker" title="Where are you going?">
-                <option>Chaicago</option>
-                <option>Algeria</option>
-                <option>Egypt</option>
-                <option>France</option>
-              </select>
-            </div>
-          <div class="search-box-single-element border-right py-2 text-center d-flex flex-column">
-            <p class="search-lable">Check in</p>
-            <input class="cursor-pointer" placeholder="Add Date" type="text" name="value_from_start_date" data-datepicker="separateRange"/>
-          </div>
-          <div class="search-box-single-element border-right py-2 text-center d-flex flex-column">
-            <p class="search-lable">Check out</p>
-            <input class="cursor-pointer "placeholder="Add Date"  type="text" name="value_from_end_date" data-datepicker="separateRange"/>
-          </div>
-            <div class="search-box-single-element py-2 text-center d-flex flex-column">
-              <p class="search-lable">Guests</p>
+              <div class="search-box-single-element border-right py-2 text-center d-flex flex-column">
+                <p class="search-lable">Location</p>
+                <select class="selectpicker" title="Add Guest">
+                  <option>Afghanistan</option>
+                  <option>Miami</option>
+                  <option>Malta</option>
+                  <option>Spain</option>
+                </select>
+              </div>
+              <div class="search-box-single-element border-right py-2 text-center d-flex flex-column">
+                <p class="search-lable">Check in</p>
+                <input class="cursor-pointer" placeholder="Add Date" type="text" name="value_from_start_date"
+                  data-datepicker="separateRange" />
+              </div>
+              <div class="search-box-single-element border-right py-2 text-center d-flex flex-column">
+                <p class="search-lable">Check out</p>
+                <input class="cursor-pointer " placeholder="Add Date" type="text" name="value_from_end_date"
+                  data-datepicker="separateRange" />
+              </div>
+              <div class="search-box-single-element py-2 text-center d-flex flex-column">
+                <p class="search-lable">Guests</p>
                 <select class="selectpicker" title="Add Guest">
                   <option>1 Guest</option>
                   <option>2 Guests</option>
@@ -145,12 +153,20 @@
                   <option>4 Guests</option>
                 </select>
               </div>
+            </div>
           </div>
-      </div>
           <button class="search-btn cursor-pointer">
             <!-- <img style="height:19px;" src="./assets/images/icons/search.png" alt="search" /> -->
-                <svg class="svg-icon search-icon" fill="#000000"aria-labelledby="title desc" height="20px" width="20px" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc"></desc><g class="search-path" fill="none" stroke="#000000"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg>
-          </button>   
+            <svg class="svg-icon search-icon" fill="#000000" aria-labelledby="title desc" height="20px" width="20px"
+              role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7">
+              <title id="title">Search Icon</title>
+              <desc id="desc"></desc>
+              <g class="search-path" fill="none" stroke="#000000">
+                <path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4" />
+                <circle cx="8" cy="8" r="7" />
+              </g>
+            </svg>
+          </button>
         </div>
       </form>
     </div>
@@ -242,7 +258,12 @@
           </div>
         </div>
       </div>
-      <div class="demo-gallery property-image-collage mt-3 mt-lg-4 d-none d-lg-block">
+      <div
+      data-aos="zoom-in"
+     data-aos-easing="linear"
+     data-aos-duration="600"
+     
+        class="demo-gallery property-image-collage mt-3 mt-lg-4 d-none d-lg-block">
         <div class="grid-container list-unstyled" id="lightgallery">
           <div class="item1 property-collage-first-image image-collage-hover cursor-pointer"
             data-responsive="./assets/images/imageOneCarousel.png" data-src="./assets/images/imageOneCarousel.png"
@@ -346,19 +367,19 @@
         <div class="swiper-wrapper" onclick="showImageGallery()">
           <div class="swiper-slide">
             <!-- <div class="numbertext">1 / 4</div> -->
-            <img style="height: 250px; width: 100%;" src="./assets/images/imageOneCarousel.png"/>
+            <img style="height: 250px; width: 100%;" src="./assets/images/imageOneCarousel.png" />
           </div>
           <div class="swiper-slide">
             <!-- <div class="numbertext">2 / 4</div> -->
-            <img style="height: 250px; width: 100%;" src="./assets/images/second-image.png"/>
+            <img style="height: 250px; width: 100%;" src="./assets/images/second-image.png" />
           </div>
           <div class="swiper-slide">
             <!-- <div class="numbertext">3 / 4</div> -->
-            <img style="height: 250px; width: 100%;" src="./assets/images/third-image.png"/>
+            <img style="height: 250px; width: 100%;" src="./assets/images/third-image.png" />
           </div>
           <div class="swiper-slide">
             <!-- <div class="numbertext">4 / 4</div> -->
-            <img style="height: 250px; width: 100%;" src="./assets/images/fourth-image.png"/>
+            <img style="height: 250px; width: 100%;" src="./assets/images/fourth-image.png" />
           </div>
         </div>
 
@@ -373,7 +394,11 @@
   <section class="modern-and-luxury-appartment property-detail container-main mt-4">
     <div class="property-detail-wrapper">
       <div class="d-flex flex-column flex-lg-row justify-content-between px-3 px-lg-0">
-        <div class="progress-detial-left-side rounded-lg bg-white box-shadow px-3 pt-3">
+        <div
+        data-aos="fade-right"
+     data-aos-easing="linear"
+     data-aos-duration="700"
+          class="progress-detial-left-side rounded-lg bg-white box-shadow px-3 pt-3">
           <div class="d-flex flex-column flex-lg-row justify-content-between border-bottom pb-3">
             <div class="property-detail-left-side">
               <div>
@@ -1928,7 +1953,6 @@
                 <div>
                   <div class="d-flex flex-column flex-lg-row justify-content-between mt-3">
                     <div class="calendar">
-
                     </div>
                   </div>
                 </div>
@@ -1957,7 +1981,8 @@
           </div>
         </div>
         <div class="cards-right pb-2 pb-lg-0">
-          <div class="hosted-card bg-white box-shadow rounded-lg py-3 px-3 mt-5 mt-lg-0">
+          <div 
+            class="hosted-card bg-white box-shadow rounded-lg py-3 px-3 mt-5 mt-lg-0">
             <div class="d-flex align-items-center">
               <img src="./assets/images/comment-image.png" alt="comment-image" />
               <div class="ml-2">
@@ -2019,7 +2044,11 @@
               </p>
             </div>
           </div>
-          <div class="hosted-card-second box-shadow rounded-lg pb-5 mt-3 overflow-hidden d-none d-lg-block">
+          <div
+          data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="700"
+            class="hosted-card-second box-shadow rounded-lg pb-5 mt-3 overflow-hidden d-none d-lg-block">
             <div style="background-color: #505050"
               class="d-flex align-items-center justify-content-between px-4 px-lg-3 py-2 rounded-lg-top">
               <p class="text-white font-weight-500 font-size-16">
@@ -2361,7 +2390,11 @@
     <div class="property-property-avaliability container-main mt-4">
       <div class="property-detail-wrapper">
         <div class="d-flex flex-column flex-lg-row justify-content-between">
-          <div class="reviews-left rounded-lg bg-white box-shadow px-3 py-3 pb-3 w-57 overflow-hidden">
+          <div
+          data-aos="fade-right"
+     data-aos-easing="linear"
+     data-aos-duration="700"
+            class="reviews-left rounded-lg bg-white box-shadow px-3 py-3 pb-3 w-57 overflow-hidden">
             <div class="col-12 p-0 mt-3">
               <!-- Progress Section -->
               <div class="property-progress mt-3">
@@ -2609,12 +2642,10 @@
                 </div>
               </div>
               <!-- Progress Section Ends-->
-              <div>
-                <div class="d-flex flex-column flex-lg-row justify-content-between mt-3"></div>
-              </div>
             </div>
           </div>
-          <div class="rules-right rounded-lg bg-white box-shadow px-3 py-3 pb-5 w-42 overflow-hidden mt-4 mt-lg-0">
+          <div
+            class="rules-right rounded-lg bg-white box-shadow px-3 py-3 pb-5 w-42 overflow-hidden mt-4 mt-lg-0">
             <!-- Rules -->
             <div class="rules d-flex flex-column flex-lg-row">
               <ul class="propery-page-listing col-12 col-lg-7 p-0">
@@ -3057,7 +3088,7 @@
             </div>
             <div class="grid-item item3">
               <div>
-              <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Bathroom"
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Bathroom"
                   data-image="./assets/images/second-image.png" data-target="#image-gallery">
                   <img style="height:100%;" class="img-thumbnail" src="./assets/images/second-image.png"
                     alt="Another alt text">
@@ -3156,8 +3187,9 @@
       </div>
     </div>
   </div>
-<script src="functions.js"></script>
-<script src="./calender.js"></script>
-</script>
+  <script src="functions.js"></script>
+  <script src="./calender.js"></script>
+  </script>
 </body>
+
 </html>

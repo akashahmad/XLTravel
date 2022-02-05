@@ -4,72 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/2.1.24/daterangepicker.min.css" rel="stylesheet"/>
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/2.1.24/moment.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/2.1.24/daterangepicker.min.js"></script>
+    <link rel="stylesheet" href="daterangepicker.min.css">
+<!-- <script type="text/javascript" src="moment.min.js"></script>
+<script type="text/javascript" src="jquery.min.js"></script> -->
+<script type="text/javascript" src="query.daterangepicker.min.js"></script>
     <title>Document</title>
+    
 </head>
 <body>
-
-
-        <input type="text" name="value_from_start_date" data-datepicker="separateRange"/>
-        to
-        <input type="text" name="value_from_end_date" data-datepicker="separateRange"/>
-        
-    <script>
-      var separator = ' - ', dateFormat = 'YYYY/MM/DD';
-    var options = {
-        autoUpdateInput: false,
-        autoApply: true,
-        locale: {
-            format: dateFormat,
-            separator: separator,
-            applyLabel: '確認',
-            cancelLabel: '取消'
-        },
-        minDate: moment().add(1, 'days'),
-        maxDate: moment().add(359, 'days'),
-        opens: "right"
-    };
-
-
-        $('[data-datepicker=separateRange]')
-            .daterangepicker(options)
-            .on('apply.daterangepicker' ,function(ev, picker) {
-                var boolStart = this.name.match(/value_from_start_/g) == null ? false : true;
-                var boolEnd = this.name.match(/value_from_end_/g) == null ? false : true;
-
-                var mainName = this.name.replace('value_from_start_', '');
-                if(boolEnd) {
-                    mainName = this.name.replace('value_from_end_', '');
-                    $(this).closest('form').find('[name=value_from_end_'+ mainName +']').blur();
-                }
-
-                $(this).closest('form').find('[name=value_from_start_'+ mainName +']').val(picker.startDate.format(dateFormat));
-                $(this).closest('form').find('[name=value_from_end_'+ mainName +']').val(picker.endDate.format(dateFormat));
-
-                $(this).trigger('change').trigger('keyup');
-            })
-            .on('show.daterangepicker', function(ev, picker) {
-                var boolStart = this.name.match(/value_from_start_/g) == null ? false : true;
-                var boolEnd = this.name.match(/value_from_end_/g) == null ? false : true;
-                var mainName = this.name.replace('value_from_start_', '');
-                if(boolEnd) {
-                    mainName = this.name.replace('value_from_end_', '');
-                }
-
-                var startDate = $(this).closest('form').find('[name=value_from_start_'+ mainName +']').val();
-                var endDate = $(this).closest('form').find('[name=value_from_end_'+ mainName +']').val();
-
-                $('[name=daterangepicker_start]').val(startDate).trigger('change').trigger('keyup');
-                $('[name=daterangepicker_end]').val(endDate).trigger('change').trigger('keyup');
-                
-                if(boolEnd) {
-                    $('[name=daterangepicker_end]').focus();
-                }
-            });
-        </script>
+    
 </body>
 </html>

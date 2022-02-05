@@ -54,86 +54,7 @@ header {
   z-index: 100;
 }
 /* Hero Section */
-.search-bar {
-  margin-top: 40px;
-}
-.search-bar .search-bar-inner .search-border-inner {
-  width: 29%;
-  height: 34px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.search-bar .search-bar-inner .search-border-inner .dropdown-menu {
-  min-width: 95% !important;
-  padding: 0px !important;
-  outline: none;
-}
-.search-bar
-  .search-bar-inner
-  .search-border-inner
-  .bootstrap-select
-  > .dropdown-toggle.bs-placeholder,
-.bootstrap-select > .dropdown-toggle.bs-placeholder:active,
-.bootstrap-select > .dropdown-toggle.bs-placeholder:focus,
-.bootstrap-select > .dropdown-toggle.bs-placeholder:hover {
-  background-color: transparent !important;
-  border: none !important;
-}
-.search-bar .search-bar-inner .search-border-inner .dropdown-toggle::after {
-  display: none;
-}
-.search-bar
-  .search-bar-inner
-  .search-border-inner
-  .bootstrap-select
-  .dropdown-toggle
-  .filter-option-inner-inner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 400;
-  font-size: 15px;
-  color: black;
-}
-.search-bar .search-bar-inner .search-border-inner .btn-light {
-  background-color: transparent;
-  border: none;
-}
-.search-bar
-  .search-bar-inner
-  .search-border-inner
-  .bootstrap-select
-  .dropdown-toggle:focus {
-  box-shadow: none !important;
-  outline-offset: -3px;
-  width: 75%;
-}
-.search-bar .search-bar-inner .search-border-inner .dropdown-menu {
-  padding: 0px 0px;
-  min-height: 100px !important;
-  min-width: 100% !important;
-  transform: translate3d(0px, 0px, 0px) !important;
-  top: 30px !important;
-  border-top-right-radius: 0px;
-  border-top-left-radius: 0px;
-}
-.search-border-inner input {
-  border: none;
-  outline: none;
-}
-.search-bar .search-bar-inner .search-icon {
-  border-radius: 50px;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  margin-right: 11px;
-}
-.search-bar .search-bar-inner .search-icon:hover {
-  background-color: #ce9930;
-}
-.search-bar .search-bar-inner .search-icon img {
-  padding: 12px 12px;
-}
+
 /* Properties Detail Left Side */
 .facalities-icons-main .single-facality {
   margin-right: 38px;
@@ -504,13 +425,7 @@ header {
   .property-image-collage .property-collage-fourth-image {
     min-height: 112px;
   }
-  .search-bar .search-bar-inner .search-icon {
-    width: 90% !important;
-    margin: 0px 0px;
-  }
-  .search-bar .search-bar-inner {
-    border-radius: 12px;
-  }
+
   .property-detail .progress-detial-left-side {
     width: 100%;
   }
@@ -522,55 +437,6 @@ header {
     margin: 0 auto;
     margin-top: 0px;
     padding-top: 55px;
-  }
-  .search-bar-inner .search-border-inner {
-    border-right: none !important;
-  }
-  .search-bar .search-bar-inner .search-border-inner {
-    width: 100%;
-  }
-  .search-bar .search-bar-inner .search-icon {
-    border-radius: 12px;
-    margin: 15px 0px;
-  }
-  .search-bar
-    .search-bar-inner
-    .search-border-inner
-    .bootstrap-select
-    > .dropdown-toggle.bs-placeholder,
-  .bootstrap-select > .dropdown-toggle.bs-placeholder:active,
-  .bootstrap-select > .dropdown-toggle.bs-placeholder:focus,
-  .bootstrap-select > .dropdown-toggle.bs-placeholder:hover {
-    padding: 11px 34px;
-  }
-  .search-bar .search-border-inner input {
-    background-color: transparent !important;
-  }
-  .search-bar
-    .search-bar-inner
-    .search-border-inner
-    .bootstrap-select
-    .dropdown-toggle:focus {
-    width: 100%;
-    offset: unset;
-  }
-  .search-bar .search-bar-inner .search-border-inner {
-    background-color: rgba(128, 128, 128, 0.09) !important;
-    margin: 11px 0px !important;
-    width: 90%;
-    margin: 0 auto;
-    border-radius: 12px;
-  }
-  .search-bar .search-bar-inner .search-border-inner .dropdown-toggle::after {
-    display: block;
-  }
-  .search-bar
-    .search-bar-inner
-    .search-border-inner
-    .bootstrap-select
-    .dropdown-toggle
-    .filter-option-inner-inner {
-    display: inline;
   }
   .property-detail .property-detail-wrapper {
     width: 100%;
@@ -678,7 +544,7 @@ header {
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 100;
+    z-index: 10;
   }
   header {
     margin: 0;
