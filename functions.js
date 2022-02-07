@@ -118,15 +118,14 @@ function ShowSearchBar() {
     document.getElementById("search-box-inner").style.backgroundColor = "#f8f8f8";
     document.getElementById("search-text-property-detail").style.display = "none";
 }
-// document.addEventListener('mouseup', function(e) {
-//   var container = document.getElementById('outside-click-search-bar');
-//   if (!container.contains(e.target)){
-//     document.getElementById('search-bar-inner-elements').style.display ="none";
-//     document.getElementById('search-text-property-detail').style.display ="block";
-//     document.getElementById('search-box-inner').style.width ="20%";
-//   }
-  
-// });
+document.addEventListener('mouseup', function(e) {
+  var container = document.getElementById('outside-click-search-bar');
+  if (!container.contains(e.target)){
+    document.getElementById('search-bar-inner-elements').style.display ="none";
+    document.getElementById('search-text-property-detail').style.display ="block";
+    document.getElementById('search-box-inner').style.width ="20%";
+  }
+});
 // Slider Functoin
 $("#recipeCarousel").carousel({
   interval: 10000,
