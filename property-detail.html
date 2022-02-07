@@ -7,6 +7,7 @@
 <!------ Include the above in your HEAD tag ---------->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -113,37 +114,31 @@
     </div>
   </header>
   <!-- Header End -->
-  <section class="hero-section">
-    <div 
-    data-aos="fade-down"
-    data-aos-easing="linear"
-    data-aos-duration="600" class="position-relative">
-      <form class="search-bar container-main"
-        id="outside-click-search-bar">
+  <section class="hero-section container-main">
+    <div data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="200" class="position-relative">
+      <form autocomplete="off" class="search-bar container-main" id="outside-click-search-bar">
         <div class="search-box my-4 cursor-pointer" id="search-box-inner" onclick="ShowSearchBar()">
           <p class="search-text pl-3" id="search-text-property-detail">Search</p>
           <div class="search-bar-inner" id="search-bar-inner-elements">
             <div class="d-flex">
               <div class="search-box-single-element border-right py-2 text-center d-flex flex-column">
                 <p class="search-lable">Location</p>
-                <select class="selectpicker" title="Add Guest">
-                  <option>Afghanistan</option>
-                  <option>Miami</option>
-                  <option>Malta</option>
-                  <option>Spain</option>
-                </select>
+                <!-- <input id="myInput" type="text" name="myCountry" placeholder="Location"> -->
+                <div class="autocomplete">
+                  <input id="myInput" type="text" name="myCountry" placeholder="Location">
+                </div>
               </div>
               <div class="search-box-single-element border-right py-2 text-center d-flex flex-column">
                 <p class="search-lable">Check in</p>
                 <!-- <input class="cursor-pointer form-control" placeholder="Add Date" type="text" name="value_from_start_date"
                   data-datepicker="separateRange" /> -->
-                  <input id="searhBar-date-picker" placeholder="Add Date" class="form-control"/>
+                <input id="searhBar-date-picker" placeholder="Add Date" class="form-control" />
               </div>
               <div class="search-box-single-element border-right py-2 text-center d-flex flex-column">
                 <p class="search-lable">Check out</p>
                 <input class="cursor-pointer " placeholder="Add Date" type="text" name="value_from_end_date"
                   data-datepicker="separateRange" />
-                  <!-- <input id="searhBar-date-picker" placeholder="Add Date" class="form-control"/> -->
+                <!-- <input id="searhBar-date-picker" placeholder="Add Date" class="form-control"/> -->
               </div>
               <div class="search-box-single-element py-2 text-center d-flex flex-column">
                 <p class="search-lable">Guests</p>
@@ -259,12 +254,7 @@
           </div>
         </div>
       </div>
-      <div
-      data-aos="zoom-in"
-     data-aos-easing="linear"
-     data-aos-duration="600"
-     
-        class="demo-gallery property-image-collage mt-3 mt-lg-4 d-none d-lg-block">
+      <div class="demo-gallery property-image-collage mt-3 mt-lg-4 d-none d-lg-block">
         <div class="grid-container list-unstyled" id="lightgallery">
           <div class="item1 property-collage-first-image image-collage-hover cursor-pointer"
             data-responsive="./assets/images/imageOneCarousel.png" data-src="./assets/images/imageOneCarousel.png"
@@ -395,10 +385,7 @@
   <section class="modern-and-luxury-appartment property-detail container-main mt-4">
     <div class="property-detail-wrapper">
       <div class="d-flex flex-column flex-lg-row justify-content-between px-3 px-lg-0">
-        <div
-        data-aos="fade-right"
-     data-aos-easing="linear"
-     data-aos-duration="700"
+        <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="700"
           class="progress-detial-left-side rounded-lg bg-white box-shadow px-3 pt-3">
           <div class="d-flex flex-column flex-lg-row justify-content-between border-bottom pb-3">
             <div class="property-detail-left-side">
@@ -1921,8 +1908,8 @@
           <!-- Home Page Facalities End-->
         </div>
         <!-- Calendar for Mobile -->
-        <div class="property-property-avaliability container-main mt-4 d-block d-lg-none mx-0">
-          <div class="property-detail-wrapper">
+        <div class="mobile-calendar property-property-avaliability container-main mt-4 d-block d-lg-none mx-0">
+          <div class="calendar-section property-detail-wrapper">
             <div class="rounded-lg bg-white box-shadow px-3 py-3 pb-5">
               <div class="col-12 p-0 mt-3">
                 <div
@@ -1954,6 +1941,9 @@
                 <div>
                   <div class="mt-3">
                     <div class="calendar">
+                      <div data-aos="zoom-in" class="calendar">
+                        <div id="mobile-calendar"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1982,8 +1972,7 @@
           </div>
         </div>
         <div class="cards-right pb-2 pb-lg-0">
-          <div 
-            class="hosted-card bg-white box-shadow rounded-lg py-3 px-3 mt-5 mt-lg-0">
+          <div class="hosted-card bg-white box-shadow rounded-lg py-3 px-3 mt-5 mt-lg-0">
             <div class="d-flex align-items-center">
               <img src="./assets/images/comment-image.png" alt="comment-image" />
               <div class="ml-2">
@@ -2045,10 +2034,7 @@
               </p>
             </div>
           </div>
-          <div
-          data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="700"
+          <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="700"
             class="hosted-card-second box-shadow rounded-lg pb-5 mt-3 overflow-hidden d-none d-lg-block">
             <div style="background-color: #505050"
               class="d-flex align-items-center justify-content-between px-4 px-lg-3 py-2 rounded-lg-top">
@@ -2170,10 +2156,10 @@
                   </div>
                 </div>
                 <div class="d-flex justify-content-between opacity-9 mt-3">
-                  <p class="font-size-12 font-weight-600 text-decoration-underline">
+                  <p class="font-size-13 font-weight-600 text-decoration-underline text-dark">
                     Total
                   </p>
-                  <p class="font-size-12 font-weight-600 color-light-gray">
+                  <p class="font-size-13 font-weight-600 color-light-gray text-dark">
                     € 625
                   </p>
                 </div>
@@ -2315,11 +2301,11 @@
                       </p>
                     </div>
                   </div>
-                  <div class="d-flex justify-content-between opacity-9 mt-3">
+                  <div class="d-flex justify-content-between mt-3">
                     <p class="font-size-12 font-weight-600 text-decoration-underline">
                       Total
                     </p>
-                    <p class="font-size-12 font-weight-600 color-light-gray">
+                    <p class="font-size-12 font-weight-600">
                       € 625
                     </p>
                   </div>
@@ -2331,13 +2317,13 @@
       </div>
     </div>
   </section>
-  <section class="calendar-section inline-datepicker-property-detail">
+  <section class="calendar-section">
     <!-- calendar -->
     <div class="property-property-avaliability container-main mt-4 d-none d-lg-block">
       <div class="property-detail-wrapper">
         <div class="rounded-lg bg-white box-shadow px-3 py-3 pb-5">
           <div class="col-12 p-0 mt-3">
-            <div class="d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-cente">
+            <div class="d-flex justify-content-between align-items-center">
               <div>
                 <p class="main-heading">Property Availability</p>
               </div>
@@ -2360,24 +2346,41 @@
                     Booked
                   </div>
                 </div>
-            </div>
+              </div>
             </div>
             <div>
-              <input id="inlinePicker" class="form-control" />
+              <div class="d-flex flex-column flex-lg-row mt-3 justify-content-center">
+                <div class="d-flex align-items-center">
+                  <img class="cursor-pointer mr-5" src="./assets/images/icons/left-arrow-gray.png" />
+                </div>
+                <div data-aos="zoom-in" class="calendar mr-5">
+                  <div id="calendar"></div>
+                </div>
+                <div data-aos="zoom-in" class="calendar calendar mr-5">
+                  <div id="calendar-two"></div>
+                </div>
+                <div data-aos="zoom-in" class="calendar">
+                  <div id="calendar-three"></div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <img class="cursor-pointer ml-5" src="./assets/images/icons/right-arrow.png" />
+                </div>
+              </div>
             </div>
           </div>
+
           <!-- calendar End-->
           <!-- Banner -->
           <div
             class="Banner d-flex flex-column flex-lg-row justify-content-between align-items-lg-center box-shadow rounded py-1 px-4 my-3 py-3">
             <div class="d-flex align-items-center">
               <img class="mr-1" style="height: 20px" src="./assets/images/icons/information.png" alt="information" />
-              <p class="opacity-8 font-size-14">
+              <p class="opacity-8 font-size-16">
                 Your dates are popular among travelers.
               </p>
             </div>
             <div>
-              <p class="opacity-8 font-size-14 mt-3 mt-lg-0">
+              <p class="opacity-8 font-size-16 mt-3 mt-lg-0">
                 Popular Destination! Properties in Dubai are being booked
                 every minute.
               </p>
@@ -2392,10 +2395,7 @@
     <div class="property-property-avaliability container-main mt-4">
       <div class="property-detail-wrapper">
         <div class="d-flex flex-column flex-lg-row justify-content-between">
-          <div
-          data-aos="fade-right"
-     data-aos-easing="linear"
-     data-aos-duration="700"
+          <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="700"
             class="reviews-left rounded-lg bg-white box-shadow px-3 py-3 pb-3 w-57 overflow-hidden">
             <div class="col-12 p-0 mt-3">
               <!-- Progress Section -->
@@ -2646,41 +2646,187 @@
               <!-- Progress Section Ends-->
             </div>
           </div>
-          <div
-            class="rules-right rounded-lg bg-white box-shadow px-3 py-3 pb-5 w-42 overflow-hidden mt-4 mt-lg-0">
+          <div class="rules-right rounded-lg bg-white box-shadow px-3 py-3 pb-5 w-42 overflow-hidden mt-4 mt-lg-0">
             <!-- Rules -->
             <div class="rules d-flex flex-column flex-lg-row">
               <ul class="propery-page-listing col-12 col-lg-7 p-0">
                 <div class="mt-4">
                   <p class="main-heading">Property Rules</p>
                 </div>
-                <li class="d-flex align-items-start mt-4">
-                  <img class="mr-2" style="height: 9px; margin-top: 5px" src="./assets/images/icons/tick.png"
-                    alt="tick" />
+                <li class="d-flex align-items-start mt-4 align-items-center">
+                  <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                    viewBox="0 0 22.728 16.563">
+                    <g id="Group_41813" data-name="Group 41813" transform="translate(-5755.47 -17591.001)">
+                      <path id="Path_85552" data-name="Path 85552"
+                        d="M450.74,87.888a1.649,1.649,0,1,1-1.649-1.649,1.649,1.649,0,0,1,1.649,1.649"
+                        transform="translate(5323.539 17504.762)" fill="#40d0d3" />
+                      <path id="Path_85553" data-name="Path 85553"
+                        d="M424.961,172.376a1.709,1.709,0,0,0-1.7-1.53h-.1l-.55,1.434-.215-.932h.048a.154.154,0,0,0,.143-.143v-.263a.138.138,0,0,0-.143-.143h-.335a.154.154,0,0,0-.143.143v.263a.154.154,0,0,0,.143.143h.024l-.215.932-.55-1.434h-.048a1.791,1.791,0,0,0-1.147.43,1.681,1.681,0,0,0-.55,1.1l-.191,1.864h5.712Z"
+                        transform="translate(5350.346 17423.809)" fill="#40d0d3" />
+                      <path id="Path_85554" data-name="Path 85554"
+                        d="M367.068,272.16h-9.631a.717.717,0,0,0,0,1.434h.741v6.477a.719.719,0,0,0,.717.717h6.74a.719.719,0,0,0,.717-.717v-6.5h.741a.719.719,0,0,0,.717-.717.736.736,0,0,0-.741-.693Z"
+                        transform="translate(5410.39 17326.775)" fill="#40d0d3" />
+                      <path id="Path_85555" data-name="Path 85555"
+                        d="M96.907,177.257a.719.719,0,0,0-.789-.621,4.724,4.724,0,0,1-1.6-.072c-.215-.072-.478-.406-.693-.693a2.21,2.21,0,0,0-1.7-1.147H90.239c-1.052,0-1.649,1.075-2.079,1.864a3.667,3.667,0,0,1-.335.574,5.347,5.347,0,0,1-1.29,1,.8.8,0,0,0-.311.382h-.6a.755.755,0,0,0-.765.765v2.27h-.143A.7.7,0,0,0,84,182.3v3.991a.719.719,0,0,0,.717.717h.048v.12a.327.327,0,0,0,.335.335h.191a.327.327,0,0,0,.335-.335v-.12h.789v.12a.327.327,0,0,0,.335.335h.191a.327.327,0,0,0,.335-.335v-.12h.048a.7.7,0,0,0,.717-.717V182.3a.7.7,0,0,0-.717-.717H87.18v-2.175a.084.084,0,0,0,.048-.024,7.246,7.246,0,0,0,1.7-1.362,4.351,4.351,0,0,0,.454-.741c.048-.072.1-.167.167-.287l.072,3.035-.765,6.525a.818.818,0,0,0,1.625.191l.693-5.927.693,5.927a.825.825,0,0,0,.813.741h.1a.812.812,0,0,0,.717-.908l-.765-6.525.072-3.131a2.725,2.725,0,0,0,1.267,1.028,5.65,5.65,0,0,0,2.2.12.756.756,0,0,0,.646-.813Zm-11.5,2.055a.214.214,0,0,1,.215-.215h.621a.023.023,0,0,0,.024.024.69.69,0,0,0,.358.287v2.151H85.411Zm.621,5.258a.287.287,0,1,1,.287-.287A.308.308,0,0,1,86.033,184.571Zm1.195-.813v1.649a.167.167,0,1,1-.335,0v-1.649a.409.409,0,0,0-.43-.406h-.908a.4.4,0,0,0-.406.406v1.625a.163.163,0,0,1-.167.167c-.1,0-.167-.048-.167-.143v-1.649a.724.724,0,0,1,.741-.717h.932a.724.724,0,0,1,.741.717Z"
+                        transform="translate(5671.469 17420.053)" fill="#40d0d3" />
+                      <path id="Path_85556" data-name="Path 85556"
+                        d="M216.656,89.008a1.649,1.649,0,1,1-1.649-1.649,1.649,1.649,0,0,1,1.649,1.649"
+                        transform="translate(5547.633 17503.689)" fill="#40d0d3" />
+                    </g>
+                  </svg>
+
                   <p>Check-in: 2:00PM - 12:00AM</p>
                 </li>
-                <li class="d-flex align-items-start mt-4">
-                  <img class="mr-2" style="height: 9px" src="./assets/images/icons/tick.png" alt="tick" />
+                <li class="d-flex align-items-start mt-4 align-items-center">
+                  <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                    viewBox="0 0 22.728 16.563">
+                    <g id="Group_41813" data-name="Group 41813" transform="translate(-5755.47 -17591.001)">
+                      <path id="Path_85552" data-name="Path 85552"
+                        d="M450.74,87.888a1.649,1.649,0,1,1-1.649-1.649,1.649,1.649,0,0,1,1.649,1.649"
+                        transform="translate(5323.539 17504.762)" fill="#40d0d3" />
+                      <path id="Path_85553" data-name="Path 85553"
+                        d="M424.961,172.376a1.709,1.709,0,0,0-1.7-1.53h-.1l-.55,1.434-.215-.932h.048a.154.154,0,0,0,.143-.143v-.263a.138.138,0,0,0-.143-.143h-.335a.154.154,0,0,0-.143.143v.263a.154.154,0,0,0,.143.143h.024l-.215.932-.55-1.434h-.048a1.791,1.791,0,0,0-1.147.43,1.681,1.681,0,0,0-.55,1.1l-.191,1.864h5.712Z"
+                        transform="translate(5350.346 17423.809)" fill="#40d0d3" />
+                      <path id="Path_85554" data-name="Path 85554"
+                        d="M367.068,272.16h-9.631a.717.717,0,0,0,0,1.434h.741v6.477a.719.719,0,0,0,.717.717h6.74a.719.719,0,0,0,.717-.717v-6.5h.741a.719.719,0,0,0,.717-.717.736.736,0,0,0-.741-.693Z"
+                        transform="translate(5410.39 17326.775)" fill="#40d0d3" />
+                      <path id="Path_85555" data-name="Path 85555"
+                        d="M96.907,177.257a.719.719,0,0,0-.789-.621,4.724,4.724,0,0,1-1.6-.072c-.215-.072-.478-.406-.693-.693a2.21,2.21,0,0,0-1.7-1.147H90.239c-1.052,0-1.649,1.075-2.079,1.864a3.667,3.667,0,0,1-.335.574,5.347,5.347,0,0,1-1.29,1,.8.8,0,0,0-.311.382h-.6a.755.755,0,0,0-.765.765v2.27h-.143A.7.7,0,0,0,84,182.3v3.991a.719.719,0,0,0,.717.717h.048v.12a.327.327,0,0,0,.335.335h.191a.327.327,0,0,0,.335-.335v-.12h.789v.12a.327.327,0,0,0,.335.335h.191a.327.327,0,0,0,.335-.335v-.12h.048a.7.7,0,0,0,.717-.717V182.3a.7.7,0,0,0-.717-.717H87.18v-2.175a.084.084,0,0,0,.048-.024,7.246,7.246,0,0,0,1.7-1.362,4.351,4.351,0,0,0,.454-.741c.048-.072.1-.167.167-.287l.072,3.035-.765,6.525a.818.818,0,0,0,1.625.191l.693-5.927.693,5.927a.825.825,0,0,0,.813.741h.1a.812.812,0,0,0,.717-.908l-.765-6.525.072-3.131a2.725,2.725,0,0,0,1.267,1.028,5.65,5.65,0,0,0,2.2.12.756.756,0,0,0,.646-.813Zm-11.5,2.055a.214.214,0,0,1,.215-.215h.621a.023.023,0,0,0,.024.024.69.69,0,0,0,.358.287v2.151H85.411Zm.621,5.258a.287.287,0,1,1,.287-.287A.308.308,0,0,1,86.033,184.571Zm1.195-.813v1.649a.167.167,0,1,1-.335,0v-1.649a.409.409,0,0,0-.43-.406h-.908a.4.4,0,0,0-.406.406v1.625a.163.163,0,0,1-.167.167c-.1,0-.167-.048-.167-.143v-1.649a.724.724,0,0,1,.741-.717h.932a.724.724,0,0,1,.741.717Z"
+                        transform="translate(5671.469 17420.053)" fill="#40d0d3" />
+                      <path id="Path_85556" data-name="Path 85556"
+                        d="M216.656,89.008a1.649,1.649,0,1,1-1.649-1.649,1.649,1.649,0,0,1,1.649,1.649"
+                        transform="translate(5547.633 17503.689)" fill="#40d0d3" />
+                    </g>
+                  </svg>
                   <p>Checkout: 12:00PM</p>
                 </li>
-                <li class="d-flex align-items-start mt-4">
-                  <img class="mr-2" style="height: 9px; margin-top: 5px" src="./assets/images/icons/tick.png"
-                    alt="tick" />
+                <li class="d-flex align-items-start mt-4 align-items-center">
+                  <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 22.19 22.19">
+                    <g id="noun-no-smoking-3678876" transform="translate(-101.11 -31.109)">
+                      <path id="Path_85574" data-name="Path 85574"
+                        d="M443.456,66.048a11.347,11.347,0,0,0,1.526,1.387c.971.693,1.248,1.11.416,2.635a2.441,2.441,0,0,0,2.635-3.19c-.971-3.051-4.3-2.08-2.635-5.131a2.456,2.456,0,0,0-1.942,4.3Z"
+                        transform="translate(-326.258 -29.252)" fill="#40d0d3" />
+                      <path id="Path_85575" data-name="Path 85575"
+                        d="M106.167,31.109l-1.942,2.08,20.11,20.11,1.942-2.08L122.116,47.2V42.2h-4.993Z"
+                        transform="translate(-2.976)" fill="#40d0d3" />
+                      <path id="Path_85576" data-name="Path 85576" d="M101.11,285.548h12.759L108.322,280H101.11Z"
+                        transform="translate(0 -237.796)" fill="#40d0d3" />
+                      <path id="Path_85577" data-name="Path 85577" d="M536.67,280h2.774v5.548H536.67Z"
+                        transform="translate(-416.143 -237.796)" fill="#40d0d3" />
+                    </g>
+                  </svg>
+
                   <p>No smoking</p>
                 </li>
-                <li class="d-flex align-items-start mt-4">
-                  <img class="mr-2" style="height: 9px; margin-top: 5px" src="./assets/images/icons/tick.png"
-                    alt="tick" />
+                <li class="d-flex align-items-start mt-4 align-items-center">
+                  <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                    viewBox="0 0 23.959 19.645">
+                    <g id="Group_41924" data-name="Group 41924" transform="translate(-127 -2145.998)">
+                      <g id="noun-pets-11640" transform="translate(96.324 2127.827)">
+                        <path id="Path_85820" data-name="Path 85820" d="M276.3,97.133l.061.061Z"
+                          transform="translate(-236.409 -76)" fill="#40d0d3" />
+                        <path id="Path_85821" data-name="Path 85821"
+                          d="M268.211,59.506C268.312,59.464,268.13,59.526,268.211,59.506Z"
+                          transform="translate(-228.603 -39.77)" fill="#40d0d3" />
+                        <path id="Path_85822" data-name="Path 85822"
+                          d="M274.2,31.59c.283.163-1.314,1.581-1.455,1.7-.647.608-1.152,1.175-2.162.912.162-1.317.3-2.351-.466-3.485-.283-.426-.243-.892-.526-1.338-.4-.609-.707-1.216-1.071-1.845-.505-.892-1.718-1.783-1.981-2.735a29,29,0,0,0-1.415-3.02c.606-.729,1.354-1.074.626-1.8a6.475,6.475,0,0,0-.969-1.013c-.365-.263-1.031-.284-1.455-.527-.606-.344-1.9-.445-2.365.243-.465.709-1.293.324-1.8.83.182-.081,0-.02.243-.081,0,0,.2.142.162.3-.081-.041-.283.04-.364.061l-.121-.183a2.753,2.753,0,0,0,.667,1.642c.344-.183.909.081,1.213.263.445.263.909-.4,1.314,0-.343.4-1.859.425-2.425.445.121.567,1.617.324,2.082.851a15.566,15.566,0,0,1-.526,3.2c-.182,1.358.606,2.31.849,3.567a25.189,25.189,0,0,1,0,4.781c.02,1.054-.424.993-1.031,1.7-.747.851.95.892,1.354.4.647-.77.344-1.338.707-2.168a4.3,4.3,0,0,0,.182-1.256c.061-.467.365-.831.4-1.317.019.426.444.73.323,1.135a7.692,7.692,0,0,0-.343,1.459,9.34,9.34,0,0,1-.869,3c-.283.77.93.426,1.253.344.768-.163.222-.77.424-1.317.081-.243.95-2.553.97-2.553.222.162.141.872.282,1.115.121.284-.566.467-.728.507l-.282.932a5.7,5.7,0,0,1,2.566-.507c-.727.729-.808,1.3.344,1.3.707,0,2.162-.852,2.3-1.58,0,0,1.353-.02,1.5-.04a1.479,1.479,0,0,0,1.213-.73c.3-.486,2.383-2.593,1.372-3.2ZM262.28,19.371c-1.273.02-.141-.871.243,0Zm1.778,2.533c-.2-.445-.828-2.8-.3-2.918-.283.1.02,3.262.93,3.242a.5.5,0,0,1-.626-.324c-.181-.385.141.324,0,0Z"
+                          transform="translate(-219.842)" fill="#40d0d3" />
+                        <path id="Path_85823" data-name="Path 85823"
+                          d="M40.821,110.129a1.7,1.7,0,0,0-.141-.71c.04.1-.061.284-.061.284-.546.263-.182-.446,0-.344-.222-.183-.586-.1-.788-.284-.222-.2-.3-.385-.606-.425-.121-.02-.445-.02-.485-.162a1.8,1.8,0,0,0-.364-.588.964.964,0,0,1-.121-.487c-.02-.04-.04-.425-.141-.284a2.793,2.793,0,0,0-.323,1.216,1.44,1.44,0,0,1-.081.4c-.081.141-.323.466-.465.3a1.62,1.62,0,0,0-.647-.466c-.182-.019-.526-.019-.505.225.081,1.073.687,2.067.3,3.141-.121.344-.384.4-.707.486a5.415,5.415,0,0,0-1.233.487,3.05,3.05,0,0,0-1.031.79,5.334,5.334,0,0,0-.546.933,22.758,22.758,0,0,0-.829,2.229c-.081.263-.162.547-.243.811-.02.04-.081.343-.121.343a17.258,17.258,0,0,0,.1-1.863c.02-.487.061-.972.081-1.46a3.962,3.962,0,0,1,.182-1.175,6.3,6.3,0,0,1,.869-1.52,3.852,3.852,0,0,0,.647-.892c.04-.142.081-.486-.1-.567a.47.47,0,0,0-.425.121,5.945,5.945,0,0,0-.808.932,9.336,9.336,0,0,0-.889,1.419,4.143,4.143,0,0,0-.384,1.621c-.061.79-.162,1.58-.222,2.39a8.025,8.025,0,0,0,.02,2.088,5.586,5.586,0,0,0,.728,1.621,3.157,3.157,0,0,0,.808.912,2.518,2.518,0,0,0,1.213.386,8.428,8.428,0,0,0,1.01.019,6.432,6.432,0,0,0,1.758-.1,10.393,10.393,0,0,0,1.94-.466c-.121-.183-.263-.325-.243-.567.02-.222.061-.426.1-.648a12.324,12.324,0,0,0,.121-1.723,7.708,7.708,0,0,0-.3-1.682,11.166,11.166,0,0,1-.222-1.4.071.071,0,0,1,.04-.019c.1.486.2.972.323,1.458a7,7,0,0,1,.323,1.6,16.087,16.087,0,0,1-.121,1.682,5.05,5.05,0,0,0-.1.588c-.04.263,0,.507.243.608a1.577,1.577,0,0,0,.909-.1c.162-.081.283-.122.263-.4a3.54,3.54,0,0,0-.081-.4c-.04-.163-.2-.284-.3-.426-.061-.081-.04-.263-.04-.365.02-.243.04-.487.081-.729a10.308,10.308,0,0,1,.243-1.378c.222-.912.364-1.844.526-2.756a3.4,3.4,0,0,0,.04-1.2,9.774,9.774,0,0,0-.3-1.277,1.08,1.08,0,0,1,.04-.71c.061-.141.283-.263.4-.365a7.229,7.229,0,0,0,.566-.547c.2-.2.1-.344.1-.609Zm-1.738-.749c.162-.061.505.284.505.284a.6.6,0,0,1-.748.344c-.182-.02.1-.568.243-.628Zm.909,5.147c-.02-.041-.061-.041-.121-.041C39.932,114.485,39.972,114.485,39.992,114.527Z"
+                          transform="translate(0 -85.591)" fill="#40d0d3" />
+                      </g>
+                      <g id="Group_41923" data-name="Group 41923" transform="translate(-4426.664 -16574)">
+                        <path id="Path_85824" data-name="Path 85824"
+                          d="M75.7,0a5.7,5.7,0,1,0,5.7,5.7A5.708,5.708,0,0,0,75.7,0ZM80.69,5.7a4.964,4.964,0,0,1-1.223,3.262L72.439,1.935A4.982,4.982,0,0,1,80.69,5.7Zm-9.977,0a4.964,4.964,0,0,1,1.223-3.262l7.028,7.028A4.982,4.982,0,0,1,70.713,5.7Z"
+                          transform="translate(4487.664 18726)" />
+                      </g>
+                    </g>
+                  </svg>
+
                   <p>No pets</p>
                 </li>
-                <li class="d-flex align-items-start mt-4">
-                  <img class="mr-2" style="height: 9px; margin-top: 5px" src="./assets/images/icons/tick.png"
-                    alt="tick" />
+                <li class="d-flex align-items-start mt-4 align-items-center">
+                  <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                    viewBox="0 0 20.563 21.082">
+                    <g id="noun-events-3042138" transform="translate(-111.023 -35.002)">
+                      <path id="Path_85578" data-name="Path 85578"
+                        d="M438.622,374.048a.535.535,0,0,0-.737,0,.522.522,0,0,0,0,.737l1.068,1.068-1.068,1.068a.521.521,0,1,0,.736.737l1.068-1.068,1.068,1.068a.521.521,0,1,0,.736-.737l-1.068-1.068,1.068-1.068a.522.522,0,0,0,0-.737.535.535,0,0,0-.737,0l-1.068,1.068Z"
+                        transform="translate(-312.653 -324.318)" fill="#40d0d3" />
+                      <path id="Path_85579" data-name="Path 85579"
+                        d="M206.469,38.9h.325a.649.649,0,0,0,.649-.649v-2.6a.65.65,0,0,0-.65-.649h-.325a.65.65,0,0,0-.651.649v2.6a.65.65,0,0,0,.651.65Z"
+                        transform="translate(-90.717)" fill="#40d0d3" />
+                      <path id="Path_85580" data-name="Path 85580"
+                        d="M415.488,38.9h.325a.649.649,0,0,0,.649-.649v-2.6a.649.649,0,0,0-.649-.649h-.325a.649.649,0,0,0-.65.649v2.6a.649.649,0,0,0,.65.65Z"
+                        transform="translate(-290.744)" fill="#40d0d3" />
+                      <path id="Path_85581" data-name="Path 85581"
+                        d="M236.028,195.733a.294.294,0,0,0-.293-.292h-1.672a.294.294,0,0,0-.293.292V197a.293.293,0,0,0,.293.293h1.672a.293.293,0,0,0,.293-.293Z"
+                        transform="translate(-117.466 -153.536)" fill="#40d0d3" />
+                      <path id="Path_85582" data-name="Path 85582"
+                        d="M305.85,195.733a.293.293,0,0,0-.292-.292h-1.643a.293.293,0,0,0-.291.292V197a.293.293,0,0,0,.291.293h1.643a.293.293,0,0,0,.292-.293Z"
+                        transform="translate(-184.314 -153.536)" fill="#40d0d3" />
+                      <path id="Path_85583" data-name="Path 85583"
+                        d="M373.093,197.275h1.643a.293.293,0,0,0,.292-.293v-1.27a.292.292,0,0,0-.292-.292h-1.643a.293.293,0,0,0-.292.292v1.27A.293.293,0,0,0,373.093,197.275Z"
+                        transform="translate(-250.515 -153.515)" fill="#40d0d3" />
+                      <path id="Path_85584" data-name="Path 85584"
+                        d="M442.284,197.275h1.641a.293.293,0,0,0,.293-.293v-1.27a.293.293,0,0,0-.293-.292h-1.641a.294.294,0,0,0-.293.292v1.27A.293.293,0,0,0,442.284,197.275Z"
+                        transform="translate(-316.729 -153.515)" fill="#40d0d3" />
+                      <path id="Path_85585" data-name="Path 85585"
+                        d="M166.856,256.143a.293.293,0,0,0-.294-.292h-1.641a.294.294,0,0,0-.294.292v1.269a.293.293,0,0,0,.294.292h1.641a.293.293,0,0,0,.294-.292Z"
+                        transform="translate(-51.3 -211.347)" fill="#40d0d3" />
+                      <path id="Path_85586" data-name="Path 85586"
+                        d="M236.028,256.143a.293.293,0,0,0-.293-.292h-1.672a.293.293,0,0,0-.293.292v1.269a.293.293,0,0,0,.293.292h1.672a.293.293,0,0,0,.293-.292Z"
+                        transform="translate(-117.466 -211.347)" fill="#40d0d3" />
+                      <path id="Path_85587" data-name="Path 85587"
+                        d="M305.85,256.143a.292.292,0,0,0-.292-.292h-1.643a.292.292,0,0,0-.291.292v1.269a.292.292,0,0,0,.291.292h1.643a.292.292,0,0,0,.292-.292Z"
+                        transform="translate(-184.314 -211.347)" fill="#40d0d3" />
+                      <path id="Path_85588" data-name="Path 85588"
+                        d="M372.8,257.408a.292.292,0,0,0,.292.292h1.643a.292.292,0,0,0,.292-.292v-1.269a.292.292,0,0,0-.292-.292h-1.643a.293.293,0,0,0-.292.292Z"
+                        transform="translate(-250.515 -211.343)" fill="#40d0d3" />
+                      <path id="Path_85589" data-name="Path 85589"
+                        d="M442,257.408a.293.293,0,0,0,.293.292h1.641a.293.293,0,0,0,.293-.292v-1.269a.293.293,0,0,0-.293-.292h-1.641a.293.293,0,0,0-.293.292Z"
+                        transform="translate(-316.737 -211.343)" fill="#40d0d3" />
+                      <path id="Path_85590" data-name="Path 85590"
+                        d="M166.856,316.573a.292.292,0,0,0-.294-.292h-1.641a.293.293,0,0,0-.294.292v1.269a.293.293,0,0,0,.294.292h1.641a.293.293,0,0,0,.294-.292Z"
+                        transform="translate(-51.3 -269.177)" fill="#40d0d3" />
+                      <path id="Path_85591" data-name="Path 85591"
+                        d="M236.028,316.573a.293.293,0,0,0-.293-.292h-1.672a.292.292,0,0,0-.293.292v1.269a.293.293,0,0,0,.293.292h1.672a.293.293,0,0,0,.293-.292Z"
+                        transform="translate(-117.466 -269.177)" fill="#40d0d3" />
+                      <path id="Path_85592" data-name="Path 85592"
+                        d="M305.85,316.573a.292.292,0,0,0-.292-.292h-1.643a.291.291,0,0,0-.291.292v1.269a.292.292,0,0,0,.291.292h1.643a.292.292,0,0,0,.292-.292Z"
+                        transform="translate(-184.314 -269.177)" fill="#40d0d3" />
+                      <path id="Path_85593" data-name="Path 85593"
+                        d="M166.563,376.69h-1.641a.293.293,0,0,0-.294.292v1.269a.293.293,0,0,0,.294.292h1.641a.293.293,0,0,0,.294-.292v-1.269a.293.293,0,0,0-.293-.292Z"
+                        transform="translate(-51.299 -326.987)" fill="#40d0d3" />
+                      <path id="Path_85594" data-name="Path 85594"
+                        d="M235.73,376.69h-1.672a.293.293,0,0,0-.293.292v1.269a.293.293,0,0,0,.293.292h1.672a.293.293,0,0,0,.293-.292v-1.269A.293.293,0,0,0,235.73,376.69Z"
+                        transform="translate(-117.461 -326.987)" fill="#40d0d3" />
+                      <path id="Path_85595" data-name="Path 85595"
+                        d="M305.557,376.69h-1.643a.292.292,0,0,0-.291.292v1.269a.292.292,0,0,0,.291.292h1.643a.292.292,0,0,0,.292-.292v-1.269A.292.292,0,0,0,305.557,376.69Z"
+                        transform="translate(-184.313 -326.987)" fill="#40d0d3" />
+                      <path id="Path_85596" data-name="Path 85596"
+                        d="M111.8,92.724h10.556a5.2,5.2,0,0,1-.4-1.169h-9.763V79.807h16.434v5.736a5.157,5.157,0,0,1,1.169.55v-9.61a.779.779,0,0,0-.779-.78H126.17v1.5a1.1,1.1,0,0,1-1.1,1.1h-.325a1.1,1.1,0,0,1-1.1-1.1V75.7h-6.464v1.5a1.1,1.1,0,0,1-1.1,1.1h-.325a1.1,1.1,0,0,1-1.1-1.1V75.7H111.8a.78.78,0,0,0-.78.78v15.46a.78.78,0,0,0,.78.779Z"
+                        transform="translate(0 -38.951)" fill="#40d0d3" />
+                      <path id="Path_85597" data-name="Path 85597"
+                        d="M377.51,318.089a4.549,4.549,0,1,0,4.549-4.549A4.554,4.554,0,0,0,377.51,318.089Zm8.165,0a3.616,3.616,0,1,1-3.616-3.616A3.62,3.62,0,0,1,385.675,318.089Z"
+                        transform="translate(-255.022 -266.554)" fill="#40d0d3" />
+                    </g>
+                  </svg>
+
                   <p>No parties or events</p>
                 </li>
-                <li class="d-flex align-items-start mt-4">
-                  <img class="mr-2" style="height: 9px; margin-top: 5px" src="./assets/images/icons/tick.png"
-                    alt="tick" />
+                <li class="d-flex align-items-start mt-4 align-items-center">
+                  <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                    viewBox="0 0 11.194 26.547">
+                    <g id="Group_41826" data-name="Group 41826" transform="translate(-5034 -17815)">
+                      <path id="Path_85598" data-name="Path 85598"
+                        d="M233.786,129.464c-.044-.744-.064-1.422-.064-2.04a11.891,11.891,0,0,1,.78-5.028v16.789a1.384,1.384,0,0,0,2.768,0v-10.1h.519v10.1a1.384,1.384,0,0,0,2.768,0V122.4a4.834,4.834,0,0,1,.2.474,13.841,13.841,0,0,1,.58,4.548c0,.617-.02,1.3-.063,2.04a.9.9,0,0,0,.842.946h.053a.9.9,0,0,0,.893-.844c.045-.776.066-1.488.066-2.144,0-3.378-.544-5.248-1.28-6.372a3.162,3.162,0,0,0-1.195-1.114,2.134,2.134,0,0,0-.906-.238l-.054,0h-4.324l-.054,0a2.135,2.135,0,0,0-.906.238,3.777,3.777,0,0,0-1.705,2.109,14.8,14.8,0,0,0-.77,5.377c0,.656.021,1.368.067,2.145a.9.9,0,0,0,.893.843h.053a.9.9,0,0,0,.841-.946Zm3.743-1.471-1.063-1.343.612-4.513a1.285,1.285,0,0,0,.451.083h0a1.284,1.284,0,0,0,.45-.083l.613,4.513Zm-.426-7.219h.851l.213.839-.032.051a.945.945,0,0,1-1.211,0l-.033-.051Z"
+                        transform="translate(4802.069 17700.977)" fill="#40d0d3" />
+                      <path id="Path_85599" data-name="Path 85599"
+                        d="M301.921,2.518A2.518,2.518,0,1,1,299.4,0a2.518,2.518,0,0,1,2.518,2.518"
+                        transform="translate(4740.195 17815)" fill="#40d0d3" />
+                    </g>
+                  </svg>
+
                   <p>Minimum age of primary renter: 18</p>
                 </li>
               </ul>
@@ -2688,27 +2834,68 @@
                 <div class="mt-4">
                   <p class="main-heading">Health & Safety</p>
                 </div>
-                <li class="d-flex align-items-start mt-4">
-                  <img class="mr-2" style="height: 9px; margin-top: 5px" src="./assets/images/icons/tick.png"
-                    alt="tick" />
+                <li class="d-flex align-items-start mt-4 align-items-center">
+                  <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="29" height="39"
+                    viewBox="0 0 23.941 23.914">
+                    <path id="Path_85829" data-name="Path 85829"
+                      d="M94.737,17.76c-.8.386-1.135-1.4-2.438-1.738a9.054,9.054,0,0,1-1.666,4.153c1.111.676,2.535-.362,2.8.652.29,1.111-2.994,4.394-4.032,4.032-.845-.29.193-1.787-.483-2.921A8.607,8.607,0,0,1,84.645,23.7c.338,1.28,2.1,1.618,1.714,2.414-.459.99-5.118.99-5.7,0-.531-.917,1.207-1.183,1.521-2.438a8.572,8.572,0,0,1-4.1-1.762c-.676,1.135.338,2.632-.483,2.921-1.014.386-4.3-2.9-4.008-4.008.266-1.014,1.69.024,2.8-.652a8.848,8.848,0,0,1-1.666-4.153c-1.3.338-1.618,2.125-2.438,1.738-.99-.459-.99-5.118,0-5.7.917-.531,1.183,1.231,2.463,1.521a8.674,8.674,0,0,1,1.762-4.1c-1.159-.724-2.656.338-2.97-.507-.362-1.014,2.921-4.3,4.032-4.008,1.038.266-.048,1.714.676,2.849A8.811,8.811,0,0,1,82.23,6.171c-.29-1.3-2.076-1.569-1.545-2.487.579-.99,5.239-.99,5.7,0,.386.821-1.424,1.135-1.738,2.463a8.863,8.863,0,0,1,4.129,1.666c.724-1.135-.338-2.584.676-2.849C90.56,4.674,93.844,7.958,93.481,9c-.314.845-1.811-.193-2.945.507a8.812,8.812,0,0,1,1.762,4.1c1.28-.314,1.545-2.052,2.463-1.521.966.555.966,5.215-.024,5.674Z"
+                      transform="translate(-71.541 -2.941)" fill="#40d0d3" fill-rule="evenodd" />
+                  </svg>
+
                   <p>
                     Airbnb's social-distancing and other COVID-19 related
                     guidelines apply
                   </p>
                 </li>
-                <li class="d-flex align-items-start mt-4">
-                  <img class="mr-2" style="height: 9px; margin-top: 5px" src="./assets/images/icons/tick.png"
-                    alt="tick" />
+                <li class="d-flex align-items-start mt-4 align-items-center">
+                  <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                    viewBox="0 0 24.738 26.309">
+                    <g id="Group_41925" data-name="Group 41925" transform="translate(-4863.073 -18846)">
+                      <path id="Path_85825" data-name="Path 85825"
+                        d="M208.8,102.667V96.539A7.9,7.9,0,0,0,202.7,88.85a1.794,1.794,0,0,0,.021-.209,1.825,1.825,0,1,0-3.65,0,1.8,1.8,0,0,0,.021.209A7.9,7.9,0,0,0,193,96.539v6.127l-2.345,3.616a.482.482,0,0,0,.4.744H210.74a.482.482,0,0,0,.4-.744Z"
+                        transform="translate(4674.587 18759.887)" fill="#40d0d3" />
+                      <path id="Path_85826" data-name="Path 85826"
+                        d="M164.532,77.316l-.95-1.406a12.417,12.417,0,0,0-5.475,10.3h1.7a10.722,10.722,0,0,1,4.729-8.893Z"
+                        transform="translate(4704.966 18770.09)" fill="#40d0d3" />
+                      <path id="Path_85827" data-name="Path 85827"
+                        d="M443.166,75.909l-.95,1.406a10.722,10.722,0,0,1,4.728,8.893h1.7a12.415,12.415,0,0,0-5.475-10.3Z"
+                        transform="translate(4439.169 18770.092)" fill="#40d0d3" />
+                      <path id="Path_85828" data-name="Path 85828"
+                        d="M298.151,431.531a3.621,3.621,0,0,0,3.621-3.621H294.53A3.621,3.621,0,0,0,298.151,431.531Z"
+                        transform="translate(4577.336 18440.777)" fill="#40d0d3" />
+                    </g>
+                  </svg>
+
                   <p>No carbon monoxide alarm</p>
                 </li>
-                <li class="d-flex align-items-start mt-4">
-                  <img class="mr-2" style="height: 9px; margin-top: 5px" src="./assets/images/icons/tick.png"
-                    alt="tick" />
+                <li class="d-flex align-items-start mt-4 align-items-center">
+                  <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 22.19 22.19">
+                    <g id="noun-no-smoking-3678876" transform="translate(-101.11 -31.109)">
+                      <path id="Path_85574" data-name="Path 85574"
+                        d="M443.456,66.048a11.347,11.347,0,0,0,1.526,1.387c.971.693,1.248,1.11.416,2.635a2.441,2.441,0,0,0,2.635-3.19c-.971-3.051-4.3-2.08-2.635-5.131a2.456,2.456,0,0,0-1.942,4.3Z"
+                        transform="translate(-326.258 -29.252)" fill="#40d0d3" />
+                      <path id="Path_85575" data-name="Path 85575"
+                        d="M106.167,31.109l-1.942,2.08,20.11,20.11,1.942-2.08L122.116,47.2V42.2h-4.993Z"
+                        transform="translate(-2.976)" fill="#40d0d3" />
+                      <path id="Path_85576" data-name="Path 85576" d="M101.11,285.548h12.759L108.322,280H101.11Z"
+                        transform="translate(0 -237.796)" fill="#40d0d3" />
+                      <path id="Path_85577" data-name="Path 85577" d="M536.67,280h2.774v5.548H536.67Z"
+                        transform="translate(-416.143 -237.796)" fill="#40d0d3" />
+                    </g>
+                  </svg>
+
                   <p>No smoke alarm</p>
                 </li>
-                <li class="d-flex align-items-start mt-4">
-                  <img class="mr-2" style="height: 9px; margin-top: 5px" src="./assets/images/icons/tick.png"
-                    alt="tick" />
+                <li class="d-flex align-items-start mt-4 align-items-center">
+                  <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                    viewBox="0 0 27.502 30.848">
+                    <g id="Group_41925" data-name="Group 41925" transform="translate(-4716.257 -18736)">
+                      <path id="Path_85825" data-name="Path 85825"
+                        d="M143.139,40.863c-.409,0-1,.544-1.411.971l-.023.023a10.044,10.044,0,0,0-2.065,4.4,3.825,3.825,0,0,0,1.987,4.131c.005,0,.006.008.011.011s8.734,5.008,12.992,7.495a2.07,2.07,0,0,0,.8.2c.2,0,.436-.18.666-.564l.294-.485h0a.363.363,0,0,1,.045-.135l3.1-5.136.022-.023a.373.373,0,0,1,.045-.056l.181-.316h-.011a1.5,1.5,0,0,0,.2-.8c0-.2-.245-.489-.553-.666l-15.656-8.894a1.361,1.361,0,0,0-.632-.158ZM159.99,52.455l-2.72,4.538,1.851,1.117a9.157,9.157,0,0,1,5.169-3.454l-4.3-2.2ZM149.223,55.6v5.813a2.766,2.766,0,0,1,.316-.045,2.673,2.673,0,0,1,.519.022,2.64,2.64,0,0,1,.429.1V56.338c-.44-.254-.814-.474-1.264-.734ZM150.78,61.6c.073.033.144.074.214.113C150.923,61.672,150.854,61.629,150.78,61.6Zm-1,.474c-.064,0-.128.007-.192.011a1.959,1.959,0,0,0-1.084.44,2.14,2.14,0,0,0-.361,2.935,1.948,1.948,0,0,0,2.81.384,2.154,2.154,0,0,0,.372-2.935h0l-.011-.011-.011-.022s-.01,0-.011,0l-.011-.011a1.986,1.986,0,0,0-1.309-.767c-.063-.008-.128-.021-.192-.022Zm-.147.767a1.241,1.241,0,0,1,.248.011,1.292,1.292,0,0,1,.767.418.36.36,0,0,1,.1.079l.011.011a.079.079,0,0,1,0,.011.36.36,0,0,1,.056.1,1.361,1.361,0,0,1-.294,1.761,1.292,1.292,0,0,1-1.84-.237,1.369,1.369,0,0,1,.237-1.874,1.272,1.272,0,0,1,.711-.282Zm-11.061.542a.692.692,0,0,0-.666.576l-1.106,7.19a.468.468,0,0,0,.485.564h5.768a.682.682,0,0,0,.666-.564l.463-3-1.964.835a1.284,1.284,0,0,1-1.682-.677l-.045-.124a1.293,1.293,0,0,1,.666-1.693l3.51-1.49.158-1.039a.477.477,0,0,0-.485-.576h-5.768Zm11.118.169a.593.593,0,0,0-.316.136.635.635,0,0,0-.1.869.542.542,0,0,0,.8.113.651.651,0,0,0,.113-.88.567.567,0,0,0-.384-.226.5.5,0,0,0-.113-.011Zm-2.619,1.219-5.632,2.382a.555.555,0,0,0-.282.745l.045.124a.547.547,0,0,0,.734.294l5.655-2.4c-.007-.008-.016-.014-.023-.022a2.847,2.847,0,0,1-.5-1.117Z"
+                        transform="translate(4579.469 18695.137)" fill="#40d0d3" />
+                    </g>
+                  </svg>
+
                   <p>Security camera/recording device</p>
                 </li>
               </ul>

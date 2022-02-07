@@ -128,7 +128,6 @@ body p {
 .color-light-gray {
   color: #848280;
 }
-
 /* Width */
 .w-16 {
   width: 15.5%;
@@ -295,7 +294,7 @@ body p {
   align-items: center;
   cursor: pointer;
 }
-.search-box:hover{
+.search-box:hover {
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.4);
 }
 .search-btn {
@@ -342,10 +341,10 @@ body p {
 }
 .search-box .search-box-single-element:hover {
   background-color: #e9e9e9;
-  border-radius: 15px;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.11);  
+  border-radius: 35px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.11);
 }
-.search-box .dropdown .btn-light{
+.search-box .dropdown .btn-light {
   background-color: transparent !important;
 }
 
@@ -441,6 +440,65 @@ input::-webkit-input-placeholder {
 }
 .search-bar .search-bar-inner .search-icon img {
   padding: 12px 12px;
+}
+.search-bar .bootstrap-select .dropdown-menu.inner {
+  background-color: transparent;
+}
+.search-bar .dropdown-menu > li > a {
+  border-bottom: 1px solid #d4d4d4;
+}
+.search-bar .dropdown-menu > li > a:hover {
+  background-color: #e9e9e9 !important;
+}
+.search-bar .dropdown-item.active,
+.dropdown-item:active {
+  background-color: #e9e9e9 !important;
+}
+/* Auto complete country */
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
+.autocomplete input {
+  border: 1px solid transparent;
+}
+.autocomplete input[type="text"] {
+  width: 100%;
+}
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  width: 328px;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 37px;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+  background-image: url(../images/icons/location.png);
+  background-repeat: no-repeat;
+  min-height: 10px;
+  background-position: 45px;
+  padding-left: 10px;
+  text-align: left;
+  padding-left: 80px;
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9;
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: #e9e9e9 !important;
 }
 /* Media Query */
 @media (max-width: 1199px) and (min-width: 320px) {
