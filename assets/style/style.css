@@ -545,4 +545,10 @@ input::-webkit-input-placeholder {
     width: 37px;
     height: 37px;
   }
+  .autocomplete-items {
+    width: 220px;
+    height: 150px;
+    overflow-y: scroll;
+    border: none;
+  }
 }
