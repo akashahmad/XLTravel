@@ -1,0 +1,467 @@
+/* Common Main Heading */
+body{
+    margin: 0;
+    padding: 0;
+}
+.main-heading {
+  font-size: 21px;
+  font-weight: 500;
+  color: #000;
+}
+.sub-heading {
+  font-size: 19px;
+  color: #000;
+  -webkit-text-stroke: 0.3px #000;
+  opacity: 0.6;
+}
+
+/* listing-property-type-dropDown */
+.filter-section .filter-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+.filter-section .filter-bar {
+  border-radius: 10px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.11);
+}
+.filter-section .dropdown {
+  transition: transform 0.2s;
+}
+.filter-section .dropdown:hover {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.11);
+}
+.listing-filter-dropDown .dropdown-menu.show {
+  transform: translate3d(1px, 55px, 0px) !important;
+}
+.dropdown-toggle::after {
+  display: none !important;
+}
+.listing-filter-dropDown .dropdown-menu {
+  width: 479px;
+}
+.small-modal .dropdown-menu {
+  width: 217px !important;
+}
+.listing-filter-dropDown input[type="checkbox"],
+input[type="radio"] {
+  margin: 0px 10px 0px 0px;
+}
+.listing-filter-dropDown .dropdown-menu li a label {
+  font-size: 13px;
+  color: black;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  padding: 7px 0px;
+}
+.listing-filter-dropDown .dropdown-menu .option {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #fec657;
+}
+.listing-filter-dropDown .dropdown-menu .option-property-facalities {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #fec657;
+}
+.listing-filter-dropDown .dropdown-menu .option-property-ratings {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #fec657;
+}
+.listing-filter-dropDown .dropdown-menu .selectall {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #fec657;
+}
+.listing-filter-dropDown .dropdown-menu .select-all-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #fec657;
+}
+.select-all-text {
+  font-size: 13px;
+  color: black;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+.btn:not(:disabled):not(.disabled) {
+  padding: 13px 19px;
+  background-color: rgba(225, 225, 225, 0.68);
+}
+.btn:not(:disabled):not(.disabled):focus {
+  background-color: #fec657;
+}
+.filter-section .filter-button {
+  color: white;
+  border: none;
+  padding: 19px 23px;
+  border-radius: 4px;
+  transition: transform 0.2s;
+}
+.filter-section .filter-button:hover {
+  transform: scale(1.1);
+}
+
+/* Price Range in lisitng filter*/
+.property-price-range .irs {
+  position: relative;
+  display: block;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.property-price-range .irs-line {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  outline: none !important;
+}
+.property-price-range .irs-line-left,
+.irs-line-mid,
+.irs-line-right {
+  position: absolute;
+  display: block;
+  top: 0;
+}
+.property-price-range .irs-line-left {
+  left: 0;
+  width: 11%;
+}
+.property-price-range .irs-line-mid {
+  left: 9%;
+  width: 82%;
+}
+.property-price-range .irs-line-right {
+  right: 0;
+  width: 11%;
+}
+
+.property-price-range .irs-bar {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 0;
+}
+.property-price-range .irs-bar-edge {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+}
+
+.property-price-range .irs-shadow {
+  position: absolute;
+  display: none;
+  left: 0;
+  width: 0;
+}
+
+.property-price-range .irs-slider {
+  position: absolute;
+  display: block;
+  cursor: default;
+  z-index: 1;
+}
+.property-price-range .irs-slider.to {
+}
+.irs-slider.type_last {
+  z-index: 2;
+}
+
+.property-price-range .irs-min {
+  position: absolute;
+  display: block;
+  left: 0;
+  cursor: default;
+}
+.property-price-range .irs-max {
+  position: absolute;
+  display: block;
+  right: 0;
+  cursor: default;
+}
+
+.property-price-range .irs-from,
+.irs-to,
+.irs-single {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  cursor: default;
+  white-space: nowrap;
+}
+
+.property-price-range .irs-grid {
+  position: absolute;
+  display: none;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+}
+.property-price-range .irs-with-grid .irs-grid {
+  display: block;
+}
+.property-price-range .irs-grid-pol {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 8px;
+  background: #000;
+}
+.property-price-range .irs-grid-pol.small {
+  height: 4px;
+}
+.property-price-range .irs-grid-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  white-space: nowrap;
+  text-align: center;
+  font-size: 9px;
+  line-height: 9px;
+  padding: 0 3px;
+  color: #000;
+}
+
+.property-price-range .irs-disable-mask {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: -1%;
+  width: 102%;
+  height: 100%;
+  cursor: default;
+  background: rgba(0, 0, 0, 0);
+  z-index: 2;
+}
+.property-price-range .lt-ie9 .irs-disable-mask {
+  background: #000;
+  filter: alpha(opacity=0);
+  cursor: not-allowed;
+}
+
+.property-price-range .irs-disabled {
+  opacity: 0.4;
+}
+
+.property-price-range .irs-hidden-input {
+  position: absolute !important;
+  display: block !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  outline: none !important;
+  z-index: -9999 !important;
+  background: none !important;
+  border-style: solid !important;
+  border-color: transparent !important;
+}
+
+.property-price-range .irs {
+  height: 55px;
+}
+.property-price-range .irs-with-grid {
+  height: 75px;
+}
+.property-price-range .irs-line {
+  height: 10px;
+  top: 33px;
+  background: #eee;
+  background: linear-gradient(to bottom, #ddd -50%, #fff 150%); /* W3C */
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  -moz-border-radius: 16px;
+}
+.property-price-range .irs-line-left {
+  height: 8px;
+}
+.property-price-range .irs-line-mid {
+  height: 8px;
+}
+.property-price-range .irs-line-right {
+  height: 8px;
+}
+
+.property-price-range .irs-bar {
+  height: 10px;
+  top: 33px;
+  border-top: 1px solid #428bca;
+  border-bottom: 1px solid #428bca;
+  background: #428bca;
+  background: linear-gradient(
+    to top,
+    rgba(66, 139, 202, 1) 0%,
+    rgba(127, 195, 232, 1) 100%
+  ); /* W3C */
+}
+.property-price-range .irs-bar-edge {
+  height: 10px;
+  top: 33px;
+  width: 14px;
+  border: 1px solid #428bca;
+  border-right: 0;
+  background: #428bca;
+  background: linear-gradient(
+    to top,
+    rgba(66, 139, 202, 1) 0%,
+    rgba(127, 195, 232, 1) 100%
+  ); /* W3C */
+  border-radius: 16px 0 0 16px;
+  -moz-border-radius: 16px 0 0 16px;
+}
+
+.property-price-range .irs-shadow {
+  height: 2px;
+  top: 38px;
+  background: #000;
+  opacity: 0.3;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+.property-price-range .lt-ie9 .irs-shadow {
+  filter: alpha(opacity=30);
+}
+
+.property-price-range .irs-slider {
+  top: 25px;
+  width: 27px;
+  height: 27px;
+  border: 1px solid #aaa;
+  background: #ddd;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(220, 220, 220, 1) 20%,
+    rgba(255, 255, 255, 1) 100%
+  ); /* W3C */
+  border-radius: 27px;
+  -moz-border-radius: 27px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.property-price-range .irs-slider.state_hover,
+.irs-slider:hover {
+  background: #fff;
+}
+
+.property-price-range .irs-min,
+.irs-max {
+  color: #333;
+  font-size: 12px;
+  line-height: 1.333;
+  text-shadow: none;
+  top: 0;
+  padding: 1px 5px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+
+.property-price-range .lt-ie9 .irs-min,
+.lt-ie9 .irs-max {
+  background: #ccc;
+}
+
+.property-price-range .irs-from,
+.irs-to,
+.irs-single {
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.333;
+  text-shadow: none;
+  padding: 1px 5px;
+  background: #428bca;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+.property-price-range .lt-ie9 .irs-from,
+.lt-ie9 .irs-to,
+.lt-ie9 .irs-single {
+  background: #999;
+}
+
+.property-price-range .irs-grid {
+  height: 27px;
+}
+.property-price-range .irs-grid-pol {
+  opacity: 0.5;
+  background: #428bca;
+}
+.property-price-range .irs-grid-pol.small {
+  background: #999;
+}
+
+.property-price-range .irs-grid-text {
+  bottom: 5px;
+  color: #99a4ac;
+}
+
+/************************* Listing Left Side ************************************ */
+.lisiting-inner-content .listing-left-wrapper {
+  width: 64%;
+}
+.lisiting-inner-content .listing-right-wrapper{
+    width: 33%;
+    margin-top: 60px;
+}
+.lisiting-inner-content .listing-left-wrapper .listing-featured-inner-card {
+  width: 85%;
+  margin: 0 auto;
+  position: relative;
+  top: -51px;
+  padding: 11px 14px;
+  border-radius: 13px;
+}
+
+.listing-premium-card-first {
+  background-image: url("/assets/images/house-premium.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 187px;
+  width: 30%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.single-premium-card{
+    background-image: url("/assets/images/single-premium-card.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 187px;
+    width: 30%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.listing-premium-center-card {
+  width: 44%;
+}
+
+.something-for-you-image{
+    background-image: url("../images/something-foe-you.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 261px;
+}
+.something-for-you-image .image-inner-card{
+right: 10px;
+top: 12px;
+border-radius: 12px;
+}
