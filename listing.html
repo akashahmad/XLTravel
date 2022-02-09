@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -50,7 +49,7 @@
             <ul class="d-flex align-items-center list-unstyled">
               <li><a href="/">Home</a></li>
               <li class="active">
-                <a href="/property-detail.html">Properties</a>
+                <a href="/listing.html">Properties</a>
               </li>
               <li><a>Blog</a></li>
               <li><a>FAQs</a></li>
@@ -83,7 +82,7 @@
             <nav class="mobile-nav">
               <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/property-detail.html">Properties</a></li>
+                <li><a href="/listing.html">Properties</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">FAQs</a></li>
                 <li><a href="#">Contact</a></li>
@@ -101,57 +100,55 @@
     </div>
   </header>
   <!-- Header End -->
-  <section class="hero-section container-main">
-    <div data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="200" class="position-relative">
-      <form autocomplete="off" class="search-bar container-main" id="outside-click-search-bar">
-        <div class="search-box my-4 cursor-pointer" id="search-box-inner" onclick="ShowSearchBar()">
-          <p class="search-text pl-3" id="search-text-property-detail">
-            Search
-          </p>
-          <div class="search-bar-inner" id="search-bar-inner-elements">
-            <div class="d-flex">
-              <div class="search-box-single-element border-right py-2 text-center d-flex flex-column">
-                <p class="search-lable">Location</p>
-                <div class="autocomplete">
-                  <input id="myInput" type="text" name="myCountry" placeholder="Location" />
+  <section style="height: 80px;" class="hero-section container-main  d-none d-md-block">
+    <div class="d-flex justify-content-center">
+      <div class="new-search-box bg-white">
+        <div class="destinations">
+          <button type="button" onclick="ShowDestinationModal()">Destination</button>
+          <div class="section-destination-modal" id="destination-modal">
+            <div class="suggestion">
+              <p>Suggest me best destination:</p>
+                <div>
+                <button class="anywhere-button">
+                  <a href="/listing.html">
+                  Take me anywhere!
+                  <img src="/assets/images/icons/right-arrow-search.png" alt="See your suggestions">
+                </a>
+                </button>
                 </div>
-              </div>
-              <div class="search-box-single-element border-right py-2 text-center d-flex flex-column">
-                <p class="search-lable">Check in</p>
-                <input id="searhBar-date-picker" placeholder="Add Date" class="form-control" />
-              </div>
-              <div class="search-box-single-element border-right py-2 text-center d-flex flex-column">
-                <p class="search-lable">Check out</p>
-                <input class="cursor-pointer" placeholder="Add Date" type="text" name="value_from_end_date"
-                  data-datepicker="separateRange" />
-              </div>
-              <div class="search-box-single-element py-2 text-center d-flex flex-column">
-                <p class="search-lable">Guests</p>
-                <select class="selectpicker" title="Add Guest">
-                  <option>1 Guest</option>
-                  <option>2 Guests</option>
-                  <option>3 Guests</option>
-                  <option>4 Guests</option>
-                </select>
+            </div>
+            <div>
+              <div autocomplete="off" class="autocomplete w-100">
+                <input id="myInput" type="text" name="myCountry" placeholder="Find Your Own Paradise">
               </div>
             </div>
           </div>
-          <button class="search-btn cursor-pointer">
-            <svg class="svg-icon search-icon" fill="#000000" aria-labelledby="title desc" height="20px" width="20px"
-              role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7">
-              <title id="title">Search Icon</title>
-              <desc id="desc"></desc>
-              <g class="search-path" fill="none" stroke="#000000">
-                <path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4" />
-                <circle cx="8" cy="8" r="7" />
-              </g>
-            </svg>
-          </button>
         </div>
-      </form>
+        <div class="check-in">
+          <button type="button" id="searhBar-date-picker">Check In</button>
+          <!-- <input placeholder="Add Date" class="form-control" /> -->
+        </div>
+        <div class="check-out">
+          <button type="button" id="searhBar-date-picker">Check Out</button>
+        </div>
+        <div class="guests">
+          <!-- <button type="button">Guests</button>  -->
+          <select class="selectpicker" title="Add Guest">
+            <option>1 Guest</option>
+            <option>2 Guests</option>
+            <option>3 Guests</option>
+            <option>4 Guests</option>
+          </select>
+        </div>
+        <a href="/property-detail.html">
+        <div class="search-button">
+          <button type="submit">Search</button>
+        </div>
+        </a>
+      </div>
     </div>
   </section>
-  <section class="filter-section container-main pt-4">
+  <section class="filter-section container-main pt-4 d-none d-md-block">
     <h3 class="text-center pt-5 pb-5">The Most Likely</h3>
     <div class="filter-wrapper d-flex align-items-center">
       <div class="filter-bar bg-white py-2 d-flex align-items-center justify-content-center px-2">
@@ -227,7 +224,7 @@
               </div>
               <div class="d-flex justify-content-between pt-5 align-items-center">
                 <div class="w-100">
-                  <p class="col-9 font-size-12">
+                  <p class="col-9 font-size-11">
                     Showing 3409 properties in Dubai
                   </p>
                 </div>
@@ -352,7 +349,7 @@
               </div>
               <div class="d-flex justify-content-between pt-5 align-items-center">
                 <div class="w-100">
-                  <p class="col-9 font-size-12">
+                  <p class="col-9 font-size-11">
                     Showing 3409 property-facalities
                   </p>
                 </div>
@@ -445,17 +442,33 @@
       </div>
     </div>
   </section>
+  <section class="filter-mobile d-block d-md-none">
+    <div style="background-color: #4b4949"
+    class="filter-mobile-banner d-flex align-items-center justify-content-between px-4 px-lg-3 py-2 rounded-lg-top d-block d-lg-none">
+    <div>
+      <p class="text-white font-weight-500 font-size-16">
+        The Most Likely
+      </p>
+    </div>
+    <div class="d-flex align-items-center">
+      <button class="filter-button background-color-tealish ml-2 d-flex align-items-center py-2 px-3">
+        <img style="height: 20px; margin-right: 9px" src="./assets/images/icons/filter.png" alt="filter" />Filters
+      </button>
+    </div>
+  </div>
+  </section>
   <section class="lisiting-inner-content container-main pt-5 overflow-hidden">
-    <div class="w-90 d-flex justify-content-between">
+    <div class="listing-wrapper w-90 d-flex flex-column flex-lg-row justify-content-between">
       <div class="listing-left-wrapper">
-        <div class="main-featured-card mr-5">
+        <div class="main-featured-card mr-0 mr-md-5">
           <p class="main-heading">Choose the best place to stay in London</p>
           <p class="sub-heading pt-3">
             Best seller based on your serarch criteria
           </p>
-          <div data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="200"
+          <a href="/property-detail.html">  
+           <div data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="200"
             class="background-color-tealish rounded-lg-top mt-5 pb-2">
-            <div class="d-flex justify-content-between align-items-center py-3 px-3">
+            <div class="card-badge-headings-mobile d-flex justify-content-between align-items-center py-3 px-3">
               <div class="d-flex align-items-center">
                 <img height="17px" src="./assets/images/icons/tags.png" alt="tag" />
                 <p class="text-white ml-3">SPECIAL RECOMMENDATION</p>
@@ -464,18 +477,22 @@
                 <p class="text-white">Exceptional value for this property</p>
               </div>
             </div>
-            <div style="
+            <div class="position-relative" style="
                   background-image: url(/assets/images/listing-house.png);
                   background-repeat: no-repeat;
                   background-size: cover;
                   min-height: 235px;
                   margin: 0px 5px;
-                "></div>
+                ">
+                <div class="yellow-badge position-absolute background-color-yellow text-white font-size-11">
+                 SPECIALLY FOR YOU
+                </div>
+                </div>
             <div class="bg-white mx-2">
               <div class="listing-featured-inner-card bg-white">
-                <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center">
+                <div class="d-flex flex-column flex-lg-row justify-content-between align-items-md-center">
                   <div>
-                    <div class="d-flex flex-column flex-lg-row mt-2 px-lg-0 px-3 align-items-center">
+                    <div class="d-flex justify-content-between mt-2 px-lg-0 px-0 px-md-3 align-items-center">
                       <div>
                         <p class="font-weight-bold mr-3 font-size-14">
                           Modern And Luxury Apartment
@@ -483,7 +500,7 @@
                       </div>
                       <div>
                         <button style="font-size: 12px;"
-                          class="yellow-button d-flex justify-content-center align-items-center mt-4 mt-lg-2">
+                          class="yellow-button d-flex justify-content-center align-items-center mt-0 mt-md-2">
                           Top Value
                         </button>
                       </div>
@@ -502,7 +519,7 @@
                             </svg>
                           </div>
                           <div>
-                            <p class="dark-gray font-weight-500 font-size-12">2</p>
+                            <p class="dark-gray font-weight-500 font-size-11">2</p>
                           </div>
                         </div>
                       </div>
@@ -518,7 +535,7 @@
                             </svg>
                           </div>
                           <div>
-                            <p class="dark-gray font-weight-500 font-size-12">2</p>
+                            <p class="dark-gray font-weight-500 font-size-11">2</p>
                           </div>
                         </div>
                       </div>
@@ -540,7 +557,7 @@
                             </svg>
                           </div>
                           <div>
-                            <p class="dark-gray font-weight-500 font-size-12">2</p>
+                            <p class="dark-gray font-weight-500 font-size-11">2</p>
                           </div>
                         </div>
                       </div>
@@ -565,7 +582,7 @@
                             </svg>
                           </div>
                           <div>
-                            <p class="dark-gray font-weight-500 font-size-12">
+                            <p class="dark-gray font-weight-500 font-size-11">
                               2460 <span class="font-size-8 opacity-6">m 2</span>
                             </p>
                           </div>
@@ -573,10 +590,11 @@
                       </div>
                     </div>
                   </div>
-                  <div>
-                    <div class="d-flex align-items-center">
+                  <div class="d-flex flex-md-column flex-row-reverse justify-content-between align-items-center">
+                    <div>
+                    <div class="d-flex align-items-center justify-content-end mt-4 mt-md-0">
                       <div class="mr-3 d-flex flex-column align-items-end">
-                        <p class="font-weight-600 font-size-12">Very Good</p>
+                        <p class="font-weight-600 font-size-11">Very Good</p>
                         <p class="font-size-11 dark-gray opacity-9">4,347 reviews</p>
                       </div>
                       <div class="position-relative d-flex justify-content-center align-items-center">
@@ -586,17 +604,21 @@
                         </p>
                       </div>
                     </div>
-                    <p class="color-tealish font-size-12 pt-2 pb-3 text-right"><img class="mr-2"
+                    <p class="color-tealish font-size-11 pt-2 pb-3 text-right"><img class="mr-2"
                         src="/assets/images/icons/greenVerified.png" alt="verified" />Verified Host</p>
-                    <p class="text-black font-weight-700 font-size-16 text-right">
+                      </div>
+                    <div>
+                    <p class="text-black font-weight-700 font-size-16 text-left text-lg-right">
                       € 149<span class="font-weight-normal font-size-13">/night</span>
                     </p>
                     <p class="underline text-right"><u>€ 622 total</u></p>
+                  </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </a>
         </div>
         <div class="main-featured-card mt-5">
           <p class="main-heading">PREMIUM accommodations for you in London</p>
@@ -605,24 +627,26 @@
           </p>
           <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="200"
             class="background-color-orange mt-5 rounded-lg">
-            <div class="d-flex align-items-center py-3 px-3">
+            <div class="card-badge-headings-mobile d-flex align-items-center py-3 px-3">
               <div class="d-flex align-items-center">
                 <img height="17px" src="./assets/images/icons/trophy.png" alt="trophy" />
-                <p class="text-white ml-3 mr-5">PREMIUM SELECTION</p>
+                <p class="text-white ml-3 mr-3 mr-md-5">PREMIUM SELECTION</p>
               </div>
               <div>
                 <p class="text-white">Because you deserve only the best in London</p>
               </div>
             </div>
-            <div class="premium-card-inner d-flex bg-white justify-content-between align-items-center rounded-lg">
-              <div class="listing-premium-card-first">
-
+            <div class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg">
+              <div class="listing-premium-card-first position-relative">
+                <div class="tealish-badge position-absolute background-color-tealish text-white font-size-11">
+                  PREMIUM
+                 </div>
               </div>
               <div class="border-right listing-premium-center-card px-3">
-                <p class="pb-4 font-weight-500 font-size-12 opacity-9">Holiday House ♥ Big Terrace and BBQ★ Pets
+                <p class="pb-4 font-weight-500 font-size-11 opacity-9 pt-4 pt-md-0">Holiday House ♥ Big Terrace and BBQ★ Pets
                   Welcome★ <img class="mr-2" height="12px" src="/assets/images/icons/greenVerified.png"
-                    alt="verified" /><span class="color-tealish font-size-12 font-weight-500">Verified Host</span> </p>
-                <p class="dark-gray font-size-12">Dopustovanje v srcu narave je vedno najboljša
+                    alt="verified" /><span class="color-tealish font-size-11 font-weight-500">Verified Host</span> </p>
+                <p class="dark-gray font-size-11">Dopustovanje v srcu narave je vedno najboljša
                   izbira Predstavljajte si, da vas zjutraj prebudi
                   petje…</p>
                 <div class="facalities-icons-inner d-flex flex-wrap align-items-center pt-4">
@@ -710,10 +734,10 @@
                   </div>
                 </div>
               </div>
-              <div class="mr-3">
+              <div class="listing-card-inner-third mr-0 mr-md-3 px-3 px-md-0 py-md-0 py-3 d-flex flex-md-column flex-row-reverse justify-content-between">
                 <div class="d-flex align-items-center justify-content-end">
                   <div class="mr-3 d-flex flex-column align-items-end">
-                    <p class="font-weight-600 font-size-12">Very Good</p>
+                    <p class="font-weight-600 font-size-11">Very Good</p>
                     <p class="font-size-11 dark-gray opacity-9">4,347 reviews</p>
                   </div>
                   <div class="position-relative d-flex justify-content-center align-items-center">
@@ -723,15 +747,20 @@
                     </p>
                   </div>
                 </div>
-                <p class="color-tealish text-right font-size-12 pt-2 pb-3">Location 8.1</p>
-                <p class="text-danger font-size-9 text-right"><u>We only have 1 left at this price!</u></p>
-                <p class="text-black font-size-10 text-right pt-3">Total price per night</p>
-                <p class="text-black font-weight-700 font-size-12 text-right py-2">
+                <div>
+                <p class="color-tealish text-md-right text-left font-size-11 pt-2 pb-3">Location 8.1</p>
+                <p class="text-danger font-size-9 text-md-right text-left"><u>We only have 1 left at this price!</u></p>
+                <p class="text-black font-size-10 text-md-right text-left pt-3">Total price per night</p>
+                <p class="text-black font-weight-700 font-size-11 text-md-right text-left py-2">
                   € 268
                 </p>
-                <div class="text-right">
+              </div>
+                <div class="text-right d-none d-md-block">
                   <button class="yellow-button font-size-9">More Details</button>
                 </div>
+              </div>
+              <div class="text-right d-block d-md-none w-75 text-center pb-4">
+                <button class="yellow-button font-size-9 w-100">More Details</button>
               </div>
             </div>
           </div>
@@ -739,14 +768,17 @@
         <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="200" class="main-featured-card mt-5">
           <p class="main-heading">Get inspired by our top rated homes</p>
           <div class="mt-3">
-            <div class="premium-card-inner d-flex bg-white justify-content-between align-items-center rounded-lg">
-              <div class="single-premium-card">
+            <div class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg">
+              <div class="single-premium-card position-relative">
+                <div class="tealish-badge position-absolute background-color-tealish text-white font-size-11">
+                  TOP
+                 </div>
               </div>
               <div class="border-right listing-premium-center-card px-3">
-                <p class="pb-4 font-weight-500 font-size-12 opacity-9">A Grand Modern Apartment <img class="mr-2"
+                <p class="pb-4 font-weight-500 font-size-11 opacity-9 pt-4 pt-md-0">A Grand Modern Apartment <img class="mr-2"
                     height="12px" src="/assets/images/icons/greenVerified.png" alt="verified" /><span
-                    class="color-tealish font-size-12 font-weight-500">Verified Host</span> </p>
-                <p class="dark-gray font-size-12">Dopustovanje v srcu narave je vedno najboljša
+                    class="color-tealish font-size-11 font-weight-500">Verified Host</span> </p>
+                <p class="dark-gray font-size-11">Dopustovanje v srcu narave je vedno najboljša
                   izbira Predstavljajte si, da vas zjutraj prebudi
                   petje…</p>
                 <div class="facalities-icons-inner d-flex flex-wrap align-items-center pt-4">
@@ -834,10 +866,10 @@
                   </div>
                 </div>
               </div>
-              <div class="mr-3">
+              <div class="listing-card-inner-third mr-0 mr-md-3 px-3 px-md-0 py-md-0 py-3 d-flex flex-md-column flex-row-reverse justify-content-between">
                 <div class="d-flex align-items-center justify-content-end">
                   <div class="mr-3 d-flex flex-column align-items-end">
-                    <p class="font-weight-600 font-size-12">Very Good</p>
+                    <p class="font-weight-600 font-size-11">Very Good</p>
                     <p class="font-size-11 dark-gray opacity-9">4,347 reviews</p>
                   </div>
                   <div class="position-relative d-flex justify-content-center align-items-center">
@@ -847,28 +879,36 @@
                     </p>
                   </div>
                 </div>
-                <p class="color-tealish text-right font-size-12 pt-2 pb-3">Location 8.1</p>
-                <p class="text-black font-size-10 text-right">Total price per night</p>
-                <p class="text-black font-weight-700 font-size-12 text-right py-2">
+                <div>
+                <p class="color-tealish text-md-right text-left font-size-11 pt-2 pb-3">Location 8.1</p>
+                <p class="text-black font-size-10 text-md-right text-left">Total price per night</p>
+                <p class="text-black font-weight-700 font-size-11 text-md-right text-left py-2">
                   € 268
                 </p>
-                <div class="text-right">
+              </div>
+                <div class="text-right d-none d-md-block">
                   <button class="yellow-button font-size-9">More Details</button>
                 </div>
+              </div>
+              <div class="text-right d-block d-md-none w-75 text-center pb-4">
+                <button class="yellow-button font-size-9 w-100">More Details</button>
               </div>
             </div>
           </div>
         </div>
         <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="200" class="main-featured-card mt-5">
           <div class="mt-3">
-            <div class="premium-card-inner d-flex bg-white justify-content-between align-items-center rounded-lg">
-              <div class="single-premium-card">
+            <div class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg">
+              <div class="single-premium-card position-relative">
+                <div class="tealish-badge position-absolute background-color-tealish text-white font-size-11">
+                  TOP
+                 </div>
               </div>
               <div class="border-right listing-premium-center-card px-3">
-                <p class="pb-4 font-weight-500 font-size-12 opacity-9">A Grand Modern Apartment <img class="mr-2"
+                <p class="pb-4 font-weight-500 font-size-11 opacity-9 pt-4 pt-md-0">A Grand Modern Apartment <img class="mr-2"
                     height="12px" src="/assets/images/icons/greenVerified.png" alt="verified" /><span
-                    class="color-tealish font-size-12 font-weight-500">Verified Host</span> </p>
-                <p class="dark-gray font-size-12">Dopustovanje v srcu narave je vedno najboljša
+                    class="color-tealish font-size-11 font-weight-500">Verified Host</span> </p>
+                <p class="dark-gray font-size-11">Dopustovanje v srcu narave je vedno najboljša
                   izbira Predstavljajte si, da vas zjutraj prebudi
                   petje…</p>
                 <div class="facalities-icons-inner d-flex flex-wrap align-items-center pt-4">
@@ -956,10 +996,10 @@
                   </div>
                 </div>
               </div>
-              <div class="mr-3">
+              <div class="listing-card-inner-third mr-0 mr-md-3 px-3 px-md-0 py-md-0 py-3 d-flex flex-md-column flex-row-reverse justify-content-between">
                 <div class="d-flex align-items-center justify-content-end">
                   <div class="mr-3 d-flex flex-column align-items-end">
-                    <p class="font-weight-600 font-size-12">Very Good</p>
+                    <p class="font-weight-600 font-size-11">Very Good</p>
                     <p class="font-size-11 dark-gray opacity-9">4,347 reviews</p>
                   </div>
                   <div class="position-relative d-flex justify-content-center align-items-center">
@@ -969,28 +1009,36 @@
                     </p>
                   </div>
                 </div>
-                <p class="color-tealish text-right font-size-12 pt-2 pb-3">Location 8.1</p>
-                <p class="text-black font-size-10 text-right">Total price per night</p>
-                <p class="text-black font-weight-700 font-size-12 text-right py-2">
+                <div>
+                <p class="color-tealish text-md-right text-left font-size-11 pt-2 pb-3">Location 8.1</p>
+                <p class="text-black font-size-10 text-md-right text-left">Total price per night</p>
+                <p class="text-black font-weight-700 font-size-11 text-md-right text-left py-2">
                   € 268
                 </p>
-                <div class="text-right">
+              </div>
+                <div class="text-right d-none d-md-block">
                   <button class="yellow-button font-size-9">More Details</button>
                 </div>
+              </div>
+              <div class="text-right d-block d-md-none w-75 text-center pb-4">
+                <button class="yellow-button font-size-9 w-100">More Details</button>
               </div>
             </div>
           </div>
         </div>
         <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="200" class="main-featured-card mt-5">
           <div class="mt-3">
-            <div class="premium-card-inner d-flex bg-white justify-content-between align-items-center rounded-lg">
-              <div class="single-premium-card">
+            <div class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg">
+              <div class="single-premium-card position-relative">
+                <div class="tealish-badge position-absolute background-color-tealish text-white font-size-11">
+                  TOP
+                 </div>
               </div>
               <div class="border-right listing-premium-center-card px-3">
-                <p class="pb-4 font-weight-500 font-size-12 opacity-9">A Grand Modern Apartment <img class="mr-2"
+                <p class="pb-4 font-weight-500 font-size-11 opacity-9 pt-4 pt-md-0">A Grand Modern Apartment <img class="mr-2"
                     height="12px" src="/assets/images/icons/greenVerified.png" alt="verified" /><span
-                    class="color-tealish font-size-12 font-weight-500">Verified Host</span> </p>
-                <p class="dark-gray font-size-12">Dopustovanje v srcu narave je vedno najboljša
+                    class="color-tealish font-size-11 font-weight-500">Verified Host</span> </p>
+                <p class="dark-gray font-size-11">Dopustovanje v srcu narave je vedno najboljša
                   izbira Predstavljajte si, da vas zjutraj prebudi
                   petje…</p>
                 <div class="facalities-icons-inner d-flex flex-wrap align-items-center pt-4">
@@ -1078,10 +1126,10 @@
                   </div>
                 </div>
               </div>
-              <div class="mr-3">
+              <div class="listing-card-inner-third mr-0 mr-md-3 px-3 px-md-0 py-md-0 py-3 d-flex flex-md-column flex-row-reverse justify-content-between">
                 <div class="d-flex align-items-center justify-content-end">
                   <div class="mr-3 d-flex flex-column align-items-end">
-                    <p class="font-weight-600 font-size-12">Very Good</p>
+                    <p class="font-weight-600 font-size-11">Very Good</p>
                     <p class="font-size-11 dark-gray opacity-9">4,347 reviews</p>
                   </div>
                   <div class="position-relative d-flex justify-content-center align-items-center">
@@ -1091,28 +1139,36 @@
                     </p>
                   </div>
                 </div>
-                <p class="color-tealish text-right font-size-12 pt-2 pb-3">Location 8.1</p>
-                <p class="text-black font-size-10 text-right">Total price per night</p>
-                <p class="text-black font-weight-700 font-size-12 text-right py-2">
+                <div>
+                <p class="color-tealish text-md-right text-left font-size-11 pt-2 pb-3">Location 8.1</p>
+                <p class="text-black font-size-10 text-md-right text-left">Total price per night</p>
+                <p class="text-black font-weight-700 font-size-11 text-md-right text-left py-2">
                   € 268
                 </p>
-                <div class="text-right">
+              </div>
+                <div class="text-right d-none d-md-block">
                   <button class="yellow-button font-size-9">More Details</button>
                 </div>
+              </div>
+              <div class="text-right d-block d-md-none w-75 text-center pb-4">
+                <button class="yellow-button font-size-9 w-100">More Details</button>
               </div>
             </div>
           </div>
         </div>
         <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="200" class="main-featured-card mt-5">
           <div class="mt-3">
-            <div class="premium-card-inner d-flex bg-white justify-content-between align-items-center rounded-lg">
-              <div class="single-premium-card">
+            <div class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg">
+              <div class="single-premium-card position-relative">
+                <div class="tealish-badge position-absolute background-color-tealish text-white font-size-11">
+                  TOP
+                 </div>
               </div>
               <div class="border-right listing-premium-center-card px-3">
-                <p class="py-b font-weight-500 font-size-12 opacity-9">A Grand Modern Apartment <img class="mr-2"
+                <p class="py-b font-weight-500 font-size-11 opacity-9 pt-4">A Grand Modern Apartment <img class="mr-2"
                     height="12px" src="/assets/images/icons/greenVerified.png" alt="verified" /><span
-                    class="color-tealish font-size-12 font-weight-500">Verified Host</span> </p>
-                <p class="dark-gray font-size-12">Dopustovanje v srcu narave je vedno najboljša
+                    class="color-tealish font-size-11 font-weight-500">Verified Host</span> </p>
+                <p class="dark-gray font-size-11">Dopustovanje v srcu narave je vedno najboljša
                   izbira Predstavljajte si, da vas zjutraj prebudi
                   petje…</p>
                 <div class="facalities-icons-inner d-flex flex-wrap align-items-center pt-4">
@@ -1200,10 +1256,10 @@
                   </div>
                 </div>
               </div>
-              <div class="mr-3">
+              <div class="listing-card-inner-third mr-0 mr-md-3 px-3 px-md-0 py-md-0 py-3 d-flex flex-md-column flex-row-reverse justify-content-between">
                 <div class="d-flex align-items-center justify-content-end">
                   <div class="mr-3 d-flex flex-column align-items-end">
-                    <p class="font-weight-600 font-size-12">Very Good</p>
+                    <p class="font-weight-600 font-size-11">Very Good</p>
                     <p class="font-size-11 dark-gray opacity-9">4,347 reviews</p>
                   </div>
                   <div class="position-relative d-flex justify-content-center align-items-center">
@@ -1213,21 +1269,26 @@
                     </p>
                   </div>
                 </div>
-                <p class="color-tealish text-right font-size-12 pt-2 pb-3">Location 8.1</p>
-                <p class="text-black font-size-10 text-right">Total price per night</p>
-                <p class="text-black font-weight-700 font-size-12 text-right py-2">
+                <div>
+                <p class="color-tealish text-md-right text-left font-size-11 pt-2 pb-3">Location 8.1</p>
+                <p class="text-black font-size-10 text-md-right text-left">Total price per night</p>
+                <p class="text-black font-weight-700 font-size-11 text-md-right text-left py-2">
                   € 268
                 </p>
-                <div class="text-right">
+              </div>
+                <div class="text-right d-none d-md-block">
                   <button class="yellow-button font-size-9">More Details</button>
                 </div>
+              </div>
+              <div class="text-right d-block d-md-none w-75 text-center pb-4">
+                <button class="yellow-button font-size-9 w-100">More Details</button>
               </div>
             </div>
           </div>
         </div>
         <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="200" class="main-featured-card mt-5">
           <div class="background-color-orange mt-5 rounded-lg">
-            <div class="d-flex align-items-center justify-content-between  py-3 px-3">
+            <div class="card-badge-headings-mobile d-flex align-items-center justify-content-between py-3 px-3">
               <div class="d-flex align-items-center">
                 <img height="17px" src="./assets/images/icons/tags.png" alt="trophy" />
                 <p class="text-white ml-3 mr-5">HOMES HIGHLIGHT</p>
@@ -1236,15 +1297,17 @@
                 <p class="text-white">Exceptional value for this property</p>
               </div>
             </div>
-            <div class="premium-card-inner d-flex bg-white justify-content-between align-items-center rounded-lg">
-              <div class="listing-premium-card-first">
-
+            <div class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg">
+              <div class="listing-premium-card-first position-relative">
+                <div class="tealish-badge position-absolute background-color-tealish text-white font-size-11">
+                  TRENDING
+                 </div>
               </div>
               <div class="border-right listing-premium-center-card px-3">
-                <p class="pb-4 font-weight-500 font-size-12 opacity-9">Holiday House ♥ Big Terrace and BBQ★ Pets
+                <p class="pb-4 font-weight-500 font-size-11 opacity-9 pt-4 pt-md-0">Holiday House ♥ Big Terrace and BBQ★ Pets
                   Welcome★ <img class="mr-2" height="12px" src="/assets/images/icons/greenVerified.png"
-                    alt="verified" /><span class="color-tealish font-size-12 font-weight-500">Verified Host</span> </p>
-                <p class="dark-gray font-size-12">Dopustovanje v srcu narave je vedno najboljša
+                    alt="verified" /><span class="color-tealish font-size-11 font-weight-500">Verified Host</span> </p>
+                <p class="dark-gray font-size-11">Dopustovanje v srcu narave je vedno najboljša
                   izbira Predstavljajte si, da vas zjutraj prebudi
                   petje…</p>
                 <div class="facalities-icons-inner d-flex flex-wrap align-items-center pt-4">
@@ -1332,10 +1395,10 @@
                   </div>
                 </div>
               </div>
-              <div class="mr-3">
+              <div class="listing-card-inner-third mr-0 mr-md-3 px-3 px-md-0 py-md-0 py-3 d-flex flex-md-column flex-row-reverse justify-content-between">
                 <div class="d-flex align-items-center justify-content-end">
                   <div class="mr-3 d-flex flex-column align-items-end">
-                    <p class="font-weight-600 font-size-12">Very Good</p>
+                    <p class="font-weight-600 font-size-11">Very Good</p>
                     <p class="font-size-11 dark-gray opacity-9">4,347 reviews</p>
                   </div>
                   <div class="position-relative d-flex justify-content-center align-items-center">
@@ -1345,29 +1408,36 @@
                     </p>
                   </div>
                 </div>
-                <p class="color-tealish text-right font-size-12 pt-2 pb-3">Location 8.1</p>
-                <p class="text-danger font-size-9 text-right"><u>We only have 1 left at this price!</u></p>
-                <p class="text-black font-size-10 text-right pt-3">Total price per night</p>
-                <p class="text-black font-weight-700 font-size-12 text-right py-2">
+                <div>
+                <p class="color-tealish text-md-right text-left font-size-11 pt-2 pb-3">Location 8.1</p>
+                <p class="text-black font-size-10 text-md-right text-left">Total price per night</p>
+                <p class="text-black font-weight-700 font-size-11 text-md-right text-left py-2">
                   € 268
                 </p>
-                <div class="text-right">
+              </div>
+                <div class="text-right d-none d-md-block">
                   <button class="yellow-button font-size-9">More Details</button>
                 </div>
+              </div>
+              <div class="text-right d-block d-md-none w-75 text-center pb-4">
+                <button class="yellow-button font-size-9 w-100">More Details</button>
               </div>
             </div>
           </div>
         </div>
         <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="200" class="main-featured-card mt-5">
           <div class="mt-3">
-            <div class="premium-card-inner d-flex bg-white justify-content-between align-items-center rounded-lg">
-              <div class="single-premium-card">
+            <div class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg">
+              <div class="single-premium-card position-relative">
+                <div class="yellow-badge position-absolute background-color-yellow text-white font-size-11">
+                  NEW
+                 </div>
               </div>
               <div class="border-right listing-premium-center-card px-3">
-                <p class="pb-4 font-weight-500 font-size-12 opacity-9">A Grand Modern Apartment <img class="mr-2"
+                <p class="pb-4 font-weight-500 font-size-11 opacity-9 pt-4 pt-md-0">A Grand Modern Apartment <img class="mr-2"
                     height="12px" src="/assets/images/icons/greenVerified.png" alt="verified" /><span
-                    class="color-tealish font-size-12 font-weight-500">Verified Host</span> </p>
-                <p class="dark-gray font-size-12">Dopustovanje v srcu narave je vedno najboljša
+                    class="color-tealish font-size-11 font-weight-500">Verified Host</span> </p>
+                <p class="dark-gray font-size-11">Dopustovanje v srcu narave je vedno najboljša
                   izbira Predstavljajte si, da vas zjutraj prebudi
                   petje…</p>
                 <div class="facalities-icons-inner d-flex flex-wrap align-items-center pt-4">
@@ -1455,10 +1525,10 @@
                   </div>
                 </div>
               </div>
-              <div class="mr-3">
+              <div class="listing-card-inner-third mr-0 mr-md-3 px-3 px-md-0 py-md-0 py-3 d-flex flex-md-column flex-row-reverse justify-content-between">
                 <div class="d-flex align-items-center justify-content-end">
                   <div class="mr-3 d-flex flex-column align-items-end">
-                    <p class="font-weight-600 font-size-12">Very Good</p>
+                    <p class="font-weight-600 font-size-11">Very Good</p>
                     <p class="font-size-11 dark-gray opacity-9">4,347 reviews</p>
                   </div>
                   <div class="position-relative d-flex justify-content-center align-items-center">
@@ -1468,28 +1538,36 @@
                     </p>
                   </div>
                 </div>
-                <p class="color-tealish text-right font-size-12 pt-2 pb-3">Location 8.1</p>
-                <p class="text-black font-size-10 text-right">Total price per night</p>
-                <p class="text-black font-weight-700 font-size-12 text-right py-2">
+                <div>
+                <p class="color-tealish text-md-right text-left font-size-11 pt-2 pb-3">Location 8.1</p>
+                <p class="text-black font-size-10 text-md-right text-left">Total price per night</p>
+                <p class="text-black font-weight-700 font-size-11 text-md-right text-left py-2">
                   € 268
                 </p>
-                <div class="text-right">
+              </div>
+                <div class="text-right d-none d-md-block">
                   <button class="yellow-button font-size-9">More Details</button>
                 </div>
+              </div>
+              <div class="text-right d-block d-md-none w-75 text-center pb-4">
+                <button class="yellow-button font-size-9 w-100">More Details</button>
               </div>
             </div>
           </div>
         </div>
         <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="200" class="main-featured-card mt-5">
           <div class="mt-3">
-            <div class="premium-card-inner d-flex bg-white justify-content-between align-items-center rounded-lg">
-              <div class="single-premium-card">
+            <div class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg">
+              <div class="single-premium-card position-relative">
+                <div class="tealish-badge position-absolute background-color-tealish text-white font-size-11">
+                  GOOD PRICE
+                 </div>
               </div>
               <div class="border-right listing-premium-center-card px-3">
-                <p class="pb-4 font-weight-500 font-size-12 opacity-9">A Grand Modern Apartment <img class="mr-2"
+                <p class="pb-4 font-weight-500 font-size-11 opacity-9 pt-4 pt-md-0">A Grand Modern Apartment <img class="mr-2"
                     height="12px" src="/assets/images/icons/greenVerified.png" alt="verified" /><span
-                    class="color-tealish font-size-12 font-weight-500">Verified Host</span> </p>
-                <p class="dark-gray font-size-12">Dopustovanje v srcu narave je vedno najboljša
+                    class="color-tealish font-size-11 font-weight-500">Verified Host</span> </p>
+                <p class="dark-gray font-size-11">Dopustovanje v srcu narave je vedno najboljša
                   izbira Predstavljajte si, da vas zjutraj prebudi
                   petje…</p>
                 <div class="facalities-icons-inner d-flex flex-wrap align-items-center pt-4">
@@ -1577,10 +1655,10 @@
                   </div>
                 </div>
               </div>
-              <div class="mr-3">
+              <div class="listing-card-inner-third mr-0 mr-md-3 px-3 px-md-0 py-md-0 py-3 d-flex flex-md-column flex-row-reverse justify-content-between">
                 <div class="d-flex align-items-center justify-content-end">
                   <div class="mr-3 d-flex flex-column align-items-end">
-                    <p class="font-weight-600 font-size-12">Very Good</p>
+                    <p class="font-weight-600 font-size-11">Very Good</p>
                     <p class="font-size-11 dark-gray opacity-9">4,347 reviews</p>
                   </div>
                   <div class="position-relative d-flex justify-content-center align-items-center">
@@ -1590,14 +1668,19 @@
                     </p>
                   </div>
                 </div>
-                <p class="color-tealish text-right font-size-12 pt-2 pb-3">Location 8.1</p>
-                <p class="text-black font-size-10 text-right">Total price per night</p>
-                <p class="text-black font-weight-700 font-size-12 text-right py-2">
+                <div>
+                <p class="color-tealish text-md-right text-left font-size-11 pt-2 pb-3">Location 8.1</p>
+                <p class="text-black font-size-10 text-md-right text-left">Total price per night</p>
+                <p class="text-black font-weight-700 font-size-11 text-md-right text-left py-2">
                   € 268
                 </p>
-                <div class="text-right">
+              </div>
+                <div class="text-right d-none d-md-block">
                   <button class="yellow-button font-size-9">More Details</button>
                 </div>
+              </div>
+              <div class="text-right d-block d-md-none w-75 text-center pb-4">
+                <button class="yellow-button font-size-9 w-100">More Details</button>
               </div>
             </div>
           </div>
@@ -1611,10 +1694,13 @@
           <div data-aos="fade-left" data-aos-easing="linear" data-aos-duration="200"
             class="something-for-you-card bg-white rounded-lg mt-5">
             <div class="something-for-you-image position-relative">
+              <div style="top: -10px; left:0px;" class="position-absolute background-color-tealish rounded px-3 py-2 text-white">
+                Top Value
+              </div>
               <div class="image-inner-card bg-white position-absolute pl-4 pr-3 py-4">
                 <div class="d-flex align-items-center">
                   <div class="mr-3 d-flex flex-column align-items-end">
-                    <p class="font-weight-600 font-size-12">Very Good</p>
+                    <p class="font-weight-600 font-size-11">Very Good</p>
                     <p class="font-size-11 dark-gray opacity-9">4,347 reviews</p>
                   </div>
                   <div class="position-relative d-flex justify-content-center align-items-center">
@@ -1624,11 +1710,11 @@
                     </p>
                   </div>
                 </div>
-                <p class="color-tealish font-size-12 text-right pt-3">Location 8.1</p>
+                <p class="color-tealish font-size-11 text-right pt-3">Location 8.1</p>
               </div>
             </div>
             <div class="px-4 pb-4">
-              <p class="font-size-14 font-weight-600 mt-5">Modern and Luxury Apartment</p>
+              <p class="card-heading-right-side font-size-14 font-weight-600 mt-5">Modern and Luxury Apartment</p>
               <p class="dark-gray font-size-13 opacity-9 mt-4">Dopustovanje v srcu narave je vedno najboljša
                 izbira </p>
               <div class="facalities-icons-inner d-flex flex-wrap align-items-center pt-4">
@@ -1645,7 +1731,7 @@
                       </svg>
                     </div>
                     <div>
-                      <p class="dark-gray font-weight-500 font-size-12">2</p>
+                      <p class="dark-gray font-weight-500 font-size-11">2</p>
                     </div>
                   </div>
                 </div>
@@ -1661,7 +1747,7 @@
                       </svg>
                     </div>
                     <div>
-                      <p class="dark-gray font-weight-500 font-size-12">2</p>
+                      <p class="dark-gray font-weight-500 font-size-11">2</p>
                     </div>
                   </div>
                 </div>
@@ -1683,7 +1769,7 @@
                       </svg>
                     </div>
                     <div>
-                      <p class="dark-gray font-weight-500 font-size-12">2</p>
+                      <p class="dark-gray font-weight-500 font-size-11">2</p>
                     </div>
                   </div>
                 </div>
@@ -1708,7 +1794,7 @@
                       </svg>
                     </div>
                     <div>
-                      <p class="dark-gray font-weight-500 font-size-12">
+                      <p class="dark-gray font-weight-500 font-size-11">
                         2460 <span class="font-size-8 opacity-6">m 2</span>
                       </p>
                     </div>
@@ -1728,10 +1814,13 @@
           <div data-aos="fade-left" data-aos-easing="linear" data-aos-duration="200"
             class="something-for-you-card bg-white rounded-lg mt-5">
             <div class="something-for-you-image position-relative">
+              <div style="top: -10px; left:0px;" class="position-absolute background-color-tealish rounded px-3 py-2 text-white">
+                Top Value
+              </div>
               <div class="image-inner-card bg-white position-absolute pl-4 pr-3 py-4">
                 <div class="d-flex align-items-center">
                   <div class="mr-3 d-flex flex-column align-items-end">
-                    <p class="font-weight-600 font-size-12">Very Good</p>
+                    <p class="font-weight-600 font-size-11">Very Good</p>
                     <p class="font-size-11 dark-gray opacity-9">4,347 reviews</p>
                   </div>
                   <div class="position-relative d-flex justify-content-center align-items-center">
@@ -1741,11 +1830,11 @@
                     </p>
                   </div>
                 </div>
-                <p class="color-tealish font-size-12 text-right pt-3">Location 8.1</p>
+                <p class="color-tealish font-size-11 text-right pt-3">Location 8.1</p>
               </div>
             </div>
             <div class="px-4 pb-4">
-              <p class="font-size-14 font-weight-600 mt-5">Modern and Luxury Apartment</p>
+              <p class="card-heading-right-side font-size-14 font-weight-600 mt-5">Modern and Luxury Apartment</p>
               <p class="dark-gray font-size-13 opacity-9 mt-4">Dopustovanje v srcu narave je vedno najboljša
                 izbira </p>
               <div class="facalities-icons-inner d-flex flex-wrap align-items-center pt-4">
@@ -1762,7 +1851,7 @@
                       </svg>
                     </div>
                     <div>
-                      <p class="dark-gray font-weight-500 font-size-12">2</p>
+                      <p class="dark-gray font-weight-500 font-size-11">2</p>
                     </div>
                   </div>
                 </div>
@@ -1778,7 +1867,7 @@
                       </svg>
                     </div>
                     <div>
-                      <p class="dark-gray font-weight-500 font-size-12">2</p>
+                      <p class="dark-gray font-weight-500 font-size-11">2</p>
                     </div>
                   </div>
                 </div>
@@ -1800,7 +1889,7 @@
                       </svg>
                     </div>
                     <div>
-                      <p class="dark-gray font-weight-500 font-size-12">2</p>
+                      <p class="dark-gray font-weight-500 font-size-11">2</p>
                     </div>
                   </div>
                 </div>
@@ -1825,7 +1914,7 @@
                       </svg>
                     </div>
                     <div>
-                      <p class="dark-gray font-weight-500 font-size-12">
+                      <p class="dark-gray font-weight-500 font-size-11">
                         2460 <span class="font-size-8 opacity-6">m 2</span>
                       </p>
                     </div>
@@ -1845,10 +1934,13 @@
           <div data-aos="fade-left" data-aos-easing="linear" data-aos-duration="200"
             class="something-for-you-card bg-white rounded-lg mt-5">
             <div class="something-for-you-image position-relative">
+              <div style="top: -10px; left:0px;" class="position-absolute background-color-tealish rounded px-3 py-2 text-white">
+                Top Value
+              </div>
               <div class="image-inner-card bg-white position-absolute pl-4 pr-3 py-4">
                 <div class="d-flex align-items-center">
                   <div class="mr-3 d-flex flex-column align-items-end">
-                    <p class="font-weight-600 font-size-12">Very Good</p>
+                    <p class="font-weight-600 font-size-11">Very Good</p>
                     <p class="font-size-11 dark-gray opacity-9">4,347 reviews</p>
                   </div>
                   <div class="position-relative d-flex justify-content-center align-items-center">
@@ -1858,11 +1950,11 @@
                     </p>
                   </div>
                 </div>
-                <p class="color-tealish font-size-12 text-right pt-3">Location 8.1</p>
+                <p class="color-tealish font-size-11 text-right pt-3">Location 8.1</p>
               </div>
             </div>
             <div class="px-4 pb-4">
-              <p class="font-size-14 font-weight-600 mt-5">Modern and Luxury Apartment</p>
+              <p class="card-heading-right-side font-size-14 font-weight-600 mt-5">Modern and Luxury Apartment</p>
               <p class="dark-gray font-size-13 opacity-9 mt-4">Dopustovanje v srcu narave je vedno najboljša
                 izbira </p>
               <div class="facalities-icons-inner d-flex flex-wrap align-items-center pt-4">
@@ -1879,7 +1971,7 @@
                       </svg>
                     </div>
                     <div>
-                      <p class="dark-gray font-weight-500 font-size-12">2</p>
+                      <p class="dark-gray font-weight-500 font-size-11">2</p>
                     </div>
                   </div>
                 </div>
@@ -1895,7 +1987,7 @@
                       </svg>
                     </div>
                     <div>
-                      <p class="dark-gray font-weight-500 font-size-12">2</p>
+                      <p class="dark-gray font-weight-500 font-size-11">2</p>
                     </div>
                   </div>
                 </div>
@@ -1917,7 +2009,7 @@
                       </svg>
                     </div>
                     <div>
-                      <p class="dark-gray font-weight-500 font-size-12">2</p>
+                      <p class="dark-gray font-weight-500 font-size-11">2</p>
                     </div>
                   </div>
                 </div>
@@ -1942,7 +2034,7 @@
                       </svg>
                     </div>
                     <div>
-                      <p class="dark-gray font-weight-500 font-size-12">
+                      <p class="dark-gray font-weight-500 font-size-11">
                         2460 <span class="font-size-8 opacity-6">m 2</span>
                       </p>
                     </div>
@@ -1962,10 +2054,13 @@
           <div data-aos="fade-left" data-aos-easing="linear" data-aos-duration="200"
             class="something-for-you-card bg-white rounded-lg mt-5">
             <div class="something-for-you-image position-relative">
+              <div style="top: -10px; left:0px;" class="position-absolute background-color-tealish rounded px-3 py-2 text-white">
+                Top Value
+              </div>
               <div class="image-inner-card bg-white position-absolute pl-4 pr-3 py-4">
                 <div class="d-flex align-items-center">
                   <div class="mr-3 d-flex flex-column align-items-end">
-                    <p class="font-weight-600 font-size-12">Very Good</p>
+                    <p class="font-weight-600 font-size-11">Very Good</p>
                     <p class="font-size-11 dark-gray opacity-9">4,347 reviews</p>
                   </div>
                   <div class="position-relative d-flex justify-content-center align-items-center">
@@ -1975,11 +2070,11 @@
                     </p>
                   </div>
                 </div>
-                <p class="color-tealish font-size-12 text-right pt-3">Location 8.1</p>
+                <p class="color-tealish font-size-11 text-right pt-3">Location 8.1</p>
               </div>
             </div>
             <div class="px-4 pb-4">
-              <p class="font-size-14 font-weight-600 mt-5">Modern and Luxury Apartment</p>
+              <p class="card-heading-right-side font-size-14 font-weight-600 mt-5">Modern and Luxury Apartment</p>
               <p class="dark-gray font-size-13 opacity-9 mt-4">Dopustovanje v srcu narave je vedno najboljša
                 izbira </p>
               <div class="facalities-icons-inner d-flex flex-wrap align-items-center pt-4">
@@ -1996,7 +2091,7 @@
                       </svg>
                     </div>
                     <div>
-                      <p class="dark-gray font-weight-500 font-size-12">2</p>
+                      <p class="dark-gray font-weight-500 font-size-11">2</p>
                     </div>
                   </div>
                 </div>
@@ -2012,7 +2107,7 @@
                       </svg>
                     </div>
                     <div>
-                      <p class="dark-gray font-weight-500 font-size-12">2</p>
+                      <p class="dark-gray font-weight-500 font-size-11">2</p>
                     </div>
                   </div>
                 </div>
@@ -2034,7 +2129,7 @@
                       </svg>
                     </div>
                     <div>
-                      <p class="dark-gray font-weight-500 font-size-12">2</p>
+                      <p class="dark-gray font-weight-500 font-size-11">2</p>
                     </div>
                   </div>
                 </div>
@@ -2059,7 +2154,7 @@
                       </svg>
                     </div>
                     <div>
-                      <p class="dark-gray font-weight-500 font-size-12">
+                      <p class="dark-gray font-weight-500 font-size-11">
                         2460 <span class="font-size-8 opacity-6">m 2</span>
                       </p>
                     </div>
@@ -2081,9 +2176,9 @@
       </div>
     </div>
   </section>
+
   <script src="functions.js"></script>
   <script src="./calender.js"></script>
   <script src="/listing.js"></script>
 </body>
-
 </html>

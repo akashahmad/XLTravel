@@ -43,7 +43,7 @@
 }
 /* Home Page Image Slider */
 .property-image-slider .property-image-slider-wrapper {
-  padding-top: 60px;
+  padding-top: 30px;
   width: 90%;
   margin: 0 auto;
 }
@@ -347,15 +347,16 @@
     font-size: 15px;
     font-weight: bold;
   }
-  .hero-section {
-    min-height: 66px;
-    position: relative;
-    top: 41px;
-  }
   .rh_banner__cover {
     height: 66px;
   }
-
+  .Price-form-mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
   .property-detail-left-side .country-detail {
     font-size: 12px;
   }
@@ -399,7 +400,7 @@
     width: 100%;
     margin: 0 auto;
     margin-top: 0px;
-    padding-top: 55px;
+    padding-top: 80px;
   }
   .property-detail .property-detail-wrapper {
     width: 100%;

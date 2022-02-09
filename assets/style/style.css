@@ -12,6 +12,10 @@ body p{
 h3{
   margin: 0;
 }
+a{
+  text-decoration: none !important;
+  color: black !important;
+}
 /* Header */
 header {
   background-color: white;
@@ -510,14 +514,17 @@ input::-webkit-input-placeholder {
 .autocomplete input[type="text"] {
   width: 100%;
 }
+.autocomplete input::placeholder{
+  font-size: 12px !important;
+  text-align: left;
+  color: black;
+}
 .autocomplete-items {
-  position: absolute;
   border: 1px solid #d4d4d4;
   border-bottom: none;
   border-top: none;
-  width: 328px;
+  width: 100%;
   z-index: 99;
-  /*position the autocomplete items to be the same width as the container:*/
   top: 37px;
   left: 0;
   right: 0;
@@ -541,7 +548,6 @@ input::-webkit-input-placeholder {
   background-color: #e9e9e9;
 }
 .autocomplete-active {
-  /*when navigating through the items using the arrow keys:*/
   background-color: #e9e9e9 !important;
 }
 
@@ -557,13 +563,6 @@ input::-webkit-input-placeholder {
   }
   .header-main {
     background-color: white;
-  }
-  .Price-form-mobile {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
   }
   header {
     margin: 0;
@@ -744,4 +743,128 @@ input::-webkit-input-placeholder {
     overflow-y: scroll;
     border: none;
   }
+}
+/* New Serach Box */
+
+.new-search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 10px 10px;
+  margin: 20px;
+  box-shadow: 0px 0px 5px grey;
+  border-radius: 25px;
+}
+
+.new-search-box .filter-option-inner-inner{
+font-size: 12px;
+color: black;
+}
+.new-search-box .bootstrap-select>.dropdown-toggle:after{
+display: none;
+}
+.new-search-box .bootstrap-select .dropdown-menu{
+  padding: 0px;
+}
+.new-search-box .bootstrap-select .dropdown-menu.inner{
+  background-color: white;
+}
+.new-search-box .anywhere-button a{
+  color: black;
+  text-decoration: none;
+}
+.destinations button, .check-in button, .check-out button, .guests button {
+  padding: 5px 20px;
+  border-radius: 15px;
+  background-color: white;
+  border: none;
+  font-size: 12px;
+}
+
+.new-search-box .guests{
+min-width: 90px;
+}
+.destinations button:hover, .check-in button:hover, .check-out button:hover, .guests:hover {
+  cursor: pointer;
+  color: #40D0D3;
+}
+
+.destinations {
+  display: block;
+  position: relative;
+}
+.new-search-box .filter-option-inner-inner:hover{
+  cursor: pointer;
+  color: #40D0D3;
+}
+.destinations .section-destination-modal {
+  display: none;
+  margin-top: 20px;
+  background-color: white;
+  width: 300px;
+  height: auto;
+  position: absolute;
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px grey;
+  padding: 10px 15px 5px 10px;
+  z-index: 100;
+}
+
+.new-search-box .bootstrap-select>.dropdown-toggle.bs-placeholder:hover{
+  background-color: transparent;
+
+}
+.new-search-box .bootstrap-select>.dropdown-toggle.bs-placeholder:hover .new-search-box .filter-option-inner-inner{
+  color: #40D0D3 !important;
+}
+.new-search-box  .btn:not(:disabled):not(.disabled){
+  padding: 0px;
+}
+.new-search-box .bootstrap-select .dropdown-toggle .filter-option-inner-inner{
+background-color: white;
+padding-left: 10px;
+}
+.suggestion button {
+  background: linear-gradient(to right, #40D0D3,#ffffff);
+  margin: 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 10px grey;
+  transition-duration: 0.5s;
+}
+
+.suggestion button:hover {
+  transform: scale(0.9);
+  transition-duration: 0.5s;
+}
+
+.section-destination-modal button img {
+  padding-left: 20px;
+  width: 50px;
+}
+
+.search-button {
+  padding-right: 10px;
+}
+
+.search-button button {
+  padding: 5px 10px 7px 10px;
+  margin-left: 10px;
+  width: 7em;
+  border-radius: 15px;
+  color: white;
+  background-color: #FEC657;
+  border: none;
+  text-shadow: 1px 1px 5px black;
+  font-size: 15px;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+.search-button button:hover{
+  transform: scale(0.9);
+  transition-duration: 0.5s;
+  background-color: #40D0D3;
 }

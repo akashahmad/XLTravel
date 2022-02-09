@@ -1,7 +1,7 @@
 /* Common Main Heading */
-body{
-    margin: 0;
-    padding: 0;
+body {
+  margin: 0;
+  padding: 0;
 }
 .main-heading {
   font-size: 21px;
@@ -14,7 +14,37 @@ body{
   -webkit-text-stroke: 0.3px #000;
   opacity: 0.6;
 }
-
+/* Badge */
+.yellow-badge {
+  border-radius: 4px;
+  padding: 8px 12px;
+  left: -8px;
+  top: 12px;
+}
+.yellow-badge::after {
+  content: "";
+  border-left: 9px solid transparent;
+  border-right: 0px solid transparent;
+  border-top: 9px solid #ffc044;
+  position: absolute;
+  left: 0px;
+  bottom: -7px;
+}
+.tealish-badge {
+  border-radius: 4px;
+  padding: 8px 12px;
+  left: -8px;
+  top: 12px;
+}
+.tealish-badge::after {
+  content: "";
+  border-left: 9px solid transparent;
+  border-right: 0px solid transparent;
+  border-top: 9px solid #40d0d3;
+  position: absolute;
+  left: 0px;
+  bottom: -7px;
+}
 /* listing-property-type-dropDown */
 .filter-section .filter-wrapper {
   width: 80%;
@@ -98,14 +128,14 @@ input[type="radio"] {
 .btn:not(:disabled):not(.disabled):focus {
   background-color: #fec657;
 }
-.filter-section .filter-button {
+ .filter-button {
   color: white;
   border: none;
   padding: 19px 23px;
   border-radius: 4px;
   transition: transform 0.2s;
 }
-.filter-section .filter-button:hover {
+.filter-button:hover {
   transform: scale(1.1);
 }
 
@@ -419,9 +449,9 @@ input[type="radio"] {
 .lisiting-inner-content .listing-left-wrapper {
   width: 64%;
 }
-.lisiting-inner-content .listing-right-wrapper{
-    width: 33%;
-    margin-top: 60px;
+.lisiting-inner-content .listing-right-wrapper {
+  width: 33%;
+  margin-top: 60px;
 }
 .lisiting-inner-content .listing-left-wrapper .listing-featured-inner-card {
   width: 85%;
@@ -441,27 +471,97 @@ input[type="radio"] {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
-.single-premium-card{
-    background-image: url("/assets/images/single-premium-card.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 187px;
-    width: 30%;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+.single-premium-card {
+  background-image: url("/assets/images/single-premium-card.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 187px;
+  width: 30%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 .listing-premium-center-card {
   width: 44%;
 }
 
-.something-for-you-image{
-    background-image: url("../images/something-foe-you.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 261px;
+.something-for-you-image {
+  background-image: url("../images/something-foe-you.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 261px;
 }
-.something-for-you-image .image-inner-card{
-right: 10px;
-top: 12px;
-border-radius: 12px;
+.something-for-you-image .image-inner-card {
+  right: 10px;
+  top: 12px;
+  border-radius: 12px;
+}
+/* Responsive */
+@media (max-width: 1199px) and (min-width: 320px) {
+  .hero-section {
+    min-height: 66px;
+    position: relative;
+    top: 41px;
+  }
+  .lisiting-inner-content .listing-left-wrapper {
+    width: 100%;
+  }
+  .lisiting-inner-content .listing-right-wrapper {
+    width: 100%;
+    margin-top: 40px;
+  }
+  .listing-wrapper{
+padding-top: 40px;
+  }
+  /* Filter banner mobile */
+  .filter-mobile-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+  .card-badge-headings-mobile {
+    font-size: 10px;
+  }
+  .yellow-badge {
+    font-size: 10px;
+  }
+  .tealish-badge {
+    font-size: 10px;
+  }
+  .main-heading {
+    font-size: 16px;
+  }
+  .sub-heading {
+    font-size: 13px;
+  }
+  .listing-premium-card-first {
+    width: 100%;
+  }
+  .listing-premium-center-card {
+    width: 100%;
+  }
+  .listing-card-inner-third {
+    width: 100%;
+  }
+  .single-premium-card {
+    width: 100%;
+  }
+  .lisiting-inner-content .listing-left-wrapper .listing-featured-inner-card {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    top: 0px;
+    padding: 11px 14px;
+    border-radius: 13px;
+  }
+  .facalities-icons-inner p {
+    font-size: 13px !important;
+  }
+  .single-facality p {
+    font-size: 14px !important;
+  }
+  .card-heading-right-side{
+  font-size: 15px;
+  }
 }

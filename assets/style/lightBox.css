@@ -125,8 +125,8 @@
   padding-bottom: 80px;
 }
 .lg-sub-html {
-  background-color: white;
-  color: black;
+  background-color: white !important;
+  color: black !important;
   width: 258px;
   height: 68vh;
   /* border-radius: 12px; */

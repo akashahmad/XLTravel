@@ -1,3 +1,15 @@
+// Search box destination modal
+function ShowDestinationModal() {
+  document.getElementById("destination-modal").style.display = "block";
+}
+document.addEventListener('mouseup', function(e) {
+  var container = document.getElementById('destination-modal');
+  if (!container.contains(e.target)){
+    document.getElementById('destination-modal').style.display ="none";
+  }
+});
+
+
 // Auto Complete suggesstion for country name
 function autocomplete(inp, arr) {
   /*the autocomplete function takes two arguments,

@@ -1,3 +1,15 @@
+
+// Select one checkbox at a time
+// var propertyRatings;
+// document.addEventListener('input',(event)=>{
+// if(event.target.getAttribute('name')=="options-property-ratings[]"){
+// if(propertyRatings)
+// propertyRatings.checked=false;
+// }
+// event.target.checked=true;
+// propertyRatings=event.target;
+// })
+
 // DropDown for property Type
 $('body').on("click", ".dropdown-menu", function (e) {
     $(this).parent().is(".open") && e.stopPropagation();
@@ -93,17 +105,6 @@ $("input[type='checkbox'].justone-property-facalities").change(function(){
   var total = $('input[name="options-property-faclities[]"]:checked').length;
   $(".dropdown-text-property-facalities").html('(' + total + ') Selected');
 });
-
-// Select one checkbox at a time
-var propertyRatings;
-document.addEventListener('input',(e)=>{
-if(e.target.getAttribute('name')=="options-property-ratings[]"){
-if(propertyRatings)
-propertyRatings.checked=false;
-}
-e.target.checked=true;
-propertyRatings=e.target;
-})
 // Star Ratings DropDown
 // Price Range Script
 // Ion.RangeSlider
@@ -133,9 +134,7 @@ propertyRatings=e.target;
 
     // =================================================================================================================
     // Service
-
     var plugin_count = 0;
-
     // IE8 fix
     var is_old_ie = (function () {
         var n = navigator.userAgent,
