@@ -190,10 +190,9 @@ $(document).ready(function () {
 //     }
 //   });
 // });
+
 // Aos Animation
 AOS.init();
-
-
 
 $(document).ready(function () {
   // Swiper: Slider
