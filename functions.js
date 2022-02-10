@@ -4,7 +4,7 @@ function ShowDestinationModal() {
 }
 document.addEventListener('mouseup', function(e) {
   var container = document.getElementById('destination-modal');
-  if (!container.contains(e.target)){
+  if (container && !container.contains(e.target)){
     document.getElementById('destination-modal').style.display ="none";
   }
 });
