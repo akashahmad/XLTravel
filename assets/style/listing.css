@@ -463,7 +463,7 @@ input[type="radio"] {
 }
 
 .listing-premium-card-first {
-  background-image: url("/assets/images/house-premium.png");
+  background-image: url("../../assets/images/house-premium.png");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 187px;
@@ -472,7 +472,7 @@ input[type="radio"] {
   border-bottom-left-radius: 10px;
 }
 .single-premium-card {
-  background-image: url("/assets/images/single-premium-card.png");
+  background-image: url("../../assets/images/single-premium-card.png");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 187px;
