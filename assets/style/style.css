@@ -156,6 +156,12 @@ header {
 .overflow-hidden {
   overflow: hidden;
 }
+.display-block{
+  display: block !important;
+}
+.display-none{
+  display: none !important;
+}
 /*Colors */
 .color-tealish {
   color: #40d0d3;
@@ -168,6 +174,9 @@ header {
 }
 .background-color-yellow {
   background-color: #ffc044;
+}
+.bg-yellow-focus{
+  background-color: #ffc044 !important;
 }
 .dark-gray {
   color: #808080;
@@ -187,6 +196,9 @@ header {
 }
 .w-31 {
   width: 31%;
+}
+.w-35{
+  width: 35%;
 }
 .w-39 {
   width: 39.85%;
@@ -291,6 +303,11 @@ header {
 .rounded-lg-top {
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
+}
+.rounded-lg-bottom {
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 /* box shadow */
 .box-shadow {
@@ -514,17 +531,14 @@ input::-webkit-input-placeholder {
 .autocomplete input[type="text"] {
   width: 100%;
 }
-.autocomplete input::placeholder{
-  font-size: 12px !important;
-  text-align: left;
-  color: black;
-}
 .autocomplete-items {
+  position: absolute;
   border: 1px solid #d4d4d4;
   border-bottom: none;
   border-top: none;
-  width: 100%;
+  width: 328px;
   z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
   top: 37px;
   left: 0;
   right: 0;

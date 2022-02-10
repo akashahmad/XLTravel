@@ -72,6 +72,10 @@ body {
 .small-modal .dropdown-menu {
   width: 217px !important;
 }
+.property-property-facalities .dropdown-menu{
+height: 360px;
+overflow-y: scroll;
+}
 .listing-filter-dropDown input[type="checkbox"],
 input[type="radio"] {
   margin: 0px 10px 0px 0px;
@@ -125,8 +129,8 @@ input[type="radio"] {
   padding: 13px 19px;
   background-color: rgba(225, 225, 225, 0.68);
 }
-.btn:not(:disabled):not(.disabled):focus {
-  background-color: #fec657;
+.filter-focus:focus {
+  background-color: #fec657 !important;
 }
  .filter-button {
   color: white;
@@ -495,6 +499,80 @@ input[type="radio"] {
   top: 12px;
   border-radius: 12px;
 }
+/* More Filters popup */
+.more-filters input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.more-filters .more-filters-number-input{
+border: none;
+width: 15%;
+font-size: 12px;
+text-align: center;
+}
+.more-filters .checkbox-more-filters {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #fec657;
+  margin: 0px;
+}
+
+/* Show more and less listing */
+.show-more-less ul {
+  margin-left: auto;
+  margin-right: auto;
+  list-style-type: none;
+  background: white;
+  padding: 0px;
+}
+.show-more-less li {
+  height: 50px;
+  line-height: 50px;
+}
+
+.listing-button-propertyFilter{
+  background-color: transparent;
+  border: none;
+}
+/* Buttons for property filter */
+.filter-button-property-type{
+  width: 163px;
+  border-radius: 11px;
+  border: none;
+  transition: transform 0.2s;
+}
+.filter-button-property-type:hover {
+  transform: scale(1.07);
+}
+/* CHECKED STATE STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.show-more-less [type="checkbox"]:checked ~ ul {
+  max-height: 300px;
+}
+
+.show-more-less [type="checkbox"]:checked + label {
+  top: 100%;
+}
+
+.show-more-less [type="checkbox"]:checked + label:before {
+  content: 'Show less amenities';
+}
+
+.show-more-less [type="checkbox"]:checked + label:after {
+  content: '⇡●';
+}
+
+.show-more-less ul li:last-child {
+  margin-bottom: 40px;
+}
+
+/* Property type less and more */
+
+/* Show more and less listing */
+
 /* Responsive */
 @media (max-width: 1199px) and (min-width: 320px) {
   .hero-section {

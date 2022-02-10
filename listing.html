@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -100,7 +101,7 @@
     </div>
   </header>
   <!-- Header End -->
-  <section style="height: 80px;" class="hero-section container-main  d-none d-md-block">
+  <!-- <section style="height: 80px;" class="hero-section container-main  d-none d-md-block">
     <div class="d-flex justify-content-center">
       <div class="new-search-box bg-white">
         <div class="destinations">
@@ -108,14 +109,14 @@
           <div class="section-destination-modal" id="destination-modal">
             <div class="suggestion">
               <p>Suggest me best destination:</p>
-                <div>
+              <div>
                 <button class="anywhere-button">
                   <a href="/listing.html">
-                  Take me anywhere!
-                  <img src="./assets/images/icons/right-arrow-search.png" alt="See your suggestions">
-                </a>
+                    Take me anywhere!
+                    <img src="./assets/images/icons/right-arrow-search.png" alt="See your suggestions">
+                  </a>
                 </button>
-                </div>
+              </div>
             </div>
             <div>
               <div autocomplete="off" class="autocomplete w-100">
@@ -126,13 +127,11 @@
         </div>
         <div class="check-in">
           <button type="button" id="searhBar-date-picker">Check In</button>
-          <!-- <input placeholder="Add Date" class="form-control" /> -->
         </div>
         <div class="check-out">
           <button type="button" id="searhBar-date-picker">Check Out</button>
         </div>
         <div class="guests">
-          <!-- <button type="button">Guests</button>  -->
           <select class="selectpicker" title="Add Guest">
             <option>1 Guest</option>
             <option>2 Guests</option>
@@ -141,16 +140,70 @@
           </select>
         </div>
         <a href="/listing.html">
-        <div class="search-button">
-          <button type="submit">Search</button>
-        </div>
+          <div class="search-button">
+            <button type="submit">Search</button>
+          </div>
         </a>
       </div>
     </div>
+  </section> -->
+  <section style="min-height: 100px;" class="hero-section container-main">
+    <div class="position-relative">
+      <form autocomplete="off" class="search-bar container-main" id="outside-click-search-bar">
+        <div class="search-box my-4 cursor-pointer" id="search-box-inner" onclick="ShowSearchBar()">
+          <p class="search-text pl-3" id="search-text-property-detail">Search</p>
+          <div class="search-bar-inner" id="search-bar-inner-elements">
+            <div class="d-flex">
+              <div class="search-box-single-element border-right py-2 text-center d-flex flex-column">
+                <p class="search-lable">Location</p>
+                <!-- <input id="myInput" type="text" name="myCountry" placeholder="Location"> -->
+                <div class="autocomplete">
+                  <input id="myInput" type="text" name="myCountry" placeholder="Location">
+                </div>
+              </div>
+              <div class="search-box-single-element border-right py-2 text-center d-flex flex-column">
+                <p class="search-lable">Check in</p>
+                <!-- <input class="cursor-pointer form-control" placeholder="Add Date" type="text" name="value_from_start_date"
+                  data-datepicker="separateRange" /> -->
+                <input id="searhBar-date-picker" placeholder="Add Date" class="form-control" />
+              </div>
+              <div class="search-box-single-element border-right py-2 text-center d-flex flex-column">
+                <p class="search-lable">Check out</p>
+                <input class="cursor-pointer " placeholder="Add Date" type="text" name="value_from_end_date"
+                  data-datepicker="separateRange" />
+                <!-- <input id="searhBar-date-picker" placeholder="Add Date" class="form-control"/> -->
+              </div>
+              <div class="search-box-single-element py-2 text-center d-flex flex-column">
+                <p class="search-lable">Guests</p>
+                <select class="selectpicker" title="Add Guest">
+                  <option>1 Guest</option>
+                  <option>2 Guests</option>
+                  <option>3 Guests</option>
+                  <option>4 Guests</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <a href="/listing.html">
+          <div class="search-btn cursor-pointer">
+            <svg class="svg-icon search-icon" fill="#000000" aria-labelledby="title desc" height="20px" width="20px"
+              role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7">
+              <title id="title">Search Icon</title>
+              <desc id="desc"></desc>
+              <g class="search-path" fill="none" stroke="#000000">
+                <path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4" />
+                <circle cx="8" cy="8" r="7" />
+              </g>
+            </svg>
+          </div>
+        </a>
+        </div>
+      </form>
+    </div>
   </section>
   <section class="filter-section container-main pt-4 d-none d-md-block">
-    <h3 class="text-center pt-5 pb-5">The Most Likely</h3>
-    <div class="filter-wrapper d-flex align-items-center">
+    <!-- <h3 class="text-center pt-5 pb-5">The Most Likely</h3> -->
+    <div class="filter-wrapper d-flex align-items-center py-4">
       <div class="filter-bar bg-white py-2 d-flex align-items-center justify-content-center px-2">
         <div class="property-type listing-filter-dropDown mr-2">
           <div class="dropdown">
@@ -265,86 +318,71 @@
         </div>
         <div class="property-property-facalities listing-filter-dropDown mr-2">
           <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle filter-focus" type="button" data-toggle="dropdown">
+            <button class="btn btn-default dropdown-toggle filter-focus" type="button" onclick="displayToggle(`property-facalities-dropBox`)">
               <span class="dropdown-text-property-facalities">Property Facalities</span>
               <span class="caret"></span>
             </button>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu" id="property-facalities-dropBox">
               <div class="d-flex flex-wrap pt-2">
                 <li class="col-6">
                   <a class="option-link" href="#"><label><input name="options-property-faclities[]" type="checkbox"
                         class="option justone-property-facalities" value="Option 1 " />
-                      General</label></a>
+                      Free Parking</label></a>
                 </li>
                 <li class="col-6">
                   <a href="#"><label><input name="options-property-faclities[]" type="checkbox"
-                        class="option-property-facalities justone-property-facalities" value="Option 3 " />Living
-                      Room</label></a>
+                        class="option-property-facalities justone-property-facalities"
+                        value="Option 3 " />Gym</label></a>
                 </li>
                 <li class="col-6">
                   <a href="#"><label><input name="options-property-faclities[]" type="checkbox"
                         class="option-property-facalities justone-property-facalities" value="Option 2 " />
-                      Kitchen And Dining</label></a>
+                      Next to the beach</label></a>
+                </li>
+                <li class="col-6">
+                  <a href="#"><label><input name="options-property-faclities[]" type="checkbox"
+                        class="option-property-facalities justone-property-facalities" value="Option 4 " />Pool (
+                      privat)</label></a>
+                </li>
+                <li class="col-6">
+                  <a href="#"><label><input name="options-property-faclities[]" type="checkbox"
+                        class="option-property-facalities justone-property-facalities" value="Option 5 " />Hot
+                      tube/jacuzzi</label></a>
+                </li>
+                <li class="col-6">
+                  <a href="#"><label><input name="options-property-faclities[]" type="checkbox"
+                        class="option-property-facalities justone-property-facalities" value="Option 6 " />Sea
+                      view</label></a>
                 </li>
                 <li class="col-6">
                   <a href="#"><label><input name="options-property-faclities[]" type="checkbox"
                         class="option-property-facalities justone-property-facalities"
-                        value="Option 4 " />Bathroom</label></a>
+                        value="Option 7 " />Beachfront</label></a>
+                </li>
+                <li class="col-6">
+                  <a href="#"><label><input name="options-property-faclities[]" type="checkbox"
+                        class="option-property-facalities justone-property-facalities" value="Option 8 " />Sun
+                      Terrace</label></a>
                 </li>
                 <li class="col-6">
                   <a href="#"><label><input name="options-property-faclities[]" type="checkbox"
                         class="option-property-facalities justone-property-facalities"
-                        value="Option 5 " />Outdoor</label></a>
-                </li>
-                <li class="col-6">
-                  <a href="#"><label><input name="options-property-faclities[]" type="checkbox"
-                        class="option-property-facalities justone-property-facalities" value="Option 6 " />Saftey
-                      Amenities</label></a>
+                        value="Option 9 " />Balcony</label></a>
                 </li>
                 <li class="col-6">
                   <a href="#"><label><input name="options-property-faclities[]" type="checkbox"
                         class="option-property-facalities justone-property-facalities"
-                        value="Option 7 " />Cottage</label></a>
+                        value="Option 10 " />Center</label></a>
                 </li>
                 <li class="col-6">
                   <a href="#"><label><input name="options-property-faclities[]" type="checkbox"
-                        class="option-property-facalities justone-property-facalities" value="Option 8 " />Guest
-                      Suite</label></a>
+                        class="option-property-facalities justone-property-facalities" value="Option 11 " />TV ( NETFLIX
+                      , YOUTUBE)</label></a>
                 </li>
                 <li class="col-6">
                   <a href="#"><label><input name="options-property-faclities[]" type="checkbox"
-                        class="option-property-facalities justone-property-facalities"
-                        value="Option 9 " />Hostel</label></a>
-                </li>
-                <li class="col-6">
-                  <a href="#"><label><input name="options-property-faclities[]" type="checkbox"
-                        class="option-property-facalities justone-property-facalities"
-                        value="Option 10 " />Hotel</label></a>
-                </li>
-                <li class="col-6">
-                  <a href="#"><label><input name="options-property-faclities[]" type="checkbox"
-                        class="option-property-facalities justone-property-facalities"
-                        value="Option 11 " />Loft</label></a>
-                </li>
-                <li class="col-6">
-                  <a href="#"><label><input name="options-property-faclities[]" type="checkbox"
-                        class="option-property-facalities justone-property-facalities"
-                        value="Option 12 " />Resort</label></a>
-                </li>
-                <li class="col-6">
-                  <a href="#"><label><input name="options-property-faclities[]" type="checkbox"
-                        class="option-property-facalities justone-property-facalities"
-                        value="Option 13 " />Villa</label></a>
-                </li>
-                <li class="col-6">
-                  <a href="#"><label><input name="options-property-faclities[]" type="checkbox"
-                        class="option-property-facalities justone-property-facalities"
-                        value="Option 14 " />Townhouse</label></a>
-                </li>
-                <li class="col-6">
-                  <a href="#"><label><input name="options-property-faclities[]" type="checkbox"
-                        class="option-property-facalities justone-property-facalities" value="Option 15 " />Business
-                      Area</label></a>
+                        class="option-property-facalities justone-property-facalities" value="Option 12 " />PRIVATE
+                      BEACH</label></a>
                 </li>
               </div>
               <div class="d-flex justify-content-between pt-5 align-items-center">
@@ -362,6 +400,381 @@
                 </div>
                 <button class="yellow-button mr-4">Done</button>
               </div>
+              <!-- More Filters -->
+              <div class="more-filters position-absolute d-flex justify-content-center align-items-center w-100">
+                <div class="more-filters-wrapper bg-white w-100">
+                  <div class="more-filers-inner">
+                    <p class="font-weight-600 border-bottom py-3  px-5">More Filters</p>
+                    <div class="px-5">
+                      <div class="rooms-and-beds">
+                        <p class="font-weight-500 py-3">Rooms And Beds</p>
+                        <ul class="list-unstyled">
+                          <li>
+                            <div class="d-flex justify-content-between border-bottom pb-2">
+                              <p class="font-weight-500 w-75">Beds</p>
+                              <div class="d-flex justify-content-end w-100">
+                                <span class="cursor-pointer" onClick="decrement(`beds-increment-decrement`)">-</span>
+                                <input class="more-filters-number-input" type="number" placeholder="0"
+                                  id="beds-increment-decrement" type=number min=0 max=10 /> <span class="cursor-pointer"
+                                  onClick="increment(`beds-increment-decrement`)">+</span>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="pt-4">
+                            <div class="d-flex justify-content-between border-bottom pb-2">
+                              <p class="font-weight-500 w-75">Bedrooms</p>
+                              <div class="d-flex justify-content-end w-100">
+                                <span class="cursor-pointer"
+                                  onClick="decrement(`bedrooms-increment-decrement`)">-</span> <input
+                                  class="more-filters-number-input" type="number" placeholder="0"
+                                  id="bedrooms-increment-decrement" type=number min=0 max=10 /> <span
+                                  class="cursor-pointer" onClick="increment(`bedrooms-increment-decrement`)">+</span>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="pt-4">
+                            <div class="d-flex justify-content-between border-bottom pb-2">
+                              <p class="font-weight-500 w-75">Bathrooms</p>
+                              <div class="d-flex justify-content-end w-100">
+                                <span class="cursor-pointer"
+                                  onClick="decrement(`Bathrooms-increment-decrement`)">-</span> <input
+                                  class="more-filters-number-input" type="number" placeholder="0"
+                                  id="Bathrooms-increment-decrement" type=number min=0 max=10 /> <span
+                                  class="cursor-pointer" onClick="increment(`Bathrooms-increment-decrement`)">+</span>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="entire-places">
+                        <p class="font-weight-600 pt-3">Entire Places</p>
+                        <div class="d-flex justify-content-between align-items-center pt-3 border-bottom pb-3">
+                          <div class="d-flex align-items-center py-3  ">
+                            <input class="checkbox-more-filters" type="checkbox" id="entire-places" name="entire-places"
+                              value="82" />
+                            <label class="font-weight-500 mb-0 ml-3 font-size-13" for="entire-places"> Entire home &
+                              appartments</label>
+                          </div>
+                          <p>
+                            82
+                          </p>
+                        </div>
+                      </div>
+                       <div class="Amenities show-more-less border-bottom">
+                        <p class="font-weight-600 pt-4">Amenities</p>
+                        <ul>
+                          <li>
+                            <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
+                              <div class="d-flex align-items-center col-6 p-0">
+                                <input class="checkbox-more-filters" type="checkbox" id="free-wifi" name="free-wifi"
+                                  value="wifi-free" />
+                                <p class="font-weight-500 mb-0 ml-3 font-size-13" for="free-wifi">Free Wifi</p>
+                              </div>
+                              <div class="d-flex align-items-center col-6 p-0">
+                                <input class="checkbox-more-filters" type="checkbox" id="free-parking"
+                                  name="free-parking" value="free-parking" />
+                                <p class="font-weight-500 mb-0 ml-3 font-size-13" for="free-parking">Free parking</p>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
+                              <div class="d-flex align-items-center col-6 p-0">
+                                <input class="checkbox-more-filters" type="checkbox" id="Pool" name="Pool"
+                                  value="pool" />
+                                <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Pool">Pool</p>
+                              </div>
+                              <div class="d-flex align-items-center col-6 p-0">
+                                <input class="checkbox-more-filters" type="checkbox" id="Gym" name="Gym" value="Gym" />
+                                <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Gym">Gym</p>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
+                              <div class="d-flex align-items-center col-6 p-0">
+                                <input class="checkbox-more-filters" type="checkbox" id="Hot-tube" name="Hot-tube"
+                                  value="Hot-tube" />
+                                <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Hot-tube">Hot tube</p>
+                              </div>
+                              <div class="d-flex align-items-center col-6 p-0">
+                                <input class="checkbox-more-filters" type="checkbox" id="next-beach" name="next-beach"
+                                  value="next-beach" />
+                                <p class="font-weight-500 mb-0 ml-3 font-size-13" for="next-beach">Next to beach</p>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
+                              <div class="d-flex align-items-center col-6 p-0">
+                                <input class="checkbox-more-filters" type="checkbox" id="Hot-tube" name="Hot-tube"
+                                  value="Hot-tube" />
+                                <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Hot-tube">Sea View</p>
+                              </div>
+                              <div class="d-flex align-items-center col-6 p-0">
+                                <input class="checkbox-more-filters" type="checkbox" id="next-beach" name="next-beach"
+                                  value="next-beach" />
+                                <p class="font-weight-500 mb-0 ml-3 font-size-13" for="next-beach">Beachfront</p>
+                              </div>
+                            </div>
+                          </li>
+                          <div class="collapse" id="collapseExampleTwo">
+                            <ul>
+                              <li>
+                                <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
+                                  <div class="d-flex align-items-center col-6 p-0">
+                                    <input class="checkbox-more-filters" type="checkbox" id="Sun-terrace"
+                                      name="Sun-terrace" value="Sun-terrace" />
+                                    <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Sun-terrace">Sun terrace</p>
+                                  </div>
+                                  <div class="d-flex align-items-center col-6 p-0">
+                                    <input class="checkbox-more-filters" type="checkbox" id="Balcony" name="Balcony"
+                                      value="Balcony" />
+                                    <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Balcony">Balcony</p>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
+                                  <div class="d-flex align-items-center col-6 p-0">
+                                    <input class="checkbox-more-filters" type="checkbox" id="Private-beach"
+                                      name="Private-beach" value="Private-beach" />
+                                    <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Sun-terrace">Private beach
+                                    </p>
+                                  </div>
+                                  <div class="d-flex align-items-center col-6 p-0">
+                                    <input class="checkbox-more-filters" type="checkbox" id="Center" name="Center"
+                                      value="Center" />
+                                    <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Center">Center</p>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
+                                  <div class="d-flex align-items-center col-8 p-0">
+                                    <input class="checkbox-more-filters" type="checkbox" id="NETFLIX" name="NETFLIX"
+                                      value="NETFLIX" />
+                                    <p class="font-weight-500 mb-0 ml-3 font-size-13" for="NETFLIX">TV (NETFLIX, YOUTUBE)</p>
+                                  </div>
+                              </li>
+                            </ul>
+                            </div>
+                 
+                          <div class="text-left pt-3">
+                            <button class="listing-button-propertyFilter btn-text mb-4 mt-0 dark-gray font-size-12" type="button" data-toggle="collapse"
+                              data-target="#collapseExampleTwo" aria-expanded="false" aria-controls="collapseExampleTwo">
+                              Show All Amenities
+                            </button>
+                          </div>
+                        </ul>
+                      </div>
+                      <div class="property-types show-more-less border-bottom">
+                        <p class="font-weight-600 pt-4">Property Types</p>
+                        <ul>
+                          <li>
+                            <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
+                              <div class="d-flex align-items-center col-6 p-0">
+                                <input class="checkbox-more-filters" type="checkbox" id="House" name="House"
+                                  value="wifi-free" />
+                                <p class="font-weight-500 mb-0 ml-3 font-size-13" for="House">House</p>
+                              </div>
+                              <div class="d-flex align-items-center col-6 p-0">
+                                <input class="checkbox-more-filters" type="checkbox" id="Apartment"
+                                  name="Apartment" value="Apartment" />
+                                <p class="font-weight-500 mb-0 ml-3 font-size-13" for="free-parking">Apartment</p>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
+                              <div class="d-flex align-items-center col-6 p-0">
+                                <input class="checkbox-more-filters" type="checkbox" id="Bed-and-breakfast" name="Bed-and-breakfast"
+                                  value="pool" />
+                                <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Bed-and-breakfast">Bed and breakfast</p>
+                              </div>
+                              <div class="d-flex align-items-center col-6 p-0">
+                                <input class="checkbox-more-filters" type="checkbox" id="Boutique" name="Boutique" value="Boutique" />
+                                <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Boutique">Boutique hotel</p>
+                              </div>
+                            </div>
+                          </li>
+                          <div class="collapse" id="collapsePropertyType">
+                            <ul>
+                              <li>
+                                <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
+                                  <div class="d-flex align-items-center col-6 p-0">
+                                    <input class="checkbox-more-filters" type="checkbox" id="Sun-terrace"
+                                      name="Sun-terrace" value="Sun-terrace" />
+                                    <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Sun-terrace">Flat</p>
+                                  </div>
+                                  <div class="d-flex align-items-center col-6 p-0">
+                                    <input class="checkbox-more-filters" type="checkbox" id="Balcony" name="Balcony"
+                                      value="Balcony" />
+                                    <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Balcony">Rooms</p>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
+                                  <div class="d-flex align-items-center col-6 p-0">
+                                    <input class="checkbox-more-filters" type="checkbox" id="Private-beach"
+                                      name="Private-beach" value="Private-beach" />
+                                    <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Sun-terrace">Hostels
+                                    </p>
+                                  </div>
+                                  <div class="d-flex align-items-center col-6 p-0">
+                                    <input class="checkbox-more-filters" type="checkbox" id="Center" name="Center"
+                                      value="Center" />
+                                    <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Center">Center</p>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
+                            </div>
+                 
+                          <div class="text-left pt-3">
+                            <button class="listing-button-propertyFilter btn-text mb-4 mt-0 dark-gray font-size-12" type="button" data-toggle="collapse"
+                              data-target="#collapsePropertyType" aria-expanded="false" aria-controls="collapsePropertyType">
+                              Show All Property Type
+                            </button>
+                            </div>
+                        </ul>
+                      </div>
+                       <div class="house-rules show-more-less border-bottom">
+                        <p class="font-weight-600 pt-4">House Rules</p>
+                        <ul>
+                          <li>
+                            <div class="pt-4 pb-3">
+                              <div class="d-flex align-items-center col-12 p-0">
+                                <input class="checkbox-more-filters" type="checkbox" id="House" name="House"
+                                  value="wifi-free" />
+                                <p class="font-weight-500 mb-0 ml-3 font-size-13" for="House">Suitable for children (2-12 years)</p>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="pt-4 pb-3">
+                              <div class="d-flex align-items-center col-12 p-0">
+                                <input class="checkbox-more-filters" type="checkbox" id="House" name="House"
+                                  value="wifi-free" />
+                                <p class="font-weight-500 mb-0 ml-3 font-size-13" for="House">Suitable for infants (under 2 years)</p>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="pt-4 pb-3">
+                              <div class="d-flex align-items-center col-12 p-0">
+                                <input class="checkbox-more-filters" type="checkbox" id="House" name="House"
+                                  value="wifi-free" />
+                                <p class="font-weight-500 mb-0 ml-3 font-size-13" for="House">Suitable for pets</p>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="pt-4 pb-3">
+                              <div class="d-flex align-items-center col-12 p-0">
+                                <input class="checkbox-more-filters" type="checkbox" id="House" name="House"
+                                  value="wifi-free" />
+                                <p class="font-weight-500 mb-0 ml-3 font-size-13" for="House">Adult only</p>
+                              </div>
+                            </div>
+                          </li>
+                              <li>
+                            <div class="pt-4 pb-3">
+                              <div class="d-flex align-items-center col-12 p-0">
+                                <input class="checkbox-more-filters" type="checkbox" id="House" name="House"
+                                  value="wifi-free" />
+                                <p class="font-weight-500 mb-0 ml-3 font-size-13" for="House">Suitable for family</p>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="host-languages show-more-less border-bottom">
+                        <p class="font-weight-600 pt-4">Host Languages</p>
+                        <ul>
+                          <li>
+                            <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
+                              <div class="d-flex align-items-center col-6 p-0">
+                                <input class="checkbox-more-filters" type="checkbox" id="English" name="English"
+                                  value="English" />
+                                <p class="font-weight-500 mb-0 ml-3 font-size-13" for="House">English</p>
+                              </div>
+                              <div class="d-flex align-items-center col-6 p-0">
+                                <input class="checkbox-more-filters" type="checkbox" id="Apartment"
+                                  name="French" value="French" />
+                                <p class="font-weight-500 mb-0 ml-3 font-size-13" for="French">French</p>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
+                              <div class="d-flex align-items-center col-6 p-0">
+                                <input class="checkbox-more-filters" type="checkbox" id="Japenese" name="Japenese"
+                                  value="Japenese" />
+                                <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Bed-and-breakfast">Japenese</p>
+                              </div>
+                              <div class="d-flex align-items-center col-6 p-0">
+                                <input class="checkbox-more-filters" type="checkbox" id="German" name="German" value="German" />
+                                <p class="font-weight-500 mb-0 ml-3 font-size-13" for="German">German</p>
+                              </div>
+                            </div>
+                          </li>
+                          <div class="collapse" id="collapseLanguages">
+                            <ul>
+                              <li>
+                                <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
+                                  <div class="d-flex align-items-center col-6 p-0">
+                                    <input class="checkbox-more-filters" type="checkbox" id="Egypt"
+                                      name="Egypt" value="Egypt" />
+                                    <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Egypt-Egypt">Egypt</p>
+                                  </div>
+                                  <div class="d-flex align-items-center col-6 p-0">
+                                    <input class="checkbox-more-filters" type="checkbox" id="Italian" name="Italian"
+                                      value="Italian" />
+                                    <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Italian">Italian</p>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
+                                  <div class="d-flex align-items-center col-6 p-0">
+                                    <input class="checkbox-more-filters" type="checkbox" id="Chinees"
+                                      name="Chinees" value="Chinees" />
+                                    <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Chinees-Chinees">Chinees
+                                    </p>
+                                  </div>
+                                  <div class="d-flex align-items-center col-6 p-0">
+                                    <input class="checkbox-more-filters" type="checkbox" id="Spanish" name="Spanish"
+                                      value="Spanish" />
+                                    <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Spanish">Spanish</p>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
+                            </div>
+                 
+                          <div class="text-left pt-3">
+                            <button class="listing-button-propertyFilter btn-text mb-4 mt-0 dark-gray font-size-12" type="button" data-toggle="collapse"
+                              data-target="#collapseLanguages" aria-expanded="false" aria-controls="collapseLanguages">
+                              Show all
+                            </button>
+                            </div>
+                        </ul>
+                      </div>
+                      <div class="d-flex justify-content-center justify-content-between px-5 py-3">
+                        <button class="filter-button-property-type">
+                          Cancel
+                        </button>
+                        <button class="yellow-button filter-button-property-type">
+                          Update
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- More Filters Ends-->
             </ul>
           </div>
         </div>
@@ -372,66 +785,119 @@
             </button>
             <ul class="dropdown-menu">
               <div class="">
-                <li class="col-6">
+                <li class="col-12">
                   <a href="#"><label><input name="options-property-ratings[]" type="checkbox"
-                        class="option-property-ratings justone-property-ratings" value="Option 12 " />1 Star</label></a>
+                        class="option-property-ratings justone-property-ratings" value="Option 12 " /><svg
+                        xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17">
+                        <path id="Polygon_58" data-name="Polygon 58"
+                          d="M9,0l2.3,6.261,6.7.233-5.287,4.1L14.562,17,9,13.275,3.438,17l1.849-6.4L0,6.493l6.7-.233Z"
+                          fill="#40d0d3" />
+                      </svg>
+                    </label></a>
                 </li>
-                <li class="col-6">
+                <li class="col-12">
                   <a href="#"><label><input name="options-property-ratings[]" type="checkbox"
-                        class="option-property-ratings justone-property-ratings" value="Option 13 " />2 Star</label></a>
+                        class="option-property-ratings justone-property-ratings" value="Option 13 " /><svg
+                        xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17">
+                        <path id="Polygon_58" data-name="Polygon 58"
+                          d="M9,0l2.3,6.261,6.7.233-5.287,4.1L14.562,17,9,13.275,3.438,17l1.849-6.4L0,6.493l6.7-.233Z"
+                          fill="#40d0d3" />
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17">
+                        <path id="Polygon_58" data-name="Polygon 58"
+                          d="M9,0l2.3,6.261,6.7.233-5.287,4.1L14.562,17,9,13.275,3.438,17l1.849-6.4L0,6.493l6.7-.233Z"
+                          fill="#40d0d3" />
+                      </svg></label></a>
                 </li>
-                <li class="col-6">
+                <li class="col-12">
                   <a href="#"><label><input name="options-property-ratings[]" type="checkbox"
-                        class="option-property-ratings justone-property-ratings" value="Option 14 " />3 Star</label></a>
+                        class="option-property-ratings justone-property-ratings" value="Option 14 " /><svg
+                        xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17">
+                        <path id="Polygon_58" data-name="Polygon 58"
+                          d="M9,0l2.3,6.261,6.7.233-5.287,4.1L14.562,17,9,13.275,3.438,17l1.849-6.4L0,6.493l6.7-.233Z"
+                          fill="#40d0d3" />
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17">
+                        <path id="Polygon_58" data-name="Polygon 58"
+                          d="M9,0l2.3,6.261,6.7.233-5.287,4.1L14.562,17,9,13.275,3.438,17l1.849-6.4L0,6.493l6.7-.233Z"
+                          fill="#40d0d3" />
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17">
+                        <path id="Polygon_58" data-name="Polygon 58"
+                          d="M9,0l2.3,6.261,6.7.233-5.287,4.1L14.562,17,9,13.275,3.438,17l1.849-6.4L0,6.493l6.7-.233Z"
+                          fill="#40d0d3" />
+                      </svg></label></a>
                 </li>
-                <li class="col-6">
+                <li class="col-12">
                   <a href="#"><label><input name="options-property-ratings[]" type="checkbox"
-                        class="option-property-ratings justone-property-ratings" value="Option 15 " />4 Star</label></a>
+                        class="option-property-ratings justone-property-ratings" value="Option 15 " /><svg
+                        xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17">
+                        <path id="Polygon_58" data-name="Polygon 58"
+                          d="M9,0l2.3,6.261,6.7.233-5.287,4.1L14.562,17,9,13.275,3.438,17l1.849-6.4L0,6.493l6.7-.233Z"
+                          fill="#40d0d3" />
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17">
+                        <path id="Polygon_58" data-name="Polygon 58"
+                          d="M9,0l2.3,6.261,6.7.233-5.287,4.1L14.562,17,9,13.275,3.438,17l1.849-6.4L0,6.493l6.7-.233Z"
+                          fill="#40d0d3" />
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17">
+                        <path id="Polygon_58" data-name="Polygon 58"
+                          d="M9,0l2.3,6.261,6.7.233-5.287,4.1L14.562,17,9,13.275,3.438,17l1.849-6.4L0,6.493l6.7-.233Z"
+                          fill="#40d0d3" />
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17">
+                        <path id="Polygon_58" data-name="Polygon 58"
+                          d="M9,0l2.3,6.261,6.7.233-5.287,4.1L14.562,17,9,13.275,3.438,17l1.849-6.4L0,6.493l6.7-.233Z"
+                          fill="#40d0d3" />
+                      </svg></label></a>
                 </li>
-                <li class="col-6">
+                <li class="col-12">
                   <a href="#"><label><input name="options-property-ratings[]" type="checkbox"
-                        class="option-property-ratings justone-property-ratings" value="Option 15 " />5 Star</label></a>
+                        class="option-property-ratings justone-property-ratings" value="Option 15 " /><svg
+                        xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17">
+                        <path id="Polygon_58" data-name="Polygon 58"
+                          d="M9,0l2.3,6.261,6.7.233-5.287,4.1L14.562,17,9,13.275,3.438,17l1.849-6.4L0,6.493l6.7-.233Z"
+                          fill="#40d0d3" />
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17">
+                        <path id="Polygon_58" data-name="Polygon 58"
+                          d="M9,0l2.3,6.261,6.7.233-5.287,4.1L14.562,17,9,13.275,3.438,17l1.849-6.4L0,6.493l6.7-.233Z"
+                          fill="#40d0d3" />
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17">
+                        <path id="Polygon_58" data-name="Polygon 58"
+                          d="M9,0l2.3,6.261,6.7.233-5.287,4.1L14.562,17,9,13.275,3.438,17l1.849-6.4L0,6.493l6.7-.233Z"
+                          fill="#40d0d3" />
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17">
+                        <path id="Polygon_58" data-name="Polygon 58"
+                          d="M9,0l2.3,6.261,6.7.233-5.287,4.1L14.562,17,9,13.275,3.438,17l1.849-6.4L0,6.493l6.7-.233Z"
+                          fill="#40d0d3" />
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17">
+                        <path id="Polygon_58" data-name="Polygon 58"
+                          d="M9,0l2.3,6.261,6.7.233-5.287,4.1L14.562,17,9,13.275,3.438,17l1.849-6.4L0,6.493l6.7-.233Z"
+                          fill="#40d0d3" />
+                      </svg></label></a>
+
                 </li>
               </div>
             </ul>
           </div>
         </div>
         <div class="property-free-wifi listing-filter-dropDown small-modal mr-2">
-          <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle filter-focus" type="button" data-toggle="dropdown">
-              Free Wifi <span class="caret"></span>
+          <div>
+            <button class="btn btn-default dropdown-toggle" id="free-wifi-button" type="button" data-toggle="dropdown" onclick="toggleClassBg(`free-wifi-button`)">
+              Free Wifi</span>
             </button>
-            <ul class="dropdown-menu">
-              <div class="">
-                <li class="col-6">
-                  <a href="#"><label><input name="options-property-ratings[]" type="checkbox"
-                        class="option-property-ratings justone-property-ratings" value="Option 12 " />Yes</label></a>
-                </li>
-                <li class="col-6">
-                  <a href="#"><label><input name="options-property-ratings[]" type="checkbox"
-                        class="option-property-ratings justone-property-ratings" value="Option 13 " />No</label></a>
-                </li>
-              </div>
-            </ul>
           </div>
         </div>
         <div class="property-free-parking listing-filter-dropDown small-modal">
-          <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle filter-focus" type="button" data-toggle="dropdown">
-              Free Parking <span class="caret"></span>
+          <div>
+            <button class="btn btn-default dropdown-toggle" id="free-parking-button" type="button" data-toggle="dropdown" onclick="toggleClassBg(`free-parking-button`)">
+              Free Parking</span>
             </button>
-            <ul class="dropdown-menu">
-              <div class="">
-                <li class="col-6">
-                  <a href="#"><label><input name="options-property-ratings[]" type="checkbox"
-                        class="option-property-ratings justone-property-ratings" value="Option 12 " />Yes</label></a>
-                </li>
-                <li class="col-6">
-                  <a href="#"><label><input name="options-property-ratings[]" type="checkbox"
-                        class="option-property-ratings justone-property-ratings" value="Option 13 " />No</label></a>
-                </li>
-              </div>
-            </ul>
           </div>
         </div>
       </div>
@@ -444,18 +910,18 @@
   </section>
   <section class="filter-mobile d-block d-md-none">
     <div style="background-color: #4b4949"
-    class="filter-mobile-banner d-flex align-items-center justify-content-between px-4 px-lg-3 py-2 rounded-lg-top d-block d-lg-none">
-    <div>
-      <p class="text-white font-weight-500 font-size-16">
-        The Most Likely
-      </p>
+      class="filter-mobile-banner d-flex align-items-center justify-content-between px-4 px-lg-3 py-2 rounded-lg-top d-block d-lg-none">
+      <div>
+        <p class="text-white font-weight-500 font-size-16">
+          The Most Likely
+        </p>
+      </div>
+      <div class="d-flex align-items-center">
+        <button class="filter-button background-color-tealish ml-2 d-flex align-items-center py-2 px-3">
+          <img style="height: 20px; margin-right: 9px" src="./assets/images/icons/filter.png" alt="filter" />Filters
+        </button>
+      </div>
     </div>
-    <div class="d-flex align-items-center">
-      <button class="filter-button background-color-tealish ml-2 d-flex align-items-center py-2 px-3">
-        <img style="height: 20px; margin-right: 9px" src="./assets/images/icons/filter.png" alt="filter" />Filters
-      </button>
-    </div>
-  </div>
   </section>
   <section class="lisiting-inner-content container-main pt-5 overflow-hidden">
     <div class="listing-wrapper w-90 d-flex flex-column flex-lg-row justify-content-between">
@@ -465,19 +931,19 @@
           <p class="sub-heading pt-3">
             Best seller based on your serarch criteria
           </p>
-          <a href="/property-detail.html">  
-           <div data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="200"
-            class="background-color-tealish rounded-lg-top mt-5 pb-2">
-            <div class="card-badge-headings-mobile d-flex justify-content-between align-items-center py-3 px-3">
-              <div class="d-flex align-items-center">
-                <img height="17px" src="./assets/images/icons/tags.png" alt="tag" />
-                <p class="text-white ml-3">SPECIAL RECOMMENDATION</p>
+          <a href="/property-detail.html">
+            <div data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="200"
+              class="background-color-tealish rounded-lg mt-5 pb-2">
+              <div class="card-badge-headings-mobile d-flex justify-content-between align-items-center py-3 px-3">
+                <div class="d-flex align-items-center">
+                  <img height="17px" src="./assets/images/icons/tags.png" alt="tag" />
+                  <p class="text-white ml-3">SPECIAL RECOMMENDATION</p>
+                </div>
+                <div>
+                  <p class="text-white">Exceptional value for this property</p>
+                </div>
               </div>
-              <div>
-                <p class="text-white">Exceptional value for this property</p>
-              </div>
-            </div>
-            <div class="position-relative" style="
+              <div class="position-relative" style="
                   background-image: url(./assets/images/listing-house.png);
                   background-repeat: no-repeat;
                   background-size: cover;
@@ -485,140 +951,141 @@
                   margin: 0px 5px;
                 ">
                 <div class="yellow-badge position-absolute background-color-yellow text-white font-size-11">
-                 SPECIALLY FOR YOU
+                  SPECIALLY FOR YOU
                 </div>
-                </div>
-            <div class="bg-white mx-2">
-              <div class="listing-featured-inner-card bg-white">
-                <div class="d-flex flex-column flex-lg-row justify-content-between align-items-md-center">
-                  <div>
-                    <div class="d-flex justify-content-between mt-2 px-lg-0 px-0 px-md-3 align-items-center">
-                      <div>
-                        <p class="font-weight-bold mr-3 font-size-14">
-                          Modern And Luxury Apartment
-                        </p>
+              </div>
+              <div class="bg-white mx-2 rounded-lg-botto">
+                <div class="listing-featured-inner-card bg-white box-shadow">
+                  <div class="d-flex flex-column flex-lg-row justify-content-between align-items-md-center">
+                    <div>
+                      <div class="d-flex justify-content-between mt-2 px-lg-0 px-0 px-md-3 align-items-center">
+                        <div>
+                          <p class="font-weight-bold mr-3 font-size-14">
+                            Modern And Luxury Apartment
+                          </p>
+                        </div>
+                        <div>
+                          <button style="font-size: 12px;"
+                            class="yellow-button d-flex justify-content-center align-items-center mt-0 mt-md-2">
+                            Top Value
+                          </button>
+                        </div>
                       </div>
-                      <div>
-                        <button style="font-size: 12px;"
-                          class="yellow-button d-flex justify-content-center align-items-center mt-0 mt-md-2">
-                          Top Value
-                        </button>
+                      <div class="facalities-icons-inner d-flex flex-wrap align-items-center pt-4">
+                        <div class="single-facality mr-4">
+                          <p class="font-weight-500 font-size-13 opacity-9">Bedrooms</p>
+                          <div class="d-flex align-items-center mt-2">
+                            <div class="mr-2">
+                              <svg class="rh_svg" fill="#40d0d3" xmlns="http://www.w3.org/2000/svg" width="20"
+                                height="20" viewBox="0 0 24 24">
+                                <defs></defs>
+                                <path
+                                  d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z"
+                                  transform="translate(-1108 -593)"></path>
+                              </svg>
+                            </div>
+                            <div>
+                              <p class="dark-gray font-weight-500 font-size-11">2</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="single-facality mr-4">
+                          <p class="font-weight-500 font-size-13 opacity-9">Bathrooms</p>
+                          <div class="d-flex align-items-center mt-2">
+                            <div class="mr-2">
+                              <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" fill="#40d0d3" width="20"
+                                height="20" viewBox="0 0 23.69 24">
+                                <path
+                                  d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z"
+                                  transform="translate(-1196.31 -593)"></path>
+                              </svg>
+                            </div>
+                            <div>
+                              <p class="dark-gray font-weight-500 font-size-11">2</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="single-facality mr-4">
+                          <p class="font-weight-500 font-size-13 opacity-9">Guests</p>
+                          <div class="d-flex align-items-center mt-2">
+                            <div class="mr-2">
+                              <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" fill="#40d0d3" width="20"
+                                height="20" viewBox="0 0 26.2 24">
+                                <ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 1.5724 14.7053)" cx="18.5"
+                                  cy="5.5" rx="5.5" ry="5.5"></ellipse>
+                                <path
+                                  d="M26.1 20.9l-1.1-5.3c-4-3.6-10.3-3.3-13.9 0.8 -1.6 1.8-2.5 4.1-2.5 6.5V24h14.6c1.5 0.1 2.8-1 2.9-2.5C26.2 21.3 26.2 21.1 26.1 20.9z">
+                                </path>
+                                <circle cx="5.5" cy="10.9" r="4.4"></circle>
+                                <path
+                                  d="M0 19.7l0 1.1c-0.3 1.5 0.7 2.8 2.2 3.1 0.2 0 0.4 0.1 0.7 0h3.7v-1.1c0-1.8 0.8-3.5 2-5 -0.9-0.3-2-0.5-3-0.5C3.4 17.5 1.5 18.3 0 19.7z">
+                                </path>
+                              </svg>
+                            </div>
+                            <div>
+                              <p class="dark-gray font-weight-500 font-size-11">2</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="single-facality">
+                          <p class="font-weight-500 font-size-13 opacity-9">Area</p>
+                          <div class="d-flex align-items-center mt-2">
+                            <div class="mr-2">
+                              <svg width="20px" height="20px" viewBox="0 0 32 32" fill="#40d0d3" id="Layer_1"
+                                data-name="Layer 1" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                  <style>
+                                    .cls-1 {
+                                      fill: none;
+                                    }
+                                  </style>
+                                </defs>
+                                <path
+                                  d="M27,22.142V9.858A3.9916,3.9916,0,1,0,22.142,5H9.858A3.9916,3.9916,0,1,0,5,9.858V22.142A3.9916,3.9916,0,1,0,9.858,27H22.142A3.9916,3.9916,0,1,0,27,22.142ZM26,4a2,2,0,1,1-2,2A2.0023,2.0023,0,0,1,26,4ZM4,6A2,2,0,1,1,6,8,2.002,2.002,0,0,1,4,6ZM6,28a2,2,0,1,1,2-2A2.0023,2.0023,0,0,1,6,28Zm16.142-3H9.858A3.9937,3.9937,0,0,0,7,22.142V9.858A3.9947,3.9947,0,0,0,9.858,7H22.142A3.9937,3.9937,0,0,0,25,9.858V22.142A3.9931,3.9931,0,0,0,22.142,25ZM26,28a2,2,0,1,1,2-2A2.0027,2.0027,0,0,1,26,28Z"
+                                  transform="translate(0 0)" />
+                                <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;"
+                                  class="cls-1" width="32" height="32" />
+                              </svg>
+                            </div>
+                            <div>
+                              <p class="dark-gray font-weight-500 font-size-11">
+                                2460 <span class="font-size-8 opacity-6">m 2</span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div class="facalities-icons-inner d-flex flex-wrap align-items-center pt-4">
-                      <div class="single-facality mr-4">
-                        <p class="font-weight-500 font-size-13 opacity-9">Bedrooms</p>
-                        <div class="d-flex align-items-center mt-2">
-                          <div class="mr-2">
-                            <svg class="rh_svg" fill="#40d0d3" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                              viewBox="0 0 24 24">
-                              <defs></defs>
-                              <path
-                                d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z"
-                                transform="translate(-1108 -593)"></path>
-                            </svg>
+                    <div
+                      class="d-flex flex-md-column flex-row-reverse justify-content-between align-items-center align-items-md-end">
+                      <div>
+                        <div class="d-flex align-items-center justify-content-end mt-4 mt-md-0">
+                          <div class="mr-3 d-flex flex-column align-items-end">
+                            <p class="font-weight-600 font-size-11">Very Good</p>
+                            <p class="font-size-11 dark-gray opacity-9">4,347 reviews</p>
                           </div>
-                          <div>
-                            <p class="dark-gray font-weight-500 font-size-11">2</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="single-facality mr-4">
-                        <p class="font-weight-500 font-size-13 opacity-9">Bathrooms</p>
-                        <div class="d-flex align-items-center mt-2">
-                          <div class="mr-2">
-                            <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" fill="#40d0d3" width="20" height="20"
-                              viewBox="0 0 23.69 24">
-                              <path
-                                d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z"
-                                transform="translate(-1196.31 -593)"></path>
-                            </svg>
-                          </div>
-                          <div>
-                            <p class="dark-gray font-weight-500 font-size-11">2</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="single-facality mr-4">
-                        <p class="font-weight-500 font-size-13 opacity-9">Guests</p>
-                        <div class="d-flex align-items-center mt-2">
-                          <div class="mr-2">
-                            <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" fill="#40d0d3" width="20" height="20"
-                              viewBox="0 0 26.2 24">
-                              <ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 1.5724 14.7053)" cx="18.5"
-                                cy="5.5" rx="5.5" ry="5.5"></ellipse>
-                              <path
-                                d="M26.1 20.9l-1.1-5.3c-4-3.6-10.3-3.3-13.9 0.8 -1.6 1.8-2.5 4.1-2.5 6.5V24h14.6c1.5 0.1 2.8-1 2.9-2.5C26.2 21.3 26.2 21.1 26.1 20.9z">
-                              </path>
-                              <circle cx="5.5" cy="10.9" r="4.4"></circle>
-                              <path
-                                d="M0 19.7l0 1.1c-0.3 1.5 0.7 2.8 2.2 3.1 0.2 0 0.4 0.1 0.7 0h3.7v-1.1c0-1.8 0.8-3.5 2-5 -0.9-0.3-2-0.5-3-0.5C3.4 17.5 1.5 18.3 0 19.7z">
-                              </path>
-                            </svg>
-                          </div>
-                          <div>
-                            <p class="dark-gray font-weight-500 font-size-11">2</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="single-facality">
-                        <p class="font-weight-500 font-size-13 opacity-9">Area</p>
-                        <div class="d-flex align-items-center mt-2">
-                          <div class="mr-2">
-                            <svg width="20px" height="20px" viewBox="0 0 32 32" fill="#40d0d3" id="Layer_1"
-                              data-name="Layer 1" xmlns="http://www.w3.org/2000/svg">
-                              <defs>
-                                <style>
-                                  .cls-1 {
-                                    fill: none;
-                                  }
-                                </style>
-                              </defs>
-                              <path
-                                d="M27,22.142V9.858A3.9916,3.9916,0,1,0,22.142,5H9.858A3.9916,3.9916,0,1,0,5,9.858V22.142A3.9916,3.9916,0,1,0,9.858,27H22.142A3.9916,3.9916,0,1,0,27,22.142ZM26,4a2,2,0,1,1-2,2A2.0023,2.0023,0,0,1,26,4ZM4,6A2,2,0,1,1,6,8,2.002,2.002,0,0,1,4,6ZM6,28a2,2,0,1,1,2-2A2.0023,2.0023,0,0,1,6,28Zm16.142-3H9.858A3.9937,3.9937,0,0,0,7,22.142V9.858A3.9947,3.9947,0,0,0,9.858,7H22.142A3.9937,3.9937,0,0,0,25,9.858V22.142A3.9931,3.9931,0,0,0,22.142,25ZM26,28a2,2,0,1,1,2-2A2.0027,2.0027,0,0,1,26,28Z"
-                                transform="translate(0 0)" />
-                              <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1"
-                                width="32" height="32" />
-                            </svg>
-                          </div>
-                          <div>
-                            <p class="dark-gray font-weight-500 font-size-11">
-                              2460 <span class="font-size-8 opacity-6">m 2</span>
+                          <div class="position-relative d-flex justify-content-center align-items-center">
+                            <img style="height: 37px" src="./assets/images/icons/Rectangle.png" alt="rectangle" />
+                            <p class="property-image-slider-text-rectangle position-absolute text-white">
+                              8.4
                             </p>
                           </div>
                         </div>
+                        <p class="color-tealish font-size-11 pt-2 pb-3 text-right"><img class="mr-2"
+                            src="./assets/images/icons/greenVerified.png" alt="verified" />Verified Host</p>
                       </div>
-                    </div>
-                  </div>
-                  <div class="d-flex flex-md-column flex-row-reverse justify-content-between align-items-center">
-                    <div>
-                    <div class="d-flex align-items-center justify-content-end mt-4 mt-md-0">
-                      <div class="mr-3 d-flex flex-column align-items-end">
-                        <p class="font-weight-600 font-size-11">Very Good</p>
-                        <p class="font-size-11 dark-gray opacity-9">4,347 reviews</p>
-                      </div>
-                      <div class="position-relative d-flex justify-content-center align-items-center">
-                        <img style="height: 37px" src="./assets/images/icons/Rectangle.png" alt="rectangle" />
-                        <p class="property-image-slider-text-rectangle position-absolute text-white">
-                          8.4
+                      <div>
+                        <p class="text-black font-weight-700 font-size-16 text-left text-lg-right">
+                          € 149<span class="font-weight-normal font-size-13">/night</span>
                         </p>
+                        <p class="underline text-right"><u>€ 622 total</u></p>
                       </div>
                     </div>
-                    <p class="color-tealish font-size-11 pt-2 pb-3 text-right"><img class="mr-2"
-                        src="./assets/images/icons/greenVerified.png" alt="verified" />Verified Host</p>
-                      </div>
-                    <div>
-                    <p class="text-black font-weight-700 font-size-16 text-left text-lg-right">
-                      € 149<span class="font-weight-normal font-size-13">/night</span>
-                    </p>
-                    <p class="underline text-right"><u>€ 622 total</u></p>
-                  </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </a>
+          </a>
         </div>
         <div class="main-featured-card mt-5">
           <p class="main-heading">PREMIUM accommodations for you in London</p>
@@ -636,14 +1103,16 @@
                 <p class="text-white">Because you deserve only the best in London</p>
               </div>
             </div>
-            <div class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg">
+            <div
+              class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg box-shadow">
               <div class="listing-premium-card-first position-relative">
                 <div class="tealish-badge position-absolute background-color-tealish text-white font-size-11">
                   PREMIUM
-                 </div>
+                </div>
               </div>
               <div class="border-right listing-premium-center-card px-3">
-                <p class="pb-4 font-weight-500 font-size-11 opacity-9 pt-4 pt-md-0">Holiday House ♥ Big Terrace and BBQ★ Pets
+                <p class="pb-4 font-weight-500 font-size-11 opacity-9 pt-4 pt-md-0">Holiday House ♥ Big Terrace and BBQ★
+                  Pets
                   Welcome★ <img class="mr-2" height="12px" src="./assets/images/icons/greenVerified.png"
                     alt="verified" /><span class="color-tealish font-size-11 font-weight-500">Verified Host</span> </p>
                 <p class="dark-gray font-size-11">Dopustovanje v srcu narave je vedno najboljša
@@ -734,7 +1203,8 @@
                   </div>
                 </div>
               </div>
-              <div class="listing-card-inner-third mr-0 mr-md-3 px-3 px-md-0 py-md-0 py-3 d-flex flex-md-column flex-row-reverse justify-content-between">
+              <div
+                class="listing-card-inner-third mr-0 mr-md-3 px-3 px-md-0 py-md-0 py-3 d-flex flex-md-column flex-row-reverse justify-content-between">
                 <div class="d-flex align-items-center justify-content-end">
                   <div class="mr-3 d-flex flex-column align-items-end">
                     <p class="font-weight-600 font-size-11">Very Good</p>
@@ -748,13 +1218,14 @@
                   </div>
                 </div>
                 <div>
-                <p class="color-tealish text-md-right text-left font-size-11 pt-2 pb-3">Location 8.1</p>
-                <p class="text-danger font-size-9 text-md-right text-left"><u>We only have 1 left at this price!</u></p>
-                <p class="text-black font-size-10 text-md-right text-left pt-3">Total price per night</p>
-                <p class="text-black font-weight-700 font-size-11 text-md-right text-left py-2">
-                  € 268
-                </p>
-              </div>
+                  <p class="color-tealish text-md-right text-left font-size-11 pt-2 pb-3">Location 8.1</p>
+                  <p class="text-danger font-size-9 text-md-right text-left"><u>We only have 1 left at this price!</u>
+                  </p>
+                  <p class="text-black font-size-10 text-md-right text-left pt-3">Total price per night</p>
+                  <p class="text-black font-weight-700 font-size-11 text-md-right text-left py-2">
+                    € 268
+                  </p>
+                </div>
                 <div class="text-right d-none d-md-block">
                   <button class="yellow-button font-size-9">More Details</button>
                 </div>
@@ -768,15 +1239,16 @@
         <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="200" class="main-featured-card mt-5">
           <p class="main-heading">Get inspired by our top rated homes</p>
           <div class="mt-3">
-            <div class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg">
+            <div
+              class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg box-shadow">
               <div class="single-premium-card position-relative">
                 <div class="tealish-badge position-absolute background-color-tealish text-white font-size-11">
                   TOP
-                 </div>
+                </div>
               </div>
               <div class="border-right listing-premium-center-card px-3">
-                <p class="pb-4 font-weight-500 font-size-11 opacity-9 pt-4 pt-md-0">A Grand Modern Apartment <img class="mr-2"
-                    height="12px" src="./assets/images/icons/greenVerified.png" alt="verified" /><span
+                <p class="pb-4 font-weight-500 font-size-11 opacity-9 pt-4 pt-md-0">A Grand Modern Apartment <img
+                    class="mr-2" height="12px" src="./assets/images/icons/greenVerified.png" alt="verified" /><span
                     class="color-tealish font-size-11 font-weight-500">Verified Host</span> </p>
                 <p class="dark-gray font-size-11">Dopustovanje v srcu narave je vedno najboljša
                   izbira Predstavljajte si, da vas zjutraj prebudi
@@ -866,7 +1338,8 @@
                   </div>
                 </div>
               </div>
-              <div class="listing-card-inner-third mr-0 mr-md-3 px-3 px-md-0 py-md-0 py-3 d-flex flex-md-column flex-row-reverse justify-content-between">
+              <div
+                class="listing-card-inner-third mr-0 mr-md-3 px-3 px-md-0 py-md-0 py-3 d-flex flex-md-column flex-row-reverse justify-content-between">
                 <div class="d-flex align-items-center justify-content-end">
                   <div class="mr-3 d-flex flex-column align-items-end">
                     <p class="font-weight-600 font-size-11">Very Good</p>
@@ -880,12 +1353,12 @@
                   </div>
                 </div>
                 <div>
-                <p class="color-tealish text-md-right text-left font-size-11 pt-2 pb-3">Location 8.1</p>
-                <p class="text-black font-size-10 text-md-right text-left">Total price per night</p>
-                <p class="text-black font-weight-700 font-size-11 text-md-right text-left py-2">
-                  € 268
-                </p>
-              </div>
+                  <p class="color-tealish text-md-right text-left font-size-11 pt-2 pb-3">Location 8.1</p>
+                  <p class="text-black font-size-10 text-md-right text-left">Total price per night</p>
+                  <p class="text-black font-weight-700 font-size-11 text-md-right text-left py-2">
+                    € 268
+                  </p>
+                </div>
                 <div class="text-right d-none d-md-block">
                   <button class="yellow-button font-size-9">More Details</button>
                 </div>
@@ -898,15 +1371,16 @@
         </div>
         <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="200" class="main-featured-card mt-5">
           <div class="mt-3">
-            <div class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg">
+            <div
+              class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg box-shadow">
               <div class="single-premium-card position-relative">
                 <div class="tealish-badge position-absolute background-color-tealish text-white font-size-11">
                   TOP
-                 </div>
+                </div>
               </div>
               <div class="border-right listing-premium-center-card px-3">
-                <p class="pb-4 font-weight-500 font-size-11 opacity-9 pt-4 pt-md-0">A Grand Modern Apartment <img class="mr-2"
-                    height="12px" src="./assets/images/icons/greenVerified.png" alt="verified" /><span
+                <p class="pb-4 font-weight-500 font-size-11 opacity-9 pt-4 pt-md-0">A Grand Modern Apartment <img
+                    class="mr-2" height="12px" src="./assets/images/icons/greenVerified.png" alt="verified" /><span
                     class="color-tealish font-size-11 font-weight-500">Verified Host</span> </p>
                 <p class="dark-gray font-size-11">Dopustovanje v srcu narave je vedno najboljša
                   izbira Predstavljajte si, da vas zjutraj prebudi
@@ -996,7 +1470,8 @@
                   </div>
                 </div>
               </div>
-              <div class="listing-card-inner-third mr-0 mr-md-3 px-3 px-md-0 py-md-0 py-3 d-flex flex-md-column flex-row-reverse justify-content-between">
+              <div
+                class="listing-card-inner-third mr-0 mr-md-3 px-3 px-md-0 py-md-0 py-3 d-flex flex-md-column flex-row-reverse justify-content-between">
                 <div class="d-flex align-items-center justify-content-end">
                   <div class="mr-3 d-flex flex-column align-items-end">
                     <p class="font-weight-600 font-size-11">Very Good</p>
@@ -1010,12 +1485,12 @@
                   </div>
                 </div>
                 <div>
-                <p class="color-tealish text-md-right text-left font-size-11 pt-2 pb-3">Location 8.1</p>
-                <p class="text-black font-size-10 text-md-right text-left">Total price per night</p>
-                <p class="text-black font-weight-700 font-size-11 text-md-right text-left py-2">
-                  € 268
-                </p>
-              </div>
+                  <p class="color-tealish text-md-right text-left font-size-11 pt-2 pb-3">Location 8.1</p>
+                  <p class="text-black font-size-10 text-md-right text-left">Total price per night</p>
+                  <p class="text-black font-weight-700 font-size-11 text-md-right text-left py-2">
+                    € 268
+                  </p>
+                </div>
                 <div class="text-right d-none d-md-block">
                   <button class="yellow-button font-size-9">More Details</button>
                 </div>
@@ -1028,15 +1503,16 @@
         </div>
         <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="200" class="main-featured-card mt-5">
           <div class="mt-3">
-            <div class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg">
+            <div
+              class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg box-shadow">
               <div class="single-premium-card position-relative">
                 <div class="tealish-badge position-absolute background-color-tealish text-white font-size-11">
                   TOP
-                 </div>
+                </div>
               </div>
               <div class="border-right listing-premium-center-card px-3">
-                <p class="pb-4 font-weight-500 font-size-11 opacity-9 pt-4 pt-md-0">A Grand Modern Apartment <img class="mr-2"
-                    height="12px" src="./assets/images/icons/greenVerified.png" alt="verified" /><span
+                <p class="pb-4 font-weight-500 font-size-11 opacity-9 pt-4 pt-md-0">A Grand Modern Apartment <img
+                    class="mr-2" height="12px" src="./assets/images/icons/greenVerified.png" alt="verified" /><span
                     class="color-tealish font-size-11 font-weight-500">Verified Host</span> </p>
                 <p class="dark-gray font-size-11">Dopustovanje v srcu narave je vedno najboljša
                   izbira Predstavljajte si, da vas zjutraj prebudi
@@ -1126,7 +1602,8 @@
                   </div>
                 </div>
               </div>
-              <div class="listing-card-inner-third mr-0 mr-md-3 px-3 px-md-0 py-md-0 py-3 d-flex flex-md-column flex-row-reverse justify-content-between">
+              <div
+                class="listing-card-inner-third mr-0 mr-md-3 px-3 px-md-0 py-md-0 py-3 d-flex flex-md-column flex-row-reverse justify-content-between">
                 <div class="d-flex align-items-center justify-content-end">
                   <div class="mr-3 d-flex flex-column align-items-end">
                     <p class="font-weight-600 font-size-11">Very Good</p>
@@ -1140,12 +1617,12 @@
                   </div>
                 </div>
                 <div>
-                <p class="color-tealish text-md-right text-left font-size-11 pt-2 pb-3">Location 8.1</p>
-                <p class="text-black font-size-10 text-md-right text-left">Total price per night</p>
-                <p class="text-black font-weight-700 font-size-11 text-md-right text-left py-2">
-                  € 268
-                </p>
-              </div>
+                  <p class="color-tealish text-md-right text-left font-size-11 pt-2 pb-3">Location 8.1</p>
+                  <p class="text-black font-size-10 text-md-right text-left">Total price per night</p>
+                  <p class="text-black font-weight-700 font-size-11 text-md-right text-left py-2">
+                    € 268
+                  </p>
+                </div>
                 <div class="text-right d-none d-md-block">
                   <button class="yellow-button font-size-9">More Details</button>
                 </div>
@@ -1158,11 +1635,12 @@
         </div>
         <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="200" class="main-featured-card mt-5">
           <div class="mt-3">
-            <div class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg">
+            <div
+              class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg box-shadow">
               <div class="single-premium-card position-relative">
                 <div class="tealish-badge position-absolute background-color-tealish text-white font-size-11">
                   TOP
-                 </div>
+                </div>
               </div>
               <div class="border-right listing-premium-center-card px-3">
                 <p class="py-b font-weight-500 font-size-11 opacity-9 pt-4">A Grand Modern Apartment <img class="mr-2"
@@ -1256,7 +1734,8 @@
                   </div>
                 </div>
               </div>
-              <div class="listing-card-inner-third mr-0 mr-md-3 px-3 px-md-0 py-md-0 py-3 d-flex flex-md-column flex-row-reverse justify-content-between">
+              <div
+                class="listing-card-inner-third mr-0 mr-md-3 px-3 px-md-0 py-md-0 py-3 d-flex flex-md-column flex-row-reverse justify-content-between">
                 <div class="d-flex align-items-center justify-content-end">
                   <div class="mr-3 d-flex flex-column align-items-end">
                     <p class="font-weight-600 font-size-11">Very Good</p>
@@ -1270,12 +1749,12 @@
                   </div>
                 </div>
                 <div>
-                <p class="color-tealish text-md-right text-left font-size-11 pt-2 pb-3">Location 8.1</p>
-                <p class="text-black font-size-10 text-md-right text-left">Total price per night</p>
-                <p class="text-black font-weight-700 font-size-11 text-md-right text-left py-2">
-                  € 268
-                </p>
-              </div>
+                  <p class="color-tealish text-md-right text-left font-size-11 pt-2 pb-3">Location 8.1</p>
+                  <p class="text-black font-size-10 text-md-right text-left">Total price per night</p>
+                  <p class="text-black font-weight-700 font-size-11 text-md-right text-left py-2">
+                    € 268
+                  </p>
+                </div>
                 <div class="text-right d-none d-md-block">
                   <button class="yellow-button font-size-9">More Details</button>
                 </div>
@@ -1297,14 +1776,16 @@
                 <p class="text-white">Exceptional value for this property</p>
               </div>
             </div>
-            <div class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg">
+            <div
+              class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg box-shadow">
               <div class="listing-premium-card-first position-relative">
                 <div class="tealish-badge position-absolute background-color-tealish text-white font-size-11">
                   TRENDING
-                 </div>
+                </div>
               </div>
               <div class="border-right listing-premium-center-card px-3">
-                <p class="pb-4 font-weight-500 font-size-11 opacity-9 pt-4 pt-md-0">Holiday House ♥ Big Terrace and BBQ★ Pets
+                <p class="pb-4 font-weight-500 font-size-11 opacity-9 pt-4 pt-md-0">Holiday House ♥ Big Terrace and BBQ★
+                  Pets
                   Welcome★ <img class="mr-2" height="12px" src="./assets/images/icons/greenVerified.png"
                     alt="verified" /><span class="color-tealish font-size-11 font-weight-500">Verified Host</span> </p>
                 <p class="dark-gray font-size-11">Dopustovanje v srcu narave je vedno najboljša
@@ -1395,7 +1876,8 @@
                   </div>
                 </div>
               </div>
-              <div class="listing-card-inner-third mr-0 mr-md-3 px-3 px-md-0 py-md-0 py-3 d-flex flex-md-column flex-row-reverse justify-content-between">
+              <div
+                class="listing-card-inner-third mr-0 mr-md-3 px-3 px-md-0 py-md-0 py-3 d-flex flex-md-column flex-row-reverse justify-content-between">
                 <div class="d-flex align-items-center justify-content-end">
                   <div class="mr-3 d-flex flex-column align-items-end">
                     <p class="font-weight-600 font-size-11">Very Good</p>
@@ -1409,12 +1891,12 @@
                   </div>
                 </div>
                 <div>
-                <p class="color-tealish text-md-right text-left font-size-11 pt-2 pb-3">Location 8.1</p>
-                <p class="text-black font-size-10 text-md-right text-left">Total price per night</p>
-                <p class="text-black font-weight-700 font-size-11 text-md-right text-left py-2">
-                  € 268
-                </p>
-              </div>
+                  <p class="color-tealish text-md-right text-left font-size-11 pt-2 pb-3">Location 8.1</p>
+                  <p class="text-black font-size-10 text-md-right text-left">Total price per night</p>
+                  <p class="text-black font-weight-700 font-size-11 text-md-right text-left py-2">
+                    € 268
+                  </p>
+                </div>
                 <div class="text-right d-none d-md-block">
                   <button class="yellow-button font-size-9">More Details</button>
                 </div>
@@ -1427,15 +1909,16 @@
         </div>
         <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="200" class="main-featured-card mt-5">
           <div class="mt-3">
-            <div class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg">
+            <div
+              class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg box-shadow">
               <div class="single-premium-card position-relative">
                 <div class="yellow-badge position-absolute background-color-yellow text-white font-size-11">
                   NEW
-                 </div>
+                </div>
               </div>
               <div class="border-right listing-premium-center-card px-3">
-                <p class="pb-4 font-weight-500 font-size-11 opacity-9 pt-4 pt-md-0">A Grand Modern Apartment <img class="mr-2"
-                    height="12px" src="./assets/images/icons/greenVerified.png" alt="verified" /><span
+                <p class="pb-4 font-weight-500 font-size-11 opacity-9 pt-4 pt-md-0">A Grand Modern Apartment <img
+                    class="mr-2" height="12px" src="./assets/images/icons/greenVerified.png" alt="verified" /><span
                     class="color-tealish font-size-11 font-weight-500">Verified Host</span> </p>
                 <p class="dark-gray font-size-11">Dopustovanje v srcu narave je vedno najboljša
                   izbira Predstavljajte si, da vas zjutraj prebudi
@@ -1525,7 +2008,8 @@
                   </div>
                 </div>
               </div>
-              <div class="listing-card-inner-third mr-0 mr-md-3 px-3 px-md-0 py-md-0 py-3 d-flex flex-md-column flex-row-reverse justify-content-between">
+              <div
+                class="listing-card-inner-third mr-0 mr-md-3 px-3 px-md-0 py-md-0 py-3 d-flex flex-md-column flex-row-reverse justify-content-between">
                 <div class="d-flex align-items-center justify-content-end">
                   <div class="mr-3 d-flex flex-column align-items-end">
                     <p class="font-weight-600 font-size-11">Very Good</p>
@@ -1539,12 +2023,12 @@
                   </div>
                 </div>
                 <div>
-                <p class="color-tealish text-md-right text-left font-size-11 pt-2 pb-3">Location 8.1</p>
-                <p class="text-black font-size-10 text-md-right text-left">Total price per night</p>
-                <p class="text-black font-weight-700 font-size-11 text-md-right text-left py-2">
-                  € 268
-                </p>
-              </div>
+                  <p class="color-tealish text-md-right text-left font-size-11 pt-2 pb-3">Location 8.1</p>
+                  <p class="text-black font-size-10 text-md-right text-left">Total price per night</p>
+                  <p class="text-black font-weight-700 font-size-11 text-md-right text-left py-2">
+                    € 268
+                  </p>
+                </div>
                 <div class="text-right d-none d-md-block">
                   <button class="yellow-button font-size-9">More Details</button>
                 </div>
@@ -1557,15 +2041,16 @@
         </div>
         <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="200" class="main-featured-card mt-5">
           <div class="mt-3">
-            <div class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg">
+            <div
+              class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg box-shadow">
               <div class="single-premium-card position-relative">
                 <div class="tealish-badge position-absolute background-color-tealish text-white font-size-11">
                   GOOD PRICE
-                 </div>
+                </div>
               </div>
               <div class="border-right listing-premium-center-card px-3">
-                <p class="pb-4 font-weight-500 font-size-11 opacity-9 pt-4 pt-md-0">A Grand Modern Apartment <img class="mr-2"
-                    height="12px" src="./assets/images/icons/greenVerified.png" alt="verified" /><span
+                <p class="pb-4 font-weight-500 font-size-11 opacity-9 pt-4 pt-md-0">A Grand Modern Apartment <img
+                    class="mr-2" height="12px" src="./assets/images/icons/greenVerified.png" alt="verified" /><span
                     class="color-tealish font-size-11 font-weight-500">Verified Host</span> </p>
                 <p class="dark-gray font-size-11">Dopustovanje v srcu narave je vedno najboljša
                   izbira Predstavljajte si, da vas zjutraj prebudi
@@ -1655,7 +2140,8 @@
                   </div>
                 </div>
               </div>
-              <div class="listing-card-inner-third mr-0 mr-md-3 px-3 px-md-0 py-md-0 py-3 d-flex flex-md-column flex-row-reverse justify-content-between">
+              <div
+                class="listing-card-inner-third mr-0 mr-md-3 px-3 px-md-0 py-md-0 py-3 d-flex flex-md-column flex-row-reverse justify-content-between">
                 <div class="d-flex align-items-center justify-content-end">
                   <div class="mr-3 d-flex flex-column align-items-end">
                     <p class="font-weight-600 font-size-11">Very Good</p>
@@ -1669,12 +2155,12 @@
                   </div>
                 </div>
                 <div>
-                <p class="color-tealish text-md-right text-left font-size-11 pt-2 pb-3">Location 8.1</p>
-                <p class="text-black font-size-10 text-md-right text-left">Total price per night</p>
-                <p class="text-black font-weight-700 font-size-11 text-md-right text-left py-2">
-                  € 268
-                </p>
-              </div>
+                  <p class="color-tealish text-md-right text-left font-size-11 pt-2 pb-3">Location 8.1</p>
+                  <p class="text-black font-size-10 text-md-right text-left">Total price per night</p>
+                  <p class="text-black font-weight-700 font-size-11 text-md-right text-left py-2">
+                    € 268
+                  </p>
+                </div>
                 <div class="text-right d-none d-md-block">
                   <button class="yellow-button font-size-9">More Details</button>
                 </div>
@@ -1692,9 +2178,10 @@
           <P class="main-heading">Something for you</P>
           <p class="sub-heading pt-2">You deserve only the best</p>
           <div data-aos="fade-left" data-aos-easing="linear" data-aos-duration="200"
-            class="something-for-you-card bg-white rounded-lg mt-5">
+            class="something-for-you-card bg-white rounded-lg mt-5 box-shadow box-shadow">
             <div class="something-for-you-image position-relative">
-              <div style="top: -10px; left:0px;" class="position-absolute background-color-tealish rounded px-3 py-2 text-white">
+              <div style="top: -10px; left:0px;"
+                class="position-absolute background-color-tealish rounded px-3 py-2 text-white">
                 Top Value
               </div>
               <div class="image-inner-card bg-white position-absolute pl-4 pr-3 py-4">
@@ -1803,7 +2290,7 @@
               </div>
               <div class="d-flex justify-content-between mt-5">
                 <div>
-                  <p class="color-tealish font-size-16 font-weight-500">139€ Per Night</p>
+                  <p class="color-tealish font-size-16 font-weight-500">139€<span class="font-size-11">/Per Night</span></p>
                 </div>
                 <div>
                   <button class="yellow-button">More Details</button>
@@ -1812,9 +2299,10 @@
             </div>
           </div>
           <div data-aos="fade-left" data-aos-easing="linear" data-aos-duration="200"
-            class="something-for-you-card bg-white rounded-lg mt-5">
+            class="something-for-you-card bg-white rounded-lg mt-5 box-shadow box-shadow">
             <div class="something-for-you-image position-relative">
-              <div style="top: -10px; left:0px;" class="position-absolute background-color-tealish rounded px-3 py-2 text-white">
+              <div style="top: -10px; left:0px;"
+                class="position-absolute background-color-tealish rounded px-3 py-2 text-white">
                 Top Value
               </div>
               <div class="image-inner-card bg-white position-absolute pl-4 pr-3 py-4">
@@ -1923,7 +2411,7 @@
               </div>
               <div class="d-flex justify-content-between mt-5">
                 <div>
-                  <p class="color-tealish font-size-16 font-weight-500">139€ Per Night</p>
+                  <p class="color-tealish font-size-16 font-weight-500">139€<span class="font-size-11">/Per Night</span></p>
                 </div>
                 <div>
                   <button class="yellow-button">More Details</button>
@@ -1932,9 +2420,10 @@
             </div>
           </div>
           <div data-aos="fade-left" data-aos-easing="linear" data-aos-duration="200"
-            class="something-for-you-card bg-white rounded-lg mt-5">
+            class="something-for-you-card bg-white rounded-lg mt-5 box-shadow">
             <div class="something-for-you-image position-relative">
-              <div style="top: -10px; left:0px;" class="position-absolute background-color-tealish rounded px-3 py-2 text-white">
+              <div style="top: -10px; left:0px;"
+                class="position-absolute background-color-tealish rounded px-3 py-2 text-white">
                 Top Value
               </div>
               <div class="image-inner-card bg-white position-absolute pl-4 pr-3 py-4">
@@ -2043,7 +2532,7 @@
               </div>
               <div class="d-flex justify-content-between mt-5">
                 <div>
-                  <p class="color-tealish font-size-16 font-weight-500">139€ Per Night</p>
+                  <p class="color-tealish font-size-16 font-weight-500">139€<span class="font-size-11">/Per Night</span></p>
                 </div>
                 <div>
                   <button class="yellow-button">More Details</button>
@@ -2052,9 +2541,10 @@
             </div>
           </div>
           <div data-aos="fade-left" data-aos-easing="linear" data-aos-duration="200"
-            class="something-for-you-card bg-white rounded-lg mt-5">
+            class="something-for-you-card bg-white rounded-lg mt-5 box-shadow">
             <div class="something-for-you-image position-relative">
-              <div style="top: -10px; left:0px;" class="position-absolute background-color-tealish rounded px-3 py-2 text-white">
+              <div style="top: -10px; left:0px;"
+                class="position-absolute background-color-tealish rounded px-3 py-2 text-white">
                 Top Value
               </div>
               <div class="image-inner-card bg-white position-absolute pl-4 pr-3 py-4">
@@ -2163,7 +2653,7 @@
               </div>
               <div class="d-flex justify-content-between mt-5">
                 <div>
-                  <p class="color-tealish font-size-16 font-weight-500">139€ Per Night</p>
+                  <p class="color-tealish font-size-16 font-weight-500">139€<span class="font-size-11">/Per Night</span></p>
                 </div>
                 <div>
                   <button class="yellow-button">More Details</button>
@@ -2176,9 +2666,9 @@
       </div>
     </div>
   </section>
-
   <script src="functions.js"></script>
   <script src="./calender.js"></script>
   <script src="/listing.js"></script>
 </body>
+
 </html>

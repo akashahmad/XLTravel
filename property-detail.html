@@ -115,52 +115,58 @@
     </div>
   </header>
   <!-- Header End -->
-  <section class="hero-section container-main  d-none d-md-block">
-    <div class="d-flex justify-content-center">
-      <div class="new-search-box bg-white">
-        <div class="destinations">
-          <button type="button" onclick="ShowDestinationModal()">Destination</button>
-          <div class="section-destination-modal" id="destination-modal">
-            <div class="suggestion">
-              <p>Suggest me best destination:</p>
-                <div>
-                <button class="anywhere-button">
-                  <a href="/listing.html">
-                  Take me anywhere!
-                  <img src="./assets/images/icons/right-arrow-search.png" alt="See your suggestions">
-                </a>
-                </button>
+  <section style="min-height: 100px;" class="hero-section container-main">
+    <div class="position-relative">
+      <form autocomplete="off" class="search-bar container-main" id="outside-click-search-bar">
+        <div class="search-box my-4 cursor-pointer" id="search-box-inner" onclick="ShowSearchBar()">
+          <p class="search-text pl-3" id="search-text-property-detail">Search</p>
+          <div class="search-bar-inner" id="search-bar-inner-elements">
+            <div class="d-flex">
+              <div class="search-box-single-element border-right py-2 text-center d-flex flex-column">
+                <p class="search-lable">Location</p>
+                <!-- <input id="myInput" type="text" name="myCountry" placeholder="Location"> -->
+                <div class="autocomplete">
+                  <input id="myInput" type="text" name="myCountry" placeholder="Location">
                 </div>
-            </div>
-            <div>
-              <div autocomplete="off" class="autocomplete w-100">
-                <input id="myInput" type="text" name="myCountry" placeholder="Find Your Own Paradise">
+              </div>
+              <div class="search-box-single-element border-right py-2 text-center d-flex flex-column">
+                <p class="search-lable">Check in</p>
+                <!-- <input class="cursor-pointer form-control" placeholder="Add Date" type="text" name="value_from_start_date"
+                  data-datepicker="separateRange" /> -->
+                <input id="searhBar-date-picker" placeholder="Add Date" class="form-control" />
+              </div>
+              <div class="search-box-single-element border-right py-2 text-center d-flex flex-column">
+                <p class="search-lable">Check out</p>
+                <input class="cursor-pointer " placeholder="Add Date" type="text" name="value_from_end_date"
+                  data-datepicker="separateRange" />
+                <!-- <input id="searhBar-date-picker" placeholder="Add Date" class="form-control"/> -->
+              </div>
+              <div class="search-box-single-element py-2 text-center d-flex flex-column">
+                <p class="search-lable">Guests</p>
+                <select class="selectpicker" title="Add Guest">
+                  <option>1 Guest</option>
+                  <option>2 Guests</option>
+                  <option>3 Guests</option>
+                  <option>4 Guests</option>
+                </select>
               </div>
             </div>
           </div>
+          <a href="/listing.html">
+            <div class="search-btn cursor-pointer">
+              <svg class="svg-icon search-icon" fill="#000000" aria-labelledby="title desc" height="20px" width="20px"
+                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7">
+                <title id="title">Search Icon</title>
+                <desc id="desc"></desc>
+                <g class="search-path" fill="none" stroke="#000000">
+                  <path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4" />
+                  <circle cx="8" cy="8" r="7" />
+                </g>
+              </svg>
+            </div>
+          </a>
         </div>
-        <div class="check-in">
-          <button type="button" id="searhBar-date-picker">Check In</button>
-          <!-- <input placeholder="Add Date" class="form-control" /> -->
-        </div>
-        <div class="check-out">
-          <button type="button" id="searhBar-date-picker">Check Out</button>
-        </div>
-        <div class="guests">
-          <!-- <button type="button">Guests</button>  -->
-          <select class="selectpicker" title="Add Guest">
-            <option>1 Guest</option>
-            <option>2 Guests</option>
-            <option>3 Guests</option>
-            <option>4 Guests</option>
-          </select>
-        </div>
-        <a href="/listing.html">
-        <div class="search-button">
-          <button type="submit">Search</button>
-        </div>
-        </a>
-      </div>
+      </form>
     </div>
   </section>
   <!--Sticky Price Header -->

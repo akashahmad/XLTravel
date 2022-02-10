@@ -8,7 +8,12 @@ document.addEventListener('mouseup', function(e) {
     document.getElementById('destination-modal').style.display ="none";
   }
 });
-
+// Toggle Classes
+function toggleClassBg(value) {
+  // var element = document.getElementById(value).style.backgroundColor = "#ffc044";
+  var element = document.getElementById(value);
+  element.classList.toggle("bg-yellow-focus");
+}
 
 // Auto Complete suggesstion for country name
 function autocomplete(inp, arr) {
@@ -130,6 +135,7 @@ function ShowSearchBar() {
     document.getElementById("search-box-inner").style.backgroundColor = "#f8f8f8";
     document.getElementById("search-text-property-detail").style.display = "none";
 }
+//Property Facalities
 document.addEventListener('mouseup', function(e) {
   var container = document.getElementById('outside-click-search-bar');
   if (!container.contains(e.target)){
@@ -167,11 +173,23 @@ $(document).ready(function () {
     if ($(this).hasClass("active")) {
       $(this).text("Show Less");
     } else {
-      $(this).text("Show all 76 amenities");
-      window.scrollTo(0, 1300);
+      $(this).text("Show All");      
+      // window.scrollTo(0, 1300);
     }
   });
 });
+// Collapse button for listing Filter
+// $(document).ready(function () {
+//   $('[data-toggle="collapse"]').click(function () {
+//     $(this).toggleClass("active");
+//     if ($(this).hasClass("active")) {
+//       $(this).text("Show Less");
+//     } else {
+//       $(this).text("Show all 76 amenities");      
+//       window.scrollTo(0, 1300);
+//     }
+//   });
+// });
 // Aos Animation
 AOS.init();
 
@@ -402,4 +420,11 @@ function hideReserveForm() {
 }
 function showReserveForm() {
   document.getElementById("reservation-form-mobile").style.display = "block";
+}
+
+// Data Block Hide Toggle generic function
+function displayToggle(value) {
+  // var element = document.getElementById(value).style.backgroundColor = "#ffc044";
+  var element = document.getElementById(value);
+  element.classList.toggle("display-block");
 }

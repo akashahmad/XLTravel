@@ -10,6 +10,14 @@
 // propertyRatings=event.target;
 // })
 
+// Increment Decrement Function
+function increment(value) {
+    document.getElementById(value).stepUp();
+  }
+  function decrement(value) {
+    document.getElementById(value).stepDown();
+  } 
+
 // DropDown for property Type
 $('body').on("click", ".dropdown-menu", function (e) {
     $(this).parent().is(".open") && e.stopPropagation();
