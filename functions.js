@@ -428,3 +428,7 @@ function displayToggle(value) {
   var element = document.getElementById(value);
   element.classList.toggle("display-block");
 }
+function closeFacilitiesDropdown (){
+  let facilitesModal = document.getElementById("property-facalities-dropBox");
+  facilitesModal.classList.remove("display-block")
+} 
