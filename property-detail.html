@@ -209,7 +209,7 @@
       </p>
     </div>
     <div class="d-flex align-items-center">
-      <button class="yellow-button" onclick="showReserveForm()">Reserve</button>
+      <button class="yellow-button" onclick="displayBlock(`reservation-form-mobile`)">Reserve</button>
     </div>
   </div>
   <section class="property-image-slider container-main">
@@ -356,7 +356,7 @@
       <!-- Mobile Carousel with Light Box-->
       <div class="swiper-container-hero-section d-block d-lg-none z-0">
         <!-- Additional required wrapper -->
-        <div class="swiper-wrapper" onclick="showImageGallery()">
+        <div class="swiper-wrapper" onclick="displayBlock(`image-gallery-carousel`)">
           <div class="swiper-slide">
             <img style="height: 250px; width: 100%;" src="./assets/images/imageOneCarousel.png" />
           </div>
@@ -2188,7 +2188,7 @@
                 </p>
               </div>
             </div> -->
-                <div class="reservation-header" onclick=" hideReserveForm()">
+                <div class="reservation-header" onclick=" displayNone(`reservation-form-mobile`)">
                   <div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="12.76" height="12.758" fill="#fefefe"
                       viewBox="0 0 43.76 43.758">
@@ -3244,7 +3244,7 @@
       <div class="image-gallery-mobile-outer">
         <div class="image-gallery-mobile">
           <div class="gallery-header d-flex align-items-center justify-content-end px-3">
-            <div onclick="hideImageGallery()">
+            <div onclick="displayNone(`image-gallery-carousel`)">
               <svg xmlns="http://www.w3.org/2000/svg" width="20.76" height="20.758" viewBox="0 0 43.76 43.758">
                 <g id="Group_41895" data-name="Group 41895" transform="translate(-5233.353 -19183)">
                   <path id="Path_85720" data-name="Path 85720"

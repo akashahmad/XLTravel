@@ -18,102 +18,6 @@ function increment(value) {
     document.getElementById(value).stepDown();
   } 
 
-// DropDown for property Type
-$('body').on("click", ".dropdown-menu", function (e) {
-    $(this).parent().is(".open") && e.stopPropagation();
-});
-
-$('.selectall').click(function() {
-if ($(this).is(':checked')) { 
-        $('.option').prop('checked', true);
-        var total = $('input[name="options[]"]:checked').length;
-        $(".dropdown-text").html('(' + total + ') Selected');
-        $(".select-text").html(' Clear');
-    } else {
-        $('.option').prop('checked', false);
-        $(".dropdown-text").html('(0) Selected');
-        $(".select-text").html(' Select');
-    }
-});
-
-$("input[type='checkbox'].justone").change(function(){
-    var a = $("input[type='checkbox'].justone");
-    if(a.length == a.filter(":checked").length){
-        $('.selectall').prop('checked', true);
-        $(".select-text").html(' Clear');
-    }
-    else {
-        $('.selectall').prop('checked', false);
-        $(".select-text").html(' Select');
-    }
-  var total = $('input[name="options[]"]:checked').length;
-  $(".dropdown-text").html('(' + total + ') Selected');
-});
-
-// DropDown for Property Facalities
-$('body').on("click", ".dropdown-menu", function (e) {
-    $(this).parent().is(".open") && e.stopPropagation();
-});
-
-$('.selectall-property-facalities').click(function() {
-if ($(this).is(':checked')) { 
-        $('.option-property-facalities').prop('checked', true);
-        var total = $('input[name="options-property-faclities[]"]:checked').length;
-        $(".dropdown-text-property-facalities").html('(' + total + ') Selected');
-        $(".select-text-property-facalities").html(' Clear');
-    } else {
-        $('.option-property-facalities').prop('checked', false);
-        $(".dropdown-text-property-facalities").html('(0) Selected');
-        $(".select-text-property-facalities").html(' Select');
-    }
-});
-
-$("input[type='checkbox'].justone-property-facalities").change(function(){
-    var a = $("input[type='checkbox'].justone-property-facalities");
-    if(a.length == a.filter(":checked").length){
-        $('.selectall-property-facalities').prop('checked', true);
-        $(".select-text-property-facalities").html(' Clear');
-    }
-    else {
-        $('.selectall-property-facalities').prop('checked', false);
-        $(".select-text-property-facalities").html(' Select');
-    }
-  var total = $('input[name="options-property-faclities[]"]:checked').length;
-  $(".dropdown-text-property-facalities").html('(' + total + ') Selected');
-});
-
-// DropDown For Property Facalitites
-$('body').on("click", ".dropdown-menu", function (e) {
-    $(this).parent().is(".open") && e.stopPropagation();
-});
-
-$('.selectall-property-ratings').click(function() {
-if ($(this).is(':checked')) { 
-        $('.option-property-ratings').prop('checked', true);
-        var total = $('input[name="options-property-ratings[]"]:checked').length;
-        $(".dropdown-text-property-facalities").html('(' + total + ') Selected');
-        $(".select-text-property-facalities").html(' Clear');
-    } else {
-        $('.option-property-facalities').prop('checked', false);
-        $(".dropdown-text-property-ratings").html('(0) Selected');
-        $(".select-text-property-facalities").html(' Select');
-    }
-});
-
-$("input[type='checkbox'].justone-property-facalities").change(function(){
-    var a = $("input[type='checkbox'].justone-property-facalities");
-    if(a.length == a.filter(":checked").length){
-        $('.selectall-property-facalities').prop('checked', true);
-        $(".select-text-property-facalities").html(' Clear');
-    }
-    else {
-        $('.selectall-property-facalities').prop('checked', false);
-        $(".select-text-property-facalities").html(' Select');
-    }
-  var total = $('input[name="options-property-faclities[]"]:checked').length;
-  $(".dropdown-text-property-facalities").html('(' + total + ') Selected');
-});
-// Star Ratings DropDown
 // Price Range Script
 // Ion.RangeSlider
 // version 2.1.7 Build: 371
@@ -228,8 +132,6 @@ $("input[type='checkbox'].justone-property-facalities").change(function(){
             return -1;
         };
     }
-
-
 
     // =================================================================================================================
     // Template

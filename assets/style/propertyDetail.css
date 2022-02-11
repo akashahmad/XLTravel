@@ -400,7 +400,10 @@
     width: 100%;
     margin: 0 auto;
     margin-top: 0px;
-    padding-top: 80px;
+    padding-top: 0px;
+  }
+  .hero-section{
+    margin-top: 90px;
   }
   .property-detail .property-detail-wrapper {
     width: 100%;

@@ -72,9 +72,9 @@ body {
 .small-modal .dropdown-menu {
   width: 217px !important;
 }
-.property-property-facalities .dropdown-menu{
-height: 360px;
-overflow-y: scroll;
+.property-property-facalities .dropdown-menu {
+  height: 360px;
+  overflow-y: scroll;
 }
 .listing-filter-dropDown input[type="checkbox"],
 input[type="radio"] {
@@ -132,7 +132,7 @@ input[type="radio"] {
 .filter-focus:focus {
   background-color: #fec657 !important;
 }
- .filter-button {
+.filter-button {
   color: white;
   border: none;
   padding: 19px 23px;
@@ -505,11 +505,11 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.more-filters .more-filters-number-input{
-border: none;
-width: 15%;
-font-size: 12px;
-text-align: center;
+.more-filters .more-filters-number-input {
+  border: none;
+  width: 15%;
+  font-size: 12px;
+  text-align: center;
 }
 .more-filters .checkbox-more-filters {
   width: 20px;
@@ -532,12 +532,12 @@ text-align: center;
   line-height: 50px;
 }
 
-.listing-button-propertyFilter{
+.listing-button-propertyFilter {
   background-color: transparent;
   border: none;
 }
 /* Buttons for property filter */
-.filter-button-property-type{
+.filter-button-property-type {
   width: 163px;
   border-radius: 11px;
   border: none;
@@ -558,11 +558,11 @@ text-align: center;
 }
 
 .show-more-less [type="checkbox"]:checked + label:before {
-  content: 'Show less amenities';
+  content: "Show less amenities";
 }
 
 .show-more-less [type="checkbox"]:checked + label:after {
-  content: '⇡●';
+  content: "⇡●";
 }
 
 .show-more-less ul li:last-child {
@@ -587,8 +587,8 @@ text-align: center;
     width: 100%;
     margin-top: 40px;
   }
-  .listing-wrapper{
-padding-top: 40px;
+  .listing-wrapper {
+    padding-top: 0px;
   }
   /* Filter banner mobile */
   .filter-mobile-banner {
@@ -639,7 +639,47 @@ padding-top: 40px;
   .single-facality p {
     font-size: 14px !important;
   }
-  .card-heading-right-side{
-  font-size: 15px;
+  .card-heading-right-side {
+    font-size: 15px;
   }
+  /* property-facalities-mobile */
+  .property-facalities-mobile{
+    position: fixed;
+    inset: 0;
+    z-index: 99;
+    background-color: white;
+    overflow-y: scroll;
+    padding-bottom: 90px;
+    padding-top: 30px;
+  }
+  .filter-button-property-type{
+    width: 100px;
+  }
+  .property-facalities-mobile-header{
+    background-color: white;
+    min-height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 110;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.11);
+  }
+  #listing-filter-mobile{
+    display: none;
+  }
+  .mobile-circle-inc-dec{
+    width: 20px;
+    height: 20px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.11);
+  }
+  /* .property-facalities-mobile {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #fec657;
+  } */
 }

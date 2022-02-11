@@ -135,14 +135,22 @@ function ShowSearchBar() {
     document.getElementById("search-box-inner").style.backgroundColor = "#f8f8f8";
     document.getElementById("search-text-property-detail").style.display = "none";
 }
-//Property Facalities
+//searchBar Close
 document.addEventListener('mouseup', function(e) {
-  var container = document.getElementById('outside-click-search-bar');
-  if (!container.contains(e.target)){
+  var searchBarArea = document.getElementById('search-box-inner');
+  if (!searchBarArea.contains(e.target)){
     document.getElementById('search-bar-inner-elements').style.display ="none";
     document.getElementById('search-text-property-detail').style.display ="block";
     document.getElementById('search-box-inner').style.width ="20%";
   }
+});
+// Property Facalities Outside Click
+document.addEventListener('mouseup', function(e) {
+  var facalitiesBox = document.getElementById('property-facalities-dropBox');
+  if (!facalitiesBox.contains(e.target)){
+  let facilitesModal = document.getElementById("property-facalities-dropBox");
+  facilitesModal.classList.remove("display-block")
+ }
 });
 // Slider Functoin
 $("#recipeCarousel").carousel({
@@ -393,18 +401,6 @@ $(document)
     e.preventDefault(); // prevent the default action (scroll / move caret)
   });
 
-function hideImageGallery() {
-  document.getElementById("image-gallery-carousel").style.display = "none";
-}
-function showImageGallery() {
-  document.getElementById("image-gallery-carousel").style.display = "block";
-}
-function hideReserveForm() {
-  document.getElementById("reservation-form-mobile").style.display = "none";
-}
-function showReserveForm() {
-  document.getElementById("reservation-form-mobile").style.display = "block";
-}
 
 // Data Block Hide Toggle generic function
 function displayToggle(value) {
@@ -416,3 +412,11 @@ function closeFacilitiesDropdown (){
   let facilitesModal = document.getElementById("property-facalities-dropBox");
   facilitesModal.classList.remove("display-block")
 } 
+
+// Display Block and none function
+ function displayBlock(value){
+  document.getElementById(value).style.display = "block";
+ }
+ function displayNone(value){
+  document.getElementById(value).style.display = "none";
+ }
