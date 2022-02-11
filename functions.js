@@ -144,6 +144,7 @@ document.addEventListener('mouseup', function(e) {
     document.getElementById('search-box-inner').style.width ="20%";
   }
 });
+
 // Property Facalities Outside Click
 document.addEventListener('mouseup', function(e) {
   var facalitiesBox = document.getElementById('property-facalities-dropBox');
