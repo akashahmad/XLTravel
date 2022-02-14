@@ -271,9 +271,12 @@ input::-webkit-inner-spin-button {
 }
 .more-filters .more-filters-number-input {
   border: none;
-  width: 15%;
-  font-size: 12px;
+  width: 22%;
+  font-size: 15px;
   text-align: center;
+}
+.more-filters .more-filters-number-input::placeholder{
+  font-size: 15px;
 }
 .more-filters .checkbox-more-filters {
   width: 20px;
