@@ -32,6 +32,10 @@
   <!-- AOS Aniamtion -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Price Range Slider -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/css/ion.rangeSlider.min.css"
+    rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script>
   <title>Listing</title>
 </head>
 
@@ -292,25 +296,75 @@
         </div>
         <div class="property-price-range listing-filter-dropDown mr-2">
           <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle filter-focus" type="button" data-toggle="dropdown">
+            <button class="btn btn-default dropdown-toggle filter-focus" type="button" onclick="displayToggle(`dropDown-priceRange`)">
               Price Range <span class="caret"></span>
             </button>
-            <div class="dropdown-menu">
-              <div class="price-range">
-                <p class="font-size-16 text-center pt-3 font-weight-600">
-                  Price Per Night
+            <div class="dropdown-menu" id="dropDown-priceRange">
+              <div class="price-range d-flex flex-column">
+                <p class="font-size-16 text-left pt-3 font-weight-500 px-5 mb-5">
+                 The average nightly price is <span>&#8364;</span>307
                 </p>
-                <div class="wrapper" style="padding: 20px">
-                  <div class="range-slider">
-                    <input type="text" class="js-range-slider" value="" />
-                  </div>
-                  <hr />
-                  <div class="extra-controls form-inline">
-                    <div class="form-group">
-                      <input type="text" class="js-input-from form-control" value="0" />
-                      <input type="text" class="js-input-to form-control" value="0" />
-                    </div>
-                  </div>
+                <svg style="position: absolute;
+                top: 41px;
+                left: 0;
+                right: 0;" class="mx-auto" width="85%" height="83" viewBox="0 0 637 83" fill="#00C2C0" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="637" height="83" fill="white"/>
+                  <rect x="30" y="53" width="11" height="22" fill="#00C2C0"/>
+                  <rect x="57" y="31" width="11" height="44" fill="#00C2C0"/>
+                  <rect x="70" y="64" width="11" height="11" fill="#00C2C0"/>
+                  <rect x="83" y="19" width="11" height="56" fill="#00C2C0"/>
+                  <rect x="96" y="55" width="11" height="20" fill="#00C2C0"/>
+                  <rect x="109" y="19" width="11" height="56" fill="#00C2C0"/>
+                  <rect x="122" y="46" width="11" height="29" fill="#00C2C0"/>
+                  <rect width="11" height="22" transform="matrix(-1 0 0 1 245 53)" fill="#00C2C0"/>
+                  <rect width="11" height="44" transform="matrix(-1 0 0 1 218 31)" fill="#00C2C0"/>
+                  <rect width="11" height="11" transform="matrix(-1 0 0 1 205 64)" fill="#00C2C0"/>
+                  <rect width="11" height="56" transform="matrix(-1 0 0 1 192 19)" fill="#00C2C0"/>
+                  <rect width="11" height="20" transform="matrix(-1 0 0 1 179 55)" fill="#00C2C0"/>
+                  <rect width="11" height="56" transform="matrix(-1 0 0 1 166 19)" fill="#00C2C0"/>
+                  <rect width="11" height="29" transform="matrix(-1 0 0 1 153 46)" fill="#00C2C0"/>
+                  <rect x="254" y="53" width="11" height="22" fill="#00C2C0"/>
+                  <rect x="281" y="31" width="11" height="44" fill="#00C2C0"/>
+                  <rect x="294" y="64" width="11" height="11" fill="#00C2C0"/>
+                  <rect x="307" y="19" width="11" height="56" fill="#00C2C0"/>
+                  <rect x="320" y="55" width="11" height="20" fill="#00C2C0"/>
+                  <rect x="333" y="19" width="11" height="56" fill="#00C2C0"/>
+                  <rect x="346" y="46" width="11" height="29" fill="#00C2C0"/>
+                  <rect width="11" height="22" transform="matrix(-1 0 0 1 467 53)" fill="#00C2C0"/>
+                  <rect width="11" height="44" transform="matrix(-1 0 0 1 440 31)" fill="#00C2C0"/>
+                  <rect width="11" height="11" transform="matrix(-1 0 0 1 427 64)" fill="#00C2C0"/>
+                  <rect width="11" height="56" transform="matrix(-1 0 0 1 414 19)" fill="#00C2C0"/>
+                  <rect width="11" height="20" transform="matrix(-1 0 0 1 401 55)" fill="#00C2C0"/>
+                  <rect width="11" height="56" transform="matrix(-1 0 0 1 388 19)" fill="#00C2C0"/>
+                  <rect width="11" height="29" transform="matrix(-1 0 0 1 375 46)" fill="#00C2C0"/>
+                  <rect x="474" y="19" width="11" height="56" fill="#00C2C0"/>
+                  <rect x="487" y="46" width="11" height="29" fill="#00C2C0"/>
+                  <rect width="11" height="22" transform="matrix(-1 0 0 1 608 53)" fill="#00C2C0"/>
+                  <rect width="11" height="44" transform="matrix(-1 0 0 1 581 31)" fill="#00C2C0"/>
+                  <rect width="11" height="11" transform="matrix(-1 0 0 1 568 64)" fill="#00C2C0"/>
+                  <rect width="11" height="56" transform="matrix(-1 0 0 1 555 19)" fill="#00C2C0"/>
+                  <rect width="11" height="20" transform="matrix(-1 0 0 1 542 55)" fill="#00C2C0"/>
+                  <rect width="11" height="56" transform="matrix(-1 0 0 1 529 19)" fill="#00C2C0"/>
+                  <rect width="11" height="29" transform="matrix(-1 0 0 1 516 46)" fill="#00C2C0"/>
+                  </svg> 
+                <input type="text" class="js-range-slider" name="my_range" value="" data-skin="round" data-type="double"
+                  data-min="0" data-max="1000" data-grid="false" />
+                  <div class="w-88 mx-auto d-flex align-items-center justify-content-between mt-3">
+                  <div class="position-relative">
+                  <input type="number" maxlength="4" value="0" class="from px-4"/>
+                  <span style="left: 0px ; top:22px;" class="position-absolute ml-2">&#8364;</span>
+                  <span style="left: 0px ; top:0px;" class="position-absolute ml-2 opacity-6">min price</span>
+                </div>
+                  <span>-</span>
+                  <div class="position-relative">
+                  <input type="number" maxlength="4" value="1000" class="to px-4" />
+                  <span style="left: 0px ; top:22px;" class="position-absolute ml-2">&#8364;</span>
+                  <span style="left: 0px ; top:0px;" class="position-absolute ml-2 opacity-6">max price</span>
+                </div>
+                </div>
+                <div class="w-88 mx-auto d-flex align-items-center justify-content-between my-3">
+                  <button class="clear-button" onclick="closeDropDownFilter(`dropDown-priceRange`)">Clear</button>
+                  <button class="yellow-button" onclick="closeDropDownFilter(`dropDown-priceRange`)">Save</button>
                 </div>
               </div>
             </div>
@@ -324,7 +378,7 @@
               <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" id="property-facalities-dropBox">
-              <div class="d-flex flex-wrap pt-2">
+              <div class="d-flex flex-wrap pt-2 px-3">
                 <li class="col-6">
                   <a class="option-link" href="#"><label><input name="options-property-faclities[]" type="checkbox"
                         class="option justone-property-facalities" value="Option 1 " />
@@ -386,7 +440,7 @@
                       BEACH</label></a>
                 </li>
               </div>
-              <div class="d-flex justify-content-between pt-5 align-items-center">
+              <div class="d-flex justify-content-between pt-5 align-items-center px-3">
                 <div class="w-100">
                   <p class="col-9 font-size-11">
                     Showing 3409 property-facalities
@@ -399,7 +453,7 @@
                       Select</span>
                     All</label>
                 </div>
-                <button class="yellow-button mr-4" onclick="closeFacilitiesDropdown()">Done</button>
+                <button class="yellow-button mr-4" onclick="closeDropDownFilter(`property-facalities-dropBox`)">Done</button>
               </div>
               <!-- More Filters -->
               <div class="more-filters position-absolute d-flex justify-content-center align-items-center w-100">
@@ -563,7 +617,7 @@
                           </div>
 
                           <div class="text-left pt-3">
-                            <button class="listing-button-propertyFilter btn-text mb-4 mt-0 dark-gray font-size-12"
+                            <button class="listing-button-propertyFilter btn-text mb-4 mt-0 dark-gray font-size-12 border"
                               type="button" data-toggle="collapse" data-target="#collapseExampleTwo"
                               aria-expanded="false" aria-controls="collapseExampleTwo">
                               Show All Amenities
@@ -638,7 +692,7 @@
                           </div>
 
                           <div class="text-left pt-3">
-                            <button class="listing-button-propertyFilter btn-text mb-4 mt-0 dark-gray font-size-12"
+                            <button class="listing-button-propertyFilter btn-text mb-4 mt-0 dark-gray font-size-12 border"
                               type="button" data-toggle="collapse" data-target="#collapsePropertyType"
                               aria-expanded="false" aria-controls="collapsePropertyType">
                               Show All Property Type
@@ -764,7 +818,7 @@
                           </div>
 
                           <div class="text-left pt-3">
-                            <button class="listing-button-propertyFilter btn-text mb-4 mt-0 dark-gray font-size-12"
+                            <button class="listing-button-propertyFilter btn-text mb-4 mt-0 dark-gray font-size-12 border"
                               type="button" data-toggle="collapse" data-target="#collapseLanguages"
                               aria-expanded="false" aria-controls="collapseLanguages">
                               Show all
@@ -773,10 +827,10 @@
                         </ul>
                       </div>
                       <div class="d-flex justify-content-center justify-content-between px-5 py-3">
-                        <button class="filter-button-property-type" onclick="closeFacilitiesDropdown ()">
+                        <button class="filter-button-property-type" onclick="closeDropDownFilter (`property-facalities-dropBox`)">
                           Cancel
                         </button>
-                        <button class="yellow-button filter-button-property-type" onclick="closeFacilitiesDropdown ()">
+                        <button class="yellow-button filter-button-property-type" onclick="closeDropDownFilter (`property-facalities-dropBox`)">
                           Update
                         </button>
                       </div>
@@ -913,91 +967,32 @@
         </div>
       </div>
       <div>
-        <button class="filter-button background-color-tealish ml-2 d-flex align-items-center">
+        <button class="filter-button background-color-tealish ml-2 d-flex align-items-center"
+          onclick="displayBlock(`filter-button-popup`)">
           <img style="height: 20px; margin-right: 9px" src="./assets/images/icons/filter.png" alt="filter" />Filters
         </button>
       </div>
     </div>
-  </section>
-  <section class="d-block d-lg-none">
-    <div class="filter-mobile-wrapper" id="listing-filter-mobile">
-    <div class="property-facalities-mobile-header d-flex align-items-center justify-content-end px-3">
-      <div onclick="displayNone(`listing-filter-mobile`)">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20.76" height="20.758" viewBox="0 0 43.76 43.758">
-          <g id="Group_41895" data-name="Group 41895" transform="translate(-5233.353 -19183)">
-            <path id="Path_85720" data-name="Path 85720"
-              d="M251.7,178.8l18.354-18.354a2.053,2.053,0,0,0-2.9-2.9l-18.354,18.354L230.44,157.539a2.053,2.053,0,0,0-2.9,2.9L245.891,178.8,227.537,197.15a2,2,0,0,0,0,2.9,2.005,2.005,0,0,0,2.9,0L248.795,181.7l18.354,18.354a2.005,2.005,0,0,0,2.9,0,2,2,0,0,0,0-2.9Z"
-              transform="translate(5006.438 19026.082)" />
-          </g>
-        </svg>
-      </div>
-    </div>
-    <div class="property-facalities-mobile more-filters">
-      <ul class="list-unstyled">
-        <div class="d-flex flex-wrap pt-5">
-          <li class="d-flex align-items-center col-6 pt-4">
-            <input class="checkbox-more-filters" type="checkbox" id="free-wifi2" name="free-wifi"
-              value="wifi-free" />
-            <label class="font-weight-500 mb-0 ml-3 font-size-15" for="free-wifi2">Free Parking</label>
-          </li>
-          <li class="d-flex align-items-center col-6 pt-4">
-            <input class="checkbox-more-filters" type="checkbox" id="Free-Parking" name="Free Parking"
-              value="Free Parking" />
-            <label class="font-weight-500 mb-0 ml-3 font-size-15" for="Free-Parking">Free Parking</label>
-          </li>
-          <li class="d-flex align-items-center col-6 pt-4">
-            <input class="checkbox-more-filters" type="checkbox" id="next-to-beach" name="next-to-beach"
-              value="next-to-beach" />
-            <label class="font-weight-500 mb-0 ml-3 font-size-15" for="next-to-beach">Next to beach</label>
-          </li>
-          <li class="d-flex align-items-center col-6 pt-4">
-            <input class="checkbox-more-filters" type="checkbox" id="PoolPrivate" name="Pool"
-              value="Pool" />
-            <label class="font-weight-500 mb-0 ml-3 font-size-15" for="PoolPrivate">Pool</label>
-          </li>
-          <li class="d-flex align-items-center col-6 pt-4">
-            <input class="checkbox-more-filters" type="checkbox" id="Gym2" name="Gym"
-              value="Gym" />
-            <label class="font-weight-500 mb-0 ml-3 font-size-15" for="Gym2">Gym</label>
-          </li>
-          <li class="d-flex align-items-center col-6 pt-4">
-            <input class="checkbox-more-filters" type="checkbox" id="Sea-View" name="Sea View"
-              value="Sea View" />
-            <label class="font-weight-500 mb-0 ml-3 font-size-15" for="Sea-View">Sea View</label>
-          </li>
-        </div>
-        <!-- <div class="d-flex justify-content-between pt-5 align-items-center">
-          <div class="w-100">
-            <p class="col-9 font-size-11">
-              Showing 3409 property-facalities
-            </p>
-          </div>
-          <div class="col-3">
-            <label class="select-all-text"><input type="checkbox"
-                class="selectall-property-facalities select-all-checkbox" /><span
-                class="select-text-property-facalities">
-                Select</span>
-              All</label>
-          </div>
-          <button class="yellow-button mr-4" onclick="closeFacilitiesDropdown()">Done</button>
-        </div> -->
-        <!-- More Filters -->
-        <div class="more-filters position-absolute d-flex justify-content-center align-items-center w-100">
-          <div class="more-filters-wrapper bg-white w-100">
+    <!-- filter popUp -->
+    <div id="filter-button-popup">
+      <div class="filter-popup-desktop d-flex justify-content-center position-fixed w-100 mx-auto">
+        <div id="filter-popup-inner" class="filter-popup-inner-desktop more-filters w-45 mx-auto">
+          <div class="more-filters-wrapper bg-white w-100 rounded-lg">
             <div class="more-filers-inner">
-              <p class="font-weight-600 border-bottom pt-5 pb-3  px-4">More Filters</p>
-              <div class="px-4">
+              <p class="font-weight-600 border-bottom py-3  px-5">More Filters</p>
+              <div class="px-5">
                 <div class="rooms-and-beds">
-                  <p class="font-weight-500 py-3">Rooms And Beds</p>
+                  <p class="font-weight-600 py-3">Rooms And Beds</p>
                   <ul class="list-unstyled">
                     <li>
                       <div class="d-flex justify-content-between border-bottom pb-2">
                         <p class="font-weight-500 w-75">Beds</p>
                         <div class="d-flex justify-content-end w-100 align-items-center">
-                          <span class="cursor-pointer mobile-circle-inc-dec" onClick="decrement(`mobile-beds-increment-decrement`)">-</span>
+                          <span class="cursor-pointer"
+                            onClick="decrement(`beds-increment-decrement-filter-popUpt`)">-</span>
                           <input class="more-filters-number-input" type="number" placeholder="0"
-                            id="mobile-beds-increment-decrement" type=number min=0 max=10 /> <span class="cursor-pointer  mobile-circle-inc-dec"
-                            onClick="increment(`mobile-beds-increment-decrement`)">+</span>
+                            id="beds-increment-decrement-filter-popUp" type=number min=0 max=10 /> <span
+                            class="cursor-pointer" onClick="increment(`beds-increment-decrement-filter-popUp`)">+</span>
                         </div>
                       </div>
                     </li>
@@ -1005,11 +1000,12 @@
                       <div class="d-flex justify-content-between border-bottom pb-2">
                         <p class="font-weight-500 w-75">Bedrooms</p>
                         <div class="d-flex justify-content-end w-100 align-items-center">
-                          <span class="cursor-pointer mobile-circle-inc-dec"
-                            onClick="decrement(`mobile-bedrooms-increment-decrement`)">-</span> <input
+                          <span class="cursor-pointer"
+                            onClick="decrement(`bedrooms-increment-decrement-filter-popUp`)">-</span> <input
                             class="more-filters-number-input" type="number" placeholder="0"
-                            id="mobile-bedrooms-increment-decrement" type=number min=0 max=10 /> <span
-                            class="cursor-pointer mobile-circle-inc-dec" onClick="increment(`mobile-bedrooms-increment-decrement`)">+</span>
+                            id="bedrooms-increment-decrement-filter-popUp" type=number min=0 max=10 /> <span
+                            class="cursor-pointer"
+                            onClick="increment(`bedrooms-increment-decrement-filter-popUp`)">+</span>
                         </div>
                       </div>
                     </li>
@@ -1017,11 +1013,12 @@
                       <div class="d-flex justify-content-between border-bottom pb-2">
                         <p class="font-weight-500 w-75">Bathrooms</p>
                         <div class="d-flex justify-content-end w-100 align-items-center">
-                          <span class="cursor-pointer mobile-circle-inc-dec"
-                            onClick="decrement(`mobile-Bathrooms-increment-decrement`)">-</span> <input
+                          <span class="cursor-pointer"
+                            onClick="decrement(`Bathrooms-increment-decrement-filter-popUp`)">-</span> <input
                             class="more-filters-number-input" type="number" placeholder="0"
-                            id="mobile-Bathrooms-increment-decrement" type=number min=0 max=10 /> <span
-                            class="cursor-pointer mobile-circle-inc-dec" onClick="increment(`mobile-Bathrooms-increment-decrement`)">+</span>
+                            id="Bathrooms-increment-decrement-filter-popUp" type=number min=0 max=10 /> <span
+                            class="cursor-pointer"
+                            onClick="increment(`Bathrooms-increment-decrement-filter-popUp`)">+</span>
                         </div>
                       </div>
                     </li>
@@ -1031,9 +1028,9 @@
                   <p class="font-weight-600 pt-3">Entire Places</p>
                   <div class="d-flex justify-content-between align-items-center pt-3 border-bottom pb-3">
                     <div class="d-flex align-items-center py-3  ">
-                      <input class="checkbox-more-filters" type="checkbox" id="entire-places-2" name="entire-places"
+                      <input class="checkbox-more-filters" type="checkbox" id="entire-places" name="entire-places"
                         value="82" />
-                      <label class="font-weight-500 mb-0 ml-3 font-size-14" for="entire-places-2"> Entire home &
+                      <label class="font-weight-500 mb-0 ml-3 font-size-13" for="entire-places"> Entire home &
                         appartments</label>
                     </div>
                     <p>
@@ -1047,27 +1044,26 @@
                     <li>
                       <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
                         <div class="d-flex align-items-center col-6 p-0">
-                          <input class="checkbox-more-filters" type="checkbox" id="free-wifi-amenities" name="free-wifi-amenities"
-                            value="free-wifi-amenities" />
-                          <p class="font-weight-500 mb-0 ml-3 font-size-14" for="free-wifi-amenities">Free Wifi</p>
+                          <input class="checkbox-more-filters" type="checkbox" id="free-wifi" name="free-wifi"
+                            value="wifi-free" />
+                          <p class="font-weight-500 mb-0 ml-3 font-size-13" for="free-wifi">Free Wifi</p>
                         </div>
                         <div class="d-flex align-items-center col-6 p-0">
-                          <input class="checkbox-more-filters" type="checkbox" id="free-parking"
-                            name="free-parking" value="free-parking" />
-                          <p class="font-weight-500 mb-0 ml-3 font-size-14" for="free-parking">Free parking</p>
+                          <input class="checkbox-more-filters" type="checkbox" id="free-parking" name="free-parking"
+                            value="free-parking" />
+                          <p class="font-weight-500 mb-0 ml-3 font-size-13" for="free-parking">Free parking</p>
                         </div>
                       </div>
                     </li>
                     <li>
                       <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
                         <div class="d-flex align-items-center col-6 p-0">
-                          <input class="checkbox-more-filters" type="checkbox" id="Pool" name="Pool"
-                            value="pool" />
-                          <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Pool">Pool</p>
+                          <input class="checkbox-more-filters" type="checkbox" id="Pool" name="Pool" value="pool" />
+                          <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Pool">Pool</p>
                         </div>
                         <div class="d-flex align-items-center col-6 p-0">
                           <input class="checkbox-more-filters" type="checkbox" id="Gym" name="Gym" value="Gym" />
-                          <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Gym">Gym</p>
+                          <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Gym">Gym</p>
                         </div>
                       </div>
                     </li>
@@ -1076,12 +1072,12 @@
                         <div class="d-flex align-items-center col-6 p-0">
                           <input class="checkbox-more-filters" type="checkbox" id="Hot-tube" name="Hot-tube"
                             value="Hot-tube" />
-                          <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Hot-tube">Hot tube</p>
+                          <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Hot-tube">Hot tube</p>
                         </div>
                         <div class="d-flex align-items-center col-6 p-0">
                           <input class="checkbox-more-filters" type="checkbox" id="next-beach" name="next-beach"
                             value="next-beach" />
-                          <p class="font-weight-500 mb-0 ml-3 font-size-14" for="next-beach">Next to beach</p>
+                          <p class="font-weight-500 mb-0 ml-3 font-size-13" for="next-beach">Next to beach</p>
                         </div>
                       </div>
                     </li>
@@ -1090,28 +1086,28 @@
                         <div class="d-flex align-items-center col-6 p-0">
                           <input class="checkbox-more-filters" type="checkbox" id="Hot-tube" name="Hot-tube"
                             value="Hot-tube" />
-                          <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Hot-tube">Sea View</p>
+                          <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Hot-tube">Sea View</p>
                         </div>
                         <div class="d-flex align-items-center col-6 p-0">
                           <input class="checkbox-more-filters" type="checkbox" id="next-beach" name="next-beach"
                             value="next-beach" />
-                          <p class="font-weight-500 mb-0 ml-3 font-size-14" for="next-beach">Beachfront</p>
+                          <p class="font-weight-500 mb-0 ml-3 font-size-13" for="next-beach">Beachfront</p>
                         </div>
                       </div>
                     </li>
-                    <div class="collapse" id="collapse-amenities-mobile">
+                    <div class="collapse" id="collapseAllAmenitiesFilterPopUp">
                       <ul>
                         <li>
                           <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
                             <div class="d-flex align-items-center col-6 p-0">
-                              <input class="checkbox-more-filters" type="checkbox" id="Sun-terrace"
-                                name="Sun-terrace" value="Sun-terrace" />
-                              <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Sun-terrace">Sun terrace</p>
+                              <input class="checkbox-more-filters" type="checkbox" id="Sun-terrace" name="Sun-terrace"
+                                value="Sun-terrace" />
+                              <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Sun-terrace">Sun terrace</p>
                             </div>
                             <div class="d-flex align-items-center col-6 p-0">
                               <input class="checkbox-more-filters" type="checkbox" id="Balcony" name="Balcony"
                                 value="Balcony" />
-                              <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Balcony">Balcony</p>
+                              <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Balcony">Balcony</p>
                             </div>
                           </div>
                         </li>
@@ -1120,13 +1116,13 @@
                             <div class="d-flex align-items-center col-6 p-0">
                               <input class="checkbox-more-filters" type="checkbox" id="Private-beach"
                                 name="Private-beach" value="Private-beach" />
-                              <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Sun-terrace">Private beach
+                              <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Sun-terrace">Private beach
                               </p>
                             </div>
                             <div class="d-flex align-items-center col-6 p-0">
                               <input class="checkbox-more-filters" type="checkbox" id="Center" name="Center"
                                 value="Center" />
-                              <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Center">Center</p>
+                              <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Center">Center</p>
                             </div>
                           </div>
                         </li>
@@ -1135,17 +1131,17 @@
                             <div class="d-flex align-items-center col-8 p-0">
                               <input class="checkbox-more-filters" type="checkbox" id="NETFLIX" name="NETFLIX"
                                 value="NETFLIX" />
-                              <p class="font-weight-500 mb-0 ml-3 font-size-14" for="NETFLIX">TV (NETFLIX,
+                              <p class="font-weight-500 mb-0 ml-3 font-size-13" for="NETFLIX">TV (NETFLIX,
                                 YOUTUBE)</p>
                             </div>
                         </li>
                       </ul>
                     </div>
-  
+
                     <div class="text-left pt-3">
-                      <button class="listing-button-propertyFilter btn-text mb-4 mt-0 dark-gray font-size-13"
-                        type="button" data-toggle="collapse" data-target="#collapse-amenities-mobile"
-                        aria-expanded="false" aria-controls="collapse-amenities-mobile">
+                      <button class="listing-button-propertyFilter btn-text mb-4 mt-0 dark-gray font-size-12 border"
+                        type="button" data-toggle="collapse" data-target="#collapseAllAmenitiesFilterPopUp"
+                        aria-expanded="false" aria-controls="collapseAllAmenitiesFilterPopUp">
                         Show All Amenities
                       </button>
                     </div>
@@ -1159,12 +1155,12 @@
                         <div class="d-flex align-items-center col-6 p-0">
                           <input class="checkbox-more-filters" type="checkbox" id="House" name="House"
                             value="wifi-free" />
-                          <p class="font-weight-500 mb-0 ml-3 font-size-14" for="House">House</p>
+                          <p class="font-weight-500 mb-0 ml-3 font-size-13" for="House">House</p>
                         </div>
                         <div class="d-flex align-items-center col-6 p-0">
                           <input class="checkbox-more-filters" type="checkbox" id="Apartment" name="Apartment"
                             value="Apartment" />
-                          <p class="font-weight-500 mb-0 ml-3 font-size-14" for="free-parking">Apartment</p>
+                          <p class="font-weight-500 mb-0 ml-3 font-size-13" for="free-parking">Apartment</p>
                         </div>
                       </div>
                     </li>
@@ -1173,29 +1169,29 @@
                         <div class="d-flex align-items-center col-6 p-0">
                           <input class="checkbox-more-filters" type="checkbox" id="Bed-and-breakfast"
                             name="Bed-and-breakfast" value="pool" />
-                          <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Bed-and-breakfast">Bed and
+                          <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Bed-and-breakfast">Bed and
                             breakfast</p>
                         </div>
                         <div class="d-flex align-items-center col-6 p-0">
                           <input class="checkbox-more-filters" type="checkbox" id="Boutique" name="Boutique"
                             value="Boutique" />
-                          <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Boutique">Boutique hotel</p>
+                          <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Boutique">Boutique hotel</p>
                         </div>
                       </div>
                     </li>
-                    <div class="collapse" id="collapsePropertyType-mobile">
+                    <div class="collapse" id="collapsePropertyTypeFilterPopUp">
                       <ul>
                         <li>
                           <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
                             <div class="d-flex align-items-center col-6 p-0">
-                              <input class="checkbox-more-filters" type="checkbox" id="Sun-terrace"
-                                name="Sun-terrace" value="Sun-terrace" />
-                              <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Sun-terrace">Flat</p>
+                              <input class="checkbox-more-filters" type="checkbox" id="Sun-terrace" name="Sun-terrace"
+                                value="Sun-terrace" />
+                              <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Sun-terrace">Flat</p>
                             </div>
                             <div class="d-flex align-items-center col-6 p-0">
                               <input class="checkbox-more-filters" type="checkbox" id="Balcony" name="Balcony"
                                 value="Balcony" />
-                              <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Balcony">Rooms</p>
+                              <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Balcony">Rooms</p>
                             </div>
                           </div>
                         </li>
@@ -1204,22 +1200,23 @@
                             <div class="d-flex align-items-center col-6 p-0">
                               <input class="checkbox-more-filters" type="checkbox" id="Private-beach"
                                 name="Private-beach" value="Private-beach" />
-                              <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Sun-terrace">Hostels
+                              <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Sun-terrace">Hostels
                               </p>
                             </div>
                             <div class="d-flex align-items-center col-6 p-0">
                               <input class="checkbox-more-filters" type="checkbox" id="Center" name="Center"
                                 value="Center" />
-                              <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Center">Center</p>
+                              <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Center">Center</p>
                             </div>
                           </div>
                         </li>
                       </ul>
                     </div>
+
                     <div class="text-left pt-3">
-                      <button class="listing-button-propertyFilter btn-text mb-4 mt-0 dark-gray font-size-13"
-                        type="button" data-toggle="collapse" data-target="#collapsePropertyType-mobile"
-                        aria-expanded="false" aria-controls="collapsePropertyType-mobile">
+                      <button class="listing-button-propertyFilter btn-text mb-4 mt-0 dark-gray font-size-12 border"
+                        type="button" data-toggle="collapse" data-target="#collapsePropertyTypeFilterPopUp"
+                        aria-expanded="false" aria-controls="collapsePropertyTypeFilterPopUp">
                         Show All Property Type
                       </button>
                     </div>
@@ -1231,9 +1228,9 @@
                     <li>
                       <div class="pt-4 pb-3">
                         <div class="d-flex align-items-center col-12 p-0">
-                          <input class="checkbox-more-filters" type="checkbox" id="Suitable-2-12" name="Suitable-2-12"
-                            value="Suitable-2-12" />
-                          <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Suitable-2-12">Suitable for children
+                          <input class="checkbox-more-filters" type="checkbox" id="House" name="House"
+                            value="wifi-free" />
+                          <p class="font-weight-500 mb-0 ml-3 font-size-13" for="House">Suitable for children
                             (2-12 years)</p>
                         </div>
                       </div>
@@ -1243,7 +1240,7 @@
                         <div class="d-flex align-items-center col-12 p-0">
                           <input class="checkbox-more-filters" type="checkbox" id="House" name="House"
                             value="wifi-free" />
-                          <p class="font-weight-500 mb-0 ml-3 font-size-14" for="House">Suitable for infants
+                          <p class="font-weight-500 mb-0 ml-3 font-size-13" for="House">Suitable for infants
                             (under 2 years)</p>
                         </div>
                       </div>
@@ -1253,7 +1250,7 @@
                         <div class="d-flex align-items-center col-12 p-0">
                           <input class="checkbox-more-filters" type="checkbox" id="House" name="House"
                             value="wifi-free" />
-                          <p class="font-weight-500 mb-0 ml-3 font-size-14" for="House">Suitable for pets</p>
+                          <p class="font-weight-500 mb-0 ml-3 font-size-13" for="House">Suitable for pets</p>
                         </div>
                       </div>
                     </li>
@@ -1262,7 +1259,7 @@
                         <div class="d-flex align-items-center col-12 p-0">
                           <input class="checkbox-more-filters" type="checkbox" id="House" name="House"
                             value="wifi-free" />
-                          <p class="font-weight-500 mb-0 ml-3 font-size-14" for="House">Adult only</p>
+                          <p class="font-weight-500 mb-0 ml-3 font-size-13" for="House">Adult only</p>
                         </div>
                       </div>
                     </li>
@@ -1271,7 +1268,7 @@
                         <div class="d-flex align-items-center col-12 p-0">
                           <input class="checkbox-more-filters" type="checkbox" id="House" name="House"
                             value="wifi-free" />
-                          <p class="font-weight-500 mb-0 ml-3 font-size-14" for="House">Suitable for family</p>
+                          <p class="font-weight-500 mb-0 ml-3 font-size-13" for="House">Suitable for family</p>
                         </div>
                       </div>
                     </li>
@@ -1285,12 +1282,12 @@
                         <div class="d-flex align-items-center col-6 p-0">
                           <input class="checkbox-more-filters" type="checkbox" id="English" name="English"
                             value="English" />
-                          <p class="font-weight-500 mb-0 ml-3 font-size-14" for="House">English</p>
+                          <p class="font-weight-500 mb-0 ml-3 font-size-13" for="House">English</p>
                         </div>
                         <div class="d-flex align-items-center col-6 p-0">
                           <input class="checkbox-more-filters" type="checkbox" id="Apartment" name="French"
                             value="French" />
-                          <p class="font-weight-500 mb-0 ml-3 font-size-14" for="French">French</p>
+                          <p class="font-weight-500 mb-0 ml-3 font-size-13" for="French">French</p>
                         </div>
                       </div>
                     </li>
@@ -1299,28 +1296,28 @@
                         <div class="d-flex align-items-center col-6 p-0">
                           <input class="checkbox-more-filters" type="checkbox" id="Japenese" name="Japenese"
                             value="Japenese" />
-                          <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Bed-and-breakfast">Japenese</p>
+                          <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Bed-and-breakfast">Japenese</p>
                         </div>
                         <div class="d-flex align-items-center col-6 p-0">
                           <input class="checkbox-more-filters" type="checkbox" id="German" name="German"
                             value="German" />
-                          <p class="font-weight-500 mb-0 ml-3 font-size-14" for="German">German</p>
+                          <p class="font-weight-500 mb-0 ml-3 font-size-13" for="German">German</p>
                         </div>
                       </div>
                     </li>
-                    <div class="collapse" id="collapseLanguages-mobile">
+                    <div class="collapse" id="collapseLanguagesFilterPopUp">
                       <ul>
                         <li>
                           <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
                             <div class="d-flex align-items-center col-6 p-0">
                               <input class="checkbox-more-filters" type="checkbox" id="Egypt" name="Egypt"
                                 value="Egypt" />
-                              <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Egypt-Egypt">Egypt</p>
+                              <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Egypt-Egypt">Egypt</p>
                             </div>
                             <div class="d-flex align-items-center col-6 p-0">
                               <input class="checkbox-more-filters" type="checkbox" id="Italian" name="Italian"
                                 value="Italian" />
-                              <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Italian">Italian</p>
+                              <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Italian">Italian</p>
                             </div>
                           </div>
                         </li>
@@ -1329,44 +1326,560 @@
                             <div class="d-flex align-items-center col-6 p-0">
                               <input class="checkbox-more-filters" type="checkbox" id="Chinees" name="Chinees"
                                 value="Chinees" />
-                              <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Chinees-Chinees">Chinees
+                              <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Chinees-Chinees">Chinees
                               </p>
                             </div>
                             <div class="d-flex align-items-center col-6 p-0">
                               <input class="checkbox-more-filters" type="checkbox" id="Spanish" name="Spanish"
                                 value="Spanish" />
-                              <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Spanish">Spanish</p>
+                              <p class="font-weight-500 mb-0 ml-3 font-size-13" for="Spanish">Spanish</p>
                             </div>
                           </div>
                         </li>
                       </ul>
                     </div>
-  
                     <div class="text-left pt-3">
-                      <button class="listing-button-propertyFilter btn-text mb-4 mt-0 dark-gray font-size-13"
-                        type="button" data-toggle="collapse" data-target="#collapseLanguages-mobile"
-                        aria-expanded="false" aria-controls="collapseLanguages-mobile">
+                      <button class="listing-button-propertyFilter btn-text mb-4 mt-0 dark-gray font-size-12 border"
+                        type="button" data-toggle="collapse" data-target="#collapseLanguagesFilterPopUp"
+                        aria-expanded="false" aria-controls="collapseLanguagesFilterPopUp">
                         Show all
                       </button>
                     </div>
                   </ul>
                 </div>
-                <div class="d-flex justify-content-center justify-content-between px-5 py-3">
-                  <button class="filter-button-property-type"onclick="displayNone(`listing-filter-mobile`)">
+                <div class="d-flex justify-content-center justify-content-between w-60 mx-auto py-3">
+                  <button class="filter-button-property-type" onclick="displayNone(`filter-button-popup`)">
                     Cancel
                   </button>
-                  <button class="yellow-button filter-button-property-type"onclick="displayNone(`listing-filter-mobile`)">
-                    Done
+                  <button class="yellow-button filter-button-property-type"
+                    onclick="displayNone(`filter-button-popup`)">
+                    Update
                   </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- More Filters Ends-->
-      </ul>
+      </div>
     </div>
-  </div>
+    <!-- Filter PopUp-->
+  </section>
+  <section class="d-block d-lg-none">
+    <div class="filter-mobile-wrapper" id="listing-filter-mobile">
+      <div class="property-facalities-mobile-header d-flex align-items-center justify-content-end px-3">
+        <div onclick="displayNone(`listing-filter-mobile`)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20.76" height="20.758" viewBox="0 0 43.76 43.758">
+            <g id="Group_41895" data-name="Group 41895" transform="translate(-5233.353 -19183)">
+              <path id="Path_85720" data-name="Path 85720"
+                d="M251.7,178.8l18.354-18.354a2.053,2.053,0,0,0-2.9-2.9l-18.354,18.354L230.44,157.539a2.053,2.053,0,0,0-2.9,2.9L245.891,178.8,227.537,197.15a2,2,0,0,0,0,2.9,2.005,2.005,0,0,0,2.9,0L248.795,181.7l18.354,18.354a2.005,2.005,0,0,0,2.9,0,2,2,0,0,0,0-2.9Z"
+                transform="translate(5006.438 19026.082)" />
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div class="property-facalities-mobile more-filters">
+        <ul class="list-unstyled">
+          <div class="d-flex flex-wrap pt-5">
+            <li class="d-flex align-items-center col-6 pt-4">
+              <input class="checkbox-more-filters" type="checkbox" id="free-wifi2" name="free-wifi" value="wifi-free" />
+              <label class="font-weight-500 mb-0 ml-3 font-size-15" for="free-wifi2">Free Parking</label>
+            </li>
+            <li class="d-flex align-items-center col-6 pt-4">
+              <input class="checkbox-more-filters" type="checkbox" id="Free-Parking" name="Free Parking"
+                value="Free Parking" />
+              <label class="font-weight-500 mb-0 ml-3 font-size-15" for="Free-Parking">Free Parking</label>
+            </li>
+            <li class="d-flex align-items-center col-6 pt-4">
+              <input class="checkbox-more-filters" type="checkbox" id="next-to-beach" name="next-to-beach"
+                value="next-to-beach" />
+              <label class="font-weight-500 mb-0 ml-3 font-size-15" for="next-to-beach">Next to beach</label>
+            </li>
+            <li class="d-flex align-items-center col-6 pt-4">
+              <input class="checkbox-more-filters" type="checkbox" id="PoolPrivate" name="Pool" value="Pool" />
+              <label class="font-weight-500 mb-0 ml-3 font-size-15" for="PoolPrivate">Pool</label>
+            </li>
+            <li class="d-flex align-items-center col-6 pt-4">
+              <input class="checkbox-more-filters" type="checkbox" id="Gym2" name="Gym" value="Gym" />
+              <label class="font-weight-500 mb-0 ml-3 font-size-15" for="Gym2">Gym</label>
+            </li>
+            <li class="d-flex align-items-center col-6 pt-4">
+              <input class="checkbox-more-filters" type="checkbox" id="Sea-View" name="Sea View" value="Sea View" />
+              <label class="font-weight-500 mb-0 ml-3 font-size-15" for="Sea-View">Sea View</label>
+            </li>
+          </div>
+          <!-- <div class="d-flex justify-content-between pt-5 align-items-center">
+          <div class="w-100">
+            <p class="col-9 font-size-11">
+              Showing 3409 property-facalities
+            </p>
+          </div>
+          <div class="col-3">
+            <label class="select-all-text"><input type="checkbox"
+                class="selectall-property-facalities select-all-checkbox" /><span
+                class="select-text-property-facalities">
+                Select</span>
+              All</label>
+          </div>
+          <button class="yellow-button mr-4" onclick="closeDropDownFilter(`property-facalities-dropBox`)">Done</button>
+        </div> -->
+          <!-- More Filters mobile -->
+          <div class="price-range d-flex flex-column">
+            <p class="font-weight-600 text-left pt-3 px-4 mb-2 pt-5 pb-2">
+             The average nightly price is <span>&#8364;</span>307
+            </p>
+            <div class="position-relative">
+            <svg style="position: absolute;
+            bottom: -14px;
+            left: 0;
+            right: 0;" class="mx-auto" width="82%" height="83" viewBox="0 0 637 83" fill="#00C2C0" xmlns="http://www.w3.org/2000/svg">
+              <rect width="637" height="83" fill="white"/>
+              <rect x="30" y="53" width="11" height="22" fill="#00C2C0"/>
+              <rect x="57" y="31" width="11" height="44" fill="#00C2C0"/>
+              <rect x="70" y="64" width="11" height="11" fill="#00C2C0"/>
+              <rect x="83" y="19" width="11" height="56" fill="#00C2C0"/>
+              <rect x="96" y="55" width="11" height="20" fill="#00C2C0"/>
+              <rect x="109" y="19" width="11" height="56" fill="#00C2C0"/>
+              <rect x="122" y="46" width="11" height="29" fill="#00C2C0"/>
+              <rect width="11" height="22" transform="matrix(-1 0 0 1 245 53)" fill="#00C2C0"/>
+              <rect width="11" height="44" transform="matrix(-1 0 0 1 218 31)" fill="#00C2C0"/>
+              <rect width="11" height="11" transform="matrix(-1 0 0 1 205 64)" fill="#00C2C0"/>
+              <rect width="11" height="56" transform="matrix(-1 0 0 1 192 19)" fill="#00C2C0"/>
+              <rect width="11" height="20" transform="matrix(-1 0 0 1 179 55)" fill="#00C2C0"/>
+              <rect width="11" height="56" transform="matrix(-1 0 0 1 166 19)" fill="#00C2C0"/>
+              <rect width="11" height="29" transform="matrix(-1 0 0 1 153 46)" fill="#00C2C0"/>
+              <rect x="254" y="53" width="11" height="22" fill="#00C2C0"/>
+              <rect x="281" y="31" width="11" height="44" fill="#00C2C0"/>
+              <rect x="294" y="64" width="11" height="11" fill="#00C2C0"/>
+              <rect x="307" y="19" width="11" height="56" fill="#00C2C0"/>
+              <rect x="320" y="55" width="11" height="20" fill="#00C2C0"/>
+              <rect x="333" y="19" width="11" height="56" fill="#00C2C0"/>
+              <rect x="346" y="46" width="11" height="29" fill="#00C2C0"/>
+              <rect width="11" height="22" transform="matrix(-1 0 0 1 467 53)" fill="#00C2C0"/>
+              <rect width="11" height="44" transform="matrix(-1 0 0 1 440 31)" fill="#00C2C0"/>
+              <rect width="11" height="11" transform="matrix(-1 0 0 1 427 64)" fill="#00C2C0"/>
+              <rect width="11" height="56" transform="matrix(-1 0 0 1 414 19)" fill="#00C2C0"/>
+              <rect width="11" height="20" transform="matrix(-1 0 0 1 401 55)" fill="#00C2C0"/>
+              <rect width="11" height="56" transform="matrix(-1 0 0 1 388 19)" fill="#00C2C0"/>
+              <rect width="11" height="29" transform="matrix(-1 0 0 1 375 46)" fill="#00C2C0"/>
+              <rect x="474" y="19" width="11" height="56" fill="#00C2C0"/>
+              <rect x="487" y="46" width="11" height="29" fill="#00C2C0"/>
+              <rect width="11" height="22" transform="matrix(-1 0 0 1 608 53)" fill="#00C2C0"/>
+              <rect width="11" height="44" transform="matrix(-1 0 0 1 581 31)" fill="#00C2C0"/>
+              <rect width="11" height="11" transform="matrix(-1 0 0 1 568 64)" fill="#00C2C0"/>
+              <rect width="11" height="56" transform="matrix(-1 0 0 1 555 19)" fill="#00C2C0"/>
+              <rect width="11" height="20" transform="matrix(-1 0 0 1 542 55)" fill="#00C2C0"/>
+              <rect width="11" height="56" transform="matrix(-1 0 0 1 529 19)" fill="#00C2C0"/>
+              <rect width="11" height="29" transform="matrix(-1 0 0 1 516 46)" fill="#00C2C0"/>
+              </svg> 
+            <input type="text" class="js-range-slider" name="my_range" value="" data-skin="round" data-type="double"
+              data-min="0" data-max="1000" data-grid="false" />
+            </div>
+            <div class="w-88 mx-auto d-flex align-items-center justify-content-between mt-3">
+              <div class="position-relative w-full">
+              <input type="number" maxlength="4" value="0" class="from px-4 w-full"/>
+              <span style="left: 0px ; top:22px;" class="position-absolute ml-2">&#8364;</span>
+              <span style="left: 0px ; top:0px;" class="position-absolute ml-2 opacity-6">min price</span>
+            </div>
+              <span>-</span>
+              <div class="position-relative w-full">
+              <input type="number" maxlength="4" value="1000" class="to px-4 w-full" />
+              <span style="left: 0px ; top:22px;" class="position-absolute ml-2">&#8364;</span>
+              <span style="left: 0px ; top:0px;" class="position-absolute ml-2 opacity-6">max price</span>
+            </div>
+            </div>
+            <div class="w-88 mx-auto d-flex align-items-center justify-content-between my-3">
+              <button class="clear-button">Clear</button>
+              <button class="yellow-button">Save</button>
+            </div>
+          </div>
+          <div class="more-filters position-absolute d-flex justify-content-center align-items-center w-100">
+            <div class="more-filters-wrapper bg-white w-100">
+              <div class="more-filers-inner">
+                <p class="font-weight-600 border-bottom pt-5 pb-3  px-4">More Filters</p>
+                <div class="px-4">
+                  <div class="rooms-and-beds">
+                    <p class="font-weight-500 py-3">Rooms And Beds</p>
+                    <ul class="list-unstyled">
+                      <li>
+                        <div class="d-flex justify-content-between border-bottom pb-2">
+                          <p class="font-weight-500 w-75">Beds</p>
+                          <div class="d-flex justify-content-end w-100 align-items-center">
+                            <span class="cursor-pointer mobile-circle-inc-dec"
+                              onClick="decrement(`mobile-beds-increment-decrement`)">-</span>
+                            <input class="more-filters-number-input" type="number" placeholder="0"
+                              id="mobile-beds-increment-decrement" type=number min=0 max=10 /> <span
+                              class="cursor-pointer  mobile-circle-inc-dec"
+                              onClick="increment(`mobile-beds-increment-decrement`)">+</span>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="pt-4">
+                        <div class="d-flex justify-content-between border-bottom pb-2">
+                          <p class="font-weight-500 w-75">Bedrooms</p>
+                          <div class="d-flex justify-content-end w-100 align-items-center">
+                            <span class="cursor-pointer mobile-circle-inc-dec"
+                              onClick="decrement(`mobile-bedrooms-increment-decrement`)">-</span> <input
+                              class="more-filters-number-input" type="number" placeholder="0"
+                              id="mobile-bedrooms-increment-decrement" type=number min=0 max=10 /> <span
+                              class="cursor-pointer mobile-circle-inc-dec"
+                              onClick="increment(`mobile-bedrooms-increment-decrement`)">+</span>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="pt-4">
+                        <div class="d-flex justify-content-between border-bottom pb-2">
+                          <p class="font-weight-500 w-75">Bathrooms</p>
+                          <div class="d-flex justify-content-end w-100 align-items-center">
+                            <span class="cursor-pointer mobile-circle-inc-dec"
+                              onClick="decrement(`mobile-Bathrooms-increment-decrement`)">-</span> <input
+                              class="more-filters-number-input" type="number" placeholder="0"
+                              id="mobile-Bathrooms-increment-decrement" type=number min=0 max=10 /> <span
+                              class="cursor-pointer mobile-circle-inc-dec"
+                              onClick="increment(`mobile-Bathrooms-increment-decrement`)">+</span>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="entire-places">
+                    <p class="font-weight-600 pt-3">Entire Places</p>
+                    <div class="d-flex justify-content-between align-items-center pt-3 border-bottom pb-3">
+                      <div class="d-flex align-items-center py-3  ">
+                        <input class="checkbox-more-filters" type="checkbox" id="entire-places-2" name="entire-places"
+                          value="82" />
+                        <label class="font-weight-500 mb-0 ml-3 font-size-14" for="entire-places-2"> Entire home &
+                          appartments</label>
+                      </div>
+                      <p>
+                        82
+                      </p>
+                    </div>
+                  </div>
+                  <div class="Amenities show-more-less border-bottom">
+                    <p class="font-weight-600 pt-4">Amenities</p>
+                    <ul>
+                      <li>
+                        <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
+                          <div class="d-flex align-items-center col-6 p-0">
+                            <input class="checkbox-more-filters" type="checkbox" id="free-wifi-amenities"
+                              name="free-wifi-amenities" value="free-wifi-amenities" />
+                            <p class="font-weight-500 mb-0 ml-3 font-size-14" for="free-wifi-amenities">Free Wifi</p>
+                          </div>
+                          <div class="d-flex align-items-center col-6 p-0">
+                            <input class="checkbox-more-filters" type="checkbox" id="free-parking" name="free-parking"
+                              value="free-parking" />
+                            <p class="font-weight-500 mb-0 ml-3 font-size-14" for="free-parking">Free parking</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
+                          <div class="d-flex align-items-center col-6 p-0">
+                            <input class="checkbox-more-filters" type="checkbox" id="Pool" name="Pool" value="pool" />
+                            <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Pool">Pool</p>
+                          </div>
+                          <div class="d-flex align-items-center col-6 p-0">
+                            <input class="checkbox-more-filters" type="checkbox" id="Gym" name="Gym" value="Gym" />
+                            <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Gym">Gym</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
+                          <div class="d-flex align-items-center col-6 p-0">
+                            <input class="checkbox-more-filters" type="checkbox" id="Hot-tube" name="Hot-tube"
+                              value="Hot-tube" />
+                            <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Hot-tube">Hot tube</p>
+                          </div>
+                          <div class="d-flex align-items-center col-6 p-0">
+                            <input class="checkbox-more-filters" type="checkbox" id="next-beach" name="next-beach"
+                              value="next-beach" />
+                            <p class="font-weight-500 mb-0 ml-3 font-size-14" for="next-beach">Next to beach</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
+                          <div class="d-flex align-items-center col-6 p-0">
+                            <input class="checkbox-more-filters" type="checkbox" id="Hot-tube" name="Hot-tube"
+                              value="Hot-tube" />
+                            <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Hot-tube">Sea View</p>
+                          </div>
+                          <div class="d-flex align-items-center col-6 p-0">
+                            <input class="checkbox-more-filters" type="checkbox" id="next-beach" name="next-beach"
+                              value="next-beach" />
+                            <p class="font-weight-500 mb-0 ml-3 font-size-14" for="next-beach">Beachfront</p>
+                          </div>
+                        </div>
+                      </li>
+                      <div class="collapse" id="collapse-amenities-mobile">
+                        <ul>
+                          <li>
+                            <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
+                              <div class="d-flex align-items-center col-6 p-0">
+                                <input class="checkbox-more-filters" type="checkbox" id="Sun-terrace" name="Sun-terrace"
+                                  value="Sun-terrace" />
+                                <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Sun-terrace">Sun terrace</p>
+                              </div>
+                              <div class="d-flex align-items-center col-6 p-0">
+                                <input class="checkbox-more-filters" type="checkbox" id="Balcony" name="Balcony"
+                                  value="Balcony" />
+                                <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Balcony">Balcony</p>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
+                              <div class="d-flex align-items-center col-6 p-0">
+                                <input class="checkbox-more-filters" type="checkbox" id="Private-beach"
+                                  name="Private-beach" value="Private-beach" />
+                                <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Sun-terrace">Private beach
+                                </p>
+                              </div>
+                              <div class="d-flex align-items-center col-6 p-0">
+                                <input class="checkbox-more-filters" type="checkbox" id="Center" name="Center"
+                                  value="Center" />
+                                <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Center">Center</p>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
+                              <div class="d-flex align-items-center col-8 p-0">
+                                <input class="checkbox-more-filters" type="checkbox" id="NETFLIX" name="NETFLIX"
+                                  value="NETFLIX" />
+                                <p class="font-weight-500 mb-0 ml-3 font-size-14" for="NETFLIX">TV (NETFLIX,
+                                  YOUTUBE)</p>
+                              </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="text-left pt-3">
+                        <button class="listing-button-propertyFilter btn-text mb-4 mt-0 dark-gray font-size-13 border"
+                          type="button" data-toggle="collapse" data-target="#collapse-amenities-mobile"
+                          aria-expanded="false" aria-controls="collapse-amenities-mobile">
+                          Show All Amenities
+                        </button>
+                      </div>
+                    </ul>
+                  </div>
+                  <div class="property-types show-more-less border-bottom">
+                    <p class="font-weight-600 pt-4">Property Types</p>
+                    <ul>
+                      <li>
+                        <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
+                          <div class="d-flex align-items-center col-6 p-0">
+                            <input class="checkbox-more-filters" type="checkbox" id="House" name="House"
+                              value="wifi-free" />
+                            <p class="font-weight-500 mb-0 ml-3 font-size-14" for="House">House</p>
+                          </div>
+                          <div class="d-flex align-items-center col-6 p-0">
+                            <input class="checkbox-more-filters" type="checkbox" id="Apartment" name="Apartment"
+                              value="Apartment" />
+                            <p class="font-weight-500 mb-0 ml-3 font-size-14" for="free-parking">Apartment</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
+                          <div class="d-flex align-items-center col-6 p-0">
+                            <input class="checkbox-more-filters" type="checkbox" id="Bed-and-breakfast"
+                              name="Bed-and-breakfast" value="pool" />
+                            <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Bed-and-breakfast">Bed and
+                              breakfast</p>
+                          </div>
+                          <div class="d-flex align-items-center col-6 p-0">
+                            <input class="checkbox-more-filters" type="checkbox" id="Boutique" name="Boutique"
+                              value="Boutique" />
+                            <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Boutique">Boutique hotel</p>
+                          </div>
+                        </div>
+                      </li>
+                      <div class="collapse" id="collapsePropertyType-mobile">
+                        <ul>
+                          <li>
+                            <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
+                              <div class="d-flex align-items-center col-6 p-0">
+                                <input class="checkbox-more-filters" type="checkbox" id="Sun-terrace" name="Sun-terrace"
+                                  value="Sun-terrace" />
+                                <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Sun-terrace">Flat</p>
+                              </div>
+                              <div class="d-flex align-items-center col-6 p-0">
+                                <input class="checkbox-more-filters" type="checkbox" id="Balcony" name="Balcony"
+                                  value="Balcony" />
+                                <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Balcony">Rooms</p>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
+                              <div class="d-flex align-items-center col-6 p-0">
+                                <input class="checkbox-more-filters" type="checkbox" id="Private-beach"
+                                  name="Private-beach" value="Private-beach" />
+                                <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Sun-terrace">Hostels
+                                </p>
+                              </div>
+                              <div class="d-flex align-items-center col-6 p-0">
+                                <input class="checkbox-more-filters" type="checkbox" id="Center" name="Center"
+                                  value="Center" />
+                                <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Center">Center</p>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="text-left pt-3">
+                        <button class="listing-button-propertyFilter btn-text mb-4 mt-0 dark-gray font-size-13 border"
+                          type="button" data-toggle="collapse" data-target="#collapsePropertyType-mobile"
+                          aria-expanded="false" aria-controls="collapsePropertyType-mobile">
+                          Show All Property Type
+                        </button>
+                      </div>
+                    </ul>
+                  </div>
+                  <div class="house-rules show-more-less border-bottom">
+                    <p class="font-weight-600 pt-4">House Rules</p>
+                    <ul>
+                      <li>
+                        <div class="pt-4 pb-3">
+                          <div class="d-flex align-items-center col-12 p-0">
+                            <input class="checkbox-more-filters" type="checkbox" id="Suitable-2-12" name="Suitable-2-12"
+                              value="Suitable-2-12" />
+                            <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Suitable-2-12">Suitable for children
+                              (2-12 years)</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="pt-4 pb-3">
+                          <div class="d-flex align-items-center col-12 p-0">
+                            <input class="checkbox-more-filters" type="checkbox" id="House" name="House"
+                              value="wifi-free" />
+                            <p class="font-weight-500 mb-0 ml-3 font-size-14" for="House">Suitable for infants
+                              (under 2 years)</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="pt-4 pb-3">
+                          <div class="d-flex align-items-center col-12 p-0">
+                            <input class="checkbox-more-filters" type="checkbox" id="House" name="House"
+                              value="wifi-free" />
+                            <p class="font-weight-500 mb-0 ml-3 font-size-14" for="House">Suitable for pets</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="pt-4 pb-3">
+                          <div class="d-flex align-items-center col-12 p-0">
+                            <input class="checkbox-more-filters" type="checkbox" id="House" name="House"
+                              value="wifi-free" />
+                            <p class="font-weight-500 mb-0 ml-3 font-size-14" for="House">Adult only</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="pt-4 pb-3">
+                          <div class="d-flex align-items-center col-12 p-0">
+                            <input class="checkbox-more-filters" type="checkbox" id="House" name="House"
+                              value="wifi-free" />
+                            <p class="font-weight-500 mb-0 ml-3 font-size-14" for="House">Suitable for family</p>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="host-languages show-more-less border-bottom">
+                    <p class="font-weight-600 pt-4">Host Languages</p>
+                    <ul>
+                      <li>
+                        <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
+                          <div class="d-flex align-items-center col-6 p-0">
+                            <input class="checkbox-more-filters" type="checkbox" id="English" name="English"
+                              value="English" />
+                            <p class="font-weight-500 mb-0 ml-3 font-size-14" for="House">English</p>
+                          </div>
+                          <div class="d-flex align-items-center col-6 p-0">
+                            <input class="checkbox-more-filters" type="checkbox" id="Apartment" name="French"
+                              value="French" />
+                            <p class="font-weight-500 mb-0 ml-3 font-size-14" for="French">French</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
+                          <div class="d-flex align-items-center col-6 p-0">
+                            <input class="checkbox-more-filters" type="checkbox" id="Japenese" name="Japenese"
+                              value="Japenese" />
+                            <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Bed-and-breakfast">Japenese</p>
+                          </div>
+                          <div class="d-flex align-items-center col-6 p-0">
+                            <input class="checkbox-more-filters" type="checkbox" id="German" name="German"
+                              value="German" />
+                            <p class="font-weight-500 mb-0 ml-3 font-size-14" for="German">German</p>
+                          </div>
+                        </div>
+                      </li>
+                      <div class="collapse" id="collapseLanguages-mobile">
+                        <ul>
+                          <li>
+                            <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
+                              <div class="d-flex align-items-center col-6 p-0">
+                                <input class="checkbox-more-filters" type="checkbox" id="Egypt" name="Egypt"
+                                  value="Egypt" />
+                                <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Egypt-Egypt">Egypt</p>
+                              </div>
+                              <div class="d-flex align-items-center col-6 p-0">
+                                <input class="checkbox-more-filters" type="checkbox" id="Italian" name="Italian"
+                                  value="Italian" />
+                                <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Italian">Italian</p>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="d-flex justify-content-between align-items-center pt-4 pb-3">
+                              <div class="d-flex align-items-center col-6 p-0">
+                                <input class="checkbox-more-filters" type="checkbox" id="Chinees" name="Chinees"
+                                  value="Chinees" />
+                                <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Chinees-Chinees">Chinees
+                                </p>
+                              </div>
+                              <div class="d-flex align-items-center col-6 p-0">
+                                <input class="checkbox-more-filters" type="checkbox" id="Spanish" name="Spanish"
+                                  value="Spanish" />
+                                <p class="font-weight-500 mb-0 ml-3 font-size-14" for="Spanish">Spanish</p>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="text-left pt-3">
+                        <button class="listing-button-propertyFilter btn-text mb-4 mt-0 dark-gray font-size-13 border"
+                          type="button" data-toggle="collapse" data-target="#collapseLanguages-mobile"
+                          aria-expanded="false" aria-controls="collapseLanguages-mobile">
+                          Show all
+                        </button>
+                      </div>
+                    </ul>
+                  </div>
+                  <div class="d-flex justify-content-center justify-content-between px-1 py-3 w-100">
+                    <button class="filter-button-property-type text-center" onclick="displayNone(`listing-filter-mobile`)">
+                      Cancel
+                    </button>
+                    <button class="yellow-button filter-button-property-type text-center"
+                      onclick="displayNone(`listing-filter-mobile`)">
+                      Done
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- More Filters Ends-->
+        </ul>
+      </div>
+    </div>
   </section>
   <section class="filter-mobile d-block d-md-none">
     <div style="background-color: #4b4949"
@@ -1377,7 +1890,8 @@
         </p>
       </div>
       <div class="d-flex align-items-center">
-        <button class="filter-button background-color-tealish ml-2 d-flex align-items-center py-2 px-3" onclick="displayBlock(`listing-filter-mobile`)">
+        <button class="filter-button background-color-tealish ml-2 d-flex align-items-center py-2 px-3"
+          onclick="displayBlock(`listing-filter-mobile`)">
           <img style="height: 20px; margin-right: 9px" src="./assets/images/icons/filter.png" alt="filter" />Filters
         </button>
       </div>
@@ -1403,7 +1917,7 @@
                   <p class="text-white">Exceptional value for this property</p>
                 </div>
               </div>
-              <div class="position-relative" style="
+              <div class="position-relative rounded-lg-top" style="
                   background-image: url(./assets/images/listing-house.png);
                   background-repeat: no-repeat;
                   background-size: cover;
@@ -1424,12 +1938,12 @@
                             Modern And Luxury Apartment
                           </p>
                         </div>
-                        <div>
+                        <!-- <div>
                           <button style="font-size: 12px;"
                             class="yellow-button d-flex justify-content-center align-items-center mt-0 mt-md-2">
                             Top Value
                           </button>
-                        </div>
+                        </div> -->
                       </div>
                       <div class="facalities-icons-inner d-flex flex-wrap align-items-center pt-4">
                         <div class="single-facality mr-4">
@@ -1769,11 +2283,11 @@
                         <svg width="14px" height="14px" viewBox="0 0 32 32" fill="#40d0d3" id="Layer_1"
                           data-name="Layer 1" xmlns="http://www.w3.org/2000/svg">
                           <defs>
-                          <path
-                            d="M27,22.142V9.858A3.9916,3.9916,0,1,0,22.142,5H9.858A3.9916,3.9916,0,1,0,5,9.858V22.142A3.9916,3.9916,0,1,0,9.858,27H22.142A3.9916,3.9916,0,1,0,27,22.142ZM26,4a2,2,0,1,1-2,2A2.0023,2.0023,0,0,1,26,4ZM4,6A2,2,0,1,1,6,8,2.002,2.002,0,0,1,4,6ZM6,28a2,2,0,1,1,2-2A2.0023,2.0023,0,0,1,6,28Zm16.142-3H9.858A3.9937,3.9937,0,0,0,7,22.142V9.858A3.9947,3.9947,0,0,0,9.858,7H22.142A3.9937,3.9937,0,0,0,25,9.858V22.142A3.9931,3.9931,0,0,0,22.142,25ZM26,28a2,2,0,1,1,2-2A2.0027,2.0027,0,0,1,26,28Z"
-                            transform="translate(0 0)" />
-                          <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1"
-                            width="32" height="32" />
+                            <path
+                              d="M27,22.142V9.858A3.9916,3.9916,0,1,0,22.142,5H9.858A3.9916,3.9916,0,1,0,5,9.858V22.142A3.9916,3.9916,0,1,0,9.858,27H22.142A3.9916,3.9916,0,1,0,27,22.142ZM26,4a2,2,0,1,1-2,2A2.0023,2.0023,0,0,1,26,4ZM4,6A2,2,0,1,1,6,8,2.002,2.002,0,0,1,4,6ZM6,28a2,2,0,1,1,2-2A2.0023,2.0023,0,0,1,6,28Zm16.142-3H9.858A3.9937,3.9937,0,0,0,7,22.142V9.858A3.9947,3.9947,0,0,0,9.858,7H22.142A3.9937,3.9937,0,0,0,25,9.858V22.142A3.9931,3.9931,0,0,0,22.142,25ZM26,28a2,2,0,1,1,2-2A2.0027,2.0027,0,0,1,26,28Z"
+                              transform="translate(0 0)" />
+                            <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1"
+                              width="32" height="32" />
                         </svg>
                       </div>
                       <div>
@@ -2585,7 +3099,7 @@
           <div data-aos="fade-left" data-aos-easing="linear" data-aos-duration="200"
             class="something-for-you-card bg-white rounded-lg mt-5 box-shadow box-shadow">
             <div class="something-for-you-image position-relative">
-              <div style="top: -10px; left:0px;"
+              <div style="top: -4px; left:0px;"
                 class="position-absolute background-color-tealish rounded px-3 py-2 text-white">
                 Top Value
               </div>
@@ -2695,7 +3209,7 @@
               </div>
               <div class="d-flex justify-content-between mt-5">
                 <div>
-                  <p class="color-tealish font-size-16 font-weight-500">139€<span class="font-size-11">/Per Night</span>
+                  <p class="color-tealish font-size-18 font-weight-500">139€<span class="font-size-11">/Per Night</span>
                   </p>
                 </div>
                 <div>
@@ -2707,7 +3221,7 @@
           <div data-aos="fade-left" data-aos-easing="linear" data-aos-duration="200"
             class="something-for-you-card bg-white rounded-lg mt-5 box-shadow box-shadow">
             <div class="something-for-you-image position-relative">
-              <div style="top: -10px; left:0px;"
+              <div style="top: -4px; left:0px;"
                 class="position-absolute background-color-tealish rounded px-3 py-2 text-white">
                 Top Value
               </div>
@@ -2817,7 +3331,7 @@
               </div>
               <div class="d-flex justify-content-between mt-5">
                 <div>
-                  <p class="color-tealish font-size-16 font-weight-500">139€<span class="font-size-11">/Per Night</span>
+                  <p class="color-tealish font-size-18 font-weight-500">139€<span class="font-size-11">/Per Night</span>
                   </p>
                 </div>
                 <div>
@@ -2829,7 +3343,7 @@
           <div data-aos="fade-left" data-aos-easing="linear" data-aos-duration="200"
             class="something-for-you-card bg-white rounded-lg mt-5 box-shadow">
             <div class="something-for-you-image position-relative">
-              <div style="top: -10px; left:0px;"
+              <div style="top: -4px; left:0px;"
                 class="position-absolute background-color-tealish rounded px-3 py-2 text-white">
                 Top Value
               </div>
@@ -2939,7 +3453,7 @@
               </div>
               <div class="d-flex justify-content-between mt-5">
                 <div>
-                  <p class="color-tealish font-size-16 font-weight-500">139€<span class="font-size-11">/Per Night</span>
+                  <p class="color-tealish font-size-18 font-weight-500">139€<span class="font-size-11">/Per Night</span>
                   </p>
                 </div>
                 <div>
@@ -2951,7 +3465,7 @@
           <div data-aos="fade-left" data-aos-easing="linear" data-aos-duration="200"
             class="something-for-you-card bg-white rounded-lg mt-5 box-shadow">
             <div class="something-for-you-image position-relative">
-              <div style="top: -10px; left:0px;"
+              <div style="top: -4px; left:0px;"
                 class="position-absolute background-color-tealish rounded px-3 py-2 text-white">
                 Top Value
               </div>
@@ -3061,7 +3575,7 @@
               </div>
               <div class="d-flex justify-content-between mt-5">
                 <div>
-                  <p class="color-tealish font-size-16 font-weight-500">139€<span class="font-size-11">/Per Night</span>
+                  <p class="color-tealish font-size-18 font-weight-500">139€<span class="font-size-11">/Per Night</span>
                   </p>
                 </div>
                 <div>

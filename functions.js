@@ -144,14 +144,7 @@ document.addEventListener('mouseup', function(e) {
     document.getElementById('search-box-inner').style.width ="20%";
   }
 });
-// Property Facalities Outside Click
-document.addEventListener('mouseup', function(e) {
-  var facalitiesBox = document.getElementById('property-facalities-dropBox');
-  if (!facalitiesBox.contains(e.target)){
-  let facilitesModal = document.getElementById("property-facalities-dropBox");
-  facilitesModal.classList.remove("display-block")
- }
-});
+
 // Slider Functoin
 $("#recipeCarousel").carousel({
   interval: 10000,
@@ -404,12 +397,11 @@ $(document)
 
 // Data Block Hide Toggle generic function
 function displayToggle(value) {
-  // var element = document.getElementById(value).style.backgroundColor = "#ffc044";
   var element = document.getElementById(value);
   element.classList.toggle("display-block");
 }
-function closeFacilitiesDropdown (){
-  let facilitesModal = document.getElementById("property-facalities-dropBox");
+function closeDropDownFilter (value){
+  let facilitesModal = document.getElementById(value);
   facilitesModal.classList.remove("display-block")
 } 
 
