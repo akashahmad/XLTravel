@@ -1654,7 +1654,7 @@
    // search bar date picker
    $('#searhBar-date-picker').daterangepicker({
     locale: {
-        format: 'DD-MM-YYYY'
+        format: 'DD-MM'
     },
     // parentEl: "#inline-calendar",
     alwaysShowCalendars: false,
@@ -1662,8 +1662,12 @@
     inline: false,
     autoUpdateInput: true,
 });  
-
-
+function getDate()
+{
+	var dateInput = document.getElementById("searhBar-date-picker").value;
+	document.getElementById("Filter-date").innerHTML = dateInput;
+	console.log("dateInput" , dateInput)
+}
 
 // Three calendars
 /* =========================================================
