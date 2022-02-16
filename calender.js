@@ -71,7 +71,7 @@
             this.locale = {
                 direction: 'ltr',
                 format: 'MM/DD/YYYY',
-                separator: ' - ',
+                separator: ' / ',
                 applyLabel: 'Apply',
                 cancelLabel: 'Cancel',
                 weekLabel: 'W',
@@ -1654,7 +1654,8 @@
    // search bar date picker
    $('#searhBar-date-picker').daterangepicker({
     locale: {
-        format: 'DD-MM'
+        format: 'MM-DD'
+		// mediumDate:     "mmm d, yyyy",
     },
     // parentEl: "#inline-calendar",
     alwaysShowCalendars: false,
