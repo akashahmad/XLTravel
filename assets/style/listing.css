@@ -454,16 +454,20 @@ margin-top: 48px;
   }
   #filter-location{
     border: none;
-    width: 50px;
+    width: 37%;
     background-color: transparent;
+    font-size: 12px;
   }
   .mobile-filter-banner-left{
-    background-color: #ffc044;
-    padding:2px 9px 5px 7px;
+    background-color: transparent;
+    /* padding:2px 5px 5px 0px; */
     border-radius: 5px;
   }
   .mobile-filter-banner-left input::placeholder{
     color: white;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 500;
   }
   .mobile-circle-inc-dec{
     width: 20px;
