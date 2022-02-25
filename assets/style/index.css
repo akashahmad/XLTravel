@@ -281,6 +281,9 @@ header {
   justify-items: center;
   align-items: center;
 }
+.swiper .content-wrapper .content{
+  width: 100%;
+}
 .swiper .content-wrapper .content :first-child {
   margin: 0;
 }
