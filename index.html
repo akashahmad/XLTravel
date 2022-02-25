@@ -1,496 +1,2179 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- Font Awesom -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet" />
+    <!-- Typing Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+    <!-- Date Picker -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/2.1.24/daterangepicker.min.css"
+        rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/2.1.24/moment.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/2.1.24/daterangepicker.min.js"></script>
+
+
     <link rel="stylesheet" href="./assets/style/style.css" />
+    <link rel="stylesheet" href="./assets/style/calendar.css" />
     <link rel="stylesheet" href="./assets/style/index.css" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <title>XlTravel</title>
-  </head>
-  <body>
+    <title>Home</title>
+</head>
+
+<body>
     <!-- Header -->
     <header>
-      <div
-        class="header-main d-flex justify-content-between align-items-center container-main container-header py-3 px-3 px-lg-0"
-      >
-        <div class="header-logo">
-          <a href="/">
-            <img
-              class="cursor-pointer"
-              src="assets/images/Group 40231.png"
-              alt="xlTravel-Logo"
-            />
-          </a>
-        </div>
-        <div>
-          <nav class="nav-bar d-none d-lg-block">
-            <ul class="d-flex align-items-center">
-              <li><a href="/">Home</a></li>
-              <li>
-                <a href="/listing.html">Properties</a>
-              </li>
-              <li><a>Blog</a></li>
-              <li><a>FAQs</a></li>
-              <li><a>Contact</a></li>
-              <li><a>Become a host</a></li>
-              <button class="yellow-button">Register</button>
-            </ul>
-          </nav>
-          <div class="d-block d-lg-none">
-            <input type="checkbox" id="openSideMenu" class="openSideMenu" />
-            <label for="openSideMenu" class="menuIconToggle">
-              <div class="hamb-line dia part-1"></div>
-              <div class="hamb-line hor"></div>
-              <div class="hamb-line dia part-2"></div>
-            </label>
-            <nav class="mobile-nav">
-              <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/listing.html">Properties</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">FAQs</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Become a host</a></li>
-                <div
-                  class="d-flex justify-content-center align-items-center pt-3"
-                >
-                  <button class="yellow-button">Register</button>
+        <div class="header-index d-flex justify-content-between align-items-center container-main py-3 px-3 px-lg-0">
+            <div class="header-logo">
+                <a href="/">
+                    <img style="height: 66px;" class="cursor-pointer" src="assets/images/logo.png"
+                        alt="xlTravel-Logo" />
+                </a>
+            </div>
+            <div>
+                <nav class="nav-bar d-none d-lg-block">
+                    <ul class="d-flex align-items-center list-unstyled">
+                        <li><a href="/" class="index-active">Home</a></li>
+                        <li>
+                            <a
+                                class="hot-deail-text position-relative d-flex align-items-center justify-content-center"><img
+                                    class="position-absolute" style="height: 24px; top: -21px;"
+                                    src="./assets/images/icons/hot-deal.gif" alt="hot-deatil" />Hot Deals</a>
+                        </li>
+                        <li><a>Xl Travel Zone</a></li>
+                        <li><a>About Us</a></li>
+                        <li><a>Help Center</a></li>
+                        <li><a>Hot Zone</a></li>
+                        <li><a><button class="teaslih-text-button cursor-pointer"> List Your Property</button></a></li>
+                        <li class="mr-0"><a> <button
+                                    class="tealish-gradient-button d-flex justify-content-center align-items-center cursor-pointer"><img
+                                        class="mr-2" height="13px" src="./assets/images/icons/lock.png" alt="lock" />
+                                    LOGIN</button></a></li>
+                    </ul>
+                </nav>
+                <div class="d-block d-lg-none">
+                    <input type="checkbox" id="openSideMenu" class="openSideMenu" />
+                    <label for="openSideMenu" class="menuIconToggle">
+                        <div class="hamb-line dia part-1"></div>
+                        <div class="hamb-line hor"></div>
+                        <div class="hamb-line dia part-2"></div>
+                    </label>
+                    <nav class="mobile-nav">
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li>
+                                <a href="#" class="hot-deail-text d-flex align-items-center">Hot Deals <img
+                                        style="height: 27px; margin-left: 12px; margin-bottom: 8px;"
+                                        src="./assets/images/icons/hot-deal.gif" alt="hot-deatil" /></a>
+                            </li>
+                            <li><a href="#">Xl Travel Zone</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Hot Zone</a></li>
+                            <div class="d-flex flex-column align-items-center pt-3 px-2">
+                                <button class="teaslih-text-button cursor-pointer"> List Your Property</button>
+                                <button
+                                    class="tealish-gradient-button mt-4 d-flex justify-content-center align-items-center cursor-pointer"><img
+                                        class="mr-2" height="13px" src="./assets/images/icons/lock.png" alt="lock" />
+                                    LOGIN</button>
+                            </div>
+                        </ul>
+                    </nav>
                 </div>
-              </ul>
-            </nav>
-          </div>
+            </div>
         </div>
-      </div>
     </header>
     <!-- Header End -->
     <!-- Hero Section -->
-    <section class="Hero-Section container">
-      <div
-        class="d-flex flex-column flex-lg-row justify-content-between align-items-center overflow-hidden"
-      >
-        <div class="image-side col-12 col-lg-6 position-relative p-0">
-          <img
-            class="bottom-image"
-            src="assets/images/menAlone.png"
-            alt="men-standing"
-          />
-          <img
-            class="top-image"
-            src="assets/images/menPhotography.png"
-            alt="men-with-camera"
-          />
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container-main mx-auto d-flex justify-content-center align-items-center px-5">
+            <div class="w-68 ml-3">
+                <h1 class="text-animation-heading text-white font-weight-500">
+                    <span class="title"><span class="find-your">Find Your</span> Next Stay</span></br>
+                </h1>
+                <p class="pt-2 text-white font-size-18 font-weight-normal">
+                    <span class="title">Your travel partner for unforgettable trips at</span></br>
+                    <span class="title">best prices</span>
+                </p>
+                <div class="search-box-index bg-white w-100 py-2 rounded box-shadow">
+                    <div class="d-flex align-items-center">
+                        <div class="autocomplete border-right w-29 px-2">
+                            <p class="search-lable">Location</p>
+                            <input id="myInput" type="text" name="myCountry" placeholder="Where are you going?">
+                        </div>
+                        <div class="border-right w-29 px-2 position-relative">
+                            <p class="search-lable">Date</p>
+                            <input id="searhBar-index-date-picker" placeholder="Add Date" class="form-control" />
+                            <svg style="right:10px; bottom:10px" class="position-absolute"
+                                xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 18">
+                                <g id="Group_9686" data-name="Group 9686" transform="translate(-1028 -1310)">
+                                    <path id="Polygon_1" data-name="Polygon 1" d="M4,0,8,7H0Z"
+                                        transform="translate(1028 1310)" />
+                                    <path id="Polygon_2" data-name="Polygon 2" d="M4,0,8,7H0Z"
+                                        transform="translate(1036 1328) rotate(180)" />
+                                </g>
+                            </svg>
+
+                        </div>
+                        <div
+                            class="search-box-single-element text-center d-flex flex-column border-right w-29 px-2 position-relative">
+                            <p class="search-lable">Guests</p>
+                            <select class="selectpicker" title="Add Guest">
+                                <option>1 Guest</option>
+                                <option>2 Guests</option>
+                                <option>3 Guests</option>
+                                <option>4 Guests</option>
+                            </select>
+                            <svg style="right:10px; bottom:10px" class="position-absolute"
+                                xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 18">
+                                <g id="Group_9686" data-name="Group 9686" transform="translate(-1028 -1310)">
+                                    <path id="Polygon_1" data-name="Polygon 1" d="M4,0,8,7H0Z"
+                                        transform="translate(1028 1310)" />
+                                    <path id="Polygon_2" data-name="Polygon 2" d="M4,0,8,7H0Z"
+                                        transform="translate(1036 1328) rotate(180)" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div
+                            class="searchbutton-index ml-3 cursor-pointer d-flex justify-content-center align-items-center">
+                            <svg class="svg-icon search-icon" fill="#000000" aria-labelledby="title desc" height="14px"
+                                width="14px" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7">
+                                <title id="title">Search Icon</title>
+                                <desc id="desc"></desc>
+                                <g class="search-path" fill="none" stroke="#000000">
+                                    <path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4" />
+                                    <circle cx="8" cy="8" r="7" />
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overflow-hidden mr-3">
+                <video style="margin-left: 4px;" id="video_background" width="100%" height="100%" preload="true" muted>
+                    <source src="./assets/video/Video_1.mp4" type="video/mp4">
+                </video>
+            </div>
         </div>
-        <div class="text-side col-12 col-lg-6">
-          <div class="text-side-inner">
-            <div class="hero-section-main-text">
-              <p>The Most Relaxing Vacation Places</p>
-            </div>
-            <div>
-              <p class="hero-section-inner-text">
-                A vacation is having nothing to do and all day to do it in. Our
-                resorts are designed to inspire and delight every sense.
-              </p>
-            </div>
-            <div>
-              <button class="yellow-button">Get Started</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="search mx-0 mx-lg-5">
-        <div class="search-now">
-          <div
-            class="search-now-inner d-flex flex-column flex-lg-row align-items-center"
-          >
-            <div class="col-12 col-lg-3">
-              <div class="search-now-single">
-                <button
-                  class="btn dropdown-toggle search-now-single bg-transparent"
-                  type="button"
-                  data-toggle="dropdown"
-                >
-                  Destination
-                </button>
-                <p class="search-select">Select</p>
-                <ul class="dropdown-menu" id="destination">
-                  <li value="Example One">Example One</li>
-                  <li value="Example Two">Example Two</li>
-                  <li value="Example Three">Example Three</li>
-                </ul>
-              </div>
-            </div>
-            <div
-              class="d-flex align-items-center justify-content-center col-12 col-lg-3"
-            >
-              <div class="search-now-single">
-                <button
-                  class="btn dropdown-toggle search-now-single bg-transparent"
-                  type="button"
-                  data-toggle="dropdown"
-                >
-                  Checkin-checkout
-                </button>
-                <p class="search-select">Select</p>
-                <ul class="dropdown-menu" id="Checkin-checkout">
-                  <li value="Example One">Example One</li>
-                  <li value="Example Two">Example Two</li>
-                  <li value="Example Three">Example Three</li>
-                </ul>
-              </div>
-            </div>
-            <div
-              class="d-flex align-items-center justify-content-center col-12 col-lg-3"
-            >
-              <div class="search-now-single">
-                <button
-                  class="btn dropdown-toggle search-now-single bg-transparent"
-                  type="button"
-                  data-toggle="dropdown"
-                >
-                  Guests
-                </button>
-                <p class="search-select">Select</p>
-                <ul class="dropdown-menu" id="Guests">
-                  <li value="Example One">Example One</li>
-                  <li value="Example Two">Example Two</li>
-                  <li value="Example Three">Example Three</li>
-                </ul>
-              </div>
-            </div>
-            <div
-              class="cursor-pointer search-bar-main col-12 col-lg-3 d-flex flex-column justify-content-center align-items-center position-relative"
-            >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="#33270d" width="20.739" height="20.739" viewBox="0 0 25.739 25.739">
-              <g data-name="Group 40242">
-                  <g data-name="Group 40241">
-                      <path data-name="Path 75926" d="M11.335 0A11.335 11.335 0 1 0 22.67 11.335 11.348 11.348 0 0 0 11.335 0zm0 20.577a9.242 9.242 0 1 1 9.242-9.242 9.253 9.253 0 0 1-9.242 9.242z"/>
-                  </g>
-              </g>
-              <g data-name="Group 40244">
-                  <g data-name="Group 40243">
-                      <path data-name="Path 75927" d="m25.433 23.953-6-6a1.046 1.046 0 0 0-1.479 1.479l6 6a1.046 1.046 0 0 0 1.479-1.479z"/>
-                  </g>
-              </g>
-          </svg>
-          
-              <div
-                class="search-bar d-flex align-items-center justify-content-center"
-              >
-                <p class="search-bar">Search now</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
-    <!-- Hero Section End-->
-    <!-- Find Travel Perfection Section -->
-    <section class="find-travel-perfection">
-      <div>
-        <p class="main-heading">Find Travel perfection</p>
-        <p class="inner-heading">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doi
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco lab.
-        </p>
-      </div>
-      <div></div>
+    <!-- Pros Section Ends-->
+    <section class="container-main mx-auto">
+        <div class="commission-pros d-flex flex-column flex-md-row flex-wrap justify-content-start px-4 px-md-5">
+            <div class="single-pros w-31 mx-auto mt-5">
+                <div class="d-flex">
+                    <div style="width:70px; height:58px;"
+                        class="bg-white d-flex justify-content-center align-items-center box-shadow rounded-md">
+                        <img style="height: 27px;" src="./assets/images/icons/commission.png" />
+                    </div>
+                    <div class="ml-5">
+                        <h class="font-weight-500 text-capitalize">No commissions</h>
+                        <p class="dark-gray text-capitalize line-height-38 pt-2 opacity-8 font-normal font-size-14">For
+                            both, hosts and guest </br> there are no extra costs</p>
+                    </div>
+                </div>
+            </div>
+            <div class="single-pros w-31 mx-auto mt-5">
+                <div class="d-flex">
+                    <div style="width:70px; height:58px;"
+                        class="bg-white d-flex justify-content-center align-items-center box-shadow rounded-md">
+                        <img style="height: 27px;" src="./assets/images/icons/index-house.png" />
+                    </div>
+                    <div class="ml-5">
+                        <h class="font-weight-500 text-capitalize">No commissions</h>
+                        <p class="dark-gray text-capitalize line-height-38 pt-2 opacity-8 font-normal font-size-14">For
+                            both, hosts and guest </br> there are no extra costs</p>
+                    </div>
+                </div>
+            </div>
+            <div class="single-pros w-31 mx-auto mt-5">
+                <div class="d-flex">
+                    <div style="width:70px; height:58px;"
+                        class="bg-white d-flex justify-content-center align-items-center box-shadow rounded-md">
+                        <img style="height: 27px;" src="./assets/images/icons/percentage.png" />
+                    </div>
+                    <div class="ml-5">
+                        <h class="font-weight-500 text-capitalize">UP TO 40% OFF</h>
+                        <p class="dark-gray text-capitalize line-height-38 pt-2 opacity-8 font-normal font-size-14">No
+                            commissions and extra </br> money spent on agents </p>
+                    </div>
+                </div>
+            </div>
+            <div class="single-pros w-31 mx-auto mt-5">
+                <div class="d-flex">
+                    <div style="width:70px; height:58px;"
+                        class="bg-white d-flex justify-content-center align-items-center box-shadow rounded-md">
+                        <img style="height: 27px;" src="./assets/images/icons/owner.png" />
+                    </div>
+                    <div class="ml-5">
+                        <h class="font-weight-500 text-capitalize">Communication With Owner</h>
+                        <p class="dark-gray text-capitalize line-height-38 pt-2 opacity-8 font-normal font-size-14">Book
+                            the accommodation </br> directly from the host </p>
+                    </div>
+                </div>
+            </div>
+            <div class="single-pros w-31 mx-auto mt-5">
+                <div class="d-flex">
+                    <div style="width:70px; height:58px;"
+                        class="bg-white d-flex justify-content-center align-items-center box-shadow rounded-md">
+                        <img style="height: 27px;" src="./assets/images/icons/leaf.png" />
+                    </div>
+                    <div class="ml-5">
+                        <h class="font-weight-500 text-capitalize">EASY & SAFE</h>
+                        <p class="dark-gray text-capitalize line-height-38 pt-2 opacity-8 font-normal font-size-14">
+                            Platform is easy to use and we </br>
+                            take care for safety of your </br>
+                            data
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="single-pros w-31 mx-auto mt-5">
+                <div class="d-flex">
+                    <div style="width:70px; height:58px;"
+                        class="bg-white d-flex justify-content-center align-items-center box-shadow rounded-md">
+                        <img style="height: 27px;" src="./assets/images/icons/owner-second.png" />
+                    </div>
+                    <div class="ml-5">
+                        <h class="font-weight-500 text-capitalize">Communication With Owner</h>
+                        <p class="dark-gray text-capitalize line-height-38 pt-2 opacity-8 font-normal font-size-14">We
+                            are here to help you find your</br> next unforgettable</br> destination </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <!-- Find Travel Perfection Section End-->
-    <!-- Cards Section-->
-    <section class="homepage-cards container">
-      <div class="d-flex flex-column flex-lg-row flex-wrap">
-        <div
-          data-aos="zoom-in"
-          class="cursor-pointer cards-inner col-12 col-lg-4"
-        >
-          <div
-            class="cards-inner-wrapper d-flex flex-column justify-content-center align-items-center"
-          >
-            <div class="card-image-outer">
-              <img
-                class="card-image-inner"
-                src="./assets/images/star.png"
-                alt="star"
-              />
+    <!-- Pros Section End -->
+    <!-- Apartments -->
+    <section class="apartments container-main mx-auto pb-5">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-flex align-items-center">
+                        <div class="pr-4 w-35">
+                            <h class="color-blue font-weight-500 font-size-35 line-height-54">A Grand Modern Apartment
+                            </h>
+                            <p class="text-black font-weight-normal pt-4 font-size-14"><img style="height:18px"
+                                    class="mr-2" src="./assets/images/icons/location-pin.png"><span
+                                    class="opacity-6">Timber
+                                    Yard, Birmingham City Centre, B5</span>
+                            </p>
+                            <p class="text-black font-weight-600 pt-3"><span
+                                    class="color-tealish font-weight-700 font-size-18">80€ </span>/per night</p>
+                            <p class="text-black opacity-6 line-height-24 pt-2 pb-4 font-size-14">this fabulous two
+                                bedroom duplex
+                                apartment will be close to some of the best local haunts
+                                and venues the city has to offer.Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+                            <div style="background-color: #eff1f5;"
+                                class="facalities-icons-inner d-flex flex-wrap justify-content-between align-items-center py-3 px-4 rounded-md">
+                                <div class="single-facality">
+                                    <p class="font-weight-500 font-size-13 opacity-9">Bedrooms</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" fill="#40d0d3" xmlns="http://www.w3.org/2000/svg"
+                                                width="20" height="20" viewBox="0 0 24 24">
+                                                <defs></defs>
+                                                <path
+                                                    d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z"
+                                                    transform="translate(-1108 -593)"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-facality">
+                                    <p class="font-weight-500 font-size-13 opacity-9">Bathrooms</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" fill="#40d0d3"
+                                                width="20" height="20" viewBox="0 0 23.69 24">
+                                                <path
+                                                    d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z"
+                                                    transform="translate(-1196.31 -593)"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-facality">
+                                    <p class="font-weight-500 font-size-13 opacity-9">Guests</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" fill="#40d0d3"
+                                                width="20" height="20" viewBox="0 0 26.2 24">
+                                                <ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 1.5724 14.7053)"
+                                                    cx="18.5" cy="5.5" rx="5.5" ry="5.5"></ellipse>
+                                                <path
+                                                    d="M26.1 20.9l-1.1-5.3c-4-3.6-10.3-3.3-13.9 0.8 -1.6 1.8-2.5 4.1-2.5 6.5V24h14.6c1.5 0.1 2.8-1 2.9-2.5C26.2 21.3 26.2 21.1 26.1 20.9z">
+                                                </path>
+                                                <circle cx="5.5" cy="10.9" r="4.4"></circle>
+                                                <path
+                                                    d="M0 19.7l0 1.1c-0.3 1.5 0.7 2.8 2.2 3.1 0.2 0 0.4 0.1 0.7 0h3.7v-1.1c0-1.8 0.8-3.5 2-5 -0.9-0.3-2-0.5-3-0.5C3.4 17.5 1.5 18.3 0 19.7z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-facality">
+                                    <p class="font-weight-500 font-size-13 opacity-9">Parking</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" fill="#40d0d3" x="0px"
+                                                y="0px" width="20px" height="20px" viewBox="0 0 24 24"
+                                                enable-background="new 0 0 24 24" xml:space="preserve">
+                                                <g>
+                                                    <path
+                                                        d="M16.277,11H7.722c-0.513,0-0.941,0.315-1.104,0.757L5,16.25v6C5,22.662,5.351,23,5.778,23h0.778
+                                                    c0.427,0,0.778-0.338,0.778-0.75V21.5h9.333v0.75c0,0.412,0.35,0.75,0.777,0.75h0.778C18.649,23,19,22.662,19,22.25v-6
+                                                    l-1.618-4.493C17.228,11.315,16.791,11,16.277,11z M7.875,19.25c-0.623,0-1.125-0.502-1.125-1.125S7.252,17,7.875,17
+                                                    S9,17.502,9,18.125S8.498,19.25,7.875,19.25z M16.125,19.25c-0.623,0-1.125-0.502-1.125-1.125S15.502,17,16.125,17
+                                                    s1.125,0.502,1.125,1.125S16.748,19.25,16.125,19.25z M6.556,15.5l1.167-3.375h8.555l1.167,3.375H6.556z">
+                                                    </path>
+                                                    <path d="M23,0h-1h-2H4H2H1C0.448,0,0,0.448,0,1v1c0,0.552,0.448,1,1,1h1v21h2V3h16v21h2V3h1c0.553,0,1-0.448,1-1V1
+                                                    C24,0.448,23.553,0,23,0z"></path>
+                                                    <path
+                                                        d="M18,4H6C5.448,4,5,4.448,5,5s0.448,1,1,1h12c0.553,0,1-0.448,1-1S18.553,4,18,4z">
+                                                    </path>
+                                                    <path
+                                                        d="M18,7H6C5.448,7,5,7.448,5,8s0.448,1,1,1h12c0.553,0,1-0.448,1-1S18.553,7,18,7z">
+                                                    </path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pt-4">
+                                <button class="yellow-button text-white px-5 font-weight-normal"> More Details</button>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <img style="height: 158px; top: -10px;" class="position-absolute top-down-animation"
+                                src="./assets/images/dots.png" alt="dots" />
+                            <img class="carousel-animation d-block w-100 position-relative rounded-lg"
+                                src="./assets/images/selection-BedRoom.png" alt="First slide">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex align-items-center">
+                        <div class="pr-4 w-35">
+                            <h class="color-blue font-weight-500 font-size-35 line-height-54">A Grand Modern Apartment
+                            </h>
+                            <p class="text-black font-weight-normal pt-4 font-size-14"><img style="height:18px"
+                                    class="mr-2" src="./assets/images/icons/location-pin.png"><span
+                                    class="opacity-6">Timber
+                                    Yard, Birmingham City Centre, B5</span>
+                            </p>
+                            <p class="text-black font-weight-600 pt-3"><span
+                                    class="color-tealish font-weight-700 font-size-18">80€ </span>/per night</p>
+                            <p class="text-black opacity-6 line-height-24 pt-2 pb-4 font-size-14">this fabulous two
+                                bedroom duplex
+                                apartment will be close to some of the best local haunts
+                                and venues the city has to offer.Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+                            <div style="background-color: #eff1f5;"
+                                class="facalities-icons-inner d-flex flex-wrap justify-content-between align-items-center py-3 px-4 rounded-md">
+                                <div class="single-facality">
+                                    <p class="font-weight-500 font-size-13 opacity-9">Bedrooms</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" fill="#40d0d3" xmlns="http://www.w3.org/2000/svg"
+                                                width="20" height="20" viewBox="0 0 24 24">
+                                                <defs></defs>
+                                                <path
+                                                    d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z"
+                                                    transform="translate(-1108 -593)"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-facality">
+                                    <p class="font-weight-500 font-size-13 opacity-9">Bathrooms</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" fill="#40d0d3"
+                                                width="20" height="20" viewBox="0 0 23.69 24">
+                                                <path
+                                                    d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z"
+                                                    transform="translate(-1196.31 -593)"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-facality">
+                                    <p class="font-weight-500 font-size-13 opacity-9">Guests</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" fill="#40d0d3"
+                                                width="20" height="20" viewBox="0 0 26.2 24">
+                                                <ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 1.5724 14.7053)"
+                                                    cx="18.5" cy="5.5" rx="5.5" ry="5.5"></ellipse>
+                                                <path
+                                                    d="M26.1 20.9l-1.1-5.3c-4-3.6-10.3-3.3-13.9 0.8 -1.6 1.8-2.5 4.1-2.5 6.5V24h14.6c1.5 0.1 2.8-1 2.9-2.5C26.2 21.3 26.2 21.1 26.1 20.9z">
+                                                </path>
+                                                <circle cx="5.5" cy="10.9" r="4.4"></circle>
+                                                <path
+                                                    d="M0 19.7l0 1.1c-0.3 1.5 0.7 2.8 2.2 3.1 0.2 0 0.4 0.1 0.7 0h3.7v-1.1c0-1.8 0.8-3.5 2-5 -0.9-0.3-2-0.5-3-0.5C3.4 17.5 1.5 18.3 0 19.7z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-facality">
+                                    <p class="font-weight-500 font-size-13 opacity-9">Parking</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" fill="#40d0d3" x="0px"
+                                                y="0px" width="20px" height="20px" viewBox="0 0 24 24"
+                                                enable-background="new 0 0 24 24" xml:space="preserve">
+                                                <g>
+                                                    <path
+                                                        d="M16.277,11H7.722c-0.513,0-0.941,0.315-1.104,0.757L5,16.25v6C5,22.662,5.351,23,5.778,23h0.778
+                                                    c0.427,0,0.778-0.338,0.778-0.75V21.5h9.333v0.75c0,0.412,0.35,0.75,0.777,0.75h0.778C18.649,23,19,22.662,19,22.25v-6
+                                                    l-1.618-4.493C17.228,11.315,16.791,11,16.277,11z M7.875,19.25c-0.623,0-1.125-0.502-1.125-1.125S7.252,17,7.875,17
+                                                    S9,17.502,9,18.125S8.498,19.25,7.875,19.25z M16.125,19.25c-0.623,0-1.125-0.502-1.125-1.125S15.502,17,16.125,17
+                                                    s1.125,0.502,1.125,1.125S16.748,19.25,16.125,19.25z M6.556,15.5l1.167-3.375h8.555l1.167,3.375H6.556z">
+                                                    </path>
+                                                    <path d="M23,0h-1h-2H4H2H1C0.448,0,0,0.448,0,1v1c0,0.552,0.448,1,1,1h1v21h2V3h16v21h2V3h1c0.553,0,1-0.448,1-1V1
+                                                    C24,0.448,23.553,0,23,0z"></path>
+                                                    <path
+                                                        d="M18,4H6C5.448,4,5,4.448,5,5s0.448,1,1,1h12c0.553,0,1-0.448,1-1S18.553,4,18,4z">
+                                                    </path>
+                                                    <path
+                                                        d="M18,7H6C5.448,7,5,7.448,5,8s0.448,1,1,1h12c0.553,0,1-0.448,1-1S18.553,7,18,7z">
+                                                    </path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pt-4">
+                                <button class="yellow-button text-white px-5 font-weight-normal"> More Details</button>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <img style="height: 158px; top: -10px;" class="position-absolute top-down-animation"
+                                src="./assets/images/dots.png" alt="dots" />
+                            <img class="carousel-animation d-block w-100 position-relative rounded-lg"
+                                src="./assets/images/selection-BedRoom.png" alt="First slide">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex align-items-center">
+                        <div class="pr-4 w-35">
+                            <h class="color-blue font-weight-500 font-size-35 line-height-54">A Grand Modern Apartment
+                            </h>
+                            <p class="text-black font-weight-normal pt-4 font-size-14"><img style="height:18px"
+                                    class="mr-2" src="./assets/images/icons/location-pin.png"><span
+                                    class="opacity-6">Timber
+                                    Yard, Birmingham City Centre, B5</span>
+                            </p>
+                            <p class="text-black font-weight-600 pt-3"><span
+                                    class="color-tealish font-weight-700 font-size-18">80€ </span>/per night</p>
+                            <p class="text-black opacity-6 line-height-24 pt-2 pb-4 font-size-14">this fabulous two
+                                bedroom duplex
+                                apartment will be close to some of the best local haunts
+                                and venues the city has to offer.Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+                            <div style="background-color: #eff1f5;"
+                                class="facalities-icons-inner d-flex flex-wrap justify-content-between align-items-center py-3 px-4 rounded-md">
+                                <div class="single-facality">
+                                    <p class="font-weight-500 font-size-13 opacity-9">Bedrooms</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" fill="#40d0d3" xmlns="http://www.w3.org/2000/svg"
+                                                width="20" height="20" viewBox="0 0 24 24">
+                                                <defs></defs>
+                                                <path
+                                                    d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z"
+                                                    transform="translate(-1108 -593)"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-facality">
+                                    <p class="font-weight-500 font-size-13 opacity-9">Bathrooms</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" fill="#40d0d3"
+                                                width="20" height="20" viewBox="0 0 23.69 24">
+                                                <path
+                                                    d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z"
+                                                    transform="translate(-1196.31 -593)"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-facality">
+                                    <p class="font-weight-500 font-size-13 opacity-9">Guests</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" fill="#40d0d3"
+                                                width="20" height="20" viewBox="0 0 26.2 24">
+                                                <ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 1.5724 14.7053)"
+                                                    cx="18.5" cy="5.5" rx="5.5" ry="5.5"></ellipse>
+                                                <path
+                                                    d="M26.1 20.9l-1.1-5.3c-4-3.6-10.3-3.3-13.9 0.8 -1.6 1.8-2.5 4.1-2.5 6.5V24h14.6c1.5 0.1 2.8-1 2.9-2.5C26.2 21.3 26.2 21.1 26.1 20.9z">
+                                                </path>
+                                                <circle cx="5.5" cy="10.9" r="4.4"></circle>
+                                                <path
+                                                    d="M0 19.7l0 1.1c-0.3 1.5 0.7 2.8 2.2 3.1 0.2 0 0.4 0.1 0.7 0h3.7v-1.1c0-1.8 0.8-3.5 2-5 -0.9-0.3-2-0.5-3-0.5C3.4 17.5 1.5 18.3 0 19.7z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-facality">
+                                    <p class="font-weight-500 font-size-13 opacity-9">Parking</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" fill="#40d0d3" x="0px"
+                                                y="0px" width="20px" height="20px" viewBox="0 0 24 24"
+                                                enable-background="new 0 0 24 24" xml:space="preserve">
+                                                <g>
+                                                    <path
+                                                        d="M16.277,11H7.722c-0.513,0-0.941,0.315-1.104,0.757L5,16.25v6C5,22.662,5.351,23,5.778,23h0.778
+                                                    c0.427,0,0.778-0.338,0.778-0.75V21.5h9.333v0.75c0,0.412,0.35,0.75,0.777,0.75h0.778C18.649,23,19,22.662,19,22.25v-6
+                                                    l-1.618-4.493C17.228,11.315,16.791,11,16.277,11z M7.875,19.25c-0.623,0-1.125-0.502-1.125-1.125S7.252,17,7.875,17
+                                                    S9,17.502,9,18.125S8.498,19.25,7.875,19.25z M16.125,19.25c-0.623,0-1.125-0.502-1.125-1.125S15.502,17,16.125,17
+                                                    s1.125,0.502,1.125,1.125S16.748,19.25,16.125,19.25z M6.556,15.5l1.167-3.375h8.555l1.167,3.375H6.556z">
+                                                    </path>
+                                                    <path d="M23,0h-1h-2H4H2H1C0.448,0,0,0.448,0,1v1c0,0.552,0.448,1,1,1h1v21h2V3h16v21h2V3h1c0.553,0,1-0.448,1-1V1
+                                                    C24,0.448,23.553,0,23,0z"></path>
+                                                    <path
+                                                        d="M18,4H6C5.448,4,5,4.448,5,5s0.448,1,1,1h12c0.553,0,1-0.448,1-1S18.553,4,18,4z">
+                                                    </path>
+                                                    <path
+                                                        d="M18,7H6C5.448,7,5,7.448,5,8s0.448,1,1,1h12c0.553,0,1-0.448,1-1S18.553,7,18,7z">
+                                                    </path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pt-4">
+                                <button class="yellow-button text-white px-5 font-weight-normal"> More Details</button>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <img style="height: 158px; top: -10px;" class="position-absolute top-down-animation"
+                                src="./assets/images/dots.png" alt="dots" />
+                            <img class="carousel-animation d-block w-100 position-relative rounded-lg"
+                                src="./assets/images/selection-BedRoom.png" alt="First slide">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p class="card-heading">NO COMMISSIONS</p>
-            <p class="card-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doi
-              eiusmod temp
-            </p>
-          </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
-        <div
-          data-aos="zoom-in"
-          class="cursor-pointer cards-inner col-12 col-lg-4"
-        >
-          <div
-            class="cards-inner-wrapper d-flex flex-column justify-content-center align-items-center"
-          >
-            <div class="card-image-outer-yellow">
-              <img
-                class="card-image-inner"
-                src="./assets/images/yellow-star.png"
-                alt="star"
-              />
-            </div>
-            <p class="card-heading">+20.000 UNITS</p>
-            <p class="card-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doi
-              eiusmod temp
-            </p>
-          </div>
-        </div>
-        <div
-          data-aos="zoom-in"
-          class="cursor-pointer cards-inner col-12 col-lg-4"
-        >
-          <div
-            class="cards-inner-wrapper d-flex flex-column justify-content-center align-items-center"
-          >
-            <div class="card-image-outer">
-              <img
-                class="card-image-inner"
-                src="./assets/images/star.png"
-                alt="star"
-              />
-            </div>
-            <p class="card-heading">UP TO 40% OFF</p>
-            <p class="card-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doi
-              eiusmod temp
-            </p>
-          </div>
-        </div>
-        <div
-          data-aos="zoom-in"
-          class="cursor-pointer cards-inner col-12 col-lg-4"
-        >
-          <div
-            class="cards-inner-wrapper d-flex flex-column justify-content-center align-items-center"
-          >
-            <div class="card-image-outer">
-              <img
-                class="card-image-inner"
-                src="./assets/images/star.png"
-                alt="star"
-              />
-            </div>
-            <p class="card-heading">COMMUNICATION WITH OWNERS</p>
-            <p class="card-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doi
-              eiusmod temp
-            </p>
-          </div>
-        </div>
-        <div
-          data-aos="zoom-in"
-          class="cursor-pointer cards-inner col-12 col-lg-4"
-        >
-          <div
-            class="cards-inner-wrapper d-flex flex-column justify-content-center align-items-center"
-          >
-            <div class="card-image-outer-yellow">
-              <img
-                class="card-image-inner"
-                src="./assets/images/yellow-star.png"
-                alt="star"
-              />
-            </div>
-            <p class="card-heading">EASY & SAFE</p>
-            <p class="card-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doi
-              eiusmod temp
-            </p>
-          </div>
-        </div>
-        <div
-          data-aos="zoom-in"
-          class="cursor-pointer cards-inner col-12 col-lg-4"
-        >
-          <div
-            class="cards-inner-wrapper d-flex flex-column justify-content-center align-items-center"
-          >
-            <div class="card-image-outer">
-              <img
-                class="card-image-inner"
-                src="./assets/images/star.png"
-                alt="star"
-              />
-            </div>
-            <p class="card-heading">TRAVEL VIRTUAL ASSISTENT</p>
-            <p class="card-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doi
-              eiusmod temp
-            </p>
-          </div>
-        </div>
-      </div>
     </section>
-    <!-- Cards Section End-->
-    <!-- New Offer Section -->
-    <section class="new-offers container">
-      <div class="new-offer-text">
-        <p class="new-offer-main-heading">New Offers</p>
-        <p class="new-offer-description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doi
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco lab.
-        </p>
-      </div>
-      <div
-        class="new-offer-card-section d-flex flex-column flex-lg-row justify-content-between flex-wrap"
-      >
-        <div data-aos="zoom-out" class="new-offers-card cursor-pointer">
-          <div class="new-offers-card-inner">
-            <div class="new-offer-image">
-              <div class="new-offer-image-heart cursor-pointer">
-                <img src="./assets/images/icons/heart.png" alt="heart" />
-              </div>
-            </div>
-            <div class="new-offer-card-text bg-white px-4 pb-4">
-              <p class="new-offer-card-heading pt-3">
-                Holiday House | Big Terrace and BBQ
-              </p>
-              <p class="new-offer-card-location-description">
-                <img
-                  class="mr-2"
-                  src="./assets/images/icons/location-pin.png"
-                  alt="location-icon"
-                />
-                217, Filovci, Moravske Toplice, 92...
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div>
-                  <p class="price">
-                    €145 <span class="per-night">/night</span>
-                  </p>
-                </div>
-                <div>
-                  <p>
-                    Compare to others
-                    <span
-                      ><img
-                        class="cursor-pointer"
-                        src="./assets/images/icons/right-arrow.png"
-                        alt="right-arrow"
-                    /></span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+    <!-- Apartments Ends -->
+    <!-- Hot Deals -->
+    <section class="hot-deals container-main pt-5 container-main mx-auto">
+        <div class="position-relative d-flex flex-column align-items-center pt-2">
+            <img style="height: 60px;" src="./assets/images/icons/hot-deal.gif" alt="hot-deail" />
+            <p class="color-red font-weight-bold font-size-25 text-center">Hot Deals</p>
+            <p class="color-gray pt-3 opacity-8">Never Miss The Best opportunity</p>
         </div>
-        <div data-aos="zoom-out" class="new-offers-card cursor-pointer">
-          <div class="new-offers-card-inner">
-            <div class="new-offer-image">
-              <div class="new-offer-image-heart cursor-pointer">
-                <img src="./assets/images/icons/heart.png" alt="heart" />
-              </div>
-            </div>
-            <div class="new-offer-card-text bg-white px-4 pb-4">
-              <p class="new-offer-card-heading pt-3">
-                Holiday House | Big Terrace and BBQ
-              </p>
-              <p class="new-offer-card-location-description">
-                <img
-                  class="mr-2"
-                  src="./assets/images/icons/location-pin.png"
-                  alt="location-icon"
-                />
-                217, Filovci, Moravske Toplice, 92...
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div>
-                  <p class="price">
-                    €145 <span class="per-night">/night</span>
-                  </p>
+        <div class="d-flex justify-content-between mt-4">
+            <div class="hot-deals-left w-57">
+                <div class="mt-4">
+                    <div
+                        class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg box-shadow">
+                        <div class="single-premium-card position-relative">
+                            <div
+                                class="tealish-badge position-absolute background-color-tealish text-white font-size-11">
+                                HOT DEALS
+                            </div>
+                            <div style="bottom: 0; right: 0;" class="position-absolute">
+                                <img src="./assets/images/icons/heart.png" alt="heart" />
+                                <img style="height:33px;" src="./assets/images/icons/swap_horiz_white.png"
+                                    alt="arrow" />
+                            </div>
+                        </div>
+                        <div class="w-48 listing-premium-center-card px-3 py-2">
+                            <p class="pb-4 font-weight-600 font-size-12 opacity-9 pt-4 pt-lg-0">A Grand Modern Apartment
+                                <img class="mr-2" height="12px" src="./assets/images/icons/greenVerified.png"
+                                    alt="verified" /><span class="color-tealish font-size-11 font-weight-500">Verified
+                                    Host</span>
+                            </p>
+                            <p class="dark-gray font-size-11">Here’s an unbeatable opportunity to get into
+                                the market at a sparkling clean price. Set…</p>
+                            <div class="facalities-icons-inner d-flex flex-wrap align-items-center pt-2">
+                                <div class="single-facality mr-3">
+                                    <p class="font-weight-500 font-size-11 opacity-9">Bedrooms</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" fill="#40d0d3" xmlns="http://www.w3.org/2000/svg"
+                                                width="18" height="18" viewBox="0 0 24 24">
+                                                <defs></defs>
+                                                <path
+                                                    d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z"
+                                                    transform="translate(-1108 -593)"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-facality mr-3">
+                                    <p class="font-weight-500 font-size-11 opacity-9">Bathrooms</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" fill="#40d0d3"
+                                                width="18" height="18" viewBox="0 0 23.69 24">
+                                                <path
+                                                    d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z"
+                                                    transform="translate(-1196.31 -593)"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-facality mr-3">
+                                    <p class="font-weight-500 font-size-11 opacity-9">Guests</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" fill="#40d0d3"
+                                                width="18" height="18" viewBox="0 0 26.2 24">
+                                                <ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 1.5724 14.7053)"
+                                                    cx="18.5" cy="5.5" rx="5.5" ry="5.5"></ellipse>
+                                                <path
+                                                    d="M26.1 20.9l-1.1-5.3c-4-3.6-10.3-3.3-13.9 0.8 -1.6 1.8-2.5 4.1-2.5 6.5V24h14.6c1.5 0.1 2.8-1 2.9-2.5C26.2 21.3 26.2 21.1 26.1 20.9z">
+                                                </path>
+                                                <circle cx="5.5" cy="10.9" r="4.4"></circle>
+                                                <path
+                                                    d="M0 19.7l0 1.1c-0.3 1.5 0.7 2.8 2.2 3.1 0.2 0 0.4 0.1 0.7 0h3.7v-1.1c0-1.8 0.8-3.5 2-5 -0.9-0.3-2-0.5-3-0.5C3.4 17.5 1.5 18.3 0 19.7z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="w-29 border-left listing-card-inner-third mr-0 mr-lg-3 px-3 px-lg-0 py-lg-0 py-3 d-flex flex-lg-column flex-row-reverse justify-content-between">
+                            <p class="text-right pb-1 color-tealish font-size-14 font-weight-500 text-capitalize">€ 149
+                                per night</p>
+                            <div class="d-flex align-items-center justify-content-end">
+                                <div class="mr-3 d-flex flex-column align-items-end">
+                                    <p class="font-weight-600 font-size-11">Very Good</p>
+                                    <p class="font-size-11 dark-gray opacity-9">4,347 reviews</p>
+                                </div>
+                                <div class="position-relative d-flex justify-content-center align-items-center">
+                                    <img style="height: 29px" src="./assets/images/icons/Rectangle.png"
+                                        alt="rectangle" />
+                                    <p
+                                        class="property-image-slider-text-rectangle position-absolute text-white font-size-13">
+                                        7.7
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="color-tealish text-lg-right text-left font-size-11 py-1">Location 8.1</p>
+                                <p class="text-right font-size-14"><span
+                                        class="font-weight-700 font-size-21">149€</span>/per night</p>
+                                <p class="text-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
+                            </div>
+                            <div class="text-right d-none d-lg-block">
+                                <button class="yellow-button font-size-11">More Details</button>
+                            </div>
+                        </div>
+                        <div class="text-right d-block d-lg-none w-75 text-center pb-4">
+                            <button class="yellow-button w-100">More Details</button>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                  <p>
-                    Compare to others
-                    <span
-                      ><img
-                        class="cursor-pointer"
-                        src="./assets/images/icons/right-arrow.png"
-                        alt="right-arrow"
-                    /></span>
-                  </p>
+                <div class="mt-4">
+                    <div
+                        class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg box-shadow">
+                        <div class="single-premium-card position-relative">
+                            <div
+                                class="tealish-badge position-absolute background-color-tealish text-white font-size-11">
+                                HOT
+                            </div>
+                            <div style="bottom: 0; right: 0;" class="position-absolute">
+                                <img src="./assets/images/icons/heart.png" alt="heart" />
+                                <img style="height:33px" src="./assets/images/icons/swap_horiz_white.png" alt="arrow" />
+                            </div>
+                        </div>
+                        <div class="w-48 listing-premium-center-card px-3 py-2">
+                            <p class="pb-4 font-weight-600 font-size-12 opacity-9 pt-4 pt-lg-0">A Grand Modern Apartment
+                                <img class="mr-2" height="12px" src="./assets/images/icons/greenVerified.png"
+                                    alt="verified" /><span class="color-tealish font-size-11 font-weight-500">Verified
+                                    Host</span>
+                            </p>
+                            <p class="dark-gray font-size-11">Here’s an unbeatable opportunity to get into
+                                the market at a sparkling clean price. Set…</p>
+                            <div class="facalities-icons-inner d-flex flex-wrap align-items-center pt-4">
+                                <div class="single-facality mr-3">
+                                    <p class="font-weight-500 font-size-11 opacity-9">Bedrooms</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" fill="#40d0d3" xmlns="http://www.w3.org/2000/svg"
+                                                width="18" height="18" viewBox="0 0 24 24">
+                                                <defs></defs>
+                                                <path
+                                                    d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z"
+                                                    transform="translate(-1108 -593)"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-facality mr-3">
+                                    <p class="font-weight-500 font-size-11 opacity-9">Bathrooms</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" fill="#40d0d3"
+                                                width="18" height="18" viewBox="0 0 23.69 24">
+                                                <path
+                                                    d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z"
+                                                    transform="translate(-1196.31 -593)"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-facality mr-3">
+                                    <p class="font-weight-500 font-size-11 opacity-9">Guests</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" fill="#40d0d3"
+                                                width="18" height="18" viewBox="0 0 26.2 24">
+                                                <ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 1.5724 14.7053)"
+                                                    cx="18.5" cy="5.5" rx="5.5" ry="5.5"></ellipse>
+                                                <path
+                                                    d="M26.1 20.9l-1.1-5.3c-4-3.6-10.3-3.3-13.9 0.8 -1.6 1.8-2.5 4.1-2.5 6.5V24h14.6c1.5 0.1 2.8-1 2.9-2.5C26.2 21.3 26.2 21.1 26.1 20.9z">
+                                                </path>
+                                                <circle cx="5.5" cy="10.9" r="4.4"></circle>
+                                                <path
+                                                    d="M0 19.7l0 1.1c-0.3 1.5 0.7 2.8 2.2 3.1 0.2 0 0.4 0.1 0.7 0h3.7v-1.1c0-1.8 0.8-3.5 2-5 -0.9-0.3-2-0.5-3-0.5C3.4 17.5 1.5 18.3 0 19.7z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="w-29 border-left listing-card-inner-third mr-0 mr-lg-3 px-3 px-lg-0 py-lg-0 py-3 d-flex flex-lg-column flex-row-reverse justify-content-between">
+                            <p class="text-right pb-1 color-tealish font-size-14 font-weight-500 text-capitalize">€ 149
+                                per night</p>
+                            <div class="d-flex align-items-center justify-content-end">
+                                <div class="mr-3 d-flex flex-column align-items-end">
+                                    <p class="font-weight-600 font-size-11">Very Good</p>
+                                    <p class="font-size-11 dark-gray opacity-9">4,347 reviews</p>
+                                </div>
+                                <div class="position-relative d-flex justify-content-center align-items-center">
+                                    <img style="height: 29px" src="./assets/images/icons/Rectangle.png"
+                                        alt="rectangle" />
+                                    <p
+                                        class="property-image-slider-text-rectangle position-absolute text-white font-size-13">
+                                        7.7
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="color-tealish text-lg-right text-left font-size-11 py-1">Location 8.1</p>
+                                <p class="text-right font-size-14"><span
+                                        class="font-weight-700 font-size-21">149€</span>/per night</p>
+                                <p class="text-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
+                            </div>
+                            <div class="text-right d-none d-lg-block">
+                                <button class="yellow-button font-size-11">More Details</button>
+                            </div>
+                        </div>
+                        <div class="text-right d-block d-lg-none w-75 text-center pb-4">
+                            <button class="yellow-button w-100">More Details</button>
+                        </div>
+                    </div>
                 </div>
-              </div>
+                <div class="mt-4">
+                    <div
+                        class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg box-shadow">
+                        <div class="single-premium-card position-relative">
+                            <div
+                                class="tealish-badge position-absolute background-color-tealish text-white font-size-11">
+                                HOT
+                            </div>
+                            <div style="bottom: 0; right: 0;" class="position-absolute">
+                                <img src="./assets/images/icons/heart.png" alt="heart" />
+                                <img style="height:33px" src="./assets/images/icons/swap_horiz_white.png" alt="arrow" />
+                            </div>
+                        </div>
+                        <div class="w-48 listing-premium-center-card px-3 py-2">
+                            <p class="pb-4 font-weight-600 font-size-12 opacity-9 pt-4 pt-lg-0">A Grand Modern Apartment
+                                <img class="mr-2" height="12px" src="./assets/images/icons/greenVerified.png"
+                                    alt="verified" /><span class="color-tealish font-size-11 font-weight-500">Verified
+                                    Host</span>
+                            </p>
+                            <p class="dark-gray font-size-11">Here’s an unbeatable opportunity to get into
+                                the market at a sparkling clean price. Set…</p>
+                            <div class="facalities-icons-inner d-flex flex-wrap align-items-center pt-4">
+                                <div class="single-facality mr-3">
+                                    <p class="font-weight-500 font-size-11 opacity-9">Bedrooms</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" fill="#40d0d3" xmlns="http://www.w3.org/2000/svg"
+                                                width="18" height="18" viewBox="0 0 24 24">
+                                                <defs></defs>
+                                                <path
+                                                    d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z"
+                                                    transform="translate(-1108 -593)"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-facality mr-3">
+                                    <p class="font-weight-500 font-size-11 opacity-9">Bathrooms</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" fill="#40d0d3"
+                                                width="18" height="18" viewBox="0 0 23.69 24">
+                                                <path
+                                                    d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z"
+                                                    transform="translate(-1196.31 -593)"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-facality mr-3">
+                                    <p class="font-weight-500 font-size-11 opacity-9">Guests</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" fill="#40d0d3"
+                                                width="18" height="18" viewBox="0 0 26.2 24">
+                                                <ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 1.5724 14.7053)"
+                                                    cx="18.5" cy="5.5" rx="5.5" ry="5.5"></ellipse>
+                                                <path
+                                                    d="M26.1 20.9l-1.1-5.3c-4-3.6-10.3-3.3-13.9 0.8 -1.6 1.8-2.5 4.1-2.5 6.5V24h14.6c1.5 0.1 2.8-1 2.9-2.5C26.2 21.3 26.2 21.1 26.1 20.9z">
+                                                </path>
+                                                <circle cx="5.5" cy="10.9" r="4.4"></circle>
+                                                <path
+                                                    d="M0 19.7l0 1.1c-0.3 1.5 0.7 2.8 2.2 3.1 0.2 0 0.4 0.1 0.7 0h3.7v-1.1c0-1.8 0.8-3.5 2-5 -0.9-0.3-2-0.5-3-0.5C3.4 17.5 1.5 18.3 0 19.7z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="w-29 border-left listing-card-inner-third mr-0 mr-lg-3 px-3 px-lg-0 py-lg-0 py-3 d-flex flex-lg-column flex-row-reverse justify-content-between">
+                            <p class="text-right pb-1 color-tealish font-size-14 font-weight-500 text-capitalize">€ 149
+                                per night</p>
+                            <div class="d-flex align-items-center justify-content-end">
+                                <div class="mr-3 d-flex flex-column align-items-end">
+                                    <p class="font-weight-600 font-size-11">Very Good</p>
+                                    <p class="font-size-11 dark-gray opacity-9">4,347 reviews</p>
+                                </div>
+                                <div class="position-relative d-flex justify-content-center align-items-center">
+                                    <img style="height: 29px" src="./assets/images/icons/Rectangle.png"
+                                        alt="rectangle" />
+                                    <p
+                                        class="property-image-slider-text-rectangle position-absolute text-white font-size-13">
+                                        7.7
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="color-tealish text-lg-right text-left font-size-11 py-1">Location 8.1</p>
+                                <p class="text-right font-size-14"><span
+                                        class="font-weight-700 font-size-21">149€</span>/per night</p>
+                                <p class="text-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
+                            </div>
+                            <div class="text-right d-none d-lg-block">
+                                <button class="yellow-button font-size-11">More Details</button>
+                            </div>
+                        </div>
+                        <div class="text-right d-block d-lg-none w-75 text-center pb-4">
+                            <button class="yellow-button w-100">More Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <div
+                        class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg box-shadow">
+                        <div class="single-premium-card position-relative">
+                            <div
+                                class="tealish-badge position-absolute background-color-tealish text-white font-size-11">
+                                HOT
+                            </div>
+                            <div style="bottom: 0; right: 0;" class="position-absolute">
+                                <img src="./assets/images/icons/heart.png" alt="heart" />
+                                <img style="height:33px" src="./assets/images/icons/swap_horiz_white.png" alt="arrow" />
+                            </div>
+                        </div>
+                        <div class="w-48 listing-premium-center-card px-3 py-2">
+                            <p class="pb-4 font-weight-600 font-size-12 opacity-9 pt-4 pt-lg-0">A Grand Modern Apartment
+                                <img class="mr-2" height="12px" src="./assets/images/icons/greenVerified.png"
+                                    alt="verified" /><span class="color-tealish font-size-11 font-weight-500">Verified
+                                    Host</span>
+                            </p>
+                            <p class="dark-gray font-size-11">Here’s an unbeatable opportunity to get into
+                                the market at a sparkling clean price. Set…</p>
+                            <div class="facalities-icons-inner d-flex flex-wrap align-items-center pt-4">
+                                <div class="single-facality mr-3">
+                                    <p class="font-weight-500 font-size-11 opacity-9">Bedrooms</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" fill="#40d0d3" xmlns="http://www.w3.org/2000/svg"
+                                                width="18" height="18" viewBox="0 0 24 24">
+                                                <defs></defs>
+                                                <path
+                                                    d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z"
+                                                    transform="translate(-1108 -593)"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-facality mr-3">
+                                    <p class="font-weight-500 font-size-11 opacity-9">Bathrooms</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" fill="#40d0d3"
+                                                width="18" height="18" viewBox="0 0 23.69 24">
+                                                <path
+                                                    d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z"
+                                                    transform="translate(-1196.31 -593)"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-facality mr-3">
+                                    <p class="font-weight-500 font-size-11 opacity-9">Guests</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" fill="#40d0d3"
+                                                width="18" height="18" viewBox="0 0 26.2 24">
+                                                <ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 1.5724 14.7053)"
+                                                    cx="18.5" cy="5.5" rx="5.5" ry="5.5"></ellipse>
+                                                <path
+                                                    d="M26.1 20.9l-1.1-5.3c-4-3.6-10.3-3.3-13.9 0.8 -1.6 1.8-2.5 4.1-2.5 6.5V24h14.6c1.5 0.1 2.8-1 2.9-2.5C26.2 21.3 26.2 21.1 26.1 20.9z">
+                                                </path>
+                                                <circle cx="5.5" cy="10.9" r="4.4"></circle>
+                                                <path
+                                                    d="M0 19.7l0 1.1c-0.3 1.5 0.7 2.8 2.2 3.1 0.2 0 0.4 0.1 0.7 0h3.7v-1.1c0-1.8 0.8-3.5 2-5 -0.9-0.3-2-0.5-3-0.5C3.4 17.5 1.5 18.3 0 19.7z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="w-29 border-left listing-card-inner-third mr-0 mr-lg-3 px-3 px-lg-0 py-lg-0 py-3 d-flex flex-lg-column flex-row-reverse justify-content-between">
+                            <p class="text-right pb-1 color-tealish font-size-14 font-weight-500 text-capitalize">€ 149
+                                per night</p>
+                            <div class="d-flex align-items-center justify-content-end">
+                                <div class="mr-3 d-flex flex-column align-items-end">
+                                    <p class="font-weight-600 font-size-11">Very Good</p>
+                                    <p class="font-size-11 dark-gray opacity-9">4,347 reviews</p>
+                                </div>
+                                <div class="position-relative d-flex justify-content-center align-items-center">
+                                    <img style="height: 29px" src="./assets/images/icons/Rectangle.png"
+                                        alt="rectangle" />
+                                    <p
+                                        class="property-image-slider-text-rectangle position-absolute text-white font-size-13">
+                                        7.7
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="color-tealish text-lg-right text-left font-size-11 py-1">Location 8.1</p>
+                                <p class="text-right font-size-14"><span
+                                        class="font-weight-700 font-size-21">149€</span>/per night</p>
+                                <p class="text-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
+                            </div>
+                            <div class="text-right d-none d-lg-block">
+                                <button class="yellow-button font-size-11">More Details</button>
+                            </div>
+                        </div>
+                        <div class="text-right d-block d-lg-none w-75 text-center pb-4">
+                            <button class="yellow-button w-100">More Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <div
+                        class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg box-shadow">
+                        <div class="single-premium-card position-relative">
+                            <div
+                                class="tealish-badge position-absolute background-color-tealish text-white font-size-11">
+                                HOT
+                            </div>
+                            <div style="bottom: 0; right: 0;" class="position-absolute">
+                                <img src="./assets/images/icons/heart.png" alt="heart" />
+                                <img style="height:33px" src="./assets/images/icons/swap_horiz_white.png" alt="arrow" />
+                            </div>
+                        </div>
+                        <div class="w-48 listing-premium-center-card px-3 py-2">
+                            <p class="pb-4 font-weight-600 font-size-12 opacity-9 pt-4 pt-lg-0">A Grand Modern Apartment
+                                <img class="mr-2" height="12px" src="./assets/images/icons/greenVerified.png"
+                                    alt="verified" /><span class="color-tealish font-size-11 font-weight-500">Verified
+                                    Host</span>
+                            </p>
+                            <p class="dark-gray font-size-11">Here’s an unbeatable opportunity to get into
+                                the market at a sparkling clean price. Set…</p>
+                            <div class="facalities-icons-inner d-flex flex-wrap align-items-center pt-4">
+                                <div class="single-facality mr-3">
+                                    <p class="font-weight-500 font-size-11 opacity-9">Bedrooms</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" fill="#40d0d3" xmlns="http://www.w3.org/2000/svg"
+                                                width="18" height="18" viewBox="0 0 24 24">
+                                                <defs></defs>
+                                                <path
+                                                    d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z"
+                                                    transform="translate(-1108 -593)"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-facality mr-3">
+                                    <p class="font-weight-500 font-size-11 opacity-9">Bathrooms</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" fill="#40d0d3"
+                                                width="18" height="18" viewBox="0 0 23.69 24">
+                                                <path
+                                                    d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z"
+                                                    transform="translate(-1196.31 -593)"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-facality mr-3">
+                                    <p class="font-weight-500 font-size-11 opacity-9">Guests</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" fill="#40d0d3"
+                                                width="18" height="18" viewBox="0 0 26.2 24">
+                                                <ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 1.5724 14.7053)"
+                                                    cx="18.5" cy="5.5" rx="5.5" ry="5.5"></ellipse>
+                                                <path
+                                                    d="M26.1 20.9l-1.1-5.3c-4-3.6-10.3-3.3-13.9 0.8 -1.6 1.8-2.5 4.1-2.5 6.5V24h14.6c1.5 0.1 2.8-1 2.9-2.5C26.2 21.3 26.2 21.1 26.1 20.9z">
+                                                </path>
+                                                <circle cx="5.5" cy="10.9" r="4.4"></circle>
+                                                <path
+                                                    d="M0 19.7l0 1.1c-0.3 1.5 0.7 2.8 2.2 3.1 0.2 0 0.4 0.1 0.7 0h3.7v-1.1c0-1.8 0.8-3.5 2-5 -0.9-0.3-2-0.5-3-0.5C3.4 17.5 1.5 18.3 0 19.7z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="w-29 border-left listing-card-inner-third mr-0 mr-lg-3 px-3 px-lg-0 py-lg-0 py-3 d-flex flex-lg-column flex-row-reverse justify-content-between">
+                            <p class="text-right pb-1 color-tealish font-size-14 font-weight-500 text-capitalize">€ 149
+                                per night</p>
+                            <div class="d-flex align-items-center justify-content-end">
+                                <div class="mr-3 d-flex flex-column align-items-end">
+                                    <p class="font-weight-600 font-size-11">Very Good</p>
+                                    <p class="font-size-11 dark-gray opacity-9">4,347 reviews</p>
+                                </div>
+                                <div class="position-relative d-flex justify-content-center align-items-center">
+                                    <img style="height: 29px" src="./assets/images/icons/Rectangle.png"
+                                        alt="rectangle" />
+                                    <p
+                                        class="property-image-slider-text-rectangle position-absolute text-white font-size-13">
+                                        7.7
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="color-tealish text-lg-right text-left font-size-11 py-1">Location 8.1</p>
+                                <p class="text-right font-size-14"><span
+                                        class="font-weight-700 font-size-21">149€</span>/per night</p>
+                                <p class="text-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
+                            </div>
+                            <div class="text-right d-none d-lg-block">
+                                <button class="yellow-button font-size-11">More Details</button>
+                            </div>
+                        </div>
+                        <div class="text-right d-block d-lg-none w-75 text-center pb-4">
+                            <button class="yellow-button w-100">More Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <div
+                        class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg box-shadow">
+                        <div class="single-premium-card position-relative">
+                            <div
+                                class="tealish-badge position-absolute background-color-tealish text-white font-size-11">
+                                HOT
+                            </div>
+                            <div style="bottom: 0; right: 0;" class="position-absolute">
+                                <img src="./assets/images/icons/heart.png" alt="heart" />
+                                <img style="height:33px" src="./assets/images/icons/swap_horiz_white.png" alt="arrow" />
+                            </div>
+                        </div>
+                        <div class="w-48 listing-premium-center-card px-3 py-2">
+                            <p class="pb-4 font-weight-600 font-size-12 opacity-9 pt-4 pt-lg-0">A Grand Modern Apartment
+                                <img class="mr-2" height="12px" src="./assets/images/icons/greenVerified.png"
+                                    alt="verified" /><span class="color-tealish font-size-11 font-weight-500">Verified
+                                    Host</span>
+                            </p>
+                            <p class="dark-gray font-size-11">Here’s an unbeatable opportunity to get into
+                                the market at a sparkling clean price. Set…</p>
+                            <div class="facalities-icons-inner d-flex flex-wrap align-items-center pt-4">
+                                <div class="single-facality mr-3">
+                                    <p class="font-weight-500 font-size-11 opacity-9">Bedrooms</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" fill="#40d0d3" xmlns="http://www.w3.org/2000/svg"
+                                                width="18" height="18" viewBox="0 0 24 24">
+                                                <defs></defs>
+                                                <path
+                                                    d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z"
+                                                    transform="translate(-1108 -593)"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-facality mr-3">
+                                    <p class="font-weight-500 font-size-11 opacity-9">Bathrooms</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" fill="#40d0d3"
+                                                width="18" height="18" viewBox="0 0 23.69 24">
+                                                <path
+                                                    d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z"
+                                                    transform="translate(-1196.31 -593)"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-facality mr-3">
+                                    <p class="font-weight-500 font-size-11 opacity-9">Guests</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" fill="#40d0d3"
+                                                width="18" height="18" viewBox="0 0 26.2 24">
+                                                <ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 1.5724 14.7053)"
+                                                    cx="18.5" cy="5.5" rx="5.5" ry="5.5"></ellipse>
+                                                <path
+                                                    d="M26.1 20.9l-1.1-5.3c-4-3.6-10.3-3.3-13.9 0.8 -1.6 1.8-2.5 4.1-2.5 6.5V24h14.6c1.5 0.1 2.8-1 2.9-2.5C26.2 21.3 26.2 21.1 26.1 20.9z">
+                                                </path>
+                                                <circle cx="5.5" cy="10.9" r="4.4"></circle>
+                                                <path
+                                                    d="M0 19.7l0 1.1c-0.3 1.5 0.7 2.8 2.2 3.1 0.2 0 0.4 0.1 0.7 0h3.7v-1.1c0-1.8 0.8-3.5 2-5 -0.9-0.3-2-0.5-3-0.5C3.4 17.5 1.5 18.3 0 19.7z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="w-29 border-left listing-card-inner-third mr-0 mr-lg-3 px-3 px-lg-0 py-lg-0 py-3 d-flex flex-lg-column flex-row-reverse justify-content-between">
+                            <p class="text-right pb-1 color-tealish font-size-14 font-weight-500 text-capitalize">€ 149
+                                per night</p>
+                            <div class="d-flex align-items-center justify-content-end">
+                                <div class="mr-3 d-flex flex-column align-items-end">
+                                    <p class="font-weight-600 font-size-11">Very Good</p>
+                                    <p class="font-size-11 dark-gray opacity-9">4,347 reviews</p>
+                                </div>
+                                <div class="position-relative d-flex justify-content-center align-items-center">
+                                    <img style="height: 29px" src="./assets/images/icons/Rectangle.png"
+                                        alt="rectangle" />
+                                    <p
+                                        class="property-image-slider-text-rectangle position-absolute text-white font-size-13">
+                                        7.7
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="color-tealish text-lg-right text-left font-size-11 py-1">Location 8.1</p>
+                                <p class="text-right font-size-14"><span
+                                        class="font-weight-700 font-size-21">149€</span>/per night</p>
+                                <p class="text-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
+                            </div>
+                            <div class="text-right d-none d-lg-block">
+                                <button class="yellow-button font-size-11">More Details</button>
+                            </div>
+                        </div>
+                        <div class="text-right d-block d-lg-none w-75 text-center pb-4">
+                            <button class="yellow-button w-100">More Details</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+            <div class="hot-deals-right w-39">
+                <div class="something-for-you-card bg-white rounded-lg mt-4 box-shadow">
+                    <div class="something-for-you-image position-relative">
+                        <div class="tealish-badge position-absolute background-color-tealish text-white font-size-11">
+                            Top Value
+                        </div>
+                        <div style="bottom: 6px; right: 5px;" class="position-absolute">
+                            <img src="./assets/images/icons/heart.png" alt="heart" />
+                            <img style="height:33px" src="./assets/images/icons/swap_horiz_white.png" alt="arrow" />
+                        </div>
+                        <div class="image-inner-card bg-white position-absolute pl-4 pr-3 py-2">
+                            <div class="d-flex align-items-center">
+                                <div class="mr-3 d-flex flex-column align-items-end">
+                                    <p class="font-weight-600 font-size-11">Very Good</p>
+                                    <p class="font-size-11 dark-gray opacity-9">4,347 reviews</p>
+                                </div>
+                                <div class="position-relative d-flex justify-content-center align-items-center">
+                                    <img style="height: 37px" src="./assets/images/icons/Rectangle.png"
+                                        alt="rectangle" />
+                                    <p class="property-image-slider-text-rectangle position-absolute text-white">
+                                        8.4
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="color-tealish font-size-11 text-right pt-3">Location 8.1</p>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between px-3 py-4">
+                        <div>
+                            <p class="card-heading-right-side font-size-14 font-weight-600">Modern and Luxury Apartment
+                            </p>
+                            <p class="dark-gray font-size-13 opacity-9 mt-2">Dopustovanje v srcu narave je vedno
+                                najboljša
+                                izbira </p>
+                            <div class="facalities-icons-inner d-flex flex-wrap align-items-center pt-4">
+                                <div class="single-facality mr-4">
+                                    <p class="font-weight-500 font-size-13 opacity-9">Bedrooms</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" fill="#40d0d3" xmlns="http://www.w3.org/2000/svg"
+                                                width="20" height="20" viewBox="0 0 24 24">
+                                                <defs></defs>
+                                                <path
+                                                    d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z"
+                                                    transform="translate(-1108 -593)"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-facality mr-4">
+                                    <p class="font-weight-500 font-size-13 opacity-9">Bathrooms</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" fill="#40d0d3"
+                                                width="20" height="20" viewBox="0 0 23.69 24">
+                                                <path
+                                                    d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z"
+                                                    transform="translate(-1196.31 -593)"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-facality mr-4">
+                                    <p class="font-weight-500 font-size-13 opacity-9">Guests</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" fill="#40d0d3"
+                                                width="20" height="20" viewBox="0 0 26.2 24">
+                                                <ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 1.5724 14.7053)"
+                                                    cx="18.5" cy="5.5" rx="5.5" ry="5.5"></ellipse>
+                                                <path
+                                                    d="M26.1 20.9l-1.1-5.3c-4-3.6-10.3-3.3-13.9 0.8 -1.6 1.8-2.5 4.1-2.5 6.5V24h14.6c1.5 0.1 2.8-1 2.9-2.5C26.2 21.3 26.2 21.1 26.1 20.9z">
+                                                </path>
+                                                <circle cx="5.5" cy="10.9" r="4.4"></circle>
+                                                <path
+                                                    d="M0 19.7l0 1.1c-0.3 1.5 0.7 2.8 2.2 3.1 0.2 0 0.4 0.1 0.7 0h3.7v-1.1c0-1.8 0.8-3.5 2-5 -0.9-0.3-2-0.5-3-0.5C3.4 17.5 1.5 18.3 0 19.7z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-right font-size-14"><span
+                                    class="font-weight-700 font-size-21">149€</span>/per night</p>
+                            <p class="text-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
+                            <button class="yellow-button mt-4"> More Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="something-for-you-card bg-white rounded-lg mt-4 box-shadow">
+                    <div class="something-for-you-image position-relative">
+                        <div class="tealish-badge position-absolute background-color-tealish text-white font-size-11">
+                            Top Value
+                        </div>
+                        <div style="bottom: 6px; right: 5px;" class="position-absolute">
+                            <img src="./assets/images/icons/heart.png" alt="heart" />
+                            <img style="height:33px" src="./assets/images/icons/swap_horiz_white.png" alt="arrow" />
+                        </div>
+                        <div class="image-inner-card bg-white position-absolute pl-4 pr-3 py-2">
+                            <div class="d-flex align-items-center">
+                                <div class="mr-3 d-flex flex-column align-items-end">
+                                    <p class="font-weight-600 font-size-11">Very Good</p>
+                                    <p class="font-size-11 dark-gray opacity-9">4,347 reviews</p>
+                                </div>
+                                <div class="position-relative d-flex justify-content-center align-items-center">
+                                    <img style="height: 37px" src="./assets/images/icons/Rectangle.png"
+                                        alt="rectangle" />
+                                    <p class="property-image-slider-text-rectangle position-absolute text-white">
+                                        8.4
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="color-tealish font-size-11 text-right pt-3">Location 8.1</p>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between px-3 py-4">
+                        <div>
+                            <p class="card-heading-right-side font-size-14 font-weight-600">Modern and Luxury Apartment
+                            </p>
+                            <p class="dark-gray font-size-13 opacity-9 mt-2">Dopustovanje v srcu narave je vedno
+                                najboljša
+                                izbira </p>
+                            <div class="facalities-icons-inner d-flex flex-wrap align-items-center pt-4">
+                                <div class="single-facality mr-4">
+                                    <p class="font-weight-500 font-size-13 opacity-9">Bedrooms</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" fill="#40d0d3" xmlns="http://www.w3.org/2000/svg"
+                                                width="20" height="20" viewBox="0 0 24 24">
+                                                <defs></defs>
+                                                <path
+                                                    d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z"
+                                                    transform="translate(-1108 -593)"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-facality mr-4">
+                                    <p class="font-weight-500 font-size-13 opacity-9">Bathrooms</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" fill="#40d0d3"
+                                                width="20" height="20" viewBox="0 0 23.69 24">
+                                                <path
+                                                    d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z"
+                                                    transform="translate(-1196.31 -593)"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-facality mr-4">
+                                    <p class="font-weight-500 font-size-13 opacity-9">Guests</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" fill="#40d0d3"
+                                                width="20" height="20" viewBox="0 0 26.2 24">
+                                                <ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 1.5724 14.7053)"
+                                                    cx="18.5" cy="5.5" rx="5.5" ry="5.5"></ellipse>
+                                                <path
+                                                    d="M26.1 20.9l-1.1-5.3c-4-3.6-10.3-3.3-13.9 0.8 -1.6 1.8-2.5 4.1-2.5 6.5V24h14.6c1.5 0.1 2.8-1 2.9-2.5C26.2 21.3 26.2 21.1 26.1 20.9z">
+                                                </path>
+                                                <circle cx="5.5" cy="10.9" r="4.4"></circle>
+                                                <path
+                                                    d="M0 19.7l0 1.1c-0.3 1.5 0.7 2.8 2.2 3.1 0.2 0 0.4 0.1 0.7 0h3.7v-1.1c0-1.8 0.8-3.5 2-5 -0.9-0.3-2-0.5-3-0.5C3.4 17.5 1.5 18.3 0 19.7z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-right font-size-14"><span
+                                    class="font-weight-700 font-size-21">149€</span>/per night</p>
+                            <p class="text-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
+                            <button class="yellow-button mt-4"> More Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="something-for-you-card bg-white rounded-lg mt-4 box-shadow">
+                    <div class="something-for-you-image position-relative">
+                        <div class="tealish-badge position-absolute background-color-tealish text-white font-size-11">
+                            Top Value
+                        </div>
+                        <div style="bottom: 6px; right: 5px;" class="position-absolute">
+                            <img src="./assets/images/icons/heart.png" alt="heart" />
+                            <img style="height:33px" src="./assets/images/icons/swap_horiz_white.png" alt="arrow" />
+                        </div>
+                        <div class="image-inner-card bg-white position-absolute pl-4 pr-3 py-2">
+                            <div class="d-flex align-items-center">
+                                <div class="mr-3 d-flex flex-column align-items-end">
+                                    <p class="font-weight-600 font-size-11">Very Good</p>
+                                    <p class="font-size-11 dark-gray opacity-9">4,347 reviews</p>
+                                </div>
+                                <div class="position-relative d-flex justify-content-center align-items-center">
+                                    <img style="height: 37px" src="./assets/images/icons/Rectangle.png"
+                                        alt="rectangle" />
+                                    <p class="property-image-slider-text-rectangle position-absolute text-white">
+                                        8.4
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="color-tealish font-size-11 text-right pt-3">Location 8.1</p>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between px-3 py-4">
+                        <div>
+                            <p class="card-heading-right-side font-size-14 font-weight-600">Modern and Luxury Apartment
+                            </p>
+                            <p class="dark-gray font-size-13 opacity-9 mt-2">Dopustovanje v srcu narave je vedno
+                                najboljša
+                                izbira </p>
+                            <div class="facalities-icons-inner d-flex flex-wrap align-items-center pt-4">
+                                <div class="single-facality mr-4">
+                                    <p class="font-weight-500 font-size-13 opacity-9">Bedrooms</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" fill="#40d0d3" xmlns="http://www.w3.org/2000/svg"
+                                                width="20" height="20" viewBox="0 0 24 24">
+                                                <defs></defs>
+                                                <path
+                                                    d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z"
+                                                    transform="translate(-1108 -593)"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-facality mr-4">
+                                    <p class="font-weight-500 font-size-13 opacity-9">Bathrooms</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" fill="#40d0d3"
+                                                width="20" height="20" viewBox="0 0 23.69 24">
+                                                <path
+                                                    d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z"
+                                                    transform="translate(-1196.31 -593)"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-facality mr-4">
+                                    <p class="font-weight-500 font-size-13 opacity-9">Guests</p>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="mr-2">
+                                            <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" fill="#40d0d3"
+                                                width="20" height="20" viewBox="0 0 26.2 24">
+                                                <ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 1.5724 14.7053)"
+                                                    cx="18.5" cy="5.5" rx="5.5" ry="5.5"></ellipse>
+                                                <path
+                                                    d="M26.1 20.9l-1.1-5.3c-4-3.6-10.3-3.3-13.9 0.8 -1.6 1.8-2.5 4.1-2.5 6.5V24h14.6c1.5 0.1 2.8-1 2.9-2.5C26.2 21.3 26.2 21.1 26.1 20.9z">
+                                                </path>
+                                                <circle cx="5.5" cy="10.9" r="4.4"></circle>
+                                                <path
+                                                    d="M0 19.7l0 1.1c-0.3 1.5 0.7 2.8 2.2 3.1 0.2 0 0.4 0.1 0.7 0h3.7v-1.1c0-1.8 0.8-3.5 2-5 -0.9-0.3-2-0.5-3-0.5C3.4 17.5 1.5 18.3 0 19.7z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-right font-size-14"><span
+                                    class="font-weight-700 font-size-21">149€</span>/per night</p>
+                            <p class="text-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
+                            <button class="yellow-button mt-4"> More Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div data-aos="zoom-out" class="new-offers-card cursor-pointer">
-          <div class="new-offers-card-inner">
-            <div class="new-offer-image">
-              <div class="new-offer-image-heart cursor-pointer">
-                <img src="./assets/images/icons/heart.png" alt="heart" />
-              </div>
-            </div>
-            <div class="new-offer-card-text bg-white px-4 pb-4">
-              <p class="new-offer-card-heading pt-3">
-                Holiday House | Big Terrace and BBQ
-              </p>
-              <p class="new-offer-card-location-description">
-                <img
-                  class="mr-2"
-                  src="./assets/images/icons/location-pin.png"
-                  alt="location-icon"
-                />
-                217, Filovci, Moravske Toplice, 92...
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div>
-                  <p class="price">
-                    €145 <span class="per-night">/night</span>
-                  </p>
-                </div>
-                <div>
-                  <p>
-                    Compare to others
-                    <span
-                      ><img
-                        class="cursor-pointer"
-                        src="./assets/images/icons/right-arrow.png"
-                        alt="right-arrow"
-                    /></span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
-    <!-- New Offer Section End -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-  </body>
+    <!-- Hot Deals End -->
+    <!-- Choice of the day -->
+    <section class="overflow-hidden section-padding">
+        <div class="choice-of-the-day container-main mx-auto pb-5">
+            <div class="d-flex flex-column align-items-center pt-3 pb-5">
+                <p class="color-blue font-weight-bold font-size-25 text-center text-capitalize">Choice Of The Day</p>
+                <p class="color-gray pt-2 opacity-8">Take a look what we suggest today for you</p>
+            </div>
+            <div id="carouselChoiceOfTheDay" class="carousel slide w-100" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselChoiceOfTheDay" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselChoiceOfTheDay" data-slide-to="1"></li>
+                    <li data-target="#carouselChoiceOfTheDay" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-flex align-items-center">
+                            <div class="w-88">
+                                <img class="choice-carousel-image d-block w-100 box-shadow-xl rounded-2xl"
+                                    height="500px"
+                                    src="./assets/images/THE-SELECT-TEN----Bedroom-Apartment---Wintergarden.png"
+                                    alt="First slide">
+                            </div>
+                            <div
+                                class="choice-of-the-day-inner carousel-animation w-48 right-0 box-shadow-lg bg-white position-absolute rounded-lg">
+                                <h class="color-blue font-weight-500 font-size-30">A Grand Modern Apartment
+                                </h>
+                                <p class="text-black font-weight-normal pt-2 font-size-11"><img style="height:18px"
+                                        class="mr-2" src="./assets/images/icons/location-pin.png"><span
+                                        class="opacity-6">Timber
+                                        Yard, Birmingham City Centre, B5</span>
+                                </p>
+                                <p class="text-black font-weight-600 pt-3"><span
+                                        class="color-tealish font-weight-700 font-size-18">80€ </span>/per night</p>
+                                <p class="text-black opacity-6 line-height-24 pt-2 pb-3 font-size-11">this fabulous two
+                                    this fabulous two bedroom duplex apartment will be close to some of the best local
+                                    haunts and venues the city has to offer.</p>
+                                <div style="background-color: #f4f7fa;"
+                                    class="facalities-icons-inner d-flex flex-wrap justify-content-between align-items-center py-2 px-4 rounded-md">
+                                    <div class="single-facality">
+                                        <p class="font-weight-500 font-size-13 opacity-9">Bedrooms</p>
+                                        <div class="d-flex align-items-center mt-2">
+                                            <div class="mr-2">
+                                                <svg class="rh_svg" fill="#40d0d3" xmlns="http://www.w3.org/2000/svg"
+                                                    width="20" height="20" viewBox="0 0 24 24">
+                                                    <defs></defs>
+                                                    <path
+                                                        d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z"
+                                                        transform="translate(-1108 -593)"></path>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="single-facality">
+                                        <p class="font-weight-500 font-size-13 opacity-9">Bathrooms</p>
+                                        <div class="d-flex align-items-center mt-2">
+                                            <div class="mr-2">
+                                                <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" fill="#40d0d3"
+                                                    width="20" height="20" viewBox="0 0 23.69 24">
+                                                    <path
+                                                        d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z"
+                                                        transform="translate(-1196.31 -593)"></path>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="single-facality">
+                                        <p class="font-weight-500 font-size-13 opacity-9">Guests</p>
+                                        <div class="d-flex align-items-center mt-2">
+                                            <div class="mr-2">
+                                                <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" fill="#40d0d3"
+                                                    width="20" height="20" viewBox="0 0 26.2 24">
+                                                    <ellipse
+                                                        transform="matrix(0.7071 -0.7071 0.7071 0.7071 1.5724 14.7053)"
+                                                        cx="18.5" cy="5.5" rx="5.5" ry="5.5"></ellipse>
+                                                    <path
+                                                        d="M26.1 20.9l-1.1-5.3c-4-3.6-10.3-3.3-13.9 0.8 -1.6 1.8-2.5 4.1-2.5 6.5V24h14.6c1.5 0.1 2.8-1 2.9-2.5C26.2 21.3 26.2 21.1 26.1 20.9z">
+                                                    </path>
+                                                    <circle cx="5.5" cy="10.9" r="4.4"></circle>
+                                                    <path
+                                                        d="M0 19.7l0 1.1c-0.3 1.5 0.7 2.8 2.2 3.1 0.2 0 0.4 0.1 0.7 0h3.7v-1.1c0-1.8 0.8-3.5 2-5 -0.9-0.3-2-0.5-3-0.5C3.4 17.5 1.5 18.3 0 19.7z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="single-facality">
+                                        <p class="font-weight-500 font-size-13 opacity-9">Parking</p>
+                                        <div class="d-flex align-items-center mt-2">
+                                            <div class="mr-2">
+                                                <svg class="rh_svg" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" fill="#40d0d3" x="0px"
+                                                    y="0px" width="20px" height="20px" viewBox="0 0 24 24"
+                                                    enable-background="new 0 0 24 24" xml:space="preserve">
+                                                    <g>
+                                                        <path
+                                                            d="M16.277,11H7.722c-0.513,0-0.941,0.315-1.104,0.757L5,16.25v6C5,22.662,5.351,23,5.778,23h0.778
+                                                    c0.427,0,0.778-0.338,0.778-0.75V21.5h9.333v0.75c0,0.412,0.35,0.75,0.777,0.75h0.778C18.649,23,19,22.662,19,22.25v-6
+                                                    l-1.618-4.493C17.228,11.315,16.791,11,16.277,11z M7.875,19.25c-0.623,0-1.125-0.502-1.125-1.125S7.252,17,7.875,17
+                                                    S9,17.502,9,18.125S8.498,19.25,7.875,19.25z M16.125,19.25c-0.623,0-1.125-0.502-1.125-1.125S15.502,17,16.125,17
+                                                    s1.125,0.502,1.125,1.125S16.748,19.25,16.125,19.25z M6.556,15.5l1.167-3.375h8.555l1.167,3.375H6.556z">
+                                                        </path>
+                                                        <path d="M23,0h-1h-2H4H2H1C0.448,0,0,0.448,0,1v1c0,0.552,0.448,1,1,1h1v21h2V3h16v21h2V3h1c0.553,0,1-0.448,1-1V1
+                                                    C24,0.448,23.553,0,23,0z"></path>
+                                                        <path
+                                                            d="M18,4H6C5.448,4,5,4.448,5,5s0.448,1,1,1h12c0.553,0,1-0.448,1-1S18.553,4,18,4z">
+                                                        </path>
+                                                        <path
+                                                            d="M18,7H6C5.448,7,5,7.448,5,8s0.448,1,1,1h12c0.553,0,1-0.448,1-1S18.553,7,18,7z">
+                                                        </path>
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex align-items-center">
+                            <div class="w-88">
+                                <img class="choice-carousel-image d-block w-100 box-shadow-xl rounded-2xl"
+                                    height="500px"
+                                    src="./assets/images/THE-SELECT-TEN----Bedroom-Apartment---Wintergarden.png"
+                                    alt="First slide">
+                            </div>
+                            <div
+                                class="choice-of-the-day-inner carousel-animation w-48 right-0 box-shadow-lg bg-white position-absolute rounded-lg">
+                                <h class="color-blue font-weight-500 font-size-30">A Grand Modern Apartment
+                                </h>
+                                <p class="text-black font-weight-normal pt-2 font-size-11"><img style="height:18px"
+                                        class="mr-2" src="./assets/images/icons/location-pin.png"><span
+                                        class="opacity-6">Timber
+                                        Yard, Birmingham City Centre, B5</span>
+                                </p>
+                                <p class="text-black font-weight-600 pt-3"><span
+                                        class="color-tealish font-weight-700 font-size-18">80€ </span>/per night</p>
+                                <p class="text-black opacity-6 line-height-24 pt-2 pb-3 font-size-11">this fabulous two
+                                    this fabulous two bedroom duplex apartment will be close to some of the best local
+                                    haunts and venues the city has to offer.</p>
+                                <div style="background-color: #f4f7fa;"
+                                    class="facalities-icons-inner d-flex flex-wrap justify-content-between align-items-center py-2 px-4 rounded-md">
+                                    <div class="single-facality">
+                                        <p class="font-weight-500 font-size-13 opacity-9">Bedrooms</p>
+                                        <div class="d-flex align-items-center mt-2">
+                                            <div class="mr-2">
+                                                <svg class="rh_svg" fill="#40d0d3" xmlns="http://www.w3.org/2000/svg"
+                                                    width="20" height="20" viewBox="0 0 24 24">
+                                                    <defs></defs>
+                                                    <path
+                                                        d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z"
+                                                        transform="translate(-1108 -593)"></path>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="single-facality">
+                                        <p class="font-weight-500 font-size-13 opacity-9">Bathrooms</p>
+                                        <div class="d-flex align-items-center mt-2">
+                                            <div class="mr-2">
+                                                <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" fill="#40d0d3"
+                                                    width="20" height="20" viewBox="0 0 23.69 24">
+                                                    <path
+                                                        d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z"
+                                                        transform="translate(-1196.31 -593)"></path>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="single-facality">
+                                        <p class="font-weight-500 font-size-13 opacity-9">Guests</p>
+                                        <div class="d-flex align-items-center mt-2">
+                                            <div class="mr-2">
+                                                <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" fill="#40d0d3"
+                                                    width="20" height="20" viewBox="0 0 26.2 24">
+                                                    <ellipse
+                                                        transform="matrix(0.7071 -0.7071 0.7071 0.7071 1.5724 14.7053)"
+                                                        cx="18.5" cy="5.5" rx="5.5" ry="5.5"></ellipse>
+                                                    <path
+                                                        d="M26.1 20.9l-1.1-5.3c-4-3.6-10.3-3.3-13.9 0.8 -1.6 1.8-2.5 4.1-2.5 6.5V24h14.6c1.5 0.1 2.8-1 2.9-2.5C26.2 21.3 26.2 21.1 26.1 20.9z">
+                                                    </path>
+                                                    <circle cx="5.5" cy="10.9" r="4.4"></circle>
+                                                    <path
+                                                        d="M0 19.7l0 1.1c-0.3 1.5 0.7 2.8 2.2 3.1 0.2 0 0.4 0.1 0.7 0h3.7v-1.1c0-1.8 0.8-3.5 2-5 -0.9-0.3-2-0.5-3-0.5C3.4 17.5 1.5 18.3 0 19.7z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="single-facality">
+                                        <p class="font-weight-500 font-size-13 opacity-9">Parking</p>
+                                        <div class="d-flex align-items-center mt-2">
+                                            <div class="mr-2">
+                                                <svg class="rh_svg" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" fill="#40d0d3" x="0px"
+                                                    y="0px" width="20px" height="20px" viewBox="0 0 24 24"
+                                                    enable-background="new 0 0 24 24" xml:space="preserve">
+                                                    <g>
+                                                        <path
+                                                            d="M16.277,11H7.722c-0.513,0-0.941,0.315-1.104,0.757L5,16.25v6C5,22.662,5.351,23,5.778,23h0.778
+                                                    c0.427,0,0.778-0.338,0.778-0.75V21.5h9.333v0.75c0,0.412,0.35,0.75,0.777,0.75h0.778C18.649,23,19,22.662,19,22.25v-6
+                                                    l-1.618-4.493C17.228,11.315,16.791,11,16.277,11z M7.875,19.25c-0.623,0-1.125-0.502-1.125-1.125S7.252,17,7.875,17
+                                                    S9,17.502,9,18.125S8.498,19.25,7.875,19.25z M16.125,19.25c-0.623,0-1.125-0.502-1.125-1.125S15.502,17,16.125,17
+                                                    s1.125,0.502,1.125,1.125S16.748,19.25,16.125,19.25z M6.556,15.5l1.167-3.375h8.555l1.167,3.375H6.556z">
+                                                        </path>
+                                                        <path d="M23,0h-1h-2H4H2H1C0.448,0,0,0.448,0,1v1c0,0.552,0.448,1,1,1h1v21h2V3h16v21h2V3h1c0.553,0,1-0.448,1-1V1
+                                                    C24,0.448,23.553,0,23,0z"></path>
+                                                        <path
+                                                            d="M18,4H6C5.448,4,5,4.448,5,5s0.448,1,1,1h12c0.553,0,1-0.448,1-1S18.553,4,18,4z">
+                                                        </path>
+                                                        <path
+                                                            d="M18,7H6C5.448,7,5,7.448,5,8s0.448,1,1,1h12c0.553,0,1-0.448,1-1S18.553,7,18,7z">
+                                                        </path>
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex align-items-center">
+                            <div class="w-88">
+                                <img class="choice-carousel-image d-block w-100 box-shadow-xl rounded-2xl"
+                                    height="500px"
+                                    src="./assets/images/THE-SELECT-TEN----Bedroom-Apartment---Wintergarden.png"
+                                    alt="First slide">
+                            </div>
+                            <div
+                                class="choice-of-the-day-inner carousel-animation w-48 right-0 box-shadow-lg bg-white position-absolute rounded-lg">
+                                <h class="color-blue font-weight-500 font-size-30">A Grand Modern Apartment
+                                </h>
+                                <p class="text-black font-weight-normal pt-2 font-size-11"><img style="height:18px"
+                                        class="mr-2" src="./assets/images/icons/location-pin.png"><span
+                                        class="opacity-6">Timber
+                                        Yard, Birmingham City Centre, B5</span>
+                                </p>
+                                <p class="text-black font-weight-600 pt-3"><span
+                                        class="color-tealish font-weight-700 font-size-18">80€ </span>/per night</p>
+                                <p class="text-black opacity-6 line-height-24 pt-2 pb-3 font-size-11">this fabulous two
+                                    this fabulous two bedroom duplex apartment will be close to some of the best local
+                                    haunts and venues the city has to offer.</p>
+                                <div style="background-color: #f4f7fa;"
+                                    class="facalities-icons-inner d-flex flex-wrap justify-content-between align-items-center py-2 px-4 rounded-md">
+                                    <div class="single-facality">
+                                        <p class="font-weight-500 font-size-13 opacity-9">Bedrooms</p>
+                                        <div class="d-flex align-items-center mt-2">
+                                            <div class="mr-2">
+                                                <svg class="rh_svg" fill="#40d0d3" xmlns="http://www.w3.org/2000/svg"
+                                                    width="20" height="20" viewBox="0 0 24 24">
+                                                    <defs></defs>
+                                                    <path
+                                                        d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z"
+                                                        transform="translate(-1108 -593)"></path>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="single-facality">
+                                        <p class="font-weight-500 font-size-13 opacity-9">Bathrooms</p>
+                                        <div class="d-flex align-items-center mt-2">
+                                            <div class="mr-2">
+                                                <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" fill="#40d0d3"
+                                                    width="20" height="20" viewBox="0 0 23.69 24">
+                                                    <path
+                                                        d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z"
+                                                        transform="translate(-1196.31 -593)"></path>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="single-facality">
+                                        <p class="font-weight-500 font-size-13 opacity-9">Guests</p>
+                                        <div class="d-flex align-items-center mt-2">
+                                            <div class="mr-2">
+                                                <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" fill="#40d0d3"
+                                                    width="20" height="20" viewBox="0 0 26.2 24">
+                                                    <ellipse
+                                                        transform="matrix(0.7071 -0.7071 0.7071 0.7071 1.5724 14.7053)"
+                                                        cx="18.5" cy="5.5" rx="5.5" ry="5.5"></ellipse>
+                                                    <path
+                                                        d="M26.1 20.9l-1.1-5.3c-4-3.6-10.3-3.3-13.9 0.8 -1.6 1.8-2.5 4.1-2.5 6.5V24h14.6c1.5 0.1 2.8-1 2.9-2.5C26.2 21.3 26.2 21.1 26.1 20.9z">
+                                                    </path>
+                                                    <circle cx="5.5" cy="10.9" r="4.4"></circle>
+                                                    <path
+                                                        d="M0 19.7l0 1.1c-0.3 1.5 0.7 2.8 2.2 3.1 0.2 0 0.4 0.1 0.7 0h3.7v-1.1c0-1.8 0.8-3.5 2-5 -0.9-0.3-2-0.5-3-0.5C3.4 17.5 1.5 18.3 0 19.7z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="single-facality">
+                                        <p class="font-weight-500 font-size-13 opacity-9">Parking</p>
+                                        <div class="d-flex align-items-center mt-2">
+                                            <div class="mr-2">
+                                                <svg class="rh_svg" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" fill="#40d0d3" x="0px"
+                                                    y="0px" width="20px" height="20px" viewBox="0 0 24 24"
+                                                    enable-background="new 0 0 24 24" xml:space="preserve">
+                                                    <g>
+                                                        <path
+                                                            d="M16.277,11H7.722c-0.513,0-0.941,0.315-1.104,0.757L5,16.25v6C5,22.662,5.351,23,5.778,23h0.778
+                                                    c0.427,0,0.778-0.338,0.778-0.75V21.5h9.333v0.75c0,0.412,0.35,0.75,0.777,0.75h0.778C18.649,23,19,22.662,19,22.25v-6
+                                                    l-1.618-4.493C17.228,11.315,16.791,11,16.277,11z M7.875,19.25c-0.623,0-1.125-0.502-1.125-1.125S7.252,17,7.875,17
+                                                    S9,17.502,9,18.125S8.498,19.25,7.875,19.25z M16.125,19.25c-0.623,0-1.125-0.502-1.125-1.125S15.502,17,16.125,17
+                                                    s1.125,0.502,1.125,1.125S16.748,19.25,16.125,19.25z M6.556,15.5l1.167-3.375h8.555l1.167,3.375H6.556z">
+                                                        </path>
+                                                        <path d="M23,0h-1h-2H4H2H1C0.448,0,0,0.448,0,1v1c0,0.552,0.448,1,1,1h1v21h2V3h16v21h2V3h1c0.553,0,1-0.448,1-1V1
+                                                    C24,0.448,23.553,0,23,0z"></path>
+                                                        <path
+                                                            d="M18,4H6C5.448,4,5,4.448,5,5s0.448,1,1,1h12c0.553,0,1-0.448,1-1S18.553,4,18,4z">
+                                                        </path>
+                                                        <path
+                                                            d="M18,7H6C5.448,7,5,7.448,5,8s0.448,1,1,1h12c0.553,0,1-0.448,1-1S18.553,7,18,7z">
+                                                        </path>
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselChoiceOfTheDay" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselChoiceOfTheDay" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Choice of the day ends -->
+    <!-- Open Travel Zone -->
+    <section class="section-padding position-relative overflow-hidden">
+        <div class="w-78 d-flex align-items-center">
+            <div class="open-zone-left">
+                <div class="open-zone-inner-left d-flex flex-column justify-content-center py-5">
+                    <h class="font-size-30 text-white"><span class="color-yellow font-size-35">XL</span> Travel Zone</h>
+                    <h class="font-size-25 text-white font-weight-500 pt-4">Your Travel Place</h>
+                    <p class="font-size-16 text-white font-weight-normal pt-4 text-capitalize">travel community, travel
+                        inspirations, recommendations, suggestions, tricks and everything you
+                        need for an unforgettable trip in one place</p>
+                    <p class="font-size-18 color-yellow font-weight-500 pt-4">You Need To Be Part Of The XL Travel Zone
+                    </p>
+                    <button
+                        class="yellow-button font-weight-normal text-white py-4 w-48 mt-5 box-shadow-xl font-size-18">Open
+                        Travel Zone</button>
+                </div>
+            </div>
+            <div style="right: -90px;" class="open-zone-right position-absolute">
+                <img style="height: 369px; width: 700px;"
+                    src="./assets/images/THE-SELECT-TEN----Bedroom-Apartment---Wintergarden.png" />
+            </div>
+        </div>
+    </section>
+    <!-- Open Travel Zone Ends-->
+    <!-- New Offers -->
+    <section class="new-offers section-padding">
+        <div class="container-main mx-auto pb-0">
+            <div class="d-flex flex-column align-items-center pt-3 pb-2">
+                <p class="color-blue font-weight-bold font-size-25 text-center text-capitalize">Check Out New Offers</p>
+                <p class="color-gray pt-2 opacity-8">Check out our recent offers and Brand new deals</p>
+            </div>
+        </div>
+        <div>
+
+        </div>
+    </section>
+    <!-- New Offers Ends-->
+    <section class="join-us container-main mx-auto pt-5">
+        <div class="join-us-inner d-flex flex-column justify-content-center align-items-center">
+            <p class="text-white font-weight-500 font-size-30">Become A Host On XL Travel</p>
+            <p class="text-white font-weight-500 font-size-21 pt-3">Join Our Big Family. You Just Few Steps Away…</p>
+            <button class="join-us-button mt-5 box-shadow cursor-pointer">
+                Lets Go
+            </button>
+        </div>
+    </section>
+    <!-- Client Review -->
+    <section class="client-review section-padding">
+        <div class="container-main mx-auto pb-0">
+            <div class="d-flex flex-column align-items-center pt-3 pb-2">
+                <p class="color-blue font-weight-bold font-size-25 text-center text-capitalize">CLient Reviews</p>
+            </div>
+        </div>
+
+    </section>
+    <!-- Client Review -->
+    <!-- Frequently Asked Question -->
+    <section class="frequently-asked-question section-padding">
+        <div class="container-main mx-auto pb-0">
+            <div class="d-flex flex-column align-items-center pt-3 pb-2">
+                <p class="color-blue font-weight-bold font-size-25 text-center text-capitalize">Frequently Asked
+                    Questions</p>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <div class="flex flex-column faq-section">
+                        <div class="row">
+                            <div class="col-md-12 px-0">
+                                <div id="accordion">
+                                    <div class="card border-accordian">
+                                        <div class="card-header" id="heading-1">
+                                            <h4 class="mb-0 faq-heading">
+                                                <a role="button" data-toggle="collapse" href="#collapse-1"
+                                                    aria-expanded="true" aria-controls="collapse-1">
+                                                    What the First Step of the Dream Apartment buying process ?
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapse-1" class="collapse show" data-parent="#accordion"
+                                            aria-labelledby="heading-1">
+                                            <div class="card-body accordian-description">
+                                                First, you need to know how much you can borrow, knowing how much home
+                                                you can afford narrows down online apartment searching to suitable
+                                                Properties , thus no time is Wasted considering apartment that are not
+                                                within your dream and budget.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card border-accordian mt-4">
+                                        <div class="card-header" id="heading-1">
+                                            <h4 class="mb-0 faq-heading">
+                                                <a role="button" data-toggle="collapse"  href="#collapse-2"
+                                                    aria-expanded="false" aria-controls="collapse-2">
+                                                    How Long does It take to buy Apartment ?
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapse-2" class="collapse" data-parent="#accordion"
+                                            aria-labelledby="heading-1">
+                                            <div class="card-body accordian-description">
+                                                First, you need to know how much you can borrow, knowing how much home
+                                                you can afford narrows down online apartment searching to suitable
+                                                Properties , thus no time is Wasted considering apartment that are not
+                                                within your dream and budget.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card border-accordian mt-4">
+                                        <div class="card-header" id="heading-1">
+                                            <h4 class="mb-0 faq-heading">
+                                                <a role="button" data-toggle="collapse"  href="#collapse-3"
+                                                    aria-expanded="false" aria-controls="collapse-3">
+                                                    How much do I need for a down payment ?
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapse-3" class="collapse" data-parent="#accordion"
+                                            aria-labelledby="heading-1">
+                                            <div class="card-body accordian-description">
+                                                First, you need to know how much you can borrow, knowing how much home
+                                                you can afford narrows down online apartment searching to suitable
+                                                Properties , thus no time is Wasted considering apartment that are not
+                                                within your dream and budget.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card border-accordian mt-4">
+                                        <div class="card-header" id="heading-1">
+                                            <h4 class="mb-0 faq-heading">
+                                                <a role="button" data-toggle="collapse"  href="#collapse-4"
+                                                    aria-expanded="false" aria-controls="collapse-4">
+                                                    What is a buyer's market ?
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapse-4" class="collapse" data-parent="#accordion"
+                                            aria-labelledby="heading-1">
+                                            <div class="card-body accordian-description">
+                                                First, you need to know how much you can borrow, knowing how much home
+                                                you can afford narrows down online apartment searching to suitable
+                                                Properties , thus no time is Wasted considering apartment that are not
+                                                within your dream and budget.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card border-accordian mt-4">
+                                        <div class="card-header" id="heading-1">
+                                            <h4 class="mb-0 faq-heading">
+                                                <a role="button" data-toggle="collapse"  href="#collapse-5"
+                                                    aria-expanded="false" aria-controls="collapse-5">
+                                                    What is popular in  Apartment ?
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapse-5" class="collapse" data-parent="#accordion"
+                                            aria-labelledby="heading-1">
+                                            <div class="card-body accordian-description">
+                                                First, you need to know how much you can borrow, knowing how much home
+                                                you can afford narrows down online apartment searching to suitable
+                                                Properties , thus no time is Wasted considering apartment that are not
+                                                within your dream and budget.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Frequently Asked Question -->
+    <script src="./index.js"></script>
+    <script src="./calender.js"></script>
+</body>
+
 </html>

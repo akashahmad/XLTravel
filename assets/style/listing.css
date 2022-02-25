@@ -14,6 +14,10 @@ body {
   -webkit-text-stroke: 0.3px #000;
   opacity: 0.6;
 }
+.listing-page-link{
+  text-decoration: none !important;
+  color: black !important;
+}
 /* Badge */
 .yellow-badge {
   border-radius: 4px;

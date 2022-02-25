@@ -1663,6 +1663,17 @@
     inline: false,
     autoUpdateInput: true,
 });  
+$('#searhBar-index-date-picker').daterangepicker({
+    locale: {
+        format: 'MM-DD'
+		// mediumDate:     "mmm d, yyyy",
+    },
+    // parentEl: "#inline-calendar",
+    alwaysShowCalendars: false,
+    autoApply :false,
+    inline: false,
+    autoUpdateInput: true,
+});  
 function getDate()
 {
 	var dateInput = document.getElementById("searhBar-date-picker").value;
