@@ -27,7 +27,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/2.1.24/moment.min.js"></script>
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/2.1.24/daterangepicker.min.js"></script>
-
+    <!-- Swiper -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.3.1/swiper-bundle.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.3.1/swiper-bundle.min.js"></script>
+    <!-- AOS Aniamtion -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <link rel="stylesheet" href="./assets/style/style.css" />
     <link rel="stylesheet" href="./assets/style/calendar.css" />
@@ -100,16 +105,15 @@
     </header>
     <!-- Header End -->
     <!-- Hero Section -->
-    <!-- Hero Section -->
     <section class="hero-section">
-        <div class="container-main mx-auto d-flex justify-content-center align-items-center px-5">
-            <div class="w-68 ml-3">
-                <h1 class="text-animation-heading text-white font-weight-500">
-                    <span class="title"><span class="find-your">Find Your</span> Next Stay</span></br>
+        <div class="container-main mx-auto d-flex justify-content-center align-items-center">
+            <div class="w-68">
+                <h1 class="text-white font-weight-500">
+                    <span class="title">Find Your Next Stay</span></br>
                 </h1>
                 <p class="pt-2 text-white font-size-18 font-weight-normal">
-                    <span class="title">Your travel partner for unforgettable trips at</span></br>
-                    <span class="title">best prices</span>
+                    <span class="title"><span class="your-travel">Your travel</span> partner for unforgettable trips at</span></br>
+                    <span class="title">best prices</span></br>
                 </p>
                 <div class="search-box-index bg-white w-100 py-2 rounded box-shadow">
                     <div class="d-flex align-items-center">
@@ -119,20 +123,16 @@
                         </div>
                         <div class="border-right w-29 px-2 position-relative">
                             <p class="search-lable">Date</p>
-                            <input id="searhBar-index-date-picker" placeholder="Add Date" class="form-control" />
-                            <svg style="right:10px; bottom:10px" class="position-absolute"
-                                xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 18">
-                                <g id="Group_9686" data-name="Group 9686" transform="translate(-1028 -1310)">
-                                    <path id="Polygon_1" data-name="Polygon 1" d="M4,0,8,7H0Z"
-                                        transform="translate(1028 1310)" />
-                                    <path id="Polygon_2" data-name="Polygon 2" d="M4,0,8,7H0Z"
-                                        transform="translate(1036 1328) rotate(180)" />
-                                </g>
-                            </svg>
-
+                            <input id="searhBar-index-date-picker" placeholder="Add Date"
+                                class="form-control" />
+                                <svg style="right: 10; bottom:8" class="position-absolute" xmlns="http://www.w3.org/2000/svg" width="8" height="18" viewBox="0 0 8 18">
+                                    <g id="Group_9686" data-name="Group 9686" transform="translate(-1028 -1310)">
+                                      <path fill="#212529" id="Polygon_1" data-name="Polygon 1" d="M4,0,8,7H0Z" transform="translate(1028 1310)"/>
+                                      <path fill="#212529" id="Polygon_2" data-name="Polygon 2" d="M4,0,8,7H0Z" transform="translate(1036 1328) rotate(180)"/>
+                                    </g>
+                                  </svg>
                         </div>
-                        <div
-                            class="search-box-single-element text-center d-flex flex-column border-right w-29 px-2 position-relative">
+                        <div class="search-box-single-element position-relative text-center d-flex flex-column border-right w-29 px-2">
                             <p class="search-lable">Guests</p>
                             <select class="selectpicker" title="Add Guest">
                                 <option>1 Guest</option>
@@ -140,20 +140,17 @@
                                 <option>3 Guests</option>
                                 <option>4 Guests</option>
                             </select>
-                            <svg style="right:10px; bottom:10px" class="position-absolute"
-                                xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 18">
+                            <svg style="right: 10; bottom:8" class="position-absolute" xmlns="http://www.w3.org/2000/svg" width="8" height="18" viewBox="0 0 8 18">
                                 <g id="Group_9686" data-name="Group 9686" transform="translate(-1028 -1310)">
-                                    <path id="Polygon_1" data-name="Polygon 1" d="M4,0,8,7H0Z"
-                                        transform="translate(1028 1310)" />
-                                    <path id="Polygon_2" data-name="Polygon 2" d="M4,0,8,7H0Z"
-                                        transform="translate(1036 1328) rotate(180)" />
+                                  <path fill="#212529" id="Polygon_1" data-name="Polygon 1" d="M4,0,8,7H0Z" transform="translate(1028 1310)"/>
+                                  <path fill="#212529" id="Polygon_2" data-name="Polygon 2" d="M4,0,8,7H0Z" transform="translate(1036 1328) rotate(180)"/>
                                 </g>
-                            </svg>
+                              </svg>
                         </div>
                         <div
-                            class="searchbutton-index ml-3 cursor-pointer d-flex justify-content-center align-items-center">
-                            <svg class="svg-icon search-icon" fill="#000000" aria-labelledby="title desc" height="14px"
-                                width="14px" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7">
+                            class="searchbutton-index ml-4 cursor-pointer d-flex justify-content-center align-items-center">
+                            <svg class="svg-icon search-icon" fill="#000000" aria-labelledby="title desc" height="20px"
+                                width="20px" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7">
                                 <title id="title">Search Icon</title>
                                 <desc id="desc"></desc>
                                 <g class="search-path" fill="none" stroke="#000000">
@@ -165,17 +162,18 @@
                     </div>
                 </div>
             </div>
-            <div class="overflow-hidden mr-3">
+            <div class="overflow-hidden">
                 <video style="margin-left: 4px;" id="video_background" width="100%" height="100%" preload="true" muted>
                     <source src="./assets/video/Video_1.mp4" type="video/mp4">
                 </video>
             </div>
         </div>
     </section>
+    <!-- Hero Section Ends-->
     <!-- Pros Section Ends-->
-    <section class="container-main mx-auto">
+    <section class="pros-section container-main mx-auto">
         <div class="commission-pros d-flex flex-column flex-md-row flex-wrap justify-content-start px-4 px-md-5">
-            <div class="single-pros w-31 mx-auto mt-5">
+            <div data-aos="zoom-in-up" class="single-pros w-31 mx-auto mt-5">
                 <div class="d-flex">
                     <div style="width:70px; height:58px;"
                         class="bg-white d-flex justify-content-center align-items-center box-shadow rounded-md">
@@ -188,7 +186,7 @@
                     </div>
                 </div>
             </div>
-            <div class="single-pros w-31 mx-auto mt-5">
+            <div data-aos="zoom-in-up" class="single-pros w-31 mx-auto mt-5">
                 <div class="d-flex">
                     <div style="width:70px; height:58px;"
                         class="bg-white d-flex justify-content-center align-items-center box-shadow rounded-md">
@@ -201,7 +199,7 @@
                     </div>
                 </div>
             </div>
-            <div class="single-pros w-31 mx-auto mt-5">
+            <div data-aos="zoom-in-up" class="single-pros w-31 mx-auto mt-5">
                 <div class="d-flex">
                     <div style="width:70px; height:58px;"
                         class="bg-white d-flex justify-content-center align-items-center box-shadow rounded-md">
@@ -214,7 +212,7 @@
                     </div>
                 </div>
             </div>
-            <div class="single-pros w-31 mx-auto mt-5">
+            <div data-aos="zoom-in-up" class="single-pros w-31 mx-auto mt-5">
                 <div class="d-flex">
                     <div style="width:70px; height:58px;"
                         class="bg-white d-flex justify-content-center align-items-center box-shadow rounded-md">
@@ -227,7 +225,7 @@
                     </div>
                 </div>
             </div>
-            <div class="single-pros w-31 mx-auto mt-5">
+            <div data-aos="zoom-in-up" class="single-pros w-31 mx-auto mt-5">
                 <div class="d-flex">
                     <div style="width:70px; height:58px;"
                         class="bg-white d-flex justify-content-center align-items-center box-shadow rounded-md">
@@ -244,7 +242,7 @@
                     </div>
                 </div>
             </div>
-            <div class="single-pros w-31 mx-auto mt-5">
+            <div data-aos="zoom-in-up" class="single-pros w-31 mx-auto mt-5">
                 <div class="d-flex">
                     <div style="width:70px; height:58px;"
                         class="bg-white d-flex justify-content-center align-items-center box-shadow rounded-md">
@@ -261,7 +259,8 @@
     </section>
     <!-- Pros Section End -->
     <!-- Apartments -->
-    <section class="apartments container-main mx-auto pb-5">
+    <section data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000"
+        class="apartments container-main mx-auto pb-5">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -287,7 +286,7 @@
                                 and venues the city has to offer.Lorem ipsum dolor sit amet, consectetur adipiscing
                                 elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
                             <div style="background-color: #eff1f5;"
-                                class="facalities-icons-inner d-flex flex-wrap justify-content-between align-items-center py-3 px-4 rounded-md">
+                                class="facalities-icons-inner d-flex flex-wrap justify-content-between align-items-center py-3 px-4 rounded-xl">
                                 <div class="single-facality">
                                     <p class="font-weight-500 font-size-13 opacity-9">Bedrooms</p>
                                     <div class="d-flex align-items-center mt-2">
@@ -380,9 +379,10 @@
                                 <button class="yellow-button text-white px-5 font-weight-normal"> More Details</button>
                             </div>
                         </div>
-                        <div class="ml-4">
-                            <img style="height: 158px; top: -10px;" class="position-absolute top-down-animation"
-                                src="./assets/images/dots.png" alt="dots" />
+                        <div class="ml-4 position-relative">
+                            <img style="height: 158px; top: -9px; left: -19px;"
+                                class="position-absolute top-down-animation" src="./assets/images/dots.png"
+                                alt="dots" />
                             <img class="carousel-animation d-block w-100 position-relative rounded-lg"
                                 src="./assets/images/selection-BedRoom.png" alt="First slide">
                         </div>
@@ -406,7 +406,7 @@
                                 and venues the city has to offer.Lorem ipsum dolor sit amet, consectetur adipiscing
                                 elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
                             <div style="background-color: #eff1f5;"
-                                class="facalities-icons-inner d-flex flex-wrap justify-content-between align-items-center py-3 px-4 rounded-md">
+                                class="facalities-icons-inner d-flex flex-wrap justify-content-between align-items-center py-3 px-4 rounded-xl">
                                 <div class="single-facality">
                                     <p class="font-weight-500 font-size-13 opacity-9">Bedrooms</p>
                                     <div class="d-flex align-items-center mt-2">
@@ -499,9 +499,10 @@
                                 <button class="yellow-button text-white px-5 font-weight-normal"> More Details</button>
                             </div>
                         </div>
-                        <div class="ml-4">
-                            <img style="height: 158px; top: -10px;" class="position-absolute top-down-animation"
-                                src="./assets/images/dots.png" alt="dots" />
+                        <div class="ml-4 position-relative">
+                            <img style="height: 158px; top: -9px; left: -19px;"
+                                class="position-absolute top-down-animation" src="./assets/images/dots.png"
+                                alt="dots" />
                             <img class="carousel-animation d-block w-100 position-relative rounded-lg"
                                 src="./assets/images/selection-BedRoom.png" alt="First slide">
                         </div>
@@ -525,7 +526,7 @@
                                 and venues the city has to offer.Lorem ipsum dolor sit amet, consectetur adipiscing
                                 elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
                             <div style="background-color: #eff1f5;"
-                                class="facalities-icons-inner d-flex flex-wrap justify-content-between align-items-center py-3 px-4 rounded-md">
+                                class="facalities-icons-inner d-flex flex-wrap justify-content-between align-items-center py-3 px-4 rounded-xl">
                                 <div class="single-facality">
                                     <p class="font-weight-500 font-size-13 opacity-9">Bedrooms</p>
                                     <div class="d-flex align-items-center mt-2">
@@ -618,9 +619,10 @@
                                 <button class="yellow-button text-white px-5 font-weight-normal"> More Details</button>
                             </div>
                         </div>
-                        <div class="ml-4">
-                            <img style="height: 158px; top: -10px;" class="position-absolute top-down-animation"
-                                src="./assets/images/dots.png" alt="dots" />
+                        <div class="ml-4 position-relative">
+                            <img style="height: 158px; top: -9px; left: -19px;"
+                                class="position-absolute top-down-animation" src="./assets/images/dots.png"
+                                alt="dots" />
                             <img class="carousel-animation d-block w-100 position-relative rounded-lg"
                                 src="./assets/images/selection-BedRoom.png" alt="First slide">
                         </div>
@@ -639,7 +641,8 @@
     </section>
     <!-- Apartments Ends -->
     <!-- Hot Deals -->
-    <section class="hot-deals container-main pt-5 container-main mx-auto">
+    <section class=" overflow-hidden hot-deals">
+        <div class="container-main pt-5 container-main mx-auto">
         <div class="position-relative d-flex flex-column align-items-center pt-2">
             <img style="height: 60px;" src="./assets/images/icons/hot-deal.gif" alt="hot-deail" />
             <p class="color-red font-weight-bold font-size-25 text-center">Hot Deals</p>
@@ -647,7 +650,7 @@
         </div>
         <div class="d-flex justify-content-between mt-4">
             <div class="hot-deals-left w-57">
-                <div class="mt-4">
+                <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="800" class="mt-4">
                     <div
                         class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg box-shadow">
                         <div class="single-premium-card position-relative">
@@ -760,7 +763,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="mt-4">
+                <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="800" class="mt-4">
                     <div
                         class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg box-shadow">
                         <div class="single-premium-card position-relative">
@@ -872,7 +875,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="mt-4">
+                <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="800" class="mt-4">
                     <div
                         class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg box-shadow">
                         <div class="single-premium-card position-relative">
@@ -984,7 +987,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="mt-4">
+                <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="800" class="mt-4">
                     <div
                         class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg box-shadow">
                         <div class="single-premium-card position-relative">
@@ -1096,7 +1099,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="mt-4">
+                <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="800" class="mt-4">
                     <div
                         class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg box-shadow">
                         <div class="single-premium-card position-relative">
@@ -1208,7 +1211,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="mt-4">
+                <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" class="mt-4">
                     <div
                         class="premium-card-inner d-flex flex-column flex-lg-row bg-white justify-content-between align-items-center rounded-lg box-shadow">
                         <div class="single-premium-card position-relative">
@@ -1322,7 +1325,8 @@
                 </div>
             </div>
             <div class="hot-deals-right w-39">
-                <div class="something-for-you-card bg-white rounded-lg mt-4 box-shadow">
+                <div data-aos="fade-left" data-aos-easing="linear" data-aos-duration="800"
+                    class="something-for-you-card bg-white rounded-lg mt-4 box-shadow">
                     <div class="something-for-you-image position-relative">
                         <div class="tealish-badge position-absolute background-color-tealish text-white font-size-11">
                             Top Value
@@ -1421,7 +1425,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="something-for-you-card bg-white rounded-lg mt-4 box-shadow">
+                <div data-aos="fade-left" data-aos-easing="linear" data-aos-duration="800"
+                    class="something-for-you-card bg-white rounded-lg mt-4 box-shadow">
                     <div class="something-for-you-image position-relative">
                         <div class="tealish-badge position-absolute background-color-tealish text-white font-size-11">
                             Top Value
@@ -1520,7 +1525,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="something-for-you-card bg-white rounded-lg mt-4 box-shadow">
+                <div data-aos="fade-left" data-aos-easing="linear" data-aos-duration="800"
+                    class="something-for-you-card bg-white rounded-lg mt-4 box-shadow">
                     <div class="something-for-you-image position-relative">
                         <div class="tealish-badge position-absolute background-color-tealish text-white font-size-11">
                             Top Value
@@ -1621,13 +1627,14 @@
                 </div>
             </div>
         </div>
+    </div>
     </section>
     <!-- Hot Deals End -->
     <!-- Choice of the day -->
-    <section class="overflow-hidden section-padding">
+    <section data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="choice-of-the-day-main overflow-hidden section-padding">
         <div class="choice-of-the-day container-main mx-auto pb-5">
             <div class="d-flex flex-column align-items-center pt-3 pb-5">
-                <p class="color-blue font-weight-bold font-size-25 text-center text-capitalize">Choice Of The Day</p>
+                <p class="color-blue font-weight-500 font-size-28 text-center text-capitalize">Choice Of The Day</p>
                 <p class="color-gray pt-2 opacity-8">Take a look what we suggest today for you</p>
             </div>
             <div id="carouselChoiceOfTheDay" class="carousel slide w-100" data-ride="carousel">
@@ -1660,7 +1667,7 @@
                                     this fabulous two bedroom duplex apartment will be close to some of the best local
                                     haunts and venues the city has to offer.</p>
                                 <div style="background-color: #f4f7fa;"
-                                    class="facalities-icons-inner d-flex flex-wrap justify-content-between align-items-center py-2 px-4 rounded-md">
+                                    class="facalities-icons-inner d-flex flex-wrap justify-content-between align-items-center py-2 px-4 rounded-xl">
                                     <div class="single-facality">
                                         <p class="font-weight-500 font-size-13 opacity-9">Bedrooms</p>
                                         <div class="d-flex align-items-center mt-2">
@@ -1776,7 +1783,7 @@
                                     this fabulous two bedroom duplex apartment will be close to some of the best local
                                     haunts and venues the city has to offer.</p>
                                 <div style="background-color: #f4f7fa;"
-                                    class="facalities-icons-inner d-flex flex-wrap justify-content-between align-items-center py-2 px-4 rounded-md">
+                                    class="facalities-icons-inner d-flex flex-wrap justify-content-between align-items-center py-2 px-4 rounded-xl">
                                     <div class="single-facality">
                                         <p class="font-weight-500 font-size-13 opacity-9">Bedrooms</p>
                                         <div class="d-flex align-items-center mt-2">
@@ -1892,7 +1899,7 @@
                                     this fabulous two bedroom duplex apartment will be close to some of the best local
                                     haunts and venues the city has to offer.</p>
                                 <div style="background-color: #f4f7fa;"
-                                    class="facalities-icons-inner d-flex flex-wrap justify-content-between align-items-center py-2 px-4 rounded-md">
+                                    class="facalities-icons-inner d-flex flex-wrap justify-content-between align-items-center py-2 px-4 rounded-xl">
                                     <div class="single-facality">
                                         <p class="font-weight-500 font-size-13 opacity-9">Bedrooms</p>
                                         <div class="d-flex align-items-center mt-2">
@@ -1999,7 +2006,7 @@
     </section>
     <!-- Choice of the day ends -->
     <!-- Open Travel Zone -->
-    <section class="section-padding position-relative overflow-hidden">
+    <section data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="section-padding overflow-hidden position-relative overflow-hidden">
         <div class="w-78 d-flex align-items-center">
             <div class="open-zone-left">
                 <div class="open-zone-inner-left d-flex flex-column justify-content-center py-5">
@@ -2023,19 +2030,390 @@
     </section>
     <!-- Open Travel Zone Ends-->
     <!-- New Offers -->
-    <section class="new-offers section-padding">
+    <section data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1100" class="new-offers overflow-hidden section-padding">
         <div class="container-main mx-auto pb-0">
             <div class="d-flex flex-column align-items-center pt-3 pb-2">
-                <p class="color-blue font-weight-bold font-size-25 text-center text-capitalize">Check Out New Offers</p>
+                <p class="color-blue font-weight-500 font-size-28 text-center text-capitalize">Check Out New Offers</p>
                 <p class="color-gray pt-2 opacity-8">Check out our recent offers and Brand new deals</p>
             </div>
         </div>
         <div>
+            <div class="wrapper position-relative">
+          <!-- Arrows -->
+          <div style="top: 180px;" class="d-flex justify-content-between position-absolute w-100">
+              <div class="swiper-button-prev"></div>
+             <div class="swiper-button-next"></div>
+          </div>
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="content-wrapper">
+                                <div class="content">
+                                    <div class="something-for-you-card bg-white rounded-lg box-shadow">
+                                        <div class="something-for-you-image position-relative">
+                                            <div
+                                                class="tealish-badge position-absolute background-color-tealish text-white font-size-11">
+                                                Top Value
+                                            </div>
+                                            <div style="bottom: 6px; right: 5px;" class="position-absolute">
+                                                <img src="./assets/images/icons/heart.png" alt="heart" />
+                                                <img style="height:33px"
+                                                    src="./assets/images/icons/swap_horiz_white.png" alt="arrow" />
+                                            </div>
+                                            <div class="image-inner-card bg-white position-absolute pl-4 pr-3 py-2">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="mr-3 d-flex flex-column align-items-end">
+                                                        <p class="font-weight-600 font-size-11">Very Good</p>
+                                                        <p class="font-size-11 dark-gray opacity-9">4,347 reviews</p>
+                                                    </div>
+                                                    <div
+                                                        class="position-relative d-flex justify-content-center align-items-center">
+                                                        <img style="height: 37px"
+                                                            src="./assets/images/icons/Rectangle.png" alt="rectangle" />
+                                                        <p
+                                                            class="property-image-slider-text-rectangle position-absolute text-white">
+                                                            8.4
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <p class="color-tealish font-size-11 text-right pt-3">Location 8.1</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between px-3 py-4">
+                                            <div>
+                                                <p class="card-heading-right-side font-size-14 font-weight-600">Modern
+                                                    and Luxury Apartment
+                                                </p>
+                                                <p class="dark-gray font-size-13 opacity-9 mt-2">Dopustovanje v srcu
+                                                    narave je vedno
+                                                    najboljša
+                                                    izbira </p>
+                                                <div
+                                                    class="facalities-icons-inner d-flex flex-wrap align-items-center pt-4">
+                                                    <div class="single-facality mr-4">
+                                                        <p class="font-weight-500 font-size-13 opacity-9">Bedrooms</p>
+                                                        <div class="d-flex align-items-center mt-2">
+                                                            <div class="mr-2">
+                                                                <svg class="rh_svg" fill="#40d0d3"
+                                                                    xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                    height="20" viewBox="0 0 24 24">
+                                                                    <defs></defs>
+                                                                    <path
+                                                                        d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z"
+                                                                        transform="translate(-1108 -593)"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <div>
+                                                                <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="single-facality mr-4">
+                                                        <p class="font-weight-500 font-size-13 opacity-9">Bathrooms</p>
+                                                        <div class="d-flex align-items-center mt-2">
+                                                            <div class="mr-2">
+                                                                <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg"
+                                                                    fill="#40d0d3" width="20" height="20"
+                                                                    viewBox="0 0 23.69 24">
+                                                                    <path
+                                                                        d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z"
+                                                                        transform="translate(-1196.31 -593)"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <div>
+                                                                <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="single-facality mr-4">
+                                                        <p class="font-weight-500 font-size-13 opacity-9">Guests</p>
+                                                        <div class="d-flex align-items-center mt-2">
+                                                            <div class="mr-2">
+                                                                <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg"
+                                                                    fill="#40d0d3" width="20" height="20"
+                                                                    viewBox="0 0 26.2 24">
+                                                                    <ellipse
+                                                                        transform="matrix(0.7071 -0.7071 0.7071 0.7071 1.5724 14.7053)"
+                                                                        cx="18.5" cy="5.5" rx="5.5" ry="5.5"></ellipse>
+                                                                    <path
+                                                                        d="M26.1 20.9l-1.1-5.3c-4-3.6-10.3-3.3-13.9 0.8 -1.6 1.8-2.5 4.1-2.5 6.5V24h14.6c1.5 0.1 2.8-1 2.9-2.5C26.2 21.3 26.2 21.1 26.1 20.9z">
+                                                                    </path>
+                                                                    <circle cx="5.5" cy="10.9" r="4.4"></circle>
+                                                                    <path
+                                                                        d="M0 19.7l0 1.1c-0.3 1.5 0.7 2.8 2.2 3.1 0.2 0 0.4 0.1 0.7 0h3.7v-1.1c0-1.8 0.8-3.5 2-5 -0.9-0.3-2-0.5-3-0.5C3.4 17.5 1.5 18.3 0 19.7z">
+                                                                    </path>
+                                                                </svg>
+                                                            </div>
+                                                            <div>
+                                                                <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="text-right font-size-14"><span
+                                                        class="font-weight-700 font-size-21">149€</span>/per night</p>
+                                                <p class="text-right font-size-12 dark-gray py-1"><s>200€/per night</s>
+                                                </p>
+                                                <button class="yellow-button mt-4"> More Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="content-wrapper">
+                                <div class="content">
+                                    <div class="something-for-you-card bg-white rounded-lg box-shadow">
+                                        <div class="something-for-you-image position-relative">
+                                            <div
+                                                class="tealish-badge position-absolute background-color-tealish text-white font-size-11">
+                                                Top Value
+                                            </div>
+                                            <div style="bottom: 6px; right: 5px;" class="position-absolute">
+                                                <img src="./assets/images/icons/heart.png" alt="heart" />
+                                                <img style="height:33px"
+                                                    src="./assets/images/icons/swap_horiz_white.png" alt="arrow" />
+                                            </div>
+                                            <div class="image-inner-card bg-white position-absolute pl-4 pr-3 py-2">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="mr-3 d-flex flex-column align-items-end">
+                                                        <p class="font-weight-600 font-size-11">Very Good</p>
+                                                        <p class="font-size-11 dark-gray opacity-9">4,347 reviews</p>
+                                                    </div>
+                                                    <div
+                                                        class="position-relative d-flex justify-content-center align-items-center">
+                                                        <img style="height: 37px"
+                                                            src="./assets/images/icons/Rectangle.png" alt="rectangle" />
+                                                        <p
+                                                            class="property-image-slider-text-rectangle position-absolute text-white">
+                                                            8.4
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <p class="color-tealish font-size-11 text-right pt-3">Location 8.1</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between px-3 py-4">
+                                            <div>
+                                                <p class="card-heading-right-side font-size-14 font-weight-600">Modern
+                                                    and Luxury Apartment
+                                                </p>
+                                                <p class="dark-gray font-size-13 opacity-9 mt-2">Dopustovanje v srcu
+                                                    narave je vedno
+                                                    najboljša
+                                                    izbira </p>
+                                                <div
+                                                    class="facalities-icons-inner d-flex flex-wrap align-items-center pt-4">
+                                                    <div class="single-facality mr-4">
+                                                        <p class="font-weight-500 font-size-13 opacity-9">Bedrooms</p>
+                                                        <div class="d-flex align-items-center mt-2">
+                                                            <div class="mr-2">
+                                                                <svg class="rh_svg" fill="#40d0d3"
+                                                                    xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                    height="20" viewBox="0 0 24 24">
+                                                                    <defs></defs>
+                                                                    <path
+                                                                        d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z"
+                                                                        transform="translate(-1108 -593)"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <div>
+                                                                <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="single-facality mr-4">
+                                                        <p class="font-weight-500 font-size-13 opacity-9">Bathrooms</p>
+                                                        <div class="d-flex align-items-center mt-2">
+                                                            <div class="mr-2">
+                                                                <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg"
+                                                                    fill="#40d0d3" width="20" height="20"
+                                                                    viewBox="0 0 23.69 24">
+                                                                    <path
+                                                                        d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z"
+                                                                        transform="translate(-1196.31 -593)"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <div>
+                                                                <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="single-facality mr-4">
+                                                        <p class="font-weight-500 font-size-13 opacity-9">Guests</p>
+                                                        <div class="d-flex align-items-center mt-2">
+                                                            <div class="mr-2">
+                                                                <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg"
+                                                                    fill="#40d0d3" width="20" height="20"
+                                                                    viewBox="0 0 26.2 24">
+                                                                    <ellipse
+                                                                        transform="matrix(0.7071 -0.7071 0.7071 0.7071 1.5724 14.7053)"
+                                                                        cx="18.5" cy="5.5" rx="5.5" ry="5.5"></ellipse>
+                                                                    <path
+                                                                        d="M26.1 20.9l-1.1-5.3c-4-3.6-10.3-3.3-13.9 0.8 -1.6 1.8-2.5 4.1-2.5 6.5V24h14.6c1.5 0.1 2.8-1 2.9-2.5C26.2 21.3 26.2 21.1 26.1 20.9z">
+                                                                    </path>
+                                                                    <circle cx="5.5" cy="10.9" r="4.4"></circle>
+                                                                    <path
+                                                                        d="M0 19.7l0 1.1c-0.3 1.5 0.7 2.8 2.2 3.1 0.2 0 0.4 0.1 0.7 0h3.7v-1.1c0-1.8 0.8-3.5 2-5 -0.9-0.3-2-0.5-3-0.5C3.4 17.5 1.5 18.3 0 19.7z">
+                                                                    </path>
+                                                                </svg>
+                                                            </div>
+                                                            <div>
+                                                                <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="text-right font-size-14"><span
+                                                        class="font-weight-700 font-size-21">149€</span>/per night</p>
+                                                <p class="text-right font-size-12 dark-gray py-1"><s>200€/per night</s>
+                                                </p>
+                                                <button class="yellow-button mt-4"> More Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="content-wrapper">
+                                <div class="content">
+                                    <div class="something-for-you-card bg-white rounded-lg box-shadow">
+                                        <div class="something-for-you-image position-relative">
+                                            <div
+                                                class="tealish-badge position-absolute background-color-tealish text-white font-size-11">
+                                                Top Value
+                                            </div>
+                                            <div style="bottom: 6px; right: 5px;" class="position-absolute">
+                                                <img src="./assets/images/icons/heart.png" alt="heart" />
+                                                <img style="height:33px"
+                                                    src="./assets/images/icons/swap_horiz_white.png" alt="arrow" />
+                                            </div>
+                                            <div class="image-inner-card bg-white position-absolute pl-4 pr-3 py-2">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="mr-3 d-flex flex-column align-items-end">
+                                                        <p class="font-weight-600 font-size-11">Very Good</p>
+                                                        <p class="font-size-11 dark-gray opacity-9">4,347 reviews</p>
+                                                    </div>
+                                                    <div
+                                                        class="position-relative d-flex justify-content-center align-items-center">
+                                                        <img style="height: 37px"
+                                                            src="./assets/images/icons/Rectangle.png" alt="rectangle" />
+                                                        <p
+                                                            class="property-image-slider-text-rectangle position-absolute text-white">
+                                                            8.4
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <p class="color-tealish font-size-11 text-right pt-3">Location 8.1</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between px-3 py-4">
+                                            <div>
+                                                <p class="card-heading-right-side font-size-14 font-weight-600">Modern
+                                                    and Luxury Apartment
+                                                </p>
+                                                <p class="dark-gray font-size-13 opacity-9 mt-2">Dopustovanje v srcu
+                                                    narave je vedno
+                                                    najboljša
+                                                    izbira </p>
+                                                <div
+                                                    class="facalities-icons-inner d-flex flex-wrap align-items-center pt-4">
+                                                    <div class="single-facality mr-4">
+                                                        <p class="font-weight-500 font-size-13 opacity-9">Bedrooms</p>
+                                                        <div class="d-flex align-items-center mt-2">
+                                                            <div class="mr-2">
+                                                                <svg class="rh_svg" fill="#40d0d3"
+                                                                    xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                    height="20" viewBox="0 0 24 24">
+                                                                    <defs></defs>
+                                                                    <path
+                                                                        d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z"
+                                                                        transform="translate(-1108 -593)"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <div>
+                                                                <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="single-facality mr-4">
+                                                        <p class="font-weight-500 font-size-13 opacity-9">Bathrooms</p>
+                                                        <div class="d-flex align-items-center mt-2">
+                                                            <div class="mr-2">
+                                                                <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg"
+                                                                    fill="#40d0d3" width="20" height="20"
+                                                                    viewBox="0 0 23.69 24">
+                                                                    <path
+                                                                        d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z"
+                                                                        transform="translate(-1196.31 -593)"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <div>
+                                                                <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="single-facality mr-4">
+                                                        <p class="font-weight-500 font-size-13 opacity-9">Guests</p>
+                                                        <div class="d-flex align-items-center mt-2">
+                                                            <div class="mr-2">
+                                                                <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg"
+                                                                    fill="#40d0d3" width="20" height="20"
+                                                                    viewBox="0 0 26.2 24">
+                                                                    <ellipse
+                                                                        transform="matrix(0.7071 -0.7071 0.7071 0.7071 1.5724 14.7053)"
+                                                                        cx="18.5" cy="5.5" rx="5.5" ry="5.5"></ellipse>
+                                                                    <path
+                                                                        d="M26.1 20.9l-1.1-5.3c-4-3.6-10.3-3.3-13.9 0.8 -1.6 1.8-2.5 4.1-2.5 6.5V24h14.6c1.5 0.1 2.8-1 2.9-2.5C26.2 21.3 26.2 21.1 26.1 20.9z">
+                                                                    </path>
+                                                                    <circle cx="5.5" cy="10.9" r="4.4"></circle>
+                                                                    <path
+                                                                        d="M0 19.7l0 1.1c-0.3 1.5 0.7 2.8 2.2 3.1 0.2 0 0.4 0.1 0.7 0h3.7v-1.1c0-1.8 0.8-3.5 2-5 -0.9-0.3-2-0.5-3-0.5C3.4 17.5 1.5 18.3 0 19.7z">
+                                                                    </path>
+                                                                </svg>
+                                                            </div>
+                                                            <div>
+                                                                <p class="dark-gray font-weight-500 font-size-11">2</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="text-right font-size-14"><span
+                                                        class="font-weight-700 font-size-21">149€</span>/per night</p>
+                                                <p class="text-right font-size-12 dark-gray py-1"><s>200€/per night</s>
+                                                </p>
+                                                <button class="yellow-button mt-4"> More Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <!-- If we need pagination -->
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-nav-wrapper">
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!-- New Offers Ends-->
-    <section class="join-us container-main mx-auto pt-5">
+    <!-- Join Us -->
+    <section data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1100" class="join-us section-padding overflow-hidden container-main mx-auto">
         <div class="join-us-inner d-flex flex-column justify-content-center align-items-center">
             <p class="text-white font-weight-500 font-size-30">Become A Host On XL Travel</p>
             <p class="text-white font-weight-500 font-size-21 pt-3">Join Our Big Family. You Just Few Steps Away…</p>
@@ -2045,20 +2423,181 @@
         </div>
     </section>
     <!-- Client Review -->
-    <section class="client-review section-padding">
+    <section data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1100" class="client-review overflow-hidden section-padding">
         <div class="container-main mx-auto pb-0">
             <div class="d-flex flex-column align-items-center pt-3 pb-2">
-                <p class="color-blue font-weight-bold font-size-25 text-center text-capitalize">CLient Reviews</p>
+                <p class="color-blue font-weight-500 font-size-28 text-center text-capitalize">Client Reviews</p>
             </div>
         </div>
-
+        <div>
+            <div class="wrapper position-relative">
+         <!-- Arrows -->
+          <div style="top: 260px;" class="d-flex justify-content-between position-absolute w-100">
+            <div class="swiper-button-prev"></div>
+           <div class="swiper-button-next"></div>
+        </div>
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div>
+                                <div class="content">
+                                    <div
+                                        class="d-flex flex-column align-items-center bg-white rounded-lg box-shadow-xl py-4 px-5">
+                                        <div class="client-img-border">
+                                            <img style="height: 60px;" src="./assets/images/client.png" alt="client" />
+                                        </div>
+                                        <div class="pt-3">
+                                            <img height="25px" src="./assets/images/icons/yellowStar-Two.png"
+                                                alt="star" />
+                                            <img height="25px" src="./assets/images/icons/yellowStar-Two.png"
+                                                alt="star" />
+                                            <img height="25px" src="./assets/images/icons/yellowStar-Two.png"
+                                                alt="star" />
+                                            <img height="25px" src="./assets/images/icons/yellowStar-Two.png"
+                                                alt="star" />
+                                            <img height="25px" src="./assets/images/icons/yellowStar-Two.png"
+                                                alt="star" />
+                                        </div>
+                                        <div class="pt-3">
+                                            <p class="font-size-14 text-center color-gray-three">Sed ut perspiciatis
+                                                unde omnis iste
+                                                natus error sit voluptatem
+                                                accusantium doloremque laudantium totam rem aperiam, eaque ipsa qua.</p>
+                                        </div>
+                                        <div class="pt-4 text-center">
+                                            <h6 class="font-size-16 color-gray-three">John Doe</h6>
+                                            <p class="font-size-12 color-gray-three pt-2"> ABC Company</p>
+                                        </div>
+                                        <div class="d-flex align-items-center pt-4">
+                                            <img style="height: 32px;" class="mr-2"
+                                                src="./assets/images/icons/google-icon.png" alt="google-icon" />
+                                            <p class="font-size-14 color-gray-three">3 week ago</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>
+                                <div class="content">
+                                    <div
+                                        class="d-flex flex-column align-items-center bg-white rounded-lg box-shadow-xl py-4 px-5">
+                                        <div class="client-img-border">
+                                            <img style="height: 60px;" src="./assets/images/client.png" alt="client" />
+                                        </div>
+                                        <div class="pt-3">
+                                            <img height="25px" src="./assets/images/icons/yellowStar-Two.png"
+                                                alt="star" />
+                                            <img height="25px" src="./assets/images/icons/yellowStar-Two.png"
+                                                alt="star" />
+                                            <img height="25px" src="./assets/images/icons/yellowStar-Two.png"
+                                                alt="star" />
+                                            <img height="25px" src="./assets/images/icons/yellowStar-Two.png"
+                                                alt="star" />
+                                            <img height="25px" src="./assets/images/icons/yellowStar-Two.png"
+                                                alt="star" />
+                                        </div>
+                                        <div class="pt-3">
+                                            <p class="font-size-14 text-center color-gray-three">Sed ut perspiciatis
+                                                unde omnis iste
+                                                natus error sit voluptatem
+                                                accusantium doloremque laudantium totam rem aperiam, eaque ipsa qua.</p>
+                                        </div>
+                                        <div class="pt-4 text-center">
+                                            <h6 class="font-size-16 color-gray-three">John Doe</h6>
+                                            <p class="font-size-12 color-gray-three pt-2"> ABC Company</p>
+                                        </div>
+                                        <div class="d-flex align-items-center pt-4">
+                                            <img style="height: 32px;" class="mr-2"
+                                                src="./assets/images/icons/google-icon.png" alt="google-icon" />
+                                            <p class="font-size-14 color-gray-three">3 week ago</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>
+                                <div class="content">
+                                    <div
+                                        class="d-flex flex-column align-items-center bg-white rounded-lg box-shadow-xl py-4 px-5">
+                                        <div class="client-img-border">
+                                            <img style="height: 60px;" src="./assets/images/client.png" alt="client" />
+                                        </div>
+                                        <div class="pt-3">
+                                            <img height="25px" src="./assets/images/icons/yellowStar-Two.png"
+                                                alt="star" />
+                                            <img height="25px" src="./assets/images/icons/yellowStar-Two.png"
+                                                alt="star" />
+                                            <img height="25px" src="./assets/images/icons/yellowStar-Two.png"
+                                                alt="star" />
+                                            <img height="25px" src="./assets/images/icons/yellowStar-Two.png"
+                                                alt="star" />
+                                            <img height="25px" src="./assets/images/icons/yellowStar-Two.png"
+                                                alt="star" />
+                                        </div>
+                                        <div class="pt-3">
+                                            <p class="font-size-14 text-center color-gray-three">Sed ut perspiciatis
+                                                unde omnis iste
+                                                natus error sit voluptatem
+                                                accusantium doloremque laudantium totam rem aperiam, eaque ipsa qua.</p>
+                                        </div>
+                                        <div class="pt-4 text-center">
+                                            <h6 class="font-size-16 color-gray-three">John Doe</h6>
+                                            <p class="font-size-12 color-gray-three pt-2"> ABC Company</p>
+                                        </div>
+                                        <div class="d-flex align-items-center pt-4">
+                                            <img style="height: 32px;" class="mr-2"
+                                                src="./assets/images/icons/google-icon.png" alt="google-icon" />
+                                            <p class="font-size-14 color-gray-three">3 week ago</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="d-flex align-items-center bg-white rounded-lg box-shadow-xl w-19 mx-auto mt-5 px-4 py-3">
+                        <div class="mr-3">
+                            <img src="./assets/images/icons/google-icon.png" alt="google-icon" />
+                        </div>
+                        <div>
+                            <p class="color-gray-three font-size-18">XL Travel <img style="height: 34px;"
+                                    src="./assets/images/icons/blue-verified.png" alt="verified" /></p>
+                            <p class="color-gray-three d-flex align-items-center font-size-18 font-weight-light"><span
+                                    class="mr-3">5.0</span>
+                                <img style="height: 20px; margin-right: 4px;"
+                                    src="./assets/images/icons/yellowStar-Two.png" alt="yellow-star" />
+                                <img style="height: 20px; margin-right: 4px;"
+                                    src="./assets/images/icons/yellowStar-Two.png" alt="yellow-star" />
+                                <img style="height: 20px; margin-right: 4px;"
+                                    src="./assets/images/icons/yellowStar-Two.png" alt="yellow-star" />
+                                <img style="height: 20px; margin-right: 4px;"
+                                    src="./assets/images/icons/yellowStar-Two.png" alt="yellow-star" />
+                                <img style="height: 20px;" src="./assets/images/icons/yellowStar-Two.png"
+                                    alt="yellow-star" />
+                            </p>
+                            <p class="color-gray-three font-size-14 font-weight-500">52 Reviews</p>
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-nav-wrapper">
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- Client Review -->
     <!-- Frequently Asked Question -->
-    <section class="frequently-asked-question section-padding">
+    <section class="frequently-asked-question section-padding overflow-hidden">
         <div class="container-main mx-auto pb-0">
             <div class="d-flex flex-column align-items-center pt-3 pb-2">
-                <p class="color-blue font-weight-bold font-size-25 text-center text-capitalize">Frequently Asked
+                <p class="color-blue font-weight-500 font-size-28 text-center text-capitalize">Frequently Asked
                     Questions</p>
             </div>
             <div class="card">
@@ -2067,7 +2606,7 @@
                         <div class="row">
                             <div class="col-md-12 px-0">
                                 <div id="accordion">
-                                    <div class="card border-accordian">
+                                    <div data-aos="flip-up" data-aos-easing="linear" data-aos-duration="900" class="card border-accordian">
                                         <div class="card-header" id="heading-1">
                                             <h4 class="mb-0 faq-heading">
                                                 <a role="button" data-toggle="collapse" href="#collapse-1"
@@ -2086,10 +2625,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card border-accordian mt-4">
+                                    <div data-aos="flip-down" data-aos-easing="linear" data-aos-duration="900"  class="card border-accordian mt-4">
                                         <div class="card-header" id="heading-1">
                                             <h4 class="mb-0 faq-heading">
-                                                <a role="button" data-toggle="collapse"  href="#collapse-2"
+                                                <a role="button" data-toggle="collapse" href="#collapse-2"
                                                     aria-expanded="false" aria-controls="collapse-2">
                                                     How Long does It take to buy Apartment ?
                                                 </a>
@@ -2105,10 +2644,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card border-accordian mt-4">
+                                    <div data-aos="flip-up" data-aos-easing="linear" data-aos-duration="900"  class="card border-accordian mt-4">
                                         <div class="card-header" id="heading-1">
                                             <h4 class="mb-0 faq-heading">
-                                                <a role="button" data-toggle="collapse"  href="#collapse-3"
+                                                <a role="button" data-toggle="collapse" href="#collapse-3"
                                                     aria-expanded="false" aria-controls="collapse-3">
                                                     How much do I need for a down payment ?
                                                 </a>
@@ -2124,10 +2663,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card border-accordian mt-4">
+                                    <div data-aos="flip-down" data-aos-easing="linear" data-aos-duration="900"  class="card border-accordian mt-4">
                                         <div class="card-header" id="heading-1">
                                             <h4 class="mb-0 faq-heading">
-                                                <a role="button" data-toggle="collapse"  href="#collapse-4"
+                                                <a role="button" data-toggle="collapse" href="#collapse-4"
                                                     aria-expanded="false" aria-controls="collapse-4">
                                                     What is a buyer's market ?
                                                 </a>
@@ -2143,12 +2682,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card border-accordian mt-4">
+                                    <div data-aos="flip-up" data-aos-easing="linear" data-aos-duration="900"  class="card border-accordian mt-4">
                                         <div class="card-header" id="heading-1">
                                             <h4 class="mb-0 faq-heading">
-                                                <a role="button" data-toggle="collapse"  href="#collapse-5"
+                                                <a role="button" data-toggle="collapse" href="#collapse-5"
                                                     aria-expanded="false" aria-controls="collapse-5">
-                                                    What is popular in  Apartment ?
+                                                    What is popular in Apartment ?
                                                 </a>
                                             </h4>
                                         </div>
@@ -2171,6 +2710,82 @@
             </div>
         </div>
     </section>
+    <footer class="footer background-color-gray-three mt-5 overflow-hidden">
+        <div  data-aos="flip-up" data-aos-easing="linear" data-aos-duration="400" class="footer-inner container-main mx-auto d-flex">
+            <div class="w-26">
+                <div class="cursor-pointer">
+                    <img style="height:67px" src="./assets/images/logo.png" alt="logo" />
+                </div>
+                <div class="ml-1">
+                    <p class="text-white font-size-12 pt-4 font-weight-200">XL Travel OU</p>
+                    <p class="text-white font-size-12 pt-2 font-weight-200">Address: Sepapaja 6, Tallinn 1551, Estonia</p>
+                    <p class="text-white font-size-12 pt-2 font-weight-200">Registry code: 16346723</p>
+                </div>
+                <div class="pt-4">
+                    <img style="height: 36px; margin-right: 10px;" class="social-media-icon"
+                        src="./assets/images/icons/facebook.png" alt="facebook" />
+                    <img style="height: 36px; margin-right: 10px;" class="social-media-icon"
+                        src="./assets/images/icons/twitter.png" alt="facebook" />
+                    <img style="height: 36px; margin-right: 10px;" class="social-media-icon"
+                        src="./assets/images/icons/google-blue.png" alt="facebook" />
+                    <img style="height: 36px;" class="social-media-icon" src="./assets/images/icons/instagram.png"
+                        alt="facebook" />
+                </div>
+            </div>
+            <div class="footer-links w-14 pt-4">
+                <ul class="text-white" style="list-style-type: '-';">
+                    <p class="font-weight-normal font-size-13">About Us</p>
+                    <div class="footer-border-line"></div>
+                    <li><a>What Is Xl Travel</a></li>
+                    <li><a>Careers</a></li>
+                    <li><a>Press</a></li>
+                    <li><a>Travel Zone</a></li>
+                </ul>
+            </div>
+            <div class="footer-links w-14 pt-4">
+                <ul class="text-white" style="list-style-type: '-';">
+                    <p class="font-weight-normal font-size-13">Help</p>
+                    <div class="footer-border-line"></div>
+                    <li><a>Help Center</a></li>
+                    <li><a>FAQs</a></li>
+                    <li><a>Privacy Policy</a></li>
+                    <li><a>Cookie Policy</a></li>
+                    <li><a>Terms Of Use</a></li>
+                </ul>
+            </div>
+            <div class="footer-links w-14 pt-4">
+                <ul class="text-white" style="list-style-type: '-';">
+                    <p class="font-weight-normal font-size-13">Partner with us</p>
+                    <div class="footer-border-line"></div>
+                    <li><a>Partner Hub</a></li>
+                    <li><a>Advertise On Agoda</a></li>
+                    <li><a>Affiliate</a></li>
+                </ul>
+            </div>
+            <!-- <div class="footer-links w-26">
+                <ul class="text-white list-unstyled">
+                    <p class="font-weight-normal font-size-13">Subscribe</p>
+                    <div class="footer-border-line"></div>
+                    <li>
+                        <form class="input-group mt-5">
+                            <input type="email" class="form-control background-color-transparent" required="true"
+                                placeholder="Email Address" aria-label="Recipient's username"
+                                aria-describedby="basic-addon2" />
+                            <div class="input-group-append">
+                                <button
+                                    class="cursor-pointer input-group-text border-0 background-color-yellow text-white font-size-14"
+                                    type="submit" id="basic-addon2">Subscribe</button>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+            </div> -->
+        </div>
+        <div class="container-main mx-auto">
+            <p class="text-center text-white font-weight-400 py-5 font-size-14">Copyright © 2022 Xl Travel. All rights
+                reserved.</p>
+        </div>
+    </footer>
     <!-- Frequently Asked Question -->
     <script src="./index.js"></script>
     <script src="./calender.js"></script>

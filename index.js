@@ -1,3 +1,5 @@
+AOS.init();
+
 $(document).ready(function() {
   $(".title").lettering();
   $(".button").lettering();
@@ -30,7 +32,7 @@ const startVideo = async () => {
     // do stuff in case your video is unavailable to play/autoplay
   }
 }
-setTimeout(startVideo, 4000)
+setTimeout(startVideo, 500)
 
   setTimeout(function () {
     $(".search-box-index ").show()
@@ -141,3 +143,40 @@ var countries = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Angu
 
 /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
 autocomplete(document.getElementById("myInput"), countries);
+
+// Swiper*********************
+const swiper = new Swiper(".swiper", {
+    // Optional parameters
+    direction: "horizontal",
+    loop: true,
+    autoHeight: false,
+    centeredSlides: true,
+    slidesPerView: 1,
+    // Responsive breakpoints
+    breakpoints: {
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+        },
+        992: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+        }
+    },
+
+    // If we need pagination
+    pagination: {
+        el: ".swiper-pagination"
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+    }
+
+    // And if we need scrollbar
+    /*scrollbar: {
+    el: '.swiper-scrollbar',
+  },*/
+});
