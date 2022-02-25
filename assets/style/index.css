@@ -73,7 +73,7 @@ video::-webkit-media-controls-panel {
 .search-box-index {
   margin-top: 60px;
   position: relative;
-  animation: animation linear 4s;
+  animation: animation linear 2.5s;
 }
 
 @keyframes animation {
