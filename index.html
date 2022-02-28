@@ -106,79 +106,82 @@
     <!-- Header End -->
     <!-- Hero Section -->
     <section class="hero-section">
-        <div class="container-main mx-auto d-flex justify-content-center align-items-center">
-            <div class="w-68">
-                <h1 class="text-white font-weight-500">
-                    <span class="title">Find Your Next Stay</span></br>
-                </h1>
-                <p class="pt-2 text-white font-size-18 font-weight-normal">
-                    <span class="title"><span class="your-travel">Your travel</span> partner for unforgettable trips at</span></br>
-                    <span class="title">best prices</span></br>
-                </p>
-                <div class="search-box-index bg-white w-100 py-2 rounded box-shadow">
-                    <div class="d-flex align-items-center">
-                        <div class="autocomplete border-right w-29 px-2">
-                            <p class="search-lable">Location</p>
-                            <input id="myInput" type="text" name="myCountry" placeholder="Where are you going?">
-                        </div>
-                        <div class="border-right w-29 px-2 position-relative">
-                            <p class="search-lable">Date</p>
-                            <input id="searhBar-index-date-picker" placeholder="Add Date" class="form-control" />
-                            <svg style="right: 10; bottom:8" class="position-absolute"
-                                xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 18">
-                                <g id="Group_9686" data-name="Group 9686" transform="translate(-1028 -1310)">
-                                    <path fill="#212529" id="Polygon_1" data-name="Polygon 1" d="M4,0,8,7H0Z"
-                                        transform="translate(1028 1310)" />
-                                    <path fill="#212529" id="Polygon_2" data-name="Polygon 2" d="M4,0,8,7H0Z"
-                                        transform="translate(1036 1328) rotate(180)" />
-                                </g>
-                            </svg>
-                        </div>
-                        <div
-                            class="search-box-single-element position-relative text-center d-flex flex-column border-right w-29 px-2">
-                            <p class="search-lable">Guests</p>
-                            <select class="selectpicker" title="Add Guest">
-                                <option>1 Guest</option>
-                                <option>2 Guests</option>
-                                <option>3 Guests</option>
-                                <option>4 Guests</option>
-                            </select>
-                            <svg style="right: 10; bottom:8" class="position-absolute"
-                                xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 18">
-                                <g id="Group_9686" data-name="Group 9686" transform="translate(-1028 -1310)">
-                                    <path fill="#212529" id="Polygon_1" data-name="Polygon 1" d="M4,0,8,7H0Z"
-                                        transform="translate(1028 1310)" />
-                                    <path fill="#212529" id="Polygon_2" data-name="Polygon 2" d="M4,0,8,7H0Z"
-                                        transform="translate(1036 1328) rotate(180)" />
-                                </g>
-                            </svg>
-                        </div>
-                        <div
-                            class="searchbutton-index ml-4 cursor-pointer d-flex justify-content-center align-items-center">
-                            <svg class="svg-icon search-icon" fill="#000000" aria-labelledby="title desc" height="20px"
-                                width="20px" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7">
-                                <title id="title">Search Icon</title>
-                                <desc id="desc"></desc>
-                                <g class="search-path" fill="none" stroke="#000000">
-                                    <path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4" />
-                                    <circle cx="8" cy="8" r="7" />
-                                </g>
-                            </svg>
-                        </div>
-                    </div>
+        <div class="container-main mx-auto position-relative">
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="w-68">
+                    <h1 class="text-white font-weight-500">
+                        <span class="title">Find Your Next Stay</span></br>
+                    </h1>
+                    <p class="pt-2 text-white font-size-18 font-weight-normal">
+                        <span class="title"><span class="your-travel">Your travel</span> partner for unforgettable trips at</span></br>
+                        <span class="title">best prices</span></br>
+                    </p>
+                </div>
+                <div class="overflow-hidden">
+                    <video style="margin-left: 4px;" id="video_background" width="100%" height="100%" preload="true"
+                        muted>
+                        <source src="./assets/video/Video_1.mp4" type="video/mp4">
+                    </video>
                 </div>
             </div>
-            <div class="overflow-hidden">
-                <video style="margin-left: 4px;" id="video_background" width="100%" height="100%" preload="true" muted>
-                    <source src="./assets/video/Video_1.mp4" type="video/mp4">
-                </video>
+            <div class="search-box-index bg-white w-57 mx-auto py-2 rounded box-shadow position-absolute">
+                <div class="d-flex align-items-center">
+                    <div class="autocomplete border-right w-29 px-4">
+                        <p class="search-lable">Location</p>
+                        <input id="myInput" type="text" name="myCountry" placeholder="Where are you going?">
+                    </div>
+                    <div class="border-right w-29 px-4 position-relative">
+                        <p class="search-lable">Date</p>
+                        <input id="searhBar-index-date-picker" placeholder="Add Date" class="form-control" />
+                        <svg style="right: 10; bottom:8" class="position-absolute" xmlns="http://www.w3.org/2000/svg"
+                            width="8" height="12" viewBox="0 0 8 18">
+                            <g id="Group_9686" data-name="Group 9686" transform="translate(-1028 -1310)">
+                                <path fill="#212529" id="Polygon_1" data-name="Polygon 1" d="M4,0,8,7H0Z"
+                                    transform="translate(1028 1310)" />
+                                <path fill="#212529" id="Polygon_2" data-name="Polygon 2" d="M4,0,8,7H0Z"
+                                    transform="translate(1036 1328) rotate(180)" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div
+                        class="search-box-single-element position-relative text-center d-flex flex-column border-right w-29 px-4">
+                        <p class="search-lable">Guests</p>
+                        <select class="selectpicker" title="Add Guest">
+                            <option>1 Guest</option>
+                            <option>2 Guests</option>
+                            <option>3 Guests</option>
+                            <option>4 Guests</option>
+                        </select>
+                        <svg style="right: 10; bottom:8" class="position-absolute" xmlns="http://www.w3.org/2000/svg"
+                            width="8" height="12" viewBox="0 0 8 18">
+                            <g id="Group_9686" data-name="Group 9686" transform="translate(-1028 -1310)">
+                                <path fill="#212529" id="Polygon_1" data-name="Polygon 1" d="M4,0,8,7H0Z"
+                                    transform="translate(1028 1310)" />
+                                <path fill="#212529" id="Polygon_2" data-name="Polygon 2" d="M4,0,8,7H0Z"
+                                    transform="translate(1036 1328) rotate(180)" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div
+                        class="searchbutton-index mx-auto cursor-pointer d-flex justify-content-center align-items-center">
+                        <svg class="svg-icon search-icon" fill="#000000" aria-labelledby="title desc" height="20px"
+                            width="20px" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7">
+                            <title id="title">Search Icon</title>
+                            <desc id="desc"></desc>
+                            <g class="search-path" fill="none" stroke="#000000">
+                                <path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4" />
+                                <circle cx="8" cy="8" r="7" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     <!-- Hero Section Ends-->
     <!-- Pros Section Ends-->
-    <section class="pros-section container-main mx-auto">
-        <div class="d-flex justify-content-center align-items-center pt-5 pb-3">
+    <section class="pros-section section-padding container-main mx-auto">
+        <div class="d-flex justify-content-center align-items-center pt-3 pb-3">
             <p class="color-blue font-weight-500 font-size-28 text-center text-capitalize">Why We Love Xl Travel</p>
         </div>
         <div class="commission-pros d-flex flex-column flex-md-row flex-wrap justify-content-start px-4 px-md-5">
@@ -204,7 +207,7 @@
                     <div class="ml-5">
                         <h class="font-weight-500 text-capitalize">Everything at one place</h>
                         <p class="dark-gray text-capitalize line-height-38 pt-2 opacity-8 font-normal font-size-14">
-                             Here you can find anything,</br> from tiny rooms to large</br> premium hotels
+                            Here you can find anything,</br> from tiny rooms to large</br> premium hotels
                         </p>
                     </div>
                 </div>
@@ -385,7 +388,8 @@
                                 </div>
                             </div>
                             <div class="pt-4">
-                                <button class="yellow-button text-white px-5 font-weight-normal top-down-animation"> More Details</button>
+                                <button class="yellow-button text-white px-5 font-weight-normal top-down-animation">
+                                    More Details</button>
                             </div>
                         </div>
                         <div class="ml-4 position-relative">
@@ -505,7 +509,8 @@
                                 </div>
                             </div>
                             <div class="pt-4">
-                                <button class="yellow-button text-white px-5 font-weight-normal top-down-animation"> More Details</button>
+                                <button class="yellow-button text-white px-5 font-weight-normal top-down-animation">
+                                    More Details</button>
                             </div>
                         </div>
                         <div class="ml-4 position-relative">
@@ -625,7 +630,8 @@
                                 </div>
                             </div>
                             <div class="pt-4">
-                                <button class="yellow-button text-white px-5 font-weight-normal top-down-animation"> More Details</button>
+                                <button class="yellow-button text-white px-5 font-weight-normal top-down-animation">
+                                    More Details</button>
                             </div>
                         </div>
                         <div class="ml-4 position-relative">
@@ -2767,6 +2773,7 @@
             </div>
         </div>
     </section>
+    <!-- Frequently Asked Question Ended -->
     <footer class="footer background-color-gray-three mt-5 overflow-hidden">
         <div data-aos="flip-up" data-aos-easing="linear" data-aos-duration="400"
             class="footer-inner container-main mx-auto d-flex">
@@ -2826,7 +2833,7 @@
                     <p class="font-weight-normal font-size-13">Become A Host On Xl Travel</p>
                     <div class="footer-border-line"></div>
                     <li>
-                       <button class="yellow-button text-white font-weight-400">Lets Go </button>
+                        <button class="yellow-button text-white font-weight-400">Lets Go </button>
                     </li>
                 </ul>
             </div>
@@ -2836,7 +2843,6 @@
                 reserved.</p>
         </div>
     </footer>
-    <!-- Frequently Asked Question -->
     <script src="./index.js"></script>
     <script src="./calender.js"></script>
 </body>
