@@ -4,8 +4,8 @@
 }
 /* Hero Section */
 .hero-section {
-  padding: 100px 0px;
-  background-color: #3cbaf8;
+  padding: 50px 0px;
+  background-color: #35b1f8;
 }
 video::-webkit-media-controls-panel {
   display: none !important;
@@ -81,7 +81,7 @@ video::-webkit-media-controls-panel {
   color: gray;
 }
 .search-box-index {
-  bottom: -58px;
+  bottom: -86px;
   left: 0;
   right: 0;
   position: relative;
@@ -105,55 +105,55 @@ video::-webkit-media-controls-panel {
     bottom: 0px;
     transform: translate(-360px);
     width: 40%;
-    opacity: 0.2;
+    opacity: 0.1;
   }
   30% {
     bottom: 40px;
     transform: translate(-360px);
     width: 40%;
-    opacity: 0.2;
+    opacity: 0.3;
   }
   40% {
     bottom: 58px;
     transform: translate(-360px);
     width: 40%;
-    opacity: 0.3;
+    opacity: 0.7;
   }
   50% {
     bottom: 58px;
     transform: translate(-360px);
     width: 40%;
-    opacity: 0.3;
+    opacity: 1;
   }
   60% {
-    bottom: 35px;
+    bottom: 20px;
     transform: translate(-270px);
     width: 45%;
-    opacity: 0.4;
+    opacity: 1;
   }
   70% {
-    bottom: 10px;
+    bottom: -30px;
     transform: translate(-180px);
     width: 52%;
-    opacity: 0.4;
+    opacity: 1;
   }
   80% {
-    bottom: -20px;
+    bottom: -45px;
     transform: translate(-90px);
     width: 55%;
-    opacity: 0.5;
+    opacity: 1;
   }
   90% {
-    bottom: -58px;
+    bottom: -80px;
     transform: translate(0);
-    width: 68%;
-    opacity: 0.5;
+    width: 60%;
+    opacity: 1;
   }
   100% {
-    bottom: -58px;
+    bottom: -86px;
     transform: translate(0);
-    width: 68%;
-    opacity: 0.6;
+    width: 100%;
+    opacity: 1;
   }
 }
 /* Common Button */
