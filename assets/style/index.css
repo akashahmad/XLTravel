@@ -741,7 +741,6 @@ header {
 
   #search-index {
     background-color: rgba(0,0,0,0.7);
-    display: none;
     position: fixed;
     inset: 0;
     z-index: 99;
@@ -750,7 +749,7 @@ header {
   .search-box-index {
     position: fixed !important;
     inset: 0;
-    height: 50%;
+    height: 60%;
     z-index: 99;
     top: 20%;
   }
@@ -760,6 +759,23 @@ header {
     left: 0;
     right: 0;
     z-index: 10;
+  }
+  .search-form-mobile input{
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 22px;
+    width: 26%;
+  }
+  .search-form-mobile ::placeholder{
+    color: white;
+    font-size: 22px;
+  }
+  #filter-location{
+    border: none;
+    width: 33%;
+    background-color: transparent;
+    font-size: 12px;
   }
   .search-box-index div {
     width: 100%;

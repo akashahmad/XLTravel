@@ -1680,6 +1680,13 @@ function getDate()
 	document.getElementById("Filter-date").innerHTML = dateInput;
 	console.log("dateInput" , dateInput)
 }
+function getDateIndex()
+{
+	var dateInput = document.getElementById("searhBar-index-date-picker").value;
+	document.getElementById("Filter-date-index").innerHTML = dateInput;
+	console.log("dateInput" , dateInput)
+}
+
 
 // Three calendars
 /* =========================================================

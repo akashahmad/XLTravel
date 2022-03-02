@@ -111,103 +111,113 @@
             <div class="d-flex justify-content-center align-items-center">
                 <div class="position-relative w-100">
                     <div class="d-block d-lg-none w-100 animation-left">
-                        <div
-                        class="writeit"
-                      ></div>
+                        <div class="writeit"></div>
                         <div>
+                        </div>
                     </div>
-                    </div>
-                    <video class="d-none d-lg-block" id="video_background" width="100%" height="100%" autoplay preload="true" muted>
+                    <video class="d-none d-lg-block" id="video_background" width="100%" height="100%" autoplay
+                        preload="true" muted>
                         <source src="./assets/video/desktop.mp4" type="video/mp4">
                     </video>
-                    <video style="margin-bottom:-4px;" class="d-block d-lg-none"id="video_background_mobile" autoplay width="100%" height="100%" preload="true" muted>
+                    <video style="margin-bottom:-4px;" class="d-block d-lg-none" id="video_background_mobile" autoplay
+                        width="100%" height="100%" preload="true" muted>
                         <source src="./assets/video/Mobile_1.mp4" type="video/mp4">
                     </video>
                     <div class="position-relative container-main">
-                    <div class="d-none d-lg-block w-88 animation-left">
-                        <h1 class="text-white font-weight-500">
-                            <span class="title">Find Your Next Stay</span></br>
-                        </h1>
-                        <p class="pt-2 text-white font-size-18 font-weight-normal">
-                            <span class="title"><span class="your-travel">Your travel</span> partner for unforgettable trips at</span></br>
-                            <span class="title">best prices</span></br>
-                        </p>
+                        <div class="d-none d-lg-block w-88 animation-left">
+                            <h1 class="text-white font-weight-500">
+                                <span class="title">Find Your Next Stay</span></br>
+                            </h1>
+                            <p class="pt-2 text-white font-size-18 font-weight-normal">
+                                <span class="title"><span class="your-travel">Your travel</span> partner for unforgettable trips at</span></br>
+                                <span class="title">best prices</span></br>
+                            </p>
+                        </div>
                     </div>
-                    </div>
-                 <div class="position-relative container-main">
-                <div id="search-index">
-                    <div class="d-flex justify-content-end mt-5 mr-3" onclick="displayNone(`search-index`)">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="white" height="30px" viewBox="0 0 329.26933 329"><path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"/></svg>
-                </div>
-                    <div class="search-box-index bg-white w-90 py-2 rounded box-shadow-xl position-absolute">
-                        <div class="d-flex flex-column flex-md-row align-items-center">
-                            <div class="autocomplete border-right w-29 px-4 search-box-inner ">
-                                <p class="search-lable">Location</p>
-                                <input id="myInput" type="text" name="myCountry" placeholder="Where are you going?">
+                    <div class="position-relative container-main">
+                        <div id="search-index">
+                            <div class="d-block d-md-none">
+                                <div class="d-flex justify-content-end mt-5 mr-3" onclick="displayNone(`search-index`)">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="white" height="30px"
+                                        viewBox="0 0 329.26933 329">
+                                        <path
+                                            d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0" />
+                                    </svg>
+                                </div>
                             </div>
-                            <div class="border-right w-29 px-4 position-relative search-box-inner">
-                                <p class="search-lable">Date</p>
-                                <input id="searhBar-index-date-picker" placeholder="Add Date" class="form-control" />
-                                <svg style="right: 10; bottom:8" class="position-absolute" xmlns="http://www.w3.org/2000/svg"
-                                    width="8" height="12" viewBox="0 0 8 18">
-                                    <g id="Group_9686" data-name="Group 9686" transform="translate(-1028 -1310)">
-                                        <path fill="#212529" id="Polygon_1" data-name="Polygon 1" d="M4,0,8,7H0Z"
-                                            transform="translate(1028 1310)" />
-                                        <path fill="#212529" id="Polygon_2" data-name="Polygon 2" d="M4,0,8,7H0Z"
-                                            transform="translate(1036 1328) rotate(180)" />
-                                    </g>
-                                </svg>
-                            </div>
-                            <div
-                                class="search-box-single-element position-relative text-center d-flex flex-column border-right search-box-inner w-29 px-4">
-                                <p class="search-lable">Guests</p>
-                                <select class="selectpicker" title="Add Guest">
-                                    <option>1 Guest</option>
-                                    <option>2 Guests</option>
-                                    <option>3 Guests</option>
-                                    <option>4 Guests</option>
-                                </select>
-                                <svg style="right: 10; bottom:8" class="position-absolute" xmlns="http://www.w3.org/2000/svg"
-                                    width="8" height="12" viewBox="0 0 8 18">
-                                    <g id="Group_9686" data-name="Group 9686" transform="translate(-1028 -1310)">
-                                        <path fill="#212529" id="Polygon_1" data-name="Polygon 1" d="M4,0,8,7H0Z"
-                                            transform="translate(1028 1310)" />
-                                        <path fill="#212529" id="Polygon_2" data-name="Polygon 2" d="M4,0,8,7H0Z"
-                                            transform="translate(1036 1328) rotate(180)" />
-                                    </g>
-                                </svg>
-                            </div>
-                            <div
-                                class="searchbutton-index mx-auto cursor-pointer d-flex justify-content-center align-items-center">
-                                <p class="search-button-text text-black font-size-12 font-weight-500 mr-1">Search</p>
-                                <svg class="svg-icon search-icon" fill="#000000" aria-labelledby="title desc" height="20px"
-                                    width="20px" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7">
-                                    <title id="title">Search Icon</title>
-                                    <desc id="desc"></desc>
-                                    <g class="search-path" fill="none" stroke="#000000">
-                                        <path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4" />
-                                        <circle cx="8" cy="8" r="7" />
-                                    </g>
-                                </svg>
+                            <div class="search-box-index bg-white w-90 py-2 rounded box-shadow-xl position-absolute">
+                                <div class="d-flex flex-column flex-md-row align-items-center">
+                                    <div class="autocomplete border-right w-29 px-4 search-box-inner ">
+                                        <p class="search-lable">Location</p>
+                                        <input id="myInput" type="text" name="myCountry"
+                                            placeholder="Where are you going?" onchange="summationIndex()">
+                                    </div>
+                                    <div class="border-right w-29 px-4 position-relative search-box-inner">
+                                        <p class="search-lable">Date</p>
+                                        <input id="searhBar-index-date-picker" placeholder="Add Date"
+                                            class="form-control" onchange="getDateIndex()" />
+                                        <svg style="right: 10; bottom:8" class="position-absolute"
+                                            xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 18">
+                                            <g id="Group_9686" data-name="Group 9686"
+                                                transform="translate(-1028 -1310)">
+                                                <path fill="#212529" id="Polygon_1" data-name="Polygon 1"
+                                                    d="M4,0,8,7H0Z" transform="translate(1028 1310)" />
+                                                <path fill="#212529" id="Polygon_2" data-name="Polygon 2"
+                                                    d="M4,0,8,7H0Z" transform="translate(1036 1328) rotate(180)" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div
+                                        class="search-box-single-element position-relative text-center d-flex flex-column border-right search-box-inner w-29 px-4">
+                                        <p class="search-lable">Guests</p>
+                                        <select class="selectpicker" title="Add Guest">
+                                            <option>1 Guest</option>
+                                            <option>2 Guests</option>
+                                            <option>3 Guests</option>
+                                            <option>4 Guests</option>
+                                        </select>
+                                        <svg style="right: 10; bottom:8" class="position-absolute"
+                                            xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 18">
+                                            <g id="Group_9686" data-name="Group 9686"
+                                                transform="translate(-1028 -1310)">
+                                                <path fill="#212529" id="Polygon_1" data-name="Polygon 1"
+                                                    d="M4,0,8,7H0Z" transform="translate(1028 1310)" />
+                                                <path fill="#212529" id="Polygon_2" data-name="Polygon 2"
+                                                    d="M4,0,8,7H0Z" transform="translate(1036 1328) rotate(180)" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div
+                                        class="searchbutton-index mx-auto cursor-pointer d-flex justify-content-center align-items-center">
+                                        <p class="search-button-text text-black font-size-12 font-weight-500 mr-1">
+                                            Search</p>
+                                        <svg class="svg-icon search-icon" fill="#000000" aria-labelledby="title desc"
+                                            height="20px" width="20px" role="img" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 19.9 19.7">
+                                            <title id="title">Search Icon</title>
+                                            <desc id="desc"></desc>
+                                            <g class="search-path" fill="none" stroke="#000000">
+                                                <path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4" />
+                                                <circle cx="8" cy="8" r="7" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    </div>
-                </div>
                     <div style="background-color: #4b4949"
-                    class="search-form-mobile d-flex align-items-center justify-content-end px-4 px-lg-3 pt-3 pb-4 rounded-lg-top d-block d-lg-none">
-                    <!-- <div>
-                      <p class="text-white font-weight-500 font-size-16">
-                        € 72/Night
-                      </p>
-                      <p class="text-white font-weight-500 font-size-9">
-                        <u> feb 12-feb 22</u>
-                      </p>
-                    </div> -->
-                    <div class="d-flex align-items-center">
-                      <button class="yellow-button" onclick="displayBlock(`search-index`)">Search</button>
+                        class="search-form-mobile d-flex align-items-center justify-content-between px-4 px-lg-3 pt-3 pb-4 rounded-lg-top d-block d-lg-none">
+                        <div>
+                            <p class="text-white"><input class="text-white" id="filter-location-index" disabled
+                                    placeholder="Location" /><span style="position: relative; top:1px"
+                                    class="font-size-15 px-1">-</span> <span
+                                    class="text-white font-weight-500 font-size-14" id="Filter-date-index"></span></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <button class="yellow-button" onclick="displayBlock(`search-index`)">Search</button>
+                        </div>
                     </div>
-                  </div>
                 </div>
             </div>
 
@@ -219,7 +229,8 @@
         <div class="d-flex justify-content-center align-items-center pt-3 pb-3">
             <p class="color-blue font-weight-500 font-size-28 text-center text-capitalize">Why We Love Xl Travel</p>
         </div>
-        <div class="commission-pros d-flex flex-column flex-lg-row flex-wrap justify-content-start justify-content-lg-center px-4 px-md-5">
+        <div
+            class="commission-pros d-flex flex-column flex-lg-row flex-wrap justify-content-start justify-content-lg-center px-4 px-md-5">
             <div data-aos="zoom-in-up" class="single-pros w-31 mx-auto mt-5">
                 <div class="d-flex">
                     <div style="width:70px; height:58px;"
@@ -228,8 +239,8 @@
                     </div>
                     <div class="ml-5">
                         <h class="font-weight-500 text-capitalize">No commissions at all</h>
-                        <p class="dark-gray text-capitalize line-height-38 pt-2 opacity-8 font-normal font-size-14"> For
-                            both, hosts and guest </br>there are no extra costs</p>
+                        <p class="dark-gray text-capitalize line-height-38 pt-2 opacity-8 font-normal font-size-14"> For both, hosts and guest 
+                        </br>there are no extra costs</p>
                     </div>
                 </div>
             </div>
@@ -818,7 +829,8 @@
                                     <p class="color-tealish text-lg-right text-left font-size-11 py-1">Location 8.1</p>
                                     <p class="text-lg-right text-left font-size-14"><span
                                             class="font-weight-700 font-size-21">149€</span>/per night</p>
-                                    <p class="text-left text-md-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
+                                    <p class="text-left text-md-right font-size-12 dark-gray py-1"><s>200€/per night</s>
+                                    </p>
                                 </div>
                                 <div class="text-right d-none d-lg-block">
                                     <button class="yellow-button font-size-11">More Details</button>
@@ -937,7 +949,8 @@
                                     <p class="color-tealish text-lg-right text-left font-size-11 py-1">Location 8.1</p>
                                     <p class="text-lg-right text-left font-size-14"><span
                                             class="font-weight-700 font-size-21">149€</span>/per night</p>
-                                    <p class="text-left text-md-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
+                                    <p class="text-left text-md-right font-size-12 dark-gray py-1"><s>200€/per night</s>
+                                    </p>
                                 </div>
                                 <div class="text-right d-none d-lg-block">
                                     <button class="yellow-button font-size-11">More Details</button>
@@ -1056,7 +1069,8 @@
                                     <p class="color-tealish text-lg-right text-left font-size-11 py-1">Location 8.1</p>
                                     <p class="text-lg-right text-left font-size-14"><span
                                             class="font-weight-700 font-size-21">149€</span>/per night</p>
-                                    <p class="text-left text-md-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
+                                    <p class="text-left text-md-right font-size-12 dark-gray py-1"><s>200€/per night</s>
+                                    </p>
                                 </div>
                                 <div class="text-right d-none d-lg-block">
                                     <button class="yellow-button font-size-11">More Details</button>
@@ -1175,7 +1189,8 @@
                                     <p class="color-tealish text-lg-right text-left font-size-11 py-1">Location 8.1</p>
                                     <p class="text-lg-right text-left font-size-14"><span
                                             class="font-weight-700 font-size-21">149€</span>/per night</p>
-                                    <p class="text-left text-md-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
+                                    <p class="text-left text-md-right font-size-12 dark-gray py-1"><s>200€/per night</s>
+                                    </p>
                                 </div>
                                 <div class="text-right d-none d-lg-block">
                                     <button class="yellow-button font-size-11">More Details</button>
@@ -1294,7 +1309,8 @@
                                     <p class="color-tealish text-lg-right text-left font-size-11 py-1">Location 8.1</p>
                                     <p class="text-lg-right text-left font-size-14"><span
                                             class="font-weight-700 font-size-21">149€</span>/per night</p>
-                                    <p class="text-left text-md-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
+                                    <p class="text-left text-md-right font-size-12 dark-gray py-1"><s>200€/per night</s>
+                                    </p>
                                 </div>
                                 <div class="text-right d-none d-lg-block">
                                     <button class="yellow-button font-size-11">More Details</button>
@@ -1413,7 +1429,8 @@
                                     <p class="color-tealish text-lg-right text-left font-size-11 py-1">Location 8.1</p>
                                     <p class="text-lg-right text-left font-size-14"><span
                                             class="font-weight-700 font-size-21">149€</span>/per night</p>
-                                    <p class="text-left text-md-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
+                                    <p class="text-left text-md-right font-size-12 dark-gray py-1"><s>200€/per night</s>
+                                    </p>
                                 </div>
                                 <div class="text-right d-none d-lg-block">
                                     <button class="yellow-button font-size-11">More Details</button>
@@ -2536,8 +2553,10 @@
     <section data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1100"
         class="join-us section-padding overflow-hidden container-main mx-auto">
         <div class="join-us-inner d-flex flex-column justify-content-center align-items-center">
-            <p class="become-host-heading text-white font-weight-500 font-size-30 text-center">Become A Host On XL Travel</p>
-            <p class="become-host-description text-white font-weight-500 font-size-21 pt-3 text-center">Join Our Big Family. You Just Few Steps Away…</p>
+            <p class="become-host-heading text-white font-weight-500 font-size-30 text-center">Become A Host On XL
+                Travel</p>
+            <p class="become-host-description text-white font-weight-500 font-size-21 pt-3 text-center">Join Our Big
+                Family. You Just Few Steps Away…</p>
             <button class="join-us-button mt-5 box-shadow cursor-pointer">
                 Lets Go
             </button>
