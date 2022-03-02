@@ -1,5 +1,6 @@
 AOS.init();
 
+// Typing Animation
 $(document).ready(function() {
   $(".title").lettering();
   $(".button").lettering();
@@ -16,23 +17,84 @@ function animation() {
   {ease: Back.easeOut.config(1.7), opacity: 1, bottom: 0}, 0.05);
 }
 
-// Video
-const startVideo = async () => {
-  const video = document.querySelector('#video_background');
+// Typing Animation Mobile
+// Create the array with the text you want to write
+var txt2write = new Array(
+  "<h1>Find Your</h1>",
+  "<h2 >Next Stay</h2>",
+  "<p>Your tavel partner for</p>",
+  "<p>unforgettable trips at</p>",
+  "<p>the best price.</p>"
+);
 
-  try {
-      await video.play();
+// Variables
+var speed = 60; // You can set the speed here. + is slower
+var index = 0;
+text_pos = 0;
+var str_length = txt2write[0].length;
+var contents, row;
 
-      video.setAttribute('autoplay', true);
-      video.setAttribute('muted', true);
+// Function
+function type_text() {
+  // Init the content with blank
+  contents = "";
+  row = Math.max(0, index - 9);
+  while (row < index) {
+    // Each sentence will end with a <br />
+    contents += txt2write[row++] + "\r<br />";
+  }
 
-      console.log('video started playing successfully');
-  } catch (err) {
-    console.log(err, 'video play error');
-    // do stuff in case your video is unavailable to play/autoplay
+  // Write the text
+  $("div.writeit").html(
+    contents +
+      txt2write[index].substring(0, text_pos) +
+      "<span class='after'>_</span>"
+  );
+
+  if (text_pos++ == str_length) {
+    text_pos = 0;
+    index++;
+    if (index != txt2write.length) {
+      str_length = txt2write[index].length;
+      setTimeout("type_text()", 800);
+    }
+  } else {
+    setTimeout("type_text()", speed);
   }
 }
-setTimeout(startVideo, 500)
+
+type_text();
+
+// Video
+// const startVideo = async () => {
+//   const video = document.querySelector('#video_background');
+
+//   try {
+//       await video.play();
+
+//       video.setAttribute('autoplay', true);
+//       video.setAttribute('muted', true);
+//   } catch (err) {
+//     console.log(err, 'video play error');
+//     // do stuff in case your video is unavailable to play/autoplay
+//   }
+// }
+// setTimeout(startVideo, 500)
+
+// const startVideoMobile = async () => {
+//   const videoMobile = document.querySelector('#video_background_mobile');
+
+//   try {
+//       await videoMobile.play();
+
+//       videoMobile.setAttribute('autoplay', true);
+//       videoMobile.setAttribute('muted', true);
+//   } catch (err) {
+//     console.log(err, 'video play error');
+//     // do stuff in case your video is unavailable to play/autoplay
+//   }
+// }
+// setTimeout(startVideoMobile, 500)
 
   setTimeout(function () {
     $(".search-box-index ").show()
@@ -180,3 +242,12 @@ const swiper = new Swiper(".swiper", {
     el: '.swiper-scrollbar',
   },*/
 });
+
+
+// Display Block and none function
+function displayBlock(value){
+  document.getElementById(value).style.display = "block";
+ }
+ function displayNone(value){
+  document.getElementById(value).style.display = "none";
+ }

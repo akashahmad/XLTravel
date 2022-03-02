@@ -96,7 +96,7 @@
                                 <button
                                     class="tealish-gradient-button mt-4 d-flex justify-content-center align-items-center cursor-pointer"><img
                                         class="mr-2" height="13px" src="./assets/images/icons/lock.png" alt="lock" />
-                                    LOGIN</button>
+                                    LOGIN / SIGN UP</button>
                             </div>
                         </ul>
                     </nav>
@@ -107,77 +107,110 @@
     <!-- Header End -->
     <!-- Hero Section -->
     <section class="hero-section">
-        <div class="container-main mx-auto position-relative">
+        <div class="position-relative">
             <div class="d-flex justify-content-center align-items-center">
-                <div class="w-68">
-                    <h1 class="text-white font-weight-500">
-                        <span class="title">Find Your Next Stay</span></br>
-                    </h1>
-                    <p class="pt-2 text-white font-size-18 font-weight-normal">
-                        <span class="title"><span class="your-travel">Your travel</span> partner for unforgettable trips at</span></br>
-                        <span class="title">best prices</span></br>
-                    </p>
-                </div>
-                <div class="overflow-hidden">
-                    <video style="margin-left: 4px; background-color:transparent;" id="video_background" width="100%" height="100%" preload="true"
-                        muted>
-                        <source src="./assets/video/Video_1.mp4" type="video/mp4">
+                <div class="position-relative w-100">
+                    <div class="d-block d-lg-none w-100 animation-left">
+                        <div
+                        class="writeit"
+                      ></div>
+                        <div>
+                    </div>
+                    </div>
+                    <video class="d-none d-lg-block" id="video_background" width="100%" height="100%" autoplay preload="true" muted>
+                        <source src="./assets/video/desktop.mp4" type="video/mp4">
                     </video>
+                    <video style="margin-bottom:-4px;" class="d-block d-lg-none"id="video_background_mobile" autoplay width="100%" height="100%" preload="true" muted>
+                        <source src="./assets/video/Mobile_1.mp4" type="video/mp4">
+                    </video>
+                    <div class="position-relative container-main">
+                    <div class="d-none d-lg-block w-88 animation-left">
+                        <h1 class="text-white font-weight-500">
+                            <span class="title">Find Your Next Stay</span></br>
+                        </h1>
+                        <p class="pt-2 text-white font-size-18 font-weight-normal">
+                            <span class="title"><span class="your-travel">Your travel</span> partner for unforgettable trips at</span></br>
+                            <span class="title">best prices</span></br>
+                        </p>
+                    </div>
+                    </div>
+                 <div class="position-relative container-main">
+                <div id="search-index">
+                    <div class="d-flex justify-content-end mt-5 mr-3" onclick="displayNone(`search-index`)">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="white" height="30px" viewBox="0 0 329.26933 329"><path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"/></svg>
+                </div>
+                    <div class="search-box-index bg-white w-90 py-2 rounded box-shadow-xl position-absolute">
+                        <div class="d-flex flex-column flex-md-row align-items-center">
+                            <div class="autocomplete border-right w-29 px-4 search-box-inner ">
+                                <p class="search-lable">Location</p>
+                                <input id="myInput" type="text" name="myCountry" placeholder="Where are you going?">
+                            </div>
+                            <div class="border-right w-29 px-4 position-relative search-box-inner">
+                                <p class="search-lable">Date</p>
+                                <input id="searhBar-index-date-picker" placeholder="Add Date" class="form-control" />
+                                <svg style="right: 10; bottom:8" class="position-absolute" xmlns="http://www.w3.org/2000/svg"
+                                    width="8" height="12" viewBox="0 0 8 18">
+                                    <g id="Group_9686" data-name="Group 9686" transform="translate(-1028 -1310)">
+                                        <path fill="#212529" id="Polygon_1" data-name="Polygon 1" d="M4,0,8,7H0Z"
+                                            transform="translate(1028 1310)" />
+                                        <path fill="#212529" id="Polygon_2" data-name="Polygon 2" d="M4,0,8,7H0Z"
+                                            transform="translate(1036 1328) rotate(180)" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div
+                                class="search-box-single-element position-relative text-center d-flex flex-column border-right search-box-inner w-29 px-4">
+                                <p class="search-lable">Guests</p>
+                                <select class="selectpicker" title="Add Guest">
+                                    <option>1 Guest</option>
+                                    <option>2 Guests</option>
+                                    <option>3 Guests</option>
+                                    <option>4 Guests</option>
+                                </select>
+                                <svg style="right: 10; bottom:8" class="position-absolute" xmlns="http://www.w3.org/2000/svg"
+                                    width="8" height="12" viewBox="0 0 8 18">
+                                    <g id="Group_9686" data-name="Group 9686" transform="translate(-1028 -1310)">
+                                        <path fill="#212529" id="Polygon_1" data-name="Polygon 1" d="M4,0,8,7H0Z"
+                                            transform="translate(1028 1310)" />
+                                        <path fill="#212529" id="Polygon_2" data-name="Polygon 2" d="M4,0,8,7H0Z"
+                                            transform="translate(1036 1328) rotate(180)" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div
+                                class="searchbutton-index mx-auto cursor-pointer d-flex justify-content-center align-items-center">
+                                <p class="search-button-text text-black font-size-12 font-weight-500 mr-1">Search</p>
+                                <svg class="svg-icon search-icon" fill="#000000" aria-labelledby="title desc" height="20px"
+                                    width="20px" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7">
+                                    <title id="title">Search Icon</title>
+                                    <desc id="desc"></desc>
+                                    <g class="search-path" fill="none" stroke="#000000">
+                                        <path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4" />
+                                        <circle cx="8" cy="8" r="7" />
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                    <div style="background-color: #4b4949"
+                    class="search-form-mobile d-flex align-items-center justify-content-end px-4 px-lg-3 pt-3 pb-4 rounded-lg-top d-block d-lg-none">
+                    <!-- <div>
+                      <p class="text-white font-weight-500 font-size-16">
+                        € 72/Night
+                      </p>
+                      <p class="text-white font-weight-500 font-size-9">
+                        <u> feb 12-feb 22</u>
+                      </p>
+                    </div> -->
+                    <div class="d-flex align-items-center">
+                      <button class="yellow-button" onclick="displayBlock(`search-index`)">Search</button>
+                    </div>
+                  </div>
                 </div>
             </div>
-            <div class="search-box-index bg-white w-90 py-2 rounded box-shadow-xl position-absolute">
-                <div class="d-flex align-items-center">
-                    <div class="autocomplete border-right w-29 px-4">
-                        <p class="search-lable">Location</p>
-                        <input id="myInput" type="text" name="myCountry" placeholder="Where are you going?">
-                    </div>
-                    <div class="border-right w-29 px-4 position-relative">
-                        <p class="search-lable">Date</p>
-                        <input id="searhBar-index-date-picker" placeholder="Add Date" class="form-control" />
-                        <svg style="right: 10; bottom:8" class="position-absolute" xmlns="http://www.w3.org/2000/svg"
-                            width="8" height="12" viewBox="0 0 8 18">
-                            <g id="Group_9686" data-name="Group 9686" transform="translate(-1028 -1310)">
-                                <path fill="#212529" id="Polygon_1" data-name="Polygon 1" d="M4,0,8,7H0Z"
-                                    transform="translate(1028 1310)" />
-                                <path fill="#212529" id="Polygon_2" data-name="Polygon 2" d="M4,0,8,7H0Z"
-                                    transform="translate(1036 1328) rotate(180)" />
-                            </g>
-                        </svg>
-                    </div>
-                    <div
-                        class="search-box-single-element position-relative text-center d-flex flex-column border-right w-29 px-4">
-                        <p class="search-lable">Guests</p>
-                        <select class="selectpicker" title="Add Guest">
-                            <option>1 Guest</option>
-                            <option>2 Guests</option>
-                            <option>3 Guests</option>
-                            <option>4 Guests</option>
-                        </select>
-                        <svg style="right: 10; bottom:8" class="position-absolute" xmlns="http://www.w3.org/2000/svg"
-                            width="8" height="12" viewBox="0 0 8 18">
-                            <g id="Group_9686" data-name="Group 9686" transform="translate(-1028 -1310)">
-                                <path fill="#212529" id="Polygon_1" data-name="Polygon 1" d="M4,0,8,7H0Z"
-                                    transform="translate(1028 1310)" />
-                                <path fill="#212529" id="Polygon_2" data-name="Polygon 2" d="M4,0,8,7H0Z"
-                                    transform="translate(1036 1328) rotate(180)" />
-                            </g>
-                        </svg>
-                    </div>
-                    <div
-                        class="searchbutton-index mx-auto cursor-pointer d-flex justify-content-center align-items-center">
-                        <p class="search-button-text text-black font-size-12 font-weight-500 mr-1">Search</p>
-                        <svg class="svg-icon search-icon" fill="#000000" aria-labelledby="title desc" height="20px"
-                            width="20px" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7">
-                            <title id="title">Search Icon</title>
-                            <desc id="desc"></desc>
-                            <g class="search-path" fill="none" stroke="#000000">
-                                <path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4" />
-                                <circle cx="8" cy="8" r="7" />
-                            </g>
-                        </svg>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </section>
     <!-- Hero Section Ends-->
@@ -186,11 +219,11 @@
         <div class="d-flex justify-content-center align-items-center pt-3 pb-3">
             <p class="color-blue font-weight-500 font-size-28 text-center text-capitalize">Why We Love Xl Travel</p>
         </div>
-        <div class="commission-pros d-flex flex-column flex-md-row flex-wrap justify-content-start px-4 px-md-5">
+        <div class="commission-pros d-flex flex-column flex-lg-row flex-wrap justify-content-start justify-content-lg-center px-4 px-md-5">
             <div data-aos="zoom-in-up" class="single-pros w-31 mx-auto mt-5">
                 <div class="d-flex">
                     <div style="width:70px; height:58px;"
-                        class="bg-white d-flex justify-content-center align-items-center box-shadow rounded-md">
+                        class="bg-white d-flex justify-content-center align-items-center box-shadow rounded-lg">
                         <img style="height: 27px;" src="./assets/images/icons/commission.png" />
                     </div>
                     <div class="ml-5">
@@ -203,7 +236,7 @@
             <div data-aos="zoom-in-up" class="single-pros w-31 mx-auto mt-5">
                 <div class="d-flex">
                     <div style="width:70px; height:58px;"
-                        class="bg-white d-flex justify-content-center align-items-center box-shadow rounded-md">
+                        class="bg-white d-flex justify-content-center align-items-center box-shadow rounded-lg">
                         <img style="height: 27px;" src="./assets/images/icons/index-house.png" />
                     </div>
                     <div class="ml-5">
@@ -217,7 +250,7 @@
             <div data-aos="zoom-in-up" class="single-pros w-31 mx-auto mt-5">
                 <div class="d-flex">
                     <div style="width:70px; height:58px;"
-                        class="bg-white d-flex justify-content-center align-items-center box-shadow rounded-md">
+                        class="bg-white d-flex justify-content-center align-items-center box-shadow rounded-lg">
                         <img style="height: 27px;" src="./assets/images/icons/percentage.png" />
                     </div>
                     <div class="ml-5">
@@ -231,7 +264,7 @@
             <div data-aos="zoom-in-up" class="single-pros w-31 mx-auto mt-5">
                 <div class="d-flex">
                     <div style="width:70px; height:58px;"
-                        class="bg-white d-flex justify-content-center align-items-center box-shadow rounded-md">
+                        class="bg-white d-flex justify-content-center align-items-center box-shadow rounded-lg">
                         <img style="height: 27px;" src="./assets/images/icons/owner.png" />
                     </div>
                     <div class="ml-5">
@@ -244,7 +277,7 @@
             <div data-aos="zoom-in-up" class="single-pros w-31 mx-auto mt-5">
                 <div class="d-flex">
                     <div style="width:70px; height:58px;"
-                        class="bg-white d-flex justify-content-center align-items-center box-shadow rounded-md">
+                        class="bg-white d-flex justify-content-center align-items-center box-shadow rounded-lg">
                         <img style="height: 27px;" src="./assets/images/icons/leaf.png" />
                     </div>
                     <div class="ml-5">
@@ -258,7 +291,7 @@
             <div data-aos="zoom-in-up" class="single-pros w-31 mx-auto mt-5">
                 <div class="d-flex">
                     <div style="width:70px; height:58px;"
-                        class="bg-white d-flex justify-content-center align-items-center box-shadow rounded-md">
+                        class="bg-white d-flex justify-content-center align-items-center box-shadow rounded-lg">
                         <img style="height: 27px;" src="./assets/images/icons/owner-second.png" />
                     </div>
                     <div class="ml-5">
@@ -283,8 +316,8 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <div class="d-flex align-items-center">
-                        <div class="pr-4 w-35">
+                    <div class="d-flex flex-column-reverse flex-lg-row align-items-center">
+                        <div class="pr-4 w-35 carousel-inner-card ">
                             <h class="color-blue font-weight-500 font-size-35 line-height-54">A Grand Modern Apartment
                             </h>
                             <p class="text-black font-weight-normal pt-4 font-size-14"><img style="height:18px"
@@ -314,7 +347,9 @@
                                             </svg>
                                         </div>
                                         <div>
-                                            <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                            <p
+                                                class="dark-gray font-weight-500 font-size-12 facalities-number facalities-number">
+                                                2</p>
                                         </div>
                                     </div>
                                 </div>
@@ -330,7 +365,9 @@
                                             </svg>
                                         </div>
                                         <div>
-                                            <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                            <p
+                                                class="dark-gray font-weight-500 font-size-12 facalities-number facalities-number">
+                                                2</p>
                                         </div>
                                     </div>
                                 </div>
@@ -352,7 +389,9 @@
                                             </svg>
                                         </div>
                                         <div>
-                                            <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                            <p
+                                                class="dark-gray font-weight-500 font-size-12 facalities-number facalities-number">
+                                                2</p>
                                         </div>
                                     </div>
                                 </div>
@@ -384,7 +423,9 @@
                                             </svg>
                                         </div>
                                         <div>
-                                            <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                            <p
+                                                class="dark-gray font-weight-500 font-size-12 facalities-number facalities-number">
+                                                2</p>
                                         </div>
                                     </div>
                                 </div>
@@ -394,7 +435,7 @@
                                     More Details</button>
                             </div>
                         </div>
-                        <div class="ml-4 position-relative">
+                        <div class="ml-0 ml-md-4 position-relative">
                             <img style="height: 158px; top: -9px; left: -19px;"
                                 class="position-absolute top-down-animation" src="./assets/images/dots.png"
                                 alt="dots" />
@@ -404,8 +445,8 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="d-flex align-items-center">
-                        <div class="pr-4 w-35">
+                    <div class="d-flex flex-column-reverse flex-lg-row align-items-center">
+                        <div class="carousel-inner-card pr-4 w-35">
                             <h class="color-blue font-weight-500 font-size-35 line-height-54">A Grand Modern Apartment
                             </h>
                             <p class="text-black font-weight-normal pt-4 font-size-14"><img style="height:18px"
@@ -435,7 +476,9 @@
                                             </svg>
                                         </div>
                                         <div>
-                                            <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                            <p
+                                                class="dark-gray font-weight-500 font-size-12 facalities-number facalities-number">
+                                                2</p>
                                         </div>
                                     </div>
                                 </div>
@@ -451,7 +494,7 @@
                                             </svg>
                                         </div>
                                         <div>
-                                            <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                            <p class="dark-gray font-weight-500 font-size-12 facalities-number">2</p>
                                         </div>
                                     </div>
                                 </div>
@@ -473,7 +516,7 @@
                                             </svg>
                                         </div>
                                         <div>
-                                            <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                            <p class="dark-gray font-weight-500 font-size-12 facalities-number">2</p>
                                         </div>
                                     </div>
                                 </div>
@@ -505,7 +548,7 @@
                                             </svg>
                                         </div>
                                         <div>
-                                            <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                            <p class="dark-gray font-weight-500 font-size-12 facalities-number">2</p>
                                         </div>
                                     </div>
                                 </div>
@@ -515,7 +558,7 @@
                                     More Details</button>
                             </div>
                         </div>
-                        <div class="ml-4 position-relative">
+                        <div class="ml-0 ml-md-4 position-relative">
                             <img style="height: 158px; top: -9px; left: -19px;"
                                 class="position-absolute top-down-animation" src="./assets/images/dots.png"
                                 alt="dots" />
@@ -525,8 +568,8 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="d-flex align-items-center">
-                        <div class="pr-4 w-35">
+                    <div class="d-flex flex-column-reverse flex-lg-row align-items-center">
+                        <div class="pr-4 w-35 carousel-inner-card ">
                             <h class="color-blue font-weight-500 font-size-35 line-height-54">A Grand Modern Apartment
                             </h>
                             <p class="text-black font-weight-normal pt-4 font-size-14"><img style="height:18px"
@@ -556,7 +599,7 @@
                                             </svg>
                                         </div>
                                         <div>
-                                            <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                            <p class="dark-gray font-weight-500 font-size-12 facalities-number">2</p>
                                         </div>
                                     </div>
                                 </div>
@@ -572,7 +615,7 @@
                                             </svg>
                                         </div>
                                         <div>
-                                            <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                            <p class="dark-gray font-weight-500 font-size-12 facalities-number">2</p>
                                         </div>
                                     </div>
                                 </div>
@@ -594,7 +637,7 @@
                                             </svg>
                                         </div>
                                         <div>
-                                            <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                            <p class="dark-gray font-weight-500 font-size-12 facalities-number">2</p>
                                         </div>
                                     </div>
                                 </div>
@@ -626,7 +669,7 @@
                                             </svg>
                                         </div>
                                         <div>
-                                            <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                            <p class="dark-gray font-weight-500 font-size-12 facalities-number">2</p>
                                         </div>
                                     </div>
                                 </div>
@@ -636,7 +679,7 @@
                                     More Details</button>
                             </div>
                         </div>
-                        <div class="ml-4 position-relative">
+                        <div class="ml-0 ml-md-4 position-relative">
                             <img style="height: 158px; top: -9px; left: -19px;"
                                 class="position-absolute top-down-animation" src="./assets/images/dots.png"
                                 alt="dots" />
@@ -665,7 +708,7 @@
                 <p class="color-red font-weight-bold font-size-25 text-center">Hot Deals</p>
                 <p class="color-gray pt-3 opacity-8">Never Miss The Best opportunity</p>
             </div>
-            <div class="d-flex justify-content-between mt-4">
+            <div class="d-flex flex-column flex-lg-row justify-content-between mt-4">
                 <div class="hot-deals-left w-57">
                     <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="800" class="mt-4">
                         <div
@@ -752,7 +795,9 @@
                             </div>
                             <div
                                 class="w-29 border-left listing-card-inner-third mr-0 mr-lg-3 px-3 px-lg-0 py-lg-0 py-3 d-flex flex-lg-column flex-row-reverse justify-content-between">
-                                <p class="text-right pb-1 color-tealish font-size-14 font-weight-500 text-capitalize">€
+                                <p
+                                    class="d-none d-lg-block text-right pb-1 color-tealish font-size-14 font-weight-500 text-capitalize">
+                                    €
                                     149
                                     per night</p>
                                 <div class="d-flex align-items-center justify-content-end">
@@ -771,9 +816,9 @@
                                 </div>
                                 <div>
                                     <p class="color-tealish text-lg-right text-left font-size-11 py-1">Location 8.1</p>
-                                    <p class="text-right font-size-14"><span
+                                    <p class="text-lg-right text-left font-size-14"><span
                                             class="font-weight-700 font-size-21">149€</span>/per night</p>
-                                    <p class="text-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
+                                    <p class="text-left text-md-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
                                 </div>
                                 <div class="text-right d-none d-lg-block">
                                     <button class="yellow-button font-size-11">More Details</button>
@@ -869,7 +914,9 @@
                             </div>
                             <div
                                 class="w-29 border-left listing-card-inner-third mr-0 mr-lg-3 px-3 px-lg-0 py-lg-0 py-3 d-flex flex-lg-column flex-row-reverse justify-content-between">
-                                <p class="text-right pb-1 color-tealish font-size-14 font-weight-500 text-capitalize">€
+                                <p
+                                    class="d-none d-lg-block text-right pb-1 color-tealish font-size-14 font-weight-500 text-capitalize">
+                                    €
                                     149
                                     per night</p>
                                 <div class="d-flex align-items-center justify-content-end">
@@ -888,9 +935,9 @@
                                 </div>
                                 <div>
                                     <p class="color-tealish text-lg-right text-left font-size-11 py-1">Location 8.1</p>
-                                    <p class="text-right font-size-14"><span
+                                    <p class="text-lg-right text-left font-size-14"><span
                                             class="font-weight-700 font-size-21">149€</span>/per night</p>
-                                    <p class="text-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
+                                    <p class="text-left text-md-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
                                 </div>
                                 <div class="text-right d-none d-lg-block">
                                     <button class="yellow-button font-size-11">More Details</button>
@@ -986,7 +1033,9 @@
                             </div>
                             <div
                                 class="w-29 border-left listing-card-inner-third mr-0 mr-lg-3 px-3 px-lg-0 py-lg-0 py-3 d-flex flex-lg-column flex-row-reverse justify-content-between">
-                                <p class="text-right pb-1 color-tealish font-size-14 font-weight-500 text-capitalize">€
+                                <p
+                                    class="d-none d-lg-block text-right pb-1 color-tealish font-size-14 font-weight-500 text-capitalize">
+                                    €
                                     149
                                     per night</p>
                                 <div class="d-flex align-items-center justify-content-end">
@@ -1005,9 +1054,9 @@
                                 </div>
                                 <div>
                                     <p class="color-tealish text-lg-right text-left font-size-11 py-1">Location 8.1</p>
-                                    <p class="text-right font-size-14"><span
+                                    <p class="text-lg-right text-left font-size-14"><span
                                             class="font-weight-700 font-size-21">149€</span>/per night</p>
-                                    <p class="text-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
+                                    <p class="text-left text-md-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
                                 </div>
                                 <div class="text-right d-none d-lg-block">
                                     <button class="yellow-button font-size-11">More Details</button>
@@ -1103,7 +1152,9 @@
                             </div>
                             <div
                                 class="w-29 border-left listing-card-inner-third mr-0 mr-lg-3 px-3 px-lg-0 py-lg-0 py-3 d-flex flex-lg-column flex-row-reverse justify-content-between">
-                                <p class="text-right pb-1 color-tealish font-size-14 font-weight-500 text-capitalize">€
+                                <p
+                                    class="d-none d-lg-block text-right pb-1 color-tealish font-size-14 font-weight-500 text-capitalize">
+                                    €
                                     149
                                     per night</p>
                                 <div class="d-flex align-items-center justify-content-end">
@@ -1122,9 +1173,9 @@
                                 </div>
                                 <div>
                                     <p class="color-tealish text-lg-right text-left font-size-11 py-1">Location 8.1</p>
-                                    <p class="text-right font-size-14"><span
+                                    <p class="text-lg-right text-left font-size-14"><span
                                             class="font-weight-700 font-size-21">149€</span>/per night</p>
-                                    <p class="text-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
+                                    <p class="text-left text-md-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
                                 </div>
                                 <div class="text-right d-none d-lg-block">
                                     <button class="yellow-button font-size-11">More Details</button>
@@ -1220,7 +1271,9 @@
                             </div>
                             <div
                                 class="w-29 border-left listing-card-inner-third mr-0 mr-lg-3 px-3 px-lg-0 py-lg-0 py-3 d-flex flex-lg-column flex-row-reverse justify-content-between">
-                                <p class="text-right pb-1 color-tealish font-size-14 font-weight-500 text-capitalize">€
+                                <p
+                                    class="d-none d-lg-block text-right pb-1 color-tealish font-size-14 font-weight-500 text-capitalize">
+                                    €
                                     149
                                     per night</p>
                                 <div class="d-flex align-items-center justify-content-end">
@@ -1239,9 +1292,9 @@
                                 </div>
                                 <div>
                                     <p class="color-tealish text-lg-right text-left font-size-11 py-1">Location 8.1</p>
-                                    <p class="text-right font-size-14"><span
+                                    <p class="text-lg-right text-left font-size-14"><span
                                             class="font-weight-700 font-size-21">149€</span>/per night</p>
-                                    <p class="text-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
+                                    <p class="text-left text-md-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
                                 </div>
                                 <div class="text-right d-none d-lg-block">
                                     <button class="yellow-button font-size-11">More Details</button>
@@ -1337,7 +1390,9 @@
                             </div>
                             <div
                                 class="w-29 border-left listing-card-inner-third mr-0 mr-lg-3 px-3 px-lg-0 py-lg-0 py-3 d-flex flex-lg-column flex-row-reverse justify-content-between">
-                                <p class="text-right pb-1 color-tealish font-size-14 font-weight-500 text-capitalize">€
+                                <p
+                                    class="d-none d-lg-block text-right pb-1 color-tealish font-size-14 font-weight-500 text-capitalize">
+                                    €
                                     149
                                     per night</p>
                                 <div class="d-flex align-items-center justify-content-end">
@@ -1356,9 +1411,9 @@
                                 </div>
                                 <div>
                                     <p class="color-tealish text-lg-right text-left font-size-11 py-1">Location 8.1</p>
-                                    <p class="text-right font-size-14"><span
+                                    <p class="text-lg-right text-left font-size-14"><span
                                             class="font-weight-700 font-size-21">149€</span>/per night</p>
-                                    <p class="text-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
+                                    <p class="text-left text-md-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
                                 </div>
                                 <div class="text-right d-none d-lg-block">
                                     <button class="yellow-button font-size-11">More Details</button>
@@ -1681,8 +1736,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div </div>
     </section>
     <!-- Hot Deals End -->
     <!-- Choice of the day -->
@@ -1701,8 +1755,8 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <div class="d-flex align-items-center">
-                            <div class="w-88">
+                        <div class="d-flex flex-column flex-lg-row align-items-center">
+                            <div class="w-88 carousel-image">
                                 <img class="choice-carousel-image d-block w-100 box-shadow-xl rounded-2xl"
                                     height="500px"
                                     src="./assets/images/THE-SELECT-TEN----Bedroom-Apartment---Wintergarden.png"
@@ -1808,7 +1862,8 @@
                                                 </svg>
                                             </div>
                                             <div>
-                                                <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                                <p class="dark-gray font-weight-500 font-size-12 facalities-number">2
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -1817,8 +1872,8 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <div class="d-flex align-items-center">
-                            <div class="w-88">
+                        <div class="d-flex flex-column flex-lg-row align-items-center">
+                            <div class="w-88 carousel-image">
                                 <img class="choice-carousel-image d-block w-100 box-shadow-xl rounded-2xl"
                                     height="500px"
                                     src="./assets/images/THE-SELECT-TEN----Bedroom-Apartment---Wintergarden.png"
@@ -1853,7 +1908,8 @@
                                                 </svg>
                                             </div>
                                             <div>
-                                                <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                                <p class="dark-gray font-weight-500 font-size-12 facalities-number">2
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -1869,7 +1925,8 @@
                                                 </svg>
                                             </div>
                                             <div>
-                                                <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                                <p class="dark-gray font-weight-500 font-size-12 facalities-number">2
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -1892,7 +1949,8 @@
                                                 </svg>
                                             </div>
                                             <div>
-                                                <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                                <p class="dark-gray font-weight-500 font-size-12 facalities-number">2
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -1924,7 +1982,8 @@
                                                 </svg>
                                             </div>
                                             <div>
-                                                <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                                <p class="dark-gray font-weight-500 font-size-12 facalities-number">2
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -1933,8 +1992,8 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <div class="d-flex align-items-center">
-                            <div class="w-88">
+                        <div class="d-flex flex-column flex-lg-row align-items-center">
+                            <div class="w-88 carousel-image">
                                 <img class="choice-carousel-image d-block w-100 box-shadow-xl rounded-2xl"
                                     height="500px"
                                     src="./assets/images/THE-SELECT-TEN----Bedroom-Apartment---Wintergarden.png"
@@ -1969,7 +2028,8 @@
                                                 </svg>
                                             </div>
                                             <div>
-                                                <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                                <p class="dark-gray font-weight-500 font-size-12 facalities-number">2
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -1985,7 +2045,8 @@
                                                 </svg>
                                             </div>
                                             <div>
-                                                <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                                <p class="dark-gray font-weight-500 font-size-12 facalities-number">2
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -2008,7 +2069,8 @@
                                                 </svg>
                                             </div>
                                             <div>
-                                                <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                                <p class="dark-gray font-weight-500 font-size-12 facalities-number">2
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -2040,7 +2102,8 @@
                                                 </svg>
                                             </div>
                                             <div>
-                                                <p class="dark-gray font-weight-500 font-size-12">2</p>
+                                                <p class="dark-gray font-weight-500 font-size-12 facalities-number">2
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -2063,8 +2126,8 @@
     <!-- Choice of the day ends -->
     <!-- Open Travel Zone -->
     <section data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000"
-        class="section-padding overflow-hidden overflow-hidden">
-        <div class="w-78 d-flex align-items-center position-relative">
+        class="section-padding overflow-hidden overflow-hidden travel-zone">
+        <div class="open-zone-left-outer w-78 d-flex flex-column flex-lg-row align-items-center position-relative">
             <div class="open-zone-left">
                 <div class="open-zone-inner-left d-flex flex-column justify-content-center py-5">
                     <h class="font-size-30 text-white"><span class="color-yellow font-size-35">XL</span> Travel Zone</h>
@@ -2075,13 +2138,12 @@
                     <p class="font-size-18 color-yellow font-weight-500 pt-4">You Need To Be Part Of The XL Travel Zone
                     </p>
                     <button
-                        class="yellow-button font-weight-normal text-white py-4 w-48 mt-5 box-shadow-xl font-size-18">Open
+                        class="yellow-button open-zone-xltravel-button font-weight-normal text-white py-4 w-48 mt-5 box-shadow-xl font-size-18">Open
                         Travel Zone</button>
                 </div>
             </div>
-            <div style="left: 679px;" class="open-zone-right position-absolute">
-                <img style="height: 369px; width: 700px;" class="rounded-xl"
-                    src="./assets/images/travel-zone.png" />
+            <div style="left: 679px;" class="open-zone-right position-absolute mt-4 mt-md-0">
+                <img style="height: 369px; width: 700px;" class="rounded-xl" src="./assets/images/travel-zone.png" />
             </div>
         </div>
     </section>
@@ -2474,8 +2536,8 @@
     <section data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1100"
         class="join-us section-padding overflow-hidden container-main mx-auto">
         <div class="join-us-inner d-flex flex-column justify-content-center align-items-center">
-            <p class="text-white font-weight-500 font-size-30">Become A Host On XL Travel</p>
-            <p class="text-white font-weight-500 font-size-21 pt-3">Join Our Big Family. You Just Few Steps Away…</p>
+            <p class="become-host-heading text-white font-weight-500 font-size-30 text-center">Become A Host On XL Travel</p>
+            <p class="become-host-description text-white font-weight-500 font-size-21 pt-3 text-center">Join Our Big Family. You Just Few Steps Away…</p>
             <button class="join-us-button mt-5 box-shadow cursor-pointer">
                 Lets Go
             </button>
@@ -2620,7 +2682,7 @@
                         </div>
                     </div>
                     <div
-                        class="d-flex align-items-center bg-white rounded-lg box-shadow-xl w-19 mx-auto mt-5 px-4 py-3">
+                        class="client-review-bottom d-flex align-items-center bg-white rounded-lg box-shadow-xl w-19 mx-auto mt-4 mt-md-5 px-4 py-3">
                         <div class="mr-3">
                             <img src="./assets/images/icons/google-icon.png" alt="google-icon" />
                         </div>
@@ -2664,7 +2726,7 @@
                 <div class="card-body">
                     <div class="flex flex-column faq-section">
                         <div class="row">
-                            <div class="col-md-12 px-0">
+                            <div class="col-lg-12 px-0">
                                 <div id="accordion">
                                     <div data-aos="flip-up" data-aos-easing="linear" data-aos-duration="900"
                                         class="card border-accordian">
@@ -2778,8 +2840,8 @@
     <!-- Frequently Asked Question Ended -->
     <footer class="footer background-color-gray-three mt-5 overflow-hidden">
         <div data-aos="flip-up" data-aos-easing="linear" data-aos-duration="400"
-            class="footer-inner container-main mx-auto d-flex">
-            <div class="w-26">
+            class="footer-inner container-main mx-auto d-flex flex-column flex-lg-row">
+            <div class="footer-single logo-side w-26">
                 <div class="cursor-pointer">
                     <img style="height:122px" src="./assets/images/logo.png" alt="logo" />
                 </div>
@@ -2800,38 +2862,40 @@
                         alt="facebook" />
                 </div>
             </div>
-            <div class="footer-links w-14 pt-5">
-                <ul class="text-white" style="list-style-type: '-';">
-                    <p class="font-weight-normal font-size-13">About Us</p>
-                    <div class="footer-border-line"></div>
-                    <li><a>What Is Xl Travel</a></li>
-                    <li><a>Careers</a></li>
-                    <li><a>Press</a></li>
-                    <li><a>Travel Zone</a></li>
-                </ul>
+            <div class="list-inner w-42 d-flex justify-content-between">
+                <div class="footer-single footer-links w-31 pt-5">
+                    <ul class="text-white" style="list-style-type: '-';">
+                        <p class="font-weight-normal font-size-13">About Us</p>
+                        <div class="footer-border-line"></div>
+                        <li><a>What Is Xl Travel</a></li>
+                        <li><a>Careers</a></li>
+                        <li><a>Press</a></li>
+                        <li><a>Travel Zone</a></li>
+                    </ul>
+                </div>
+                <div class="footer-single footer-links w-31 pt-5">
+                    <ul class="text-white" style="list-style-type: '-';">
+                        <p class="font-weight-normal font-size-13">Help</p>
+                        <div class="footer-border-line"></div>
+                        <li><a>Help Center</a></li>
+                        <li><a>FAQs</a></li>
+                        <li><a>Privacy Policy</a></li>
+                        <li><a>Cookie Policy</a></li>
+                        <li><a>Terms Of Use</a></li>
+                    </ul>
+                </div>
+                <div class="footer-single footer-links w-31 pt-5">
+                    <ul class="text-white" style="list-style-type: '-';">
+                        <p class="font-weight-normal font-size-13">Partner with us</p>
+                        <div class="footer-border-line"></div>
+                        <li><a>Partner Hub</a></li>
+                        <li><a>Advertise On Agoda</a></li>
+                        <li><a>Affiliate</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-links w-14 pt-5">
-                <ul class="text-white" style="list-style-type: '-';">
-                    <p class="font-weight-normal font-size-13">Help</p>
-                    <div class="footer-border-line"></div>
-                    <li><a>Help Center</a></li>
-                    <li><a>FAQs</a></li>
-                    <li><a>Privacy Policy</a></li>
-                    <li><a>Cookie Policy</a></li>
-                    <li><a>Terms Of Use</a></li>
-                </ul>
-            </div>
-            <div class="footer-links w-14 pt-5">
-                <ul class="text-white" style="list-style-type: '-';">
-                    <p class="font-weight-normal font-size-13">Partner with us</p>
-                    <div class="footer-border-line"></div>
-                    <li><a>Partner Hub</a></li>
-                    <li><a>Advertise On Agoda</a></li>
-                    <li><a>Affiliate</a></li>
-                </ul>
-            </div>
-            <div class="footer-links pt-5">
-                <div class="d-flex">
+            <div class="footer-single footer-links pt-5">
+                <div class="d-flex justify-content-center">
                     <div class="position-relative mr-4">
                         <img style="height: 119px;" src="./assets/images/icons/google-rating-badge.png"
                             alt="google-badge" />
@@ -2850,7 +2914,8 @@
                         </div>
                     </div>
                     <div style="margin-right: 16px;" class="position-relative">
-                        <img style="height: 119px;" src="./assets/images/icons/facebook-rating-badge.png" alt="facebook-badge"/>
+                        <img style="height: 119px;" src="./assets/images/icons/facebook-rating-badge.png"
+                            alt="facebook-badge" />
                         <div style=" 
                         top: 59px;
                         left: 0;
@@ -2866,7 +2931,7 @@
                         </div>
                     </div>
                     <div>
-                        <img style="height: 119px;" src="./assets/images/icons/award-badge.png" alt="award-badge"/>
+                        <img style="height: 119px;" src="./assets/images/icons/award-badge.png" alt="award-badge" />
                     </div>
                 </div>
             </div>
