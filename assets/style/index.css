@@ -740,10 +740,11 @@ header {
   } */
 
   #search-index {
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
     inset: 0;
     z-index: 99;
+    display: none;
   }
 
   .search-box-index {
@@ -760,18 +761,18 @@ header {
     right: 0;
     z-index: 10;
   }
-  .search-form-mobile input{
+  .search-form-mobile input {
     background-color: transparent;
     color: white;
     border: none;
-    font-size: 22px;
+    font-size: 13px;
     width: 26%;
   }
-  .search-form-mobile ::placeholder{
+  .search-form-mobile ::placeholder {
     color: white;
-    font-size: 22px;
+    font-size: 13px;
   }
-  #filter-location{
+  #filter-location {
     border: none;
     width: 33%;
     background-color: transparent;
