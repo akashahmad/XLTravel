@@ -1004,5 +1004,8 @@
   .mobile-calendar .calendar-section .table-condensed .next {
     display: block;
   }
+  .daterangepicker.dropdown-menu{
+    position: fixed !important;
+  }
 }
 /* Calendar Css Ends */

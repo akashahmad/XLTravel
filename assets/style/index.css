@@ -171,19 +171,7 @@ video::-webkit-media-controls-panel {
   }
 }
 /* Common Button */
-.tealish-gradient-button {
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 18px;
-  border-radius: 8px;
-  font-weight: 500;
-  background-image: linear-gradient(to bottom right, #1db3e1, #3dc7ad);
-  transition: transform 0.2s;
-}
-.tealish-gradient-button:hover {
-  transform: scale(1.07);
-}
+
 /* tealish-color button */
 .teaslih-text-button {
   background-color: transparent;
@@ -313,6 +301,29 @@ header {
     opacity: 1;
   }
 }
+  /* Top Destination */
+  .top-destination .top-destination-card .top-destination-card-inner-one{
+    background-image:url("../images/pexels-alleksana-4226100.jpg");
+    min-height: 340px;
+    background-repeat: no-repeat;
+    background-size:cover;
+    border-radius: 30px;
+  }
+  .top-destination .top-destination-card .top-destination-card-inner-two{
+    background-image:url("../images/pexels-pierre-blaché-2901209.jpg");
+    min-height: 340px;
+    background-repeat: no-repeat;
+    background-size:cover;
+    border-radius: 30px;
+  }
+  .top-destination .top-destination-card .top-destination-card-inner-three{
+    background-image:url("../images/pexels-pierre-blaché-2901215.jpg");
+    min-height: 340px;
+    background-repeat: no-repeat;
+    background-size:cover;
+    border-radius: 30px;
+  }
+
 /* Choice of the day */
 
 .choice-of-the-day .carousel-inner {
@@ -347,7 +358,7 @@ header {
   overflow: hidden;
 }
 .swiper-pointer-events {
-  width: 110%;
+  width: 110% !important;
   padding-top: 30px;
   margin: 0 auto !important;
   overflow: hidden !important;
@@ -595,20 +606,6 @@ header {
   margin-top: 12px;
   margin-bottom: 28px;
 }
-/* .footer input {
-  border: solid 1.5px #fff;
-  border-right: none;
-}
-.footer ::placeholder {
-  color: white;
-}
-.footer .form-control:focus {
-  background-color: transparent;
-  color: white;
-}
-.footer .form-control {
-  color: white;
-} */
 .footer .social-media-icon {
   cursor: pointer;
   transition: transform 0.2s;
@@ -650,8 +647,9 @@ header {
     line-height: 25px;
   }
   .writeit h1 {
+    color: #ffc044;
     line-height: 20px;
-    font-size: 43px;
+    font-size: 48px;
   }
   .writeit h2 {
     line-height: 20px;
@@ -670,75 +668,6 @@ header {
     animation: unset;
   }
 
-  /* @keyframes animation {
-    0% {
-      bottom: 0px;
-      transform: translate(0px);
-      width: 90%;
-      opacity: 0.1;
-    }
-    10% {
-      bottom: 80px;
-      transform: translate(0px);
-      width: 90%;
-      opacity: 0.1;
-    }
-    20% {
-      bottom: 130px;
-      transform: translate(0px);
-      width: 90%;
-      opacity: 0.1;
-    }
-    30% {
-      bottom: 170px;
-      transform: translate(0px);
-      width: 90%;
-      opacity: 0.3;
-    }
-    40% {
-      bottom: 213px;
-      transform: translate(0px);
-      width: 90%;
-      opacity: 0.7;
-    }
-    50% {
-      bottom: 213px;
-      transform: translate(0px);
-      width: 90%;
-      opacity: 1;
-    }
-    60% {
-      bottom: 170px;
-      transform: translate(0px);
-      width: 90%;
-      opacity: 1;
-    }
-    70% {
-      bottom: 100px;
-      transform: translate(0px);
-      width: 90%;
-      opacity: 1;
-    }
-    80% {
-      bottom: 0px;
-      transform: translate(0px);
-      width: 90%;
-      opacity: 1;
-    }
-    90% {
-      bottom: 20px;
-      transform: translate(0);
-      width: 90%;
-      opacity: 1;
-    }
-    100% {
-      bottom: 20px;
-      transform: translate(0);
-      width: 90%;
-      opacity: 1;
-    }
-  } */
-
   #search-index {
     background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
@@ -748,15 +677,13 @@ header {
   }
 
   .search-box-index {
-    position: fixed !important;
-    inset: 0;
-    height: 60%;
+    height: fit-content;
     z-index: 99;
     top: 20%;
   }
   .search-form-mobile {
     position: fixed;
-    bottom: 0;
+    bottom: -4px;
     left: 0;
     right: 0;
     z-index: 10;
@@ -950,6 +877,10 @@ header {
   .hot-deals .single-premium-card {
     width: 100%;
     border-top-right-radius: 13px;
+    min-height: 243px;
+  }
+  .something-for-you-image {
+    min-height: 253px;
   }
   .hot-deals .listing-premium-center-card {
     width: 100%;
@@ -957,15 +888,20 @@ header {
   .hot-deals .listing-card-inner-third {
     width: 100%;
   }
+    /* Choice of the Day */
   .choice-of-the-day-main .choice-of-the-day-inner {
     position: unset !important;
     width: 100%;
     padding: 20px 20px;
     margin-top: 10px;
   }
-  /* Choice of the Day */
+
+  /* .swiper-pointer-events{
+    width: 100% !important;
+  } */
   .choice-of-the-day-main {
-    padding: 0px 20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .choice-of-the-day-main .carousel-image img {
     height: 300px;
@@ -979,7 +915,7 @@ header {
     padding-right: 20px;
   }
   .join-us .join-us-inner {
-    min-height: 330px;
+    min-height: 424px;
     padding: 0px 20px;
     border-radius: 30px;
   }
@@ -994,7 +930,8 @@ header {
     width: 100%;
   }
   .travel-zone .open-zone-xltravel-button {
-    width: 100%;
+    width: 60%;
+    margin: 0 auto;
   }
   .open-zone-left .open-zone-inner-left {
     width: 100%;
@@ -1004,10 +941,6 @@ header {
   .travel-zone .open-zone-right {
     position: unset !important;
     margin: 0px 20px;
-  }
-  .travel-zone .open-zone-right img {
-    height: 100% !important;
-    width: 100% !important;
   }
   .client-review .client-review-bottom {
     width: 75%;
@@ -1024,7 +957,7 @@ header {
   }
   /* Footer */
   .footer {
-    padding: 0px 20px;
+    padding: 54px 20px;
   }
   .footer .footer-single {
     width: 100%;
@@ -1033,7 +966,13 @@ header {
     text-align: center;
   }
   .footer .list-inner {
-    width: 100%;
+    width: 34%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .footer .footer-border-line{
+    margin: 0 auto;
+    padding-top: 10px;
   }
   /* Facalities */
   .single-facality .facalities-number {
