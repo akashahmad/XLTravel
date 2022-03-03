@@ -991,7 +991,11 @@ header {
   .client-review .swiper .swiper-nav-wrapper {
     bottom: 36px;
   }
+  .top-destination .arrows{
+    top:42% !important;
+  }
 }
+/* Query for iPad */
 @media (max-width: 900px) and (min-width: 700px) {
   .commission-pros .single-pros {
     width: 45% !important;
