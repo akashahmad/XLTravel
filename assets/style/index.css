@@ -992,3 +992,8 @@ header {
     bottom: 36px;
   }
 }
+@media (max-width: 900px) and (min-width: 700px) {
+  .commission-pros .single-pros {
+    width: 45% !important;
+  }
+}
