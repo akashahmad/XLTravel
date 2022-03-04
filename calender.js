@@ -1674,6 +1674,17 @@ $('#searhBar-index-date-picker').daterangepicker({
     inline: false,
     autoUpdateInput: true,
 });  
+$('#searhBar-index-date-picker-inline').daterangepicker({
+    locale: {
+        format: 'MM-DD'
+		// mediumDate:     "mmm d, yyyy",
+    },
+    // parentEl: "#inline-calendar",
+    alwaysShowCalendars: true,
+    autoApply :true,
+    inline: true,
+    autoUpdateInput: true,
+}); 
 function getDate()
 {
 	var dateInput = document.getElementById("searhBar-date-picker").value;

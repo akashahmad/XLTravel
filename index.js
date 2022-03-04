@@ -20,6 +20,15 @@ $(document).scroll(function() {
   window.addEventListener("scroll", myScrollFunc);
 });
 
+// Increment Decrement Function
+function increment(value) {
+  document.getElementById(value).stepUp();
+}
+function decrement(value) {
+  document.getElementById(value).stepDown();
+} 
+
+
 // Typing Animation
 $(document).ready(function() {
   $(".title").lettering();
@@ -84,11 +93,6 @@ function type_text() {
 }
 
 type_text();
-
-  // setTimeout(function () {
-  //   $(".search-box-index").show()
-  // }, 5000);
-
 
   // Auto complete
   
@@ -194,6 +198,7 @@ var countries = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Angu
 
 /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
 autocomplete(document.getElementById("myInput"), countries);
+autocomplete(document.getElementById("myInputMobile"), countries);
 
 // Swiper*********************
 const swiper = new Swiper(".swiper", {

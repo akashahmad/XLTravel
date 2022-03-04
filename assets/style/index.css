@@ -689,27 +689,26 @@ header {
     font-size: 26px;
     line-height: 28px !important;
   }
-  .search-box-index {
+  /* .search-box-index {
     bottom: -49px;
     left: 0;
     right: 0;
     animation: unset;
-  }
+  } */
   #search-index {
     background-color: white;
     position: fixed;
     inset: 0;
     z-index: 99;
     display: none;
-    animation: display 0.3s linear;
+    animation: display 0.2s linear;
     overflow: hidden;
-    
   }
- @keyframes display {
-   from{height: 0;}
-   to{height: 100%;}
+  @keyframes display {
+   from{width: 0;}
+   to{width: 100%;}
  }
-  .search-box-index {
+  /* .search-box-index {
     height: fit-content;
     z-index: 99;
     top: 20%;
@@ -729,6 +728,69 @@ header {
   }
   .search-box-index .searchbutton-index:hover {
     width: 80%;
+  } */
+
+  .search-box-mobile-view .location-mobile-index .location-input-mobile {
+    border-radius: 12px;
+    padding: 10px 20px;
+    border: 1px solid black;
+    margin-top: 18px;
+  }
+  .search-box-mobile-view .location-mobile-index .autocomplete-items {
+    top: 87px;
+    left: 33px;
+    height: 100%;
+    overflow-y: unset;
+  }
+  .search-box-mobile-view .nearby-location-search-index {
+    height: 378px;
+    overflow-y: scroll;
+    padding-bottom: 70px;
+  }
+  .search-box-mobile-view  .guestes-mobile-index{
+    height: 478px;
+    overflow-y: scroll;
+    padding-bottom: 70px;
+  }
+  #searhBar-index-date-picker-inline {
+    width: 78%;
+    margin: 0 auto;
+    border-radius: 29px;
+    border: 1px solid black;
+    position: relative;
+    top: 20px;
+  }
+  .search-box-mobile-view .back-button {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px 14px;
+    width: 100px;
+  }
+  .search-box-mobile-view .mobile-circle-inc-dec {
+    border-radius: 50%;
+    border: 1px solid black;
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .search-box-mobile-view .search-mobile-number-input {
+    border: none;
+    width: 70px;
+    text-align: center;
+  }
+  .search-box-mobile-view .guests-mobile-search ::placeholder {
+    text-align: center !important;
+  }
+  #search-calendar-mobile-index {
+    display: none;
+  }
+  #search-guest-mobile-index {
+    display: none;
   }
   /* Hamburger  */
   .top-item {
@@ -977,10 +1039,10 @@ header {
   .footer .footer-border-line {
     padding-top: 10px;
   }
-  .footer .list-inner{
+  .footer .list-inner {
     width: 100% !important;
   }
-  .footer .footer-link-headings{
+  .footer .footer-link-headings {
     font-size: 13px;
   }
   /* Facalities */
@@ -1008,5 +1070,15 @@ header {
 @media (max-width: 900px) and (min-width: 700px) {
   .commission-pros .single-pros {
     width: 45% !important;
+  }
+  .search-box-mobile-view .nearby-location-search-index {
+    height: 378px;
+    overflow-y: scroll;
+    padding-bottom: 152px;
+  }
+  .search-box-mobile-view  .guestes-mobile-index{
+    height: 378px;
+    overflow-y: scroll;
+    padding-bottom: 152px;
   }
 }
