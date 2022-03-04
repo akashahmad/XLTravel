@@ -696,21 +696,24 @@ header {
     animation: unset;
   }
   #search-index {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: white;
     position: fixed;
     inset: 0;
     z-index: 99;
     display: none;
     animation: display 0.3s linear;
+    overflow: hidden;
+    
   }
  @keyframes display {
-   from{opacity: 0;}
-   to{opacity: 1;}
+   from{height: 0;}
+   to{height: 100%;}
  }
   .search-box-index {
     height: fit-content;
     z-index: 99;
     top: 20%;
+    border-radius: 20px;
   }
   .search-box-index div {
     width: 100%;
