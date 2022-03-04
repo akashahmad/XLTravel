@@ -638,6 +638,7 @@ header {
   .hero-section .hero-mobile {
     background-color: #35b1f8;
     min-height: 550px;
+    padding-top: 34px;
   }
   .mobile-search-input-header {
     background-color: transparent;
@@ -701,15 +702,17 @@ header {
     inset: 0;
     z-index: 99;
     display: none;
-    animation: display 0.2s linear;
+    animation: transform 0.5s;
     overflow: hidden;
   }
-  @keyframes display {
+  @keyframes transform {
     from {
-      width: 0;
+      transform: scaleY( 0);
+      transform-origin: bottom;
     }
     to {
-      width: 100%;
+      transform: scaleY(1);
+      transform-origin: top;
     }
   }
   /* .search-box-index {
