@@ -2,11 +2,6 @@
 .section-padding {
   padding-top: 102px;
 }
-/* Hero Section */
-/* .hero-section {
-  padding: 50px 0px;
-  background-color: #35b1f8;
-} */
 .hero-section .animation-left {
   position: absolute;
   z-index: 99;
@@ -301,28 +296,28 @@ header {
     opacity: 1;
   }
 }
-  /* Top Destination */
-  .top-destination .top-destination-card .top-destination-card-inner-one{
-    background-image:url("../images/pexels-alleksana-4226100.jpg");
-    min-height: 340px;
-    background-repeat: no-repeat;
-    background-size:cover;
-    border-radius: 30px;
-  }
-  .top-destination .top-destination-card .top-destination-card-inner-two{
-    background-image:url("../images/pexels-pierre-blaché-2901209.jpg");
-    min-height: 340px;
-    background-repeat: no-repeat;
-    background-size:cover;
-    border-radius: 30px;
-  }
-  .top-destination .top-destination-card .top-destination-card-inner-three{
-    background-image:url("../images/pexels-pierre-blaché-2901215.jpg");
-    min-height: 340px;
-    background-repeat: no-repeat;
-    background-size:cover;
-    border-radius: 30px;
-  }
+/* Top Destination */
+.top-destination .top-destination-card .top-destination-card-inner-one {
+  background-image: url("../images/pexels-alleksana-4226100.jpg");
+  min-height: 340px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 30px;
+}
+.top-destination .top-destination-card .top-destination-card-inner-two {
+  background-image: url("../images/pexels-pierre-blaché-2901209.jpg");
+  min-height: 340px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 30px;
+}
+.top-destination .top-destination-card .top-destination-card-inner-three {
+  background-image: url("../images/pexels-pierre-blaché-2901215.jpg");
+  min-height: 340px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 30px;
+}
 
 /* Choice of the day */
 
@@ -560,9 +555,6 @@ header {
   padding: 30px 70px 30px 20px !important;
   border: 1.2px solid transparent !important;
 }
-/* .border-accordian:focus {
-  border: 1px solid #00b2d3 !important;
-} */
 .frequently-asked-question .accordian-description {
   font-size: 12px;
   width: 70%;
@@ -625,22 +617,58 @@ header {
 .tealish-border-button:hover {
   transform: scale(1.1);
 }
+/* Show and hide */
+.hide {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.show {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
 @media (max-width: 1199px) and (min-width: 320px) {
+  /* Section Padding */
+  .section-padding {
+    padding-top: 70px;
+  }
   /* Hero Section */
   .hero-section {
     overflow: hidden;
   }
-  .hero-section .animation-left {
-    position: absolute;
-    z-index: 19;
-    left: 10px;
-    right: 0;
-    top: 130px;
+  .hero-section .hero-mobile {
+    background-color: #35b1f8;
+    min-height: 550px;
   }
-  .hero-section {
-    overflow-x: hidden;
+  .mobile-search-input-header {
+    background-color: transparent;
+    border: 1px solid #00b2d3;
+    border-radius: 15px;
+  }
+  .search-button-mobile-inner {
+    border-color: white;
+    background-color: #f7f7f7;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    padding: 9px 5px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.11);
+    width: 80% !important;
+  }
+  .search-mobile-index {
+    animation: animation 3s linear;
+  }
+  @keyframes animation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
   .writeit {
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 100px;
     color: white;
     font-weight: 500;
     text-align: left;
@@ -667,7 +695,6 @@ header {
     right: 0;
     animation: unset;
   }
-
   #search-index {
     background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
@@ -680,30 +707,6 @@ header {
     height: fit-content;
     z-index: 99;
     top: 20%;
-  }
-  .search-form-mobile {
-    position: fixed;
-    bottom: -4px;
-    left: 0;
-    right: 0;
-    z-index: 10;
-  }
-  .search-form-mobile input {
-    background-color: transparent;
-    color: white;
-    border: none;
-    font-size: 13px;
-    width: 26%;
-  }
-  .search-form-mobile ::placeholder {
-    color: white;
-    font-size: 13px;
-  }
-  #filter-location {
-    border: none;
-    width: 33%;
-    background-color: transparent;
-    font-size: 12px;
   }
   .search-box-index div {
     width: 100%;
@@ -851,7 +854,6 @@ header {
     margin-top: -9px;
     transition: all 0.25s;
   }
-
   /* Props Section */
   .commission-pros .single-pros {
     width: 100%;
@@ -888,7 +890,7 @@ header {
   .hot-deals .listing-card-inner-third {
     width: 100%;
   }
-    /* Choice of the Day */
+  /* Choice of the Day */
   .choice-of-the-day-main .choice-of-the-day-inner {
     position: unset !important;
     width: 100%;
@@ -965,14 +967,14 @@ header {
   .footer .logo-side {
     text-align: center;
   }
-  .footer .list-inner {
-    width: 34%;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .footer .footer-border-line{
-    margin: 0 auto;
+  .footer .footer-border-line {
     padding-top: 10px;
+  }
+  .footer .list-inner{
+    width: 100% !important;
+  }
+  .footer .footer-link-headings{
+    font-size: 13px;
   }
   /* Facalities */
   .single-facality .facalities-number {
@@ -991,8 +993,8 @@ header {
   .client-review .swiper .swiper-nav-wrapper {
     bottom: 36px;
   }
-  .top-destination .arrows{
-    top:42% !important;
+  .top-destination .arrows {
+    top: 42% !important;
   }
 }
 /* Query for iPad */

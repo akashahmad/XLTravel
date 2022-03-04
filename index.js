@@ -1,5 +1,25 @@
 AOS.init();
 
+// Search Button Box show and hide functions
+$(document).scroll(function() {
+
+  searchHeader = document.getElementById("header-search-mobile");
+  myID = document.getElementById("search-button-mobile-view");
+
+  var myScrollFunc = function () {
+      var y = window.scrollY;
+      if (y >= 390) {
+          myID.className = "search-mobile-index hide"
+          searchHeader.className = "header-search-mobile show"
+      } else {
+          myID.className = "search-mobile-index show"
+          searchHeader.className = "header-search-mobile hide"
+      }
+  };
+
+  window.addEventListener("scroll", myScrollFunc);
+});
+
 // Typing Animation
 $(document).ready(function() {
   $(".title").lettering();
@@ -28,7 +48,7 @@ var txt2write = new Array(
 );
 
 // Variables
-var speed = 60; // You can set the speed here. + is slower
+var speed = 20; // You can set the speed here. + is slower
 var index = 0;
 text_pos = 0;
 var str_length = txt2write[0].length;
@@ -65,40 +85,9 @@ function type_text() {
 
 type_text();
 
-// Video
-// const startVideo = async () => {
-//   const video = document.querySelector('#video_background');
-
-//   try {
-//       await video.play();
-
-//       video.setAttribute('autoplay', true);
-//       video.setAttribute('muted', true);
-//   } catch (err) {
-//     console.log(err, 'video play error');
-//     // do stuff in case your video is unavailable to play/autoplay
-//   }
-// }
-// setTimeout(startVideo, 500)
-
-// const startVideoMobile = async () => {
-//   const videoMobile = document.querySelector('#video_background_mobile');
-
-//   try {
-//       await videoMobile.play();
-
-//       videoMobile.setAttribute('autoplay', true);
-//       videoMobile.setAttribute('muted', true);
-//   } catch (err) {
-//     console.log(err, 'video play error');
-//     // do stuff in case your video is unavailable to play/autoplay
-//   }
-// }
-// setTimeout(startVideoMobile, 500)
-
-  setTimeout(function () {
-    $(".search-box-index ").show()
-  }, 5000);
+  // setTimeout(function () {
+  //   $(".search-box-index").show()
+  // }, 5000);
 
 
   // Auto complete

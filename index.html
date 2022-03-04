@@ -51,6 +51,23 @@
                         alt="xlTravel-Logo" />
                 </a>
             </div>
+            <div id="header-search-mobile" class="header-search-mobile hide d-block d-lg-none"
+                onclick="displayBlock(`search-index`)">
+                <div class="d-flex justify-content-center position-relative align-items-center">
+                    <input class="w-88 mobile-search-input-header mx-auto pl-5 pb-1" disabled
+                        placeholder="Where you want to go?">
+                    <svg style="left: 40px; top: 7px;" class="svg-icon position-absolute" fill="#00b2d3"
+                        aria-labelledby="title desc" height="15px" width="15px" role="img"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7">
+                        <title id="title">Search Icon</title>
+                        <desc id="desc"></desc>
+                        <g class="search-path" fill="none" stroke="#00b2d3">
+                            <path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4" />
+                            <circle cx="8" cy="8" r="7" />
+                        </g>
+                    </svg>
+                </div>
+            </div>
             <div>
                 <nav class="nav-bar d-none d-lg-block">
                     <ul class="d-flex align-items-center list-unstyled">
@@ -109,19 +126,36 @@
     <section class="hero-section">
         <div class="position-relative">
             <div class="d-flex justify-content-center align-items-center">
-                <div class="position-relative w-100">
-                    <div class="d-block d-lg-none w-100 animation-left">
-                        <div class="writeit"></div>
-                        <div>
+                <div class="w-100">
+                    <div class="hero-mobile w-100 d-block d-lg-none position-relative px-3">
+                        <div class="w-100">
+                            <div class="writeit"></div>
+                            <div
+                                id="search-button-mobile-view"
+                                class="search-mobile-index text-center d-block d-lg-none show">
+                                <div class="d-flex align-items-center mb-4 mx-auto">
+                                    <button
+                                    style="bottom: 35px;"
+                                        class="search-button-mobile-inner text-black w-100 position-absolute left-0 right-0 mx-auto d-flex justify-content-center align-items-center"
+                                        onclick="displayBlock(`search-index`)">
+                                        <svg class="svg-icon mr-3" fill="#000000" aria-labelledby="title desc"
+                                            height="20px" width="20px" role="img" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 19.9 19.7">
+                                            <title id="title">Search Icon</title>
+                                            <desc id="desc"></desc>
+                                            <g class="search-path" fill="none" stroke="#000000">
+                                                <path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4" />
+                                                <circle cx="8" cy="8" r="7" />
+                                            </g>
+                                        </svg> Where are you going?</button>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <video class="d-none d-lg-block" id="video_background" width="100%" height="100%" autoplay
                         preload="true" muted>
                         <source src="./assets/video/desktop.mp4" type="video/mp4">
-                    </video>
-                    <video style="margin-bottom:-4px;" class="d-block d-lg-none" id="video_background_mobile" autoplay
-                        width="100%" height="100%" preload="true" muted>
-                        <source src="./assets/video/Mobile_1.mp4" type="video/mp4">
                     </video>
                     <div class="position-relative container-main">
                         <div class="d-none d-lg-block w-88 animation-left">
@@ -129,7 +163,8 @@
                                 <span class="title">Find Your Next Stay</span></br>
                             </h1>
                             <p class="pt-2 text-white font-size-18 font-weight-normal">
-                                <span class="title"><span class="your-travel">Your travel</span> partner for unforgettable trips at</span></br>
+                                <span class="title"><span class="your-travel">Your travel</span> partner for
+                                    unforgettable trips at</span></br>
                                 <span class="title">best prices</span></br>
                             </p>
                         </div>
@@ -206,31 +241,18 @@
                             </div>
                         </div>
                     </div>
-                    <div style="background-image: linear-gradient(to bottom right, #1db3e1, #3dc7ad);"
-                        class="search-form-mobile d-flex align-items-center justify-content-between px-4 px-lg-3 pt-3 pb-4 rounded-lg-top d-block d-lg-none">
-                        <div>
-                            <p class="text-white"><input class="text-white" id="filter-location-index" disabled
-                                    placeholder="Location" /><span style="position: relative; top:1px"
-                                    class="font-size-15 px-1">-</span> <span
-                                    class="text-white font-weight-500 font-size-14" id="Filter-date-index"></span></p>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <button class="yellow-button" onclick="displayBlock(`search-index`)">Search</button>
-                        </div>
-                    </div>
                 </div>
             </div>
 
         </div>
     </section>
-    <!-- Hero Section Ends-->
+    <!-- Mobile Hero Section Ends -->
     <!-- Pros Section Ends-->
     <section class="pros-section section-padding container-main mx-auto">
         <div class="d-flex justify-content-center align-items-center pt-3 pb-3">
             <p class="color-blue font-weight-500 font-size-28 text-center text-capitalize">Why We Love Xl Travel</p>
         </div>
-        <div
-            class="commission-pros d-flex flex-wrap justify-content-start justify-content-lg-center px-4 px-lg-5">
+        <div class="commission-pros d-flex flex-wrap justify-content-start justify-content-lg-center px-4 px-lg-5">
             <div data-aos="zoom-in-up" class="single-pros w-31 mx-auto mt-5">
                 <div class="d-flex">
                     <div style="width:70px; height:58px;"
@@ -239,8 +261,9 @@
                     </div>
                     <div class="ml-5">
                         <h class="font-weight-500 text-capitalize">No commissions at all</h>
-                        <p class="dark-gray text-capitalize line-height-38 pt-2 opacity-8 font-normal font-size-14"> For both, hosts and guest 
-                        </br>there are no extra costs</p>
+                        <p class="dark-gray text-capitalize line-height-38 pt-2 opacity-8 font-normal font-size-14"> For
+                            both, hosts and guest
+                            </br>there are no extra costs</p>
                     </div>
                 </div>
             </div>
@@ -717,7 +740,7 @@
             <div class="position-relative d-flex flex-column align-items-center pt-2">
                 <img style="height: 60px;" src="./assets/images/icons/hot-deal.gif" alt="hot-deail" />
                 <p class="color-red font-weight-bold font-size-25 text-center">Hot Deals</p>
-                <p class="color-gray pt-3 opacity-8">Never Miss The Best opportunity</p>
+                <p class="color-gray pt-3 opacity-8 text-center">Never Miss The Best opportunity</p>
             </div>
             <div class="d-flex flex-column flex-lg-row justify-content-between mt-4">
                 <div class="hot-deals-left w-57">
@@ -1538,7 +1561,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div>
+                            <div class="text-right">
                                 <p class="text-right font-size-14"><span
                                         class="font-weight-700 font-size-21">149€</span>/per night</p>
                                 <p class="text-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
@@ -1641,7 +1664,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div>
+                            <div class="text-right">
                                 <p class="text-right font-size-14"><span
                                         class="font-weight-700 font-size-21">149€</span>/per night</p>
                                 <p class="text-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
@@ -1744,7 +1767,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div>
+                            <div class="text-right">
                                 <p class="text-right font-size-14"><span
                                         class="font-weight-700 font-size-21">149€</span>/per night</p>
                                 <p class="text-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
@@ -1759,85 +1782,95 @@
 
     <!-- Top Destination -->
     <section data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1100"
-    class="top-destination overflow-hidden section-padding">
-    <div class="container-main mx-auto pb-0">
-        <div class="d-flex flex-column align-items-center pt-3 pb-2">
-            <p class="color-blue font-weight-500 font-size-28 text-center text-capitalize">Explore Top Destination</p>
-            <p class="color-gray pt-2 opacity-8">Top Destination</p>
-        </div>
-    </div>
-    <div>
-        <div class="wrapper position-relative">
-            <!-- Arrows -->
-            <div style="top: 35%;" class="arrows d-flex justify-content-between position-absolute w-100">
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-            <!-- Slider main container -->
-            <div class="swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        <div class="content-wrapper">
-                            <div class="content">
-                               <div class="top-destination-card">
-                                    <div class="top-destination-card-inner-one position-relative">
-                                        <div class="position-absolute right-0 bg-white box-shadow-lg px-3 py-2 mr-3 mt-3 rounded-lg">
-                                          <span class="text-black font-weight-500">&#x20AC;340</span>
-                                        </div>
-                                    </div>
-                                    <div class="pt-4 pl-0 pl-lg-2">
-                                        <p class="font-size-18 font-weight-500 color-gray-three text-center text-lg-left">Enjoy The Beauty Of The Brazil City</p>
-                                    </div>
-                               </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="content-wrapper">
-                            <div class="content">
-                               <div class="top-destination-card">
-                                    <div class="top-destination-card-inner-two position-relative">
-                                        <div class="position-absolute right-0 bg-white box-shadow-lg px-3 py-2 mr-3 mt-3 rounded-lg">
-                                          <span class="text-black font-weight-500">&#x20AC;340</span>
-                                        </div>
-                                    </div>
-                                    <div class="pt-4 pl-0 pl-lg-2">
-                                        <p class="font-size-18 font-weight-500 color-gray-three text-center text-lg-left">Enjoy The Beauty Of The China City</p>
-                                    </div>
-                               </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="content-wrapper">
-                            <div class="content">
-                               <div class="top-destination-card">
-                                    <div class="top-destination-card-inner-three position-relative">
-                                        <div class="position-absolute right-0 bg-white box-shadow-lg px-3 py-2 mr-3 mt-3 rounded-lg">
-                                          <span class="text-black font-weight-500">&#x20AC;340</span>
-                                        </div>
-                                    </div>
-                                    <div class="pt-4 pl-0 pl-lg-2 ">
-                                        <p class="font-size-18 font-weight-500 color-gray-three text-center text-lg-left">Enjoy The Beauty Of The Australia City</p>
-                                    </div>
-                               </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- If we need pagination -->
-                <!-- If we need navigation buttons -->
-                <div class="swiper-nav-wrapper">
-                    <div class="swiper-pagination"></div>
-                </div>
+        class="top-destination overflow-hidden section-padding">
+        <div class="container-main mx-auto pb-0">
+            <div class="d-flex flex-column align-items-center pt-3 pb-2">
+                <p class="color-blue font-weight-500 font-size-28 text-center text-capitalize">Explore Top Destination
+                </p>
+                <p class="color-gray pt-2 opacity-8">Top Destination</p>
             </div>
         </div>
-    </div>
-</section>
+        <div>
+            <div class="wrapper position-relative">
+                <!-- Arrows -->
+                <div style="top: 35%;" class="arrows d-flex justify-content-between position-absolute w-100">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="content-wrapper">
+                                <div class="content">
+                                    <div class="top-destination-card">
+                                        <div class="top-destination-card-inner-one position-relative">
+                                            <div
+                                                class="position-absolute right-0 bg-white box-shadow-lg px-3 py-2 mr-3 mt-3 rounded-lg">
+                                                <span class="text-black font-weight-500">&#x20AC;340</span>
+                                            </div>
+                                        </div>
+                                        <div class="pt-4 pl-0 pl-lg-2">
+                                            <p
+                                                class="font-size-18 font-weight-500 color-gray-three text-center text-lg-left">
+                                                Enjoy The Beauty Of The Brazil City</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="content-wrapper">
+                                <div class="content">
+                                    <div class="top-destination-card">
+                                        <div class="top-destination-card-inner-two position-relative">
+                                            <div
+                                                class="position-absolute right-0 bg-white box-shadow-lg px-3 py-2 mr-3 mt-3 rounded-lg">
+                                                <span class="text-black font-weight-500">&#x20AC;340</span>
+                                            </div>
+                                        </div>
+                                        <div class="pt-4 pl-0 pl-lg-2">
+                                            <p
+                                                class="font-size-18 font-weight-500 color-gray-three text-center text-lg-left">
+                                                Enjoy The Beauty Of The China City</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="content-wrapper">
+                                <div class="content">
+                                    <div class="top-destination-card">
+                                        <div class="top-destination-card-inner-three position-relative">
+                                            <div
+                                                class="position-absolute right-0 bg-white box-shadow-lg px-3 py-2 mr-3 mt-3 rounded-lg">
+                                                <span class="text-black font-weight-500">&#x20AC;340</span>
+                                            </div>
+                                        </div>
+                                        <div class="pt-4 pl-0 pl-lg-2 ">
+                                            <p
+                                                class="font-size-18 font-weight-500 color-gray-three text-center text-lg-left">
+                                                Enjoy The Beauty Of The Australia City</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-nav-wrapper">
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Top Destination Ends-->
-    
+
     <!-- Choice of the day -->
     <section data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000"
         class="choice-of-the-day-main overflow-hidden section-padding">
@@ -2373,7 +2406,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div>
+                                            <div class="text-right">
                                                 <p class="text-right font-size-14"><span
                                                         class="font-weight-700 font-size-21">149€</span>/per night</p>
                                                 <p class="text-right font-size-12 dark-gray py-1"><s>200€/per night</s>
@@ -2490,7 +2523,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div>
+                                            <div class="text-right">
                                                 <p class="text-right font-size-14"><span
                                                         class="font-weight-700 font-size-21">149€</span>/per night</p>
                                                 <p class="text-right font-size-12 dark-gray py-1"><s>200€/per night</s>
@@ -2607,7 +2640,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div>
+                                            <div class="text-right">
                                                 <p class="text-right font-size-14"><span
                                                         class="font-weight-700 font-size-21">149€</span>/per night</p>
                                                 <p class="text-right font-size-12 dark-gray py-1"><s>200€/per night</s>
@@ -2966,7 +2999,7 @@
             <div class="list-inner w-42 d-flex flex-column flex-lg-row justify-content-between">
                 <div class="footer-single footer-links w-31 pt-5">
                     <ul class="text-white" style="list-style-type: '-';">
-                        <p class="font-weight-normal font-size-13">About Us</p>
+                        <p class="footer-link-headings font-weight-normal font-size-13">About Us</p>
                         <div class="footer-border-line"></div>
                         <li><a>What Is Xl Travel</a></li>
                         <li><a>Careers</a></li>
@@ -2974,9 +3007,10 @@
                         <li><a>Travel Zone</a></li>
                     </ul>
                 </div>
+                <div style="border-bottom:1.5px solid #1a8f91;;" class="d-block d-lg-none"></div>
                 <div class="footer-single footer-links w-31 pt-5">
                     <ul class="text-white" style="list-style-type: '-';">
-                        <p class="font-weight-normal font-size-13">Help</p>
+                        <p class="footer-link-headings font-weight-normal font-size-13">Help</p>
                         <div class="footer-border-line"></div>
                         <li><a>Help Center</a></li>
                         <li><a>FAQs</a></li>
@@ -2985,9 +3019,10 @@
                         <li><a>Terms Of Use</a></li>
                     </ul>
                 </div>
+                <div style="border-bottom:1.5px solid #1a8f91;;" class="d-block d-lg-none"></div>
                 <div class="footer-single footer-links w-31 pt-5">
                     <ul class="text-white" style="list-style-type: '-';">
-                        <p class="font-weight-normal font-size-13">Partner with us</p>
+                        <p class="footer-link-headings font-weight-normal font-size-13">Partner with us</p>
                         <div class="footer-border-line"></div>
                         <li><a>Partner Hub</a></li>
                         <li><a>Advertise On Agoda</a></li>
@@ -3038,7 +3073,7 @@
             </div>
         </div>
         <div class="container-main mx-auto">
-            <p class="text-center text-white font-weight-400 py-5 font-size-14">Copyright © 2022 Xl Travel. All rights
+            <p class="text-center text-white font-weight-400 py-4 py-lg-5 font-size-14">Copyright © 2022 Xl Travel. All rights
                 reserved.</p>
         </div>
     </footer>

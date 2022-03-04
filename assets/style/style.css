@@ -354,6 +354,9 @@ header {
 .left-0 {
   left: 0;
 }
+.bottom-0 {
+  bottom: 0;
+}
 /* Opacity */
 .opacity-1 {
   opacity: 1;
@@ -871,7 +874,7 @@ input::-webkit-input-placeholder {
     border: none;
   }
   .yellow-button {
-    padding: 9px 12px;
+    padding: 9px 5px;
   }
 }
 /* New Serach Box */
