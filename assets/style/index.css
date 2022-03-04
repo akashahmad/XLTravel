@@ -701,8 +701,12 @@ header {
     inset: 0;
     z-index: 99;
     display: none;
+    animation: display 0.3s linear;
   }
-
+ @keyframes display {
+   from{opacity: 0;}
+   to{opacity: 1;}
+ }
   .search-box-index {
     height: fit-content;
     z-index: 99;
