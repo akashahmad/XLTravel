@@ -705,9 +705,13 @@ header {
     overflow: hidden;
   }
   @keyframes display {
-   from{width: 0;}
-   to{width: 100%;}
- }
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
   /* .search-box-index {
     height: fit-content;
     z-index: 99;
@@ -747,7 +751,7 @@ header {
     overflow-y: scroll;
     padding-bottom: 70px;
   }
-  .search-box-mobile-view  .guestes-mobile-index{
+  .search-box-mobile-view .guestes-mobile-index {
     height: 478px;
     overflow-y: scroll;
     padding-bottom: 70px;
@@ -1076,7 +1080,7 @@ header {
     overflow-y: scroll;
     padding-bottom: 152px;
   }
-  .search-box-mobile-view  .guestes-mobile-index{
+  .search-box-mobile-view .guestes-mobile-index {
     height: 378px;
     overflow-y: scroll;
     padding-bottom: 152px;
