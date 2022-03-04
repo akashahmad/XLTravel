@@ -747,12 +747,12 @@ header {
     overflow-y: unset;
   }
   .search-box-mobile-view .nearby-location-search-index {
-    height: 378px;
+    height: 90vh;
     overflow-y: scroll;
-    padding-bottom: 70px;
+    padding-bottom: 110px;
   }
   .search-box-mobile-view .guestes-mobile-index {
-    height: 478px;
+    height: 90vh;
     overflow-y: scroll;
     padding-bottom: 70px;
   }
@@ -1076,13 +1076,15 @@ header {
     width: 45% !important;
   }
   .search-box-mobile-view .nearby-location-search-index {
-    height: 378px;
+    height: 100vh;
+    overflow-y: scroll;
+  }
+  .search-box-mobile-view .guestes-mobile-index {
+    height: 90vh;
     overflow-y: scroll;
     padding-bottom: 152px;
   }
-  .search-box-mobile-view .guestes-mobile-index {
-    height: 378px;
-    overflow-y: scroll;
-    padding-bottom: 152px;
+  #searhBar-index-date-picker-inline{
+    top: -11px;
   }
 }
