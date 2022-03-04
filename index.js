@@ -195,12 +195,6 @@ var countries = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Angu
 /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
 autocomplete(document.getElementById("myInput"), countries);
 
-function summationIndex()
-{
-  var locationInput = document.getElementById("myInput").value;
-  document.getElementById("filter-location-index").value = locationInput;
-  // console.log("INNERHTML" , locationInput)
-}
 // Swiper*********************
 const swiper = new Swiper(".swiper", {
     // Optional parameters

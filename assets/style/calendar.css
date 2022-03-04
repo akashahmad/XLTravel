@@ -1005,7 +1005,7 @@
     display: block;
   }
   .daterangepicker.dropdown-menu{
-    position: fixed !important;
+    position: fixed;
   }
 }
 /* Calendar Css Ends */
