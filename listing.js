@@ -1,22 +1,14 @@
 
-// Select one checkbox at a time
-// var propertyRatings;
-// document.addEventListener('input',(event)=>{
-// if(event.target.getAttribute('name')=="options-property-ratings[]"){
-// if(propertyRatings)
-// propertyRatings.checked=false;
-// }
-// event.target.checked=true;
-// propertyRatings=event.target;
-// })
-
-// Increment Decrement Function
-function increment(value) {
-    document.getElementById(value).stepUp();
+// Search box destination modal
+function ShowDestinationModal() {
+    document.getElementById("destination-modal").style.display = "block";
   }
-  function decrement(value) {
-    document.getElementById(value).stepDown();
-  } 
+  document.addEventListener('mouseup', function(e) {
+    var container = document.getElementById('destination-modal');
+    if (container && !container.contains(e.target)){
+      document.getElementById('destination-modal').style.display ="none";
+    }
+  });
 
 // Price Range Script
 var $range = $(".js-range-slider"),
@@ -98,3 +90,11 @@ document.addEventListener('mouseup', function(e) {
       document.getElementById('filter-button-popup').style.display ="none";
    }
   });
+
+// Filter Yellow button toggle
+function toggleClassBg(value) {
+    // var element = document.getElementById(value).style.backgroundColor = "#ffc044";
+    var element = document.getElementById(value);
+    element.classList.toggle("bg-yellow-focus");
+  }
+  

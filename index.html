@@ -168,16 +168,7 @@
                         </div>
                     </div>
                     <div class="position-relative container-main">
-                        <div id="search-index">
-                            <div class="d-block d-lg-none">
-                                <div class="d-flex justify-content-end mt-3 mr-3" onclick="displayNone(`search-index`)">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="black" height="20px"
-                                        viewBox="0 0 329.26933 329">
-                                        <path
-                                            d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0" />
-                                    </svg>
-                                </div>
-                            </div>
+                        <div>
                             <div
                                 class="d-none d-lg-block search-box-index bg-white w-90 py-2 box-shadow-lg position-absolute rounded-md">
                                 <!-- Search Desktop -->
@@ -239,206 +230,211 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Search mobile -->
-                            <div class="search-box-mobile-view d-block d-lg-none">
-                                <div id="search-location-mobile-index" class="location-mobile-index mt-4 px-4">
-                                    <div class="autocomplete w-100 search-box-inner">
-                                        <p class="search-lable font-weight-500">Location</p>
-                                        <input class="location-input-mobile" id="myInputMobile" type="text"
-                                            name="myCountry" placeholder="Hey! Where you want to go?">
-                                    </div>
-                                    <p class="font-weight-500 pt-4">Location Nearby</p>
-                                    <div class="nearby-location-search-index">
-                                        <div class="mt-4 d-flex align-items-center"
-                                            onclick="displayNone(`search-location-mobile-index`) , displayBlock(`search-calendar-mobile-index`)">
-                                            <div>
-                                                <img style="height: 70px; width: 100px; border-radius: 10px;"
-                                                    src="./assets/images/pexels-alleksana-4226100.jpg" />
-                                            </div>
-                                            <div class="ml-3">
-                                                <p class="font-weight-500">Boston</p>
-                                                <span class="font-size-11 opacity-6">4 hours drive</span>
-                                            </div>
-                                        </div>
-                                        <div class="mt-4 d-flex align-items-center"
-                                            onclick="displayNone(`search-location-mobile-index`) , displayBlock(`search-calendar-mobile-index`)">
-                                            <div>
-                                                <img style="height: 70px; width: 100px; border-radius: 10px;"
-                                                    src="./assets/images/pexels-pierre-blaché-2901209.jpg" />
-                                            </div>
-                                            <div class="ml-3">
-                                                <p class="font-weight-500">Hoouston</p>
-                                                <span class="font-size-11 opacity-6">12 hours drive</span>
-                                            </div>
-                                        </div>
-                                        <div class="mt-4 d-flex align-items-center"
-                                            onclick="displayNone(`search-location-mobile-index`) , displayBlock(`search-calendar-mobile-index`)">
-                                            <div>
-                                                <img style="height: 70px; width: 100px; border-radius: 10px;"
-                                                    src="./assets/images/pexels-pierre-blaché-2901215.jpg" />
-                                            </div>
-                                            <div class="ml-3">
-                                                <p class="font-weight-500">Miami</p>
-                                                <span class="font-size-11 opacity-6">20 hours drive</span>
-                                            </div>
-                                        </div>
-                                        <div class="mt-4 d-flex align-items-center"
-                                            onclick="displayNone(`search-location-mobile-index`) , displayBlock(`search-calendar-mobile-index`)">
-                                            <div>
-                                                <img style="height: 70px; width: 100px; border-radius: 10px;"
-                                                    src="./assets/images/pexels-alleksana-4226100.jpg" />
-                                            </div>
-                                            <div class="ml-3">
-                                                <p class="font-weight-500">Boston</p>
-                                                <span class="font-size-11 opacity-6">4 hours drive</span>
-                                            </div>
-                                        </div>
-                                        <div class="mt-4 d-flex align-items-center"
-                                            onclick="displayNone(`search-location-mobile-index`) , displayBlock(`search-calendar-mobile-index`)">
-                                            <div>
-                                                <img style="height: 70px; width: 100px; border-radius: 10px;"
-                                                    src="./assets/images/pexels-pierre-blaché-2901209.jpg" />
-                                            </div>
-                                            <div class="ml-3">
-                                                <p class="font-weight-500">Hoouston</p>
-                                                <span class="font-size-11 opacity-6">12 hours drive</span>
-                                            </div>
-                                        </div>
-                                        <div class="mt-4 d-flex align-items-center"
-                                            onclick="displayNone(`search-location-mobile-index`) , displayBlock(`search-calendar-mobile-index`)">
-                                            <div>
-                                                <img style="height: 70px; width: 100px; border-radius: 10px;"
-                                                    src="./assets/images/pexels-pierre-blaché-2901215.jpg" />
-                                            </div>
-                                            <div class="ml-3">
-                                                <p class="font-weight-500">Miami</p>
-                                                <span class="font-size-11 opacity-6">20 hours drive</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="position-absolute bottom-0 left-0 right-0 py-3 bg-white">
-                                        <div class="d-flex justify-content-between w-84 mx-auto text-center">
-                                            <div>
-                                                <button style="width: 165px;" class="back-button px-4" onclick="displayNone(`search-index`)">
-                                                    BACK </button>
-                                            </div>
-                                            <div>
-                                                <button style="width: 165px;" class="yellow-button px-4"
-                                                    onclick="displayNone(`search-location-mobile-index`) , displayBlock(`search-calendar-mobile-index`)">
-                                                    NEXT </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="search-calendar-mobile-index" class="calendar-mobile-index">
-                                    <p class="font-weight-500 font-size-25 px-4">Calendar</p>
-                                    <div>
-                                        <input id="searhBar-index-date-picker-inline" placeholder="Add Date"
-                                            class="form-control" />
-                                    </div>
-
-                                    <div class="position-absolute bottom-0 left-0 right-0 py-3 bg-white">
-                                        <div class="d-flex justify-content-between w-84 mx-auto text-center">
-                                            <div>
-                                                <button style="width: 165px;" class="back-button px-4"
-                                                    onclick="displayNone(`search-calendar-mobile-index`) , displayBlock(`search-location-mobile-index`)">
-                                                    BACK </button>
-                                            </div>
-                                            <div>
-                                                <button style="width: 165px;" class="yellow-button px-4"
-                                                    onclick="displayNone(`search-calendar-mobile-index`) , displayBlock(`search-guest-mobile-index`)">
-                                                    NEXT </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="search-guest-mobile-index" class="guests-mobile-search mt-5 px-4">
-                                    <div class="guestes-mobile-index">
-                                        <p class="font-weight-500 py-5 font-size-25">Guests</p>
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <div class="d-flex justify-content-between border-bottom pb-3">
-                                                    <p class="font-weight-500 w-75">Children</p>
-                                                    <div class="d-flex justify-content-end w-100 align-items-center">
-                                                        <span class="cursor-pointer mobile-circle-inc-dec"
-                                                            onClick="decrement(`children-increment-decrement`)">-</span>
-                                                        <input class="search-mobile-number-input" type="number"
-                                                            placeholder="0" id="children-increment-decrement"
-                                                            type=number min=0 max=10 /> <span
-                                                            class="cursor-pointer  mobile-circle-inc-dec"
-                                                            onClick="increment(`children-increment-decrement`)">+</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="pt-4">
-                                                <div class="d-flex justify-content-between border-bottom pb-3">
-                                                    <p class="font-weight-500 w-75">Adults</p>
-                                                    <div class="d-flex justify-content-end w-100 align-items-center">
-                                                        <span class="cursor-pointer mobile-circle-inc-dec"
-                                                            onClick="decrement(`adults-increment-decrement`)">-</span>
-                                                        <input class="search-mobile-number-input" type="number"
-                                                            placeholder="0" id="adults-increment-decrement" type=number
-                                                            min=0 max=10 /> <span
-                                                            class="cursor-pointer mobile-circle-inc-dec"
-                                                            onClick="increment(`adults-increment-decrement`)">+</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="pt-4">
-                                                <div class="d-flex justify-content-between border-bottom pb-3">
-                                                    <p class="font-weight-500 w-75">Infants</p>
-                                                    <div class="d-flex justify-content-end w-100 align-items-center">
-                                                        <span class="cursor-pointer mobile-circle-inc-dec"
-                                                            onClick="decrement(`infants-increment-decrement`)">-</span>
-                                                        <input class="search-mobile-number-input" type="number"
-                                                            placeholder="0" id="infants-increment-decrement" type=number
-                                                            min=0 max=10 /> <span
-                                                            class="cursor-pointer mobile-circle-inc-dec"
-                                                            onClick="increment(`infants-increment-decrement`)">+</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="pt-4">
-                                                <div class="d-flex justify-content-between border-bottom pb-3">
-                                                    <p class="font-weight-500 w-75">Pets</p>
-                                                    <div class="d-flex justify-content-end w-100 align-items-center">
-                                                        <span class="cursor-pointer mobile-circle-inc-dec"
-                                                            onClick="decrement(`pets-increment-decrement`)">-</span>
-                                                        <input class="search-mobile-number-input" type="number"
-                                                            placeholder="0" id="pets-increment-decrement" type=number
-                                                            min=0 max=10 /> <span
-                                                            class="cursor-pointer mobile-circle-inc-dec"
-                                                            onClick="increment(`pets-increment-decrement`)">+</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="position-absolute bottom-0 left-0 right-0 py-3 bg-white">
-                                        <div class="d-flex justify-content-between w-84 mx-auto text-center">
-                                            <div>
-                                                <button style="width: 165px;" class="back-button px-4"
-                                                    onclick="displayNone(`search-guest-mobile-index`) , displayBlock(`search-calendar-mobile-index`)">
-                                                    SKIP </button>
-                                            </div>
-                                            <div>
-                                                <a href="./listing.html">
-                                                <button style="width: 165px;" class="yellow-button px-4"
-                                                    onclick="displayNone(`search-index`)"> SEARCH </button>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
     <!-- Mobile Hero Section Ends -->
+    <!-- Search mobile -->
+    <div id="search-index">
+        <div class="search-box-mobile-view d-block d-lg-none">
+            <div class="d-block d-lg-none">
+                <div class="d-flex justify-content-end mt-3 mr-3" onclick="displayNone(`search-index`)">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="black" height="20px" viewBox="0 0 329.26933 329">
+                        <path
+                            d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0" />
+                    </svg>
+                </div>
+            </div>
+            <div id="search-location-mobile-index" class="location-mobile-index mt-4 px-4">
+                <div class="autocomplete w-100 search-box-inner">
+                    <p class="search-lable font-weight-500">Location</p>
+                    <input class="location-input-mobile" id="myInputMobile" type="text" name="myCountry"
+                        placeholder="Hey! Where you want to go?">
+                </div>
+                <p class="font-weight-500 pt-4">Location Nearby</p>
+                <div class="nearby-location-search-index">
+                    <div class="mt-4 d-flex align-items-center"
+                        onclick="displayNone(`search-location-mobile-index`) , displayBlock(`search-calendar-mobile-index`)">
+                        <div>
+                            <img style="height: 70px; width: 100px; border-radius: 10px;"
+                                src="./assets/images/pexels-alleksana-4226100.jpg" />
+                        </div>
+                        <div class="ml-3">
+                            <p class="font-weight-500">Boston</p>
+                            <span class="font-size-11 opacity-6">4 hours drive</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 d-flex align-items-center"
+                        onclick="displayNone(`search-location-mobile-index`) , displayBlock(`search-calendar-mobile-index`)">
+                        <div>
+                            <img style="height: 70px; width: 100px; border-radius: 10px;"
+                                src="./assets/images/pexels-pierre-blaché-2901209.jpg" />
+                        </div>
+                        <div class="ml-3">
+                            <p class="font-weight-500">Hoouston</p>
+                            <span class="font-size-11 opacity-6">12 hours drive</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 d-flex align-items-center"
+                        onclick="displayNone(`search-location-mobile-index`) , displayBlock(`search-calendar-mobile-index`)">
+                        <div>
+                            <img style="height: 70px; width: 100px; border-radius: 10px;"
+                                src="./assets/images/pexels-pierre-blaché-2901215.jpg" />
+                        </div>
+                        <div class="ml-3">
+                            <p class="font-weight-500">Miami</p>
+                            <span class="font-size-11 opacity-6">20 hours drive</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 d-flex align-items-center"
+                        onclick="displayNone(`search-location-mobile-index`) , displayBlock(`search-calendar-mobile-index`)">
+                        <div>
+                            <img style="height: 70px; width: 100px; border-radius: 10px;"
+                                src="./assets/images/pexels-alleksana-4226100.jpg" />
+                        </div>
+                        <div class="ml-3">
+                            <p class="font-weight-500">Boston</p>
+                            <span class="font-size-11 opacity-6">4 hours drive</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 d-flex align-items-center"
+                        onclick="displayNone(`search-location-mobile-index`) , displayBlock(`search-calendar-mobile-index`)">
+                        <div>
+                            <img style="height: 70px; width: 100px; border-radius: 10px;"
+                                src="./assets/images/pexels-pierre-blaché-2901209.jpg" />
+                        </div>
+                        <div class="ml-3">
+                            <p class="font-weight-500">Hoouston</p>
+                            <span class="font-size-11 opacity-6">12 hours drive</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 d-flex align-items-center"
+                        onclick="displayNone(`search-location-mobile-index`) , displayBlock(`search-calendar-mobile-index`)">
+                        <div>
+                            <img style="height: 70px; width: 100px; border-radius: 10px;"
+                                src="./assets/images/pexels-pierre-blaché-2901215.jpg" />
+                        </div>
+                        <div class="ml-3">
+                            <p class="font-weight-500">Miami</p>
+                            <span class="font-size-11 opacity-6">20 hours drive</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="position-absolute bottom-0 left-0 right-0 py-3 bg-white">
+                    <div class="d-flex justify-content-between w-84 mx-auto text-center">
+                        <div>
+                            <button style="width: 165px;" class="back-button px-4"
+                                onclick="displayNone(`search-index`)">
+                                BACK </button>
+                        </div>
+                        <div>
+                            <button style="width: 165px;" class="yellow-button px-4"
+                                onclick="displayNone(`search-location-mobile-index`) , displayBlock(`search-calendar-mobile-index`)">
+                                NEXT </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="search-calendar-mobile-index" class="calendar-mobile-index">
+                <p class="font-weight-500 font-size-25 px-4">Calendar</p>
+                <div>
+                    <input id="searhBar-index-date-picker-inline" placeholder="Add Date" class="form-control" />
+                </div>
+
+                <div class="position-absolute bottom-0 left-0 right-0 py-3 bg-white">
+                    <div class="d-flex justify-content-between w-84 mx-auto text-center">
+                        <div>
+                            <button style="width: 165px;" class="back-button px-4"
+                                onclick="displayNone(`search-calendar-mobile-index`) , displayBlock(`search-location-mobile-index`)">
+                                BACK </button>
+                        </div>
+                        <div>
+                            <button style="width: 165px;" class="yellow-button px-4"
+                                onclick="displayNone(`search-calendar-mobile-index`) , displayBlock(`search-guest-mobile-index`)">
+                                NEXT </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="search-guest-mobile-index" class="guests-mobile-search mt-5 px-4">
+                <div class="guestes-mobile-index">
+                    <p class="font-weight-500 py-5 font-size-25">Guests</p>
+                    <ul class="list-unstyled">
+                        <li>
+                            <div class="d-flex justify-content-between border-bottom pb-3">
+                                <p class="font-weight-500 w-75">Children</p>
+                                <div class="d-flex justify-content-end w-100 align-items-center">
+                                    <span class="cursor-pointer mobile-circle-inc-dec"
+                                        onClick="decrement(`children-increment-decrement`)">-</span>
+                                    <input class="search-mobile-number-input" type="number" placeholder="0"
+                                        id="children-increment-decrement" type=number min=0 max=10 /> <span
+                                        class="cursor-pointer  mobile-circle-inc-dec"
+                                        onClick="increment(`children-increment-decrement`)">+</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="pt-4">
+                            <div class="d-flex justify-content-between border-bottom pb-3">
+                                <p class="font-weight-500 w-75">Adults</p>
+                                <div class="d-flex justify-content-end w-100 align-items-center">
+                                    <span class="cursor-pointer mobile-circle-inc-dec"
+                                        onClick="decrement(`adults-increment-decrement`)">-</span>
+                                    <input class="search-mobile-number-input" type="number" placeholder="0"
+                                        id="adults-increment-decrement" type=number min=0 max=10 /> <span
+                                        class="cursor-pointer mobile-circle-inc-dec"
+                                        onClick="increment(`adults-increment-decrement`)">+</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="pt-4">
+                            <div class="d-flex justify-content-between border-bottom pb-3">
+                                <p class="font-weight-500 w-75">Infants</p>
+                                <div class="d-flex justify-content-end w-100 align-items-center">
+                                    <span class="cursor-pointer mobile-circle-inc-dec"
+                                        onClick="decrement(`infants-increment-decrement`)">-</span>
+                                    <input class="search-mobile-number-input" type="number" placeholder="0"
+                                        id="infants-increment-decrement" type=number min=0 max=10 /> <span
+                                        class="cursor-pointer mobile-circle-inc-dec"
+                                        onClick="increment(`infants-increment-decrement`)">+</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="pt-4">
+                            <div class="d-flex justify-content-between border-bottom pb-3">
+                                <p class="font-weight-500 w-75">Pets</p>
+                                <div class="d-flex justify-content-end w-100 align-items-center">
+                                    <span class="cursor-pointer mobile-circle-inc-dec"
+                                        onClick="decrement(`pets-increment-decrement`)">-</span>
+                                    <input class="search-mobile-number-input" type="number" placeholder="0"
+                                        id="pets-increment-decrement" type=number min=0 max=10 /> <span
+                                        class="cursor-pointer mobile-circle-inc-dec"
+                                        onClick="increment(`pets-increment-decrement`)">+</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="position-absolute bottom-0 left-0 right-0 py-3 bg-white">
+                    <div class="d-flex justify-content-between w-84 mx-auto text-center">
+                        <div>
+                            <button style="width: 165px;" class="back-button px-4"
+                                onclick="displayNone(`search-guest-mobile-index`) , displayBlock(`search-calendar-mobile-index`)">
+                                SKIP </button>
+                        </div>
+                        <div>
+                            <a href="./listing.html">
+                                <button style="width: 165px;" class="yellow-button px-4"
+                                    onclick="displayNone(`search-index`)"> SEARCH </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Pros Section Ends-->
     <section class="pros-section section-padding container-main mx-auto">
         <div class="d-flex justify-content-center align-items-center pt-3 pb-3">
@@ -3271,6 +3267,7 @@
         </div>
     </footer>
     <script src="./index.js"></script>
+    <script src="./functions.js"></script>
     <script src="./calender.js"></script>
 </body>
 

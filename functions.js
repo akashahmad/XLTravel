@@ -1,21 +1,16 @@
-// Search box destination modal
-function ShowDestinationModal() {
-  document.getElementById("destination-modal").style.display = "block";
+// Aos Animation
+AOS.init();
+
+// Increment Decrement Function
+function increment(value) {
+  document.getElementById(value).stepUp();
 }
-document.addEventListener('mouseup', function(e) {
-  var container = document.getElementById('destination-modal');
-  if (container && !container.contains(e.target)){
-    document.getElementById('destination-modal').style.display ="none";
-  }
-});
-// Toggle Classes
-function toggleClassBg(value) {
-  // var element = document.getElementById(value).style.backgroundColor = "#ffc044";
-  var element = document.getElementById(value);
-  element.classList.toggle("bg-yellow-focus");
-}
+function decrement(value) {
+  document.getElementById(value).stepDown();
+} 
 
 // Auto Complete suggesstion for country name
+
 function autocomplete(inp, arr) {
   /*the autocomplete function takes two arguments,
   the text field element and an array of possible autocompleted values:*/
@@ -118,13 +113,13 @@ var countries = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Angu
 /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
 autocomplete(document.getElementById("myInput"), countries);
 
+// Save Location function
 function summation()
 {
   var locationInput = document.getElementById("myInput").value;
   document.getElementById("filter-location").value = locationInput;
   // console.log("INNERHTML" , locationInput)
 }
-// Auto complete script ended
 
 // Sticky price header
 $(window).scroll(function () {
@@ -144,35 +139,13 @@ function ShowSearchBar() {
 //searchBar Close
 document.addEventListener('mouseup', function(e) {
   var searchBarArea = document.getElementById('search-box-inner');
-  if (!searchBarArea.contains(e.target)){
+  if (searchBarArea && !searchBarArea.contains(e.target)){
     document.getElementById('search-bar-inner-elements').style.display ="none";
     document.getElementById('search-text-property-detail').style.display ="block";
     document.getElementById('search-box-inner').style.width ="20%";
   }
 });
 
-// Slider Functoin
-$("#recipeCarousel").carousel({
-  interval: 10000,
-});
-
-$(".carousel .carousel-item").each(function () {
-  var minPerSlide = 3;
-  var next = $(this).next();
-  if (!next.length) {
-    next = $(this).siblings(":first");
-  }
-  next.children(":first-child").clone().appendTo($(this));
-
-  for (var i = 0; i < minPerSlide; i++) {
-    next = next.next();
-    if (!next.length) {
-      next = $(this).siblings(":first");
-    }
-
-    next.children(":first-child").clone().appendTo($(this));
-  }
-});
 // Collapse button toggle text
 $(document).ready(function () {
   $('[data-toggle="collapse"]').click(function () {
@@ -185,223 +158,38 @@ $(document).ready(function () {
     }
   });
 });
-// Collapse button for listing Filter
-// $(document).ready(function () {
-//   $('[data-toggle="collapse"]').click(function () {
-//     $(this).toggleClass("active");
-//     if ($(this).hasClass("active")) {
-//       $(this).text("Show Less");
-//     } else {
-//       $(this).text("Show all 76 amenities");      
-//       window.scrollTo(0, 1300);
-//     }
-//   });
-// });
-
-// Aos Animation
-AOS.init();
-
-$(document).ready(function () {
-  // Swiper: Slider
-  new Swiper(".swiper-container", {
-    loop: true,
-    nextButton: ".swiper-button-next",
-    prevButton: ".swiper-button-prev",
-    slidesPerView: 3,
-    paginationClickable: true,
-    spaceBetween: 20,
-    breakpoints: {
-      1920: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-      },
-      1028: {
-        slidesPerView: 1.4,
-        spaceBetween: 30,
-      },
-      480: {
-        slidesPerView: 1.4,
-        spaceBetween: 10,
-      },
-    },
-  });
-});
-$(document).ready(function () {
-  // Swiper: Slider
-  new Swiper(".swiper-container-hero-section", {
-    loop: true,
-    nextButton: ".swiper-button-next",
-    prevButton: ".swiper-button-prev",
-    slidesPerView: 1,
-    paginationClickable: true,
-    spaceBetween: 0,
-    breakpoints: {
-      1920: {
-        slidesPerView: 1,
-        spaceBetween: 0,
-      },
-      1028: {
-        slidesPerView: 1,
-        spaceBetween: 0,
-      },
-      480: {
-        slidesPerView: 1,
-        spaceBetween: 0,
-      },
-    },
-  });
-});
-$(document).ready(function () {
-  // Swiper: Slider
-  new Swiper(".swiper-container-rooms", {
-    loop: true,
-    nextButton: ".swiper-button-next",
-    prevButton: ".swiper-button-prev",
-    slidesPerView: 3,
-    paginationClickable: true,
-    spaceBetween: 20,
-    breakpoints: {
-      1920: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-      },
-      1028: {
-        slidesPerView: 2.5,
-        spaceBetween: 30,
-      },
-      480: {
-        slidesPerView: 2.5,
-        spaceBetween: 10,
-      },
-    },
-  });
-});
 
 // Mobile Carousel
-var slideIndex = 1;
-showSlides(slideIndex);
+// var slideIndex = 1;
+// showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+// function plusSlides(n) {
+//   showSlides(slideIndex += n);
+// }
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+// function currentSlide(n) {
+//   showSlides(slideIndex = n);
+// }
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-  captionText.innerHTML = dots[slideIndex - 1].alt;
-}
-// Gallery for mobile
-let modalId = $('#image-gallery');
+// function showSlides(n) {
+//   var i;
+//   var slides = document.getElementsByClassName("mySlides");
+//   var dots = document.getElementsByClassName("demo");
+//   var captionText = document.getElementById("caption");
+//   if (n > slides.length) { slideIndex = 1 }
+//   if (n < 1) { slideIndex = slides.length }
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";
+//   }
+//   for (i = 0; i < dots.length; i++) {
+//     dots[i].className = dots[i].className.replace(" active", "");
+//   }
+//   slides[slideIndex - 1].style.display = "block";
+//   dots[slideIndex - 1].className += " active";
+//   captionText.innerHTML = dots[slideIndex - 1].alt;
+// }
 
-$(document)
-  .ready(function () {
-
-    loadGallery(true, 'a.thumbnail');
-
-    //This function disables buttons when needed
-    function disableButtons(counter_max, counter_current) {
-      $('#show-previous-image, #show-next-image')
-        .show();
-      if (counter_max === counter_current) {
-        $('#show-next-image')
-          .hide();
-      } else if (counter_current === 1) {
-        $('#show-previous-image')
-          .hide();
-      }
-    }
-
-    /**
-     *
-     * @param setIDs        Sets IDs when DOM is loaded. If using a PHP counter, set to false.
-     * @param setClickAttr  Sets the attribute for the click handler.
-     */
-
-    function loadGallery(setIDs, setClickAttr) {
-      let current_image,
-        selector,
-        counter = 0;
-
-      $('#show-next-image, #show-previous-image')
-        .click(function () {
-          if ($(this)
-            .attr('id') === 'show-previous-image') {
-            current_image--;
-          } else {
-            current_image++;
-          }
-
-          selector = $('[data-image-id="' + current_image + '"]');
-          updateGallery(selector);
-        });
-
-      function updateGallery(selector) {
-        let $sel = selector;
-        current_image = $sel.data('image-id');
-        $('#image-gallery-title')
-          .text($sel.data('title'));
-        $('#image-gallery-image')
-          .attr('src', $sel.data('image'));
-        disableButtons(counter, $sel.data('image-id'));
-      }
-
-      if (setIDs == true) {
-        $('[data-image-id]')
-          .each(function () {
-            counter++;
-            $(this)
-              .attr('data-image-id', counter);
-          });
-      }
-      $(setClickAttr)
-        .on('click', function () {
-          updateGallery($(this));
-        });
-    }
-  });
-
-// build key actions
-$(document)
-  .keydown(function (e) {
-    switch (e.which) {
-      case 37: // left
-        if ((modalId.data('bs.modal') || {})._isShown && $('#show-previous-image').is(":visible")) {
-          $('#show-previous-image')
-            .click();
-        }
-        break;
-
-      case 39: // right
-        if ((modalId.data('bs.modal') || {})._isShown && $('#show-next-image').is(":visible")) {
-          $('#show-next-image')
-            .click();
-        }
-        break;
-
-      default:
-        return; // exit this handler for other keys
-    }
-    e.preventDefault(); // prevent the default action (scroll / move caret)
-  });
-
-
-// Data Block Hide Toggle generic function
+// Data Block Hide Toggle common function
 function displayToggle(value) {
   var element = document.getElementById(value);
   element.classList.toggle("display-block");
