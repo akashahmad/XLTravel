@@ -49,7 +49,7 @@ video::-webkit-media-controls-panel {
   font-size: 12px !important;
   height: 30px;
 }
-::placeholder {
+.search-box-index ::placeholder {
   text-align: left !important;
   font-size: 12px !important;
 }
@@ -164,22 +164,6 @@ video::-webkit-media-controls-panel {
     width: 90%;
     opacity: 1;
   }
-}
-/* Common Button */
-
-/* tealish-color button */
-.teaslih-text-button {
-  background-color: transparent;
-  color: #40d0d3;
-  border: 2px solid #40d0d3;
-  outline: none;
-  padding: 8px 18px;
-  border-radius: 8px;
-  font-weight: 500;
-  transition: transform 0.2s;
-}
-.teaslih-text-button:hover {
-  transform: scale(1.07);
 }
 .hot-deail-text {
   color: #ef3b3c !important;
@@ -640,11 +624,7 @@ header {
     min-height: 550px;
     padding-top: 34px;
   }
-  .mobile-search-input-header {
-    background-color: transparent;
-    border: 1px solid #00b2d3;
-    border-radius: 15px;
-  }
+  
   .search-button-mobile-inner {
     border-color: white;
     background-color: #f7f7f7;
@@ -799,137 +779,7 @@ header {
   #search-guest-mobile-index {
     display: none;
   }
-  /* Hamburger  */
-  .top-item {
-    margin-top: 100px;
-  }
-  header {
-    margin: 0;
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 0px 0px 5px 0px #ddd;
-    position: fixed;
-    z-index: 20;
-  }
-  .mobile-nav {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 52px;
-    left: 0;
-    width: 100%;
-    transform: translateX(100%);
-    transition: transform 260ms ease-in-out;
-    background-color: white;
-    border-left: 1px solid #eee;
-  }
-  .mobile-nav ul {
-    margin: 0;
-    padding: 0;
-    border-top: 1px solid #eee;
-  }
-  .mobile-nav ul > li {
-    list-style: none;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: bold;
-    padding: 18px !important;
-    cursor: pointer;
-    border-bottom: 1px solid #eee;
-    transition: 0.25s;
-  }
-  .mobile-nav ul > li span {
-    display: block;
-    font-size: 14px;
-    color: #353535;
-  }
-  .mobile-nav ul > li a {
-    color: #353535;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer;
-    text-decoration: none;
-  }
-  .mobile-nav ul > li:hover {
-    background-color: #dddddd;
-  }
-  .mobile-nav li#nav-signup {
-    list-style: none;
-    background-color: #00b2d3;
-  }
-  .mobile-nav ul > li#nav-signup span {
-    color: #00b2d3;
-  }
-  .mobile-nav ul > li#nav-signup a {
-    color: #ffffff;
-  }
-  .mobile-nav ul > li#nav-signup:hover {
-    background-color: #006375;
-  }
-  input[type="checkbox"]:checked ~ nav {
-    transform: translateX(0);
-    z-index: 40;
-  }
-  input[type="checkbox"] {
-    box-sizing: border-box;
-    display: none;
-    transition: all 0.25s;
-  }
-  .menuIconToggle {
-    box-sizing: border-box;
-    cursor: pointer;
-    z-index: 40;
-    height: 100%;
-    width: 100%;
-    width: 22px;
-    margin: 0px;
-    transition: all 0.3s;
-  }
-  .hamb-line {
-    box-sizing: border-box;
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    background-color: #444;
-    transition: all 0.25s;
-  }
-  .hor {
-    transition: all 0.3s;
-    box-sizing: border-box;
-    position: relative;
-    float: left;
-    margin-top: 3px;
-  }
-  .dia.part-1 {
-    position: relative;
-    box-sizing: border-box;
-    float: left;
-    transition: all 0.25s;
-  }
-  .dia.part-2 {
-    box-sizing: border-box;
-    position: relative;
-    float: left;
-    margin-top: 3px;
-    transition: all 0.25s;
-  }
-  input[type="checkbox"]:checked ~ .menuIconToggle > .hor {
-    box-sizing: border-box;
-    opacity: 0;
-    transition: all 0.25s;
-  }
-  input[type="checkbox"]:checked ~ .menuIconToggle > .dia.part-1 {
-    box-sizing: border-box;
-    transform: rotate(135deg);
-    margin-top: 8px;
-    transition: all 0.25s;
-  }
-  input[type="checkbox"]:checked ~ .menuIconToggle > .dia.part-2 {
-    box-sizing: border-box;
-    transform: rotate(-135deg);
-    margin-top: -9px;
-    transition: all 0.25s;
-  }
+  
   /* Props Section */
   .commission-pros .single-pros {
     width: 100%;

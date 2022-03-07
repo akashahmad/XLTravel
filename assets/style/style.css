@@ -50,6 +50,21 @@ header {
 /* Header Ends */
 
 /* Common Classes */
+
+.teaslih-text-button {
+  background-color: transparent;
+  color: #40d0d3;
+  border: 2px solid #40d0d3;
+  outline: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: transform 0.2s;
+}
+.teaslih-text-button:hover {
+  transform: scale(1.07);
+}
+
 .yellow-button {
   cursor: pointer;
   border: none;
@@ -186,6 +201,10 @@ header {
 .color-gray {
   color: #8d9598;
 }
+.color-gray-two {
+  color: #9d9d9d;
+}
+
 .color-red {
   color: #ef3b3c;
 }
@@ -209,6 +228,11 @@ header {
 }
 .bg-yellow-focus {
   background-color: #ffc044 !important;
+}
+.bg-yellow-no-border{
+  background-color: #ffc044 !important;
+  outline: transparent !important;
+  border:2px solid transparent !important;
 }
 .dark-gray {
   color: #808080;
@@ -281,6 +305,9 @@ header {
 .w-90 {
   width: 90%;
   margin: 0 auto;
+}
+.w-95 {
+  width: 95%;
 }
 .w-97 {
   width: 97%;
@@ -683,18 +710,24 @@ input::-webkit-input-placeholder {
     transform: translateY(-10px);
   }
 }
-
 /* Media Query */
 @media (max-width: 1199px) and (min-width: 320px) {
   .header-logo img {
     height: 40px !important;
   }
+  /* header-search-button */
+  
+  .mobile-search-input-header {
+    background-color: transparent;
+    border: 1px solid #00b2d3;
+    border-radius: 15px;
+  }
+
   /* Mobile Nav */
-  /* Hamburger  */
   .top-item {
     margin-top: 100px;
   }
-  .header-main {
+  .header-main , .header-index {
     background-color: white;
   }
   header {
@@ -712,7 +745,7 @@ input::-webkit-input-placeholder {
     width: 100%;
     height: 100%;
     position: fixed;
-    top: 70px;
+    top: 54px;
     left: 0;
     width: 100%;
     transform: translateX(100%);
@@ -763,11 +796,11 @@ input::-webkit-input-placeholder {
   .mobile-nav ul > li#nav-signup:hover {
     background-color: #006375;
   }
-  .header-main .header-wrapper input[type="checkbox"]:checked ~ nav {
+  header .header-wrapper input[type="checkbox"]:checked ~ nav {
     transform: translateX(0);
     z-index: 40;
   }
-  .header-main .header-wrapper input[type="checkbox"] {
+  header .header-wrapper input[type="checkbox"] {
     box-sizing: border-box;
     display: none;
     transition: all 0.25s;
@@ -827,6 +860,7 @@ input::-webkit-input-placeholder {
     margin-top: -9px;
     transition: all 0.25s;
   }
+  /* Hamburger Ends */
   .small-yellow-button {
     font-size: 14px;
     padding: 10px 0px;

@@ -16,7 +16,7 @@ function autocomplete(inp, arr) {
   the text field element and an array of possible autocompleted values:*/
   var currentFocus;
   /*execute a function when someone writes in the text field:*/
-  inp.addEventListener("input", function (e) {
+  inp && inp.addEventListener("input", function (e) {
     var a, b, i, val = this.value;
     /*close any already open lists of autocompleted values*/
     closeAllLists();
@@ -40,7 +40,7 @@ function autocomplete(inp, arr) {
         /*insert a input field that will hold the current array item's value:*/
         b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
         /*execute a function when someone clicks on the item value (DIV element):*/
-        b.addEventListener("click", function (e) {
+        b && b.addEventListener("click", function (e) {
           /*insert the value for the autocomplete text field:*/
           inp.value = this.getElementsByTagName("input")[0].value;
           /*close the list of autocompleted values,
@@ -52,7 +52,7 @@ function autocomplete(inp, arr) {
     }
   });
   /*execute a function presses a key on the keyboard:*/
-  inp.addEventListener("keydown", function (e) {
+  inp && inp.addEventListener("keydown", function (e) {
     var x = document.getElementById(this.id + "autocomplete-list");
     if (x) x = x.getElementsByTagName("div");
     if (e.keyCode == 40) {
@@ -146,18 +146,6 @@ document.addEventListener('mouseup', function(e) {
   }
 });
 
-// Collapse button toggle text
-$(document).ready(function () {
-  $('[data-toggle="collapse"]').click(function () {
-    $(this).toggleClass("active");
-    if ($(this).hasClass("active")) {
-      $(this).text("Show Less");
-    } else {
-      $(this).text("Show All");      
-      // window.scrollTo(0, 1300);
-    }
-  });
-});
 
 // Mobile Carousel
 // var slideIndex = 1;
@@ -206,3 +194,25 @@ function closeDropDownFilter (value){
  function displayNone(value){
   document.getElementById(value).style.display = "none";
  }
+ 
+//  Toggle Yellow color class
+function toggleClassBg(value) {
+  var element = document.getElementById(value);
+  element.classList.toggle("bg-yellow-focus");
+}
+
+// Yellow button Add Class
+function addYellowBg(value) {
+  var element = document.getElementById(value);
+  element.classList.add("bg-yellow-no-border");
+}
+function removeYellowBg(value) {
+  var element = document.getElementById(value);
+  element.classList.remove("bg-yellow-no-border");
+}
+// Hepl center Page Scroll Function
+
+function scrollHelpCenter(){
+  window.scrollTo(0, 900);
+}
+

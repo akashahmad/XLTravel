@@ -10,6 +10,20 @@ function ShowDestinationModal() {
     }
   });
 
+  
+// Collapse button toggle text
+$(document).ready(function () {
+  $('[data-toggle="collapse"]').click(function () {
+    $(this).toggleClass("active");
+    if ($(this).hasClass("active")) {
+      $(this).text("Show Less");
+    } else {
+      $(this).text("Show All");      
+      // window.scrollTo(0, 1300);
+    }
+  });
+});
+
 // Price Range Script
 var $range = $(".js-range-slider"),
     $from = $(".from"),
@@ -90,11 +104,3 @@ document.addEventListener('mouseup', function(e) {
       document.getElementById('filter-button-popup').style.display ="none";
    }
   });
-
-// Filter Yellow button toggle
-function toggleClassBg(value) {
-    // var element = document.getElementById(value).style.backgroundColor = "#ffc044";
-    var element = document.getElementById(value);
-    element.classList.toggle("bg-yellow-focus");
-  }
-  
