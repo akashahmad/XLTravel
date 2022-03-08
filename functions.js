@@ -200,19 +200,3 @@ function toggleClassBg(value) {
   var element = document.getElementById(value);
   element.classList.toggle("bg-yellow-focus");
 }
-
-// Yellow button Add Class
-function addYellowBg(value) {
-  var element = document.getElementById(value);
-  element.classList.add("bg-yellow-no-border");
-}
-function removeYellowBg(value) {
-  var element = document.getElementById(value);
-  element.classList.remove("bg-yellow-no-border");
-}
-// Hepl center Page Scroll Function
-
-function scrollHelpCenter(){
-  window.scrollTo(0, 900);
-}
-

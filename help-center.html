@@ -21,6 +21,8 @@
     <!-- AOS Aniamtion -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Isotope FIlters -->
+    <script src="https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
     <!-- Css Files -->
     <link rel="icon" type="image/x-icon" href="./assets/images/logo2.png">
     <link rel="stylesheet" href="./assets/style/style.css" />
@@ -112,7 +114,7 @@
                             <p class="text-white text-center font-size-14 font-weight-500 pt-3 pb-5">Sed ut perspiciatis
                                 unde omnis iste natus error sit voluptatem</p>
                             <button id="host-button-help-center" class="host-guest-button"
-                                onclick="addYellowBg(`host-button-help-center`) , removeYellowBg(`guest-button-help-center`) , displayBlock(`host-section`) , displayNone(`guest-section`) ,scrollHelpCenter() ">
+                                onclick="addYellowBg(`host-button-help-center`) , removeYellowBg(`guest-button-help-center`) , displayBlock(`host-section`) , displayNone(`guest-section`)">
                                 Search</button>
                         </div>
                     </div>
@@ -123,7 +125,7 @@
                             <p class="text-white text-center font-size-14 font-weight-500 pt-3 pb-5">Sed ut perspiciatis
                                 unde omnis iste natus error sit voluptatem</p>
                             <button id="guest-button-help-center" class="host-guest-button"
-                                onclick="addYellowBg(`guest-button-help-center`) , removeYellowBg(`host-button-help-center`) , displayBlock(`guest-section`) , displayNone(`host-section`) ,scrollHelpCenter() ">
+                                onclick="addYellowBg(`guest-button-help-center`) , removeYellowBg(`host-button-help-center`) , displayBlock(`guest-section`) , displayNone(`host-section`)">
                                 Search</button>
                         </div>
                     </div>
@@ -151,289 +153,536 @@
                     </div>
                 </div>
                 <div id="host-section" class="questions-assist section-padding">
-                    <div class="filter-button w-60 mx-auto d-flex justify-content-between flex-wrap">
-                        <button class="filter-button-single filter-button-active mt-4">
-                            General
-                        </button>
-                        <button class="filter-button-single mt-4">
-                            Reservation
-                        </button>
-                        <button class="filter-button-single mt-4">
-                            Rooms
-                        </button>
-                        <button class="filter-button-single mt-4">
-                            Houses
-                        </button>
+                    <div class="filter-button w-60 mx-auto">
+                        <div class="button-group filters-button-group w-100 d-flex justify-content-between flex-wrap">
+                            <button class="button filter-button-single is-checked mt-4 mt-lg-0"
+                                data-filter=".hostGeneral">General</button>
+                            <button class="button filter-button-single  mt-4 mt-lg-0"
+                                data-filter=".hostReservation">Reservation</button>
+                            <button class="button filter-button-single  mt-4 mt-lg-0"
+                                data-filter=".hostRooms">Rooms</button>
+                            <button class="button filter-button-single  mt-4 mt-lg-0"
+                                data-filter=".hostHouses">Houses</button>
+                        </div>
                     </div>
-                    <div class="card mt-3">
-                        <div class="card-body">
-                            <div class="flex flex-column faq-section">
-                                <div class="row">
-                                    <div class="col-lg-12 px-0">
-                                        <div id="accordion">
-                                            <div data-aos="flip-up" data-aos-easing="linear" data-aos-duration="900"
-                                                class="card border-accordian">
-                                                <div class="card-header" id="heading-1">
-                                                    <h4 class="mb-0 faq-heading">
-                                                        <a role="button" data-toggle="collapse" href="#collapse-1"
-                                                            aria-expanded="true" aria-controls="collapse-1">
-                                                            What the First Step of the Dream Apartment buying process ?
-                                                        </a>
-                                                    </h4>
-                                                </div>
-                                                <div id="collapse-1" class="collapse show" data-parent="#accordion"
-                                                    aria-labelledby="heading-1">
-                                                    <div class="card-body accordian-description">
-                                                        First, you need to know how much you can borrow, knowing how
-                                                        much home you can afford narrows down online apartment searching
-                                                        to suitable Properties , thus no time is Wasted considering
-                                                        apartment that are not within your dream and budget.
+                    <div class="filter-host">
+                        <div class="card mt-3">
+                            <div class="card-body">
+                                <div class="flex flex-column faq-section">
+                                    <div class="row">
+                                        <div class="col-lg-12 px-0">
+                                            <div id="accordion">
+                                                <div data-aos="flip-up" data-aos-easing="linear" data-aos-duration="900"
+                                                    class="card border-accordian element-item transition hostGeneral"
+                                                    data-category="transition">
+                                                    <div class="card-header" id="heading-1">
+                                                        <h4 class="mb-0 faq-heading">
+                                                            <a role="button" data-toggle="collapse" href="#collapse-1"
+                                                                aria-expanded="true" aria-controls="collapse-1">
+                                                                What the First Step of the Dream Apartment buying
+                                                                process ?
+                                                            </a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapse-1" class="collapse show" data-parent="#accordion"
+                                                        aria-labelledby="heading-1">
+                                                        <div class="card-body accordian-description">
+                                                            First, you need to know how much you can borrow, knowing how
+                                                            much home you can afford narrows down online apartment
+                                                            searching
+                                                            to suitable Properties , thus no time is Wasted considering
+                                                            apartment that are not within your dream and budget.
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div data-aos="flip-down" data-aos-easing="linear" data-aos-duration="900"
-                                                class="card border-accordian mt-4">
-                                                <div class="card-header" id="heading-1">
-                                                    <h4 class="mb-0 faq-heading">
-                                                        <a role="button" data-toggle="collapse" href="#collapse-2"
-                                                            aria-expanded="false" aria-controls="collapse-2">
-                                                            How Long does It take to buy Apartment ?
-                                                        </a>
-                                                    </h4>
-                                                </div>
-                                                <div id="collapse-2" class="collapse" data-parent="#accordion"
-                                                    aria-labelledby="heading-1">
-                                                    <div class="card-body accordian-description">
-                                                        First, you need to know how much you can borrow, knowing how
-                                                        much home
-                                                        you can afford narrows down online apartment searching to
-                                                        suitable
-                                                        Properties , thus no time is Wasted considering apartment that
-                                                        are not
-                                                        within your dream and budget.
+                                                <div data-aos="flip-down" data-aos-easing="linear"
+                                                    data-aos-duration="900"
+                                                    class="card border-accordian mt-4 element-item transition hostGeneral"
+                                                    data-category="transition">
+                                                    <div class="card-header" id="heading-1">
+                                                        <h4 class="mb-0 faq-heading">
+                                                            <a role="button" data-toggle="collapse" href="#collapse-2"
+                                                                aria-expanded="false" aria-controls="collapse-2">
+                                                                How Long does It take to buy Apartment ?
+                                                            </a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapse-2" class="collapse" data-parent="#accordion"
+                                                        aria-labelledby="heading-1">
+                                                        <div class="card-body accordian-description">
+                                                            First, you need to know how much you can borrow, knowing how
+                                                            much home
+                                                            you can afford narrows down online apartment searching to
+                                                            suitable
+                                                            Properties , thus no time is Wasted considering apartment
+                                                            that
+                                                            are not
+                                                            within your dream and budget.
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div data-aos="flip-up" data-aos-easing="linear" data-aos-duration="900"
-                                                class="card border-accordian mt-4">
-                                                <div class="card-header" id="heading-1">
-                                                    <h4 class="mb-0 faq-heading">
-                                                        <a role="button" data-toggle="collapse" href="#collapse-3"
-                                                            aria-expanded="false" aria-controls="collapse-3">
-                                                            How much do I need for a down payment ?
-                                                        </a>
-                                                    </h4>
-                                                </div>
-                                                <div id="collapse-3" class="collapse" data-parent="#accordion"
-                                                    aria-labelledby="heading-1">
-                                                    <div class="card-body accordian-description">
-                                                        First, you need to know how much you can borrow, knowing how
-                                                        much home
-                                                        you can afford narrows down online apartment searching to
-                                                        suitable
-                                                        Properties , thus no time is Wasted considering apartment that
-                                                        are not
-                                                        within your dream and budget.
+                                                <div data-aos="flip-up" data-aos-easing="linear" data-aos-duration="900"
+                                                    class="card border-accordian mt-4 element-item transition hostGeneral"
+                                                    data-category="transition">
+                                                    <div class="card-header" id="heading-1">
+                                                        <h4 class="mb-0 faq-heading">
+                                                            <a role="button" data-toggle="collapse" href="#collapse-3"
+                                                                aria-expanded="false" aria-controls="collapse-3">
+                                                                How much do I need for a down payment ?
+                                                            </a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapse-3" class="collapse" data-parent="#accordion"
+                                                        aria-labelledby="heading-1">
+                                                        <div class="card-body accordian-description">
+                                                            First, you need to know how much you can borrow, knowing how
+                                                            much home
+                                                            you can afford narrows down online apartment searching to
+                                                            suitable
+                                                            Properties , thus no time is Wasted considering apartment
+                                                            that
+                                                            are not
+                                                            within your dream and budget.
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div data-aos="flip-down" data-aos-easing="linear" data-aos-duration="900"
-                                                class="card border-accordian mt-4">
-                                                <div class="card-header" id="heading-1">
-                                                    <h4 class="mb-0 faq-heading">
-                                                        <a role="button" data-toggle="collapse" href="#collapse-4"
-                                                            aria-expanded="false" aria-controls="collapse-4">
-                                                            What is a buyer's market ?
-                                                        </a>
-                                                    </h4>
-                                                </div>
-                                                <div id="collapse-4" class="collapse" data-parent="#accordion"
-                                                    aria-labelledby="heading-1">
-                                                    <div class="card-body accordian-description">
-                                                        First, you need to know how much you can borrow, knowing how
-                                                        much home
-                                                        you can afford narrows down online apartment searching to
-                                                        suitable
-                                                        Properties , thus no time is Wasted considering apartment that
-                                                        are not
-                                                        within your dream and budget.
+                                                <div data-aos="flip-down" data-aos-easing="linear"
+                                                    data-aos-duration="900"
+                                                    class="card border-accordian mt-4 element-item transition hostReservation"
+                                                    data-category="transition">
+                                                    <div class="card-header" id="heading-1">
+                                                        <h4 class="mb-0 faq-heading">
+                                                            <a role="button" data-toggle="collapse" href="#collapse-4"
+                                                                aria-expanded="false" aria-controls="collapse-4">
+                                                                What is a buyer's market ?
+                                                            </a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapse-4" class="collapse" data-parent="#accordion"
+                                                        aria-labelledby="heading-1">
+                                                        <div class="card-body accordian-description">
+                                                            First, you need to know how much you can borrow, knowing how
+                                                            much home
+                                                            you can afford narrows down online apartment searching to
+                                                            suitable
+                                                            Properties , thus no time is Wasted considering apartment
+                                                            that
+                                                            are not
+                                                            within your dream and budget.
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div data-aos="flip-up" data-aos-easing="linear" data-aos-duration="900"
-                                                class="card border-accordian mt-4">
-                                                <div class="card-header" id="heading-1">
-                                                    <h4 class="mb-0 faq-heading">
-                                                        <a role="button" data-toggle="collapse" href="#collapse-5"
-                                                            aria-expanded="false" aria-controls="collapse-5">
-                                                            What is popular in Apartment ?
-                                                        </a>
-                                                    </h4>
+                                                <div data-aos="flip-up" data-aos-easing="linear" data-aos-duration="900"
+                                                    class="card border-accordian mt-4 element-item transition hostReservation"
+                                                    data-category="transition">
+                                                    <div class="card-header" id="heading-1">
+                                                        <h4 class="mb-0 faq-heading">
+                                                            <a role="button" data-toggle="collapse" href="#collapse-5"
+                                                                aria-expanded="false" aria-controls="collapse-5">
+                                                                What is popular in Apartment ?
+                                                            </a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapse-5" class="collapse" data-parent="#accordion"
+                                                        aria-labelledby="heading-1">
+                                                        <div class="card-body accordian-description">
+                                                            First, you need to know how much you can borrow, knowing how
+                                                            much home
+                                                            you can afford narrows down online apartment searching to
+                                                            suitable
+                                                            Properties , thus no time is Wasted considering apartment
+                                                            that
+                                                            are not
+                                                            within your dream and budget.
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div id="collapse-5" class="collapse" data-parent="#accordion"
-                                                    aria-labelledby="heading-1">
-                                                    <div class="card-body accordian-description">
-                                                        First, you need to know how much you can borrow, knowing how
-                                                        much home
-                                                        you can afford narrows down online apartment searching to
-                                                        suitable
-                                                        Properties , thus no time is Wasted considering apartment that
-                                                        are not
-                                                        within your dream and budget.
+                                                <div data-aos="flip-down" data-aos-easing="linear"
+                                                    data-aos-duration="900"
+                                                    class="card border-accordian mt-4 element-item transition hostRooms"
+                                                    data-category="transition">
+                                                    <div class="card-header" id="heading-1">
+                                                        <h4 class="mb-0 faq-heading">
+                                                            <a role="button" data-toggle="collapse" href="#collapse-6"
+                                                                aria-expanded="false" aria-controls="collapse-6">
+                                                                What is popular in Apartment ?
+                                                            </a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapse-6" class="collapse" data-parent="#accordion"
+                                                        aria-labelledby="heading-1">
+                                                        <div class="card-body accordian-description">
+                                                            First, you need to know how much you can borrow, knowing how
+                                                            much home
+                                                            you can afford narrows down online apartment searching to
+                                                            suitable
+                                                            Properties , thus no time is Wasted considering apartment
+                                                            that
+                                                            are not
+                                                            within your dream and budget.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div data-aos="flip-up" data-aos-easing="linear" data-aos-duration="900"
+                                                    class="card border-accordian mt-4 element-item transition hostRooms"
+                                                    data-category="transition">
+                                                    <div class="card-header" id="heading-1">
+                                                        <h4 class="mb-0 faq-heading">
+                                                            <a role="button" data-toggle="collapse" href="#collapse-7"
+                                                                aria-expanded="false" aria-controls="collapse-7">
+                                                                What is popular in Apartment ?
+                                                            </a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapse-7" class="collapse" data-parent="#accordion"
+                                                        aria-labelledby="heading-1">
+                                                        <div class="card-body accordian-description">
+                                                            First, you need to know how much you can borrow, knowing how
+                                                            much home
+                                                            you can afford narrows down online apartment searching to
+                                                            suitable
+                                                            Properties , thus no time is Wasted considering apartment
+                                                            that
+                                                            are not
+                                                            within your dream and budget.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div data-aos="flip-down" data-aos-easing="linear"
+                                                    data-aos-duration="900"
+                                                    class="card border-accordian mt-4 element-item transition hostHouses"
+                                                    data-category="transition">
+                                                    <div class="card-header" id="heading-1">
+                                                        <h4 class="mb-0 faq-heading">
+                                                            <a role="button" data-toggle="collapse" href="#collapse-8"
+                                                                aria-expanded="false" aria-controls="collapse-8">
+                                                                What is popular in Apartment ?
+                                                            </a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapse-8" class="collapse" data-parent="#accordion"
+                                                        aria-labelledby="heading-1">
+                                                        <div class="card-body accordian-description">
+                                                            First, you need to know how much you can borrow, knowing how
+                                                            much home
+                                                            you can afford narrows down online apartment searching to
+                                                            suitable
+                                                            Properties , thus no time is Wasted considering apartment
+                                                            that
+                                                            are not
+                                                            within your dream and budget.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div data-aos="flip-up" data-aos-easing="linear" data-aos-duration="900"
+                                                    class="card border-accordian mt-4 element-item transition hostHouses"
+                                                    data-category="transition">
+                                                    <div class="card-header" id="heading-1">
+                                                        <h4 class="mb-0 faq-heading">
+                                                            <a role="button" data-toggle="collapse" href="#collapse-9"
+                                                                aria-expanded="false" aria-controls="collapse-9">
+                                                                What is popular in Apartment ?
+                                                            </a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapse-9" class="collapse" data-parent="#accordion"
+                                                        aria-labelledby="heading-1">
+                                                        <div class="card-body accordian-description">
+                                                            First, you need to know how much you can borrow, knowing how
+                                                            much home
+                                                            you can afford narrows down online apartment searching to
+                                                            suitable
+                                                            Properties , thus no time is Wasted considering apartment
+                                                            that
+                                                            are not
+                                                            within your dream and budget.
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
 
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div id="guest-section" class="questions-assist section-padding">
-                    <div class="filter-button w-60 mx-auto d-flex justify-content-between flex-wrap">
-                        <button class="filter-button-single filter-button-active mt-4">
-                            General
-                        </button>
-                        <button class="filter-button-single mt-4">
-                            Reservation
-                        </button>
-                        <button class="filter-button-single mt-4">
-                            Rooms
-                        </button>
-                        <button class="filter-button-single mt-4">
-                            Houses
-                        </button>
+                    <div class="filter-button w-60 mx-auto">
+                        <div
+                            class="button-group-guest filters-button-group-guest w-100  d-flex justify-content-between flex-wrap">
+                            <button class="button filter-button-single is-checked mt-4 mt-lg-0"
+                                data-filter-guest=".guestGeneral">General</button>
+                            <button class="button filter-button-single mt-4 mt-lg-0"
+                                data-filter-guest=".guestReservation">Reservation</button>
+                            <button class="button filter-button-single mt-4 mt-lg-0"
+                                data-filter-guest=".guestRooms">Rooms</button>
+                            <button class="button filter-button-single mt-4 mt-lg-0"
+                                data-filter-guest=".guestHouses">Houses</button>
+                        </div>
                     </div>
-                    <div class="card mt-3">
-                        <div class="card-body">
-                            <div class="flex flex-column faq-section">
-                                <div class="row">
-                                    <div class="col-lg-12 px-0">
-                                        <div id="accordion2">
-                                            <div data-aos="flip-up" data-aos-easing="linear" data-aos-duration="900"
-                                                class="card border-accordian">
-                                                <div class="card-header" id="heading-1-help">
-                                                    <h4 class="mb-0 faq-heading">
-                                                        <a role="button" data-toggle="collapse" href="#collapse-1-help"
-                                                            aria-expanded="true" aria-controls="collapse-1-help">
-                                                            What the First Step of the Dream Apartment buying process ?
-                                                        </a>
-                                                    </h4>
-                                                </div>
-                                                <div id="collapse-1-help" class="collapse show"
-                                                    data-parent="#accordion2" aria-labelledby="heading-1-help">
-                                                    <div class="card-body accordian-description">
-                                                        First, you need to know how much you can borrow, knowing how
-                                                        much home you can afford narrows down online apartment searching
-                                                        to suitable Properties , thus no time is Wasted considering
-                                                        apartment that are not within your dream and budget.
+                    <div class="filter-guest">
+                        <div class="card mt-3">
+                            <div class="card-body">
+                                <div class="flex flex-column faq-section">
+                                    <div class="row">
+                                        <div class="col-lg-12 px-0">
+                                            <div id="accordion-guest">
+                                                <div data-aos="flip-up" data-aos-easing="linear" data-aos-duration="900"
+                                                    class="card border-accordian element-item-guest transition guestGeneral"
+                                                    data-category="transition">
+                                                    <div class="card-header" id="heading-guest">
+                                                        <h4 class="mb-0 faq-heading">
+                                                            <a role="button" data-toggle="collapse"
+                                                                href="#collapse-guest" aria-expanded="true"
+                                                                aria-controls="collapse-guest">
+                                                                What the First Step of the Dream Apartment buying
+                                                                process ?
+                                                            </a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapse-guest" class="collapse show"
+                                                        data-parent="#accordion-guest" aria-labelledby="heading-guest">
+                                                        <div class="card-body accordian-description">
+                                                            First, you need to know how much you can borrow, knowing how
+                                                            much home you can afford narrows down online apartment
+                                                            searching
+                                                            to suitable Properties , thus no time is Wasted considering
+                                                            apartment that are not within your dream and budget.
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div data-aos="flip-down" data-aos-easing="linear" data-aos-duration="900"
-                                                class="card border-accordian mt-4">
-                                                <div class="card-header" id="heading-1-help">
-                                                    <h4 class="mb-0 faq-heading">
-                                                        <a role="button" data-toggle="collapse" href="#collapse-2-help"
-                                                            aria-expanded="false" aria-controls="collapse-2-help">
-                                                            How Long does It take to buy Apartment ?
-                                                        </a>
-                                                    </h4>
-                                                </div>
-                                                <div id="collapse-2-help" class="collapse" data-parent="#accordion2"
-                                                    aria-labelledby="heading-1">
-                                                    <div class="card-body accordian-description">
-                                                        First, you need to know how much you can borrow, knowing how
-                                                        much home
-                                                        you can afford narrows down online apartment searching to
-                                                        suitable
-                                                        Properties , thus no time is Wasted considering apartment that
-                                                        are not
-                                                        within your dream and budget.
+                                                <div data-aos="flip-down" data-aos-easing="linear"
+                                                    data-aos-duration="900"
+                                                    class="card border-accordian mt-4 element-item-guest transition guestGeneral"
+                                                    data-category="transition">
+                                                    <div class="card-header" id="heading-guest">
+                                                        <h4 class="mb-0 faq-heading">
+                                                            <a role="button" data-toggle="collapse"
+                                                                href="#collapse-2-guest" aria-expanded="false"
+                                                                aria-controls="collapse-2-guest">
+                                                                How Long does It take to buy Apartment ?
+                                                            </a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapse-2-guest" class="collapse"
+                                                        data-parent="#accordion-guest"
+                                                        aria-labelledby="heading-1-guest">
+                                                        <div class="card-body accordian-description">
+                                                            First, you need to know how much you can borrow, knowing how
+                                                            much home
+                                                            you can afford narrows down online apartment searching to
+                                                            suitable
+                                                            Properties , thus no time is Wasted considering apartment
+                                                            that
+                                                            are not
+                                                            within your dream and budget.
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div data-aos="flip-up" data-aos-easing="linear" data-aos-duration="900"
-                                                class="card border-accordian mt-4">
-                                                <div class="card-header" id="heading-1-help">
-                                                    <h4 class="mb-0 faq-heading">
-                                                        <a role="button" data-toggle="collapse" href="#collapse-3-help"
-                                                            aria-expanded="false" aria-controls="collapse-3-help">
-                                                            How much do I need for a down payment ?
-                                                        </a>
-                                                    </h4>
-                                                </div>
-                                                <div id="collapse-3-help" class="collapse" data-parent="#accordion2"
-                                                    aria-labelledby="heading-1">
-                                                    <div class="card-body accordian-description">
-                                                        First, you need to know how much you can borrow, knowing how
-                                                        much home
-                                                        you can afford narrows down online apartment searching to
-                                                        suitable
-                                                        Properties , thus no time is Wasted considering apartment that
-                                                        are not
-                                                        within your dream and budget.
+                                                <div data-aos="flip-up" data-aos-easing="linear" data-aos-duration="900"
+                                                    class="card border-accordian mt-4 element-item-guest transition guestGeneral"
+                                                    data-category="transition">
+                                                    <div class="card-header" id="heading-1">
+                                                        <h4 class="mb-0 faq-heading">
+                                                            <a role="button" data-toggle="collapse"
+                                                                href="#collapse-3-guest" aria-expanded="false"
+                                                                aria-controls="collapse-3-guest">
+                                                                How much do I need for a down payment ?
+                                                            </a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapse-3-guest" class="collapse"
+                                                        data-parent="#accordion-guest"
+                                                        aria-labelledby="heading-1-guest">
+                                                        <div class="card-body accordian-description">
+                                                            First, you need to know how much you can borrow, knowing how
+                                                            much home
+                                                            you can afford narrows down online apartment searching to
+                                                            suitable
+                                                            Properties , thus no time is Wasted considering apartment
+                                                            that
+                                                            are not
+                                                            within your dream and budget.
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div data-aos="flip-down" data-aos-easing="linear" data-aos-duration="900"
-                                                class="card border-accordian mt-4">
-                                                <div class="card-header" id="heading-1-help">
-                                                    <h4 class="mb-0 faq-heading">
-                                                        <a role="button" data-toggle="collapse" href="#collapse-4-help"
-                                                            aria-expanded="false" aria-controls="collapse-4">
-                                                            What is a buyer's market ?
-                                                        </a>
-                                                    </h4>
-                                                </div>
-                                                <div id="collapse-4-help" class="collapse" data-parent="#accordion2"
-                                                    aria-labelledby="heading-1">
-                                                    <div class="card-body accordian-description">
-                                                        First, you need to know how much you can borrow, knowing how
-                                                        much home
-                                                        you can afford narrows down online apartment searching to
-                                                        suitable
-                                                        Properties , thus no time is Wasted considering apartment that
-                                                        are not
-                                                        within your dream and budget.
+                                                <div data-aos="flip-down" data-aos-easing="linear"
+                                                    data-aos-duration="900"
+                                                    class="card border-accordian mt-4 element-item-guest transition guestReservation"
+                                                    data-category="transition">
+                                                    <div class="card-header" id="heading-1-guest">
+                                                        <h4 class="mb-0 faq-heading">
+                                                            <a role="button" data-toggle="collapse"
+                                                                href="#collapse-4-guest" aria-expanded="false"
+                                                                aria-controls="collapse-4-guest">
+                                                                What is a buyer's market ?
+                                                            </a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapse-4-guest" class="collapse"
+                                                        data-parent="#accordion-guest"
+                                                        aria-labelledby="heading-1-guest">
+                                                        <div class="card-body accordian-description">
+                                                            First, you need to know how much you can borrow, knowing how
+                                                            much home
+                                                            you can afford narrows down online apartment searching to
+                                                            suitable
+                                                            Properties , thus no time is Wasted considering apartment
+                                                            that
+                                                            are not
+                                                            within your dream and budget.
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div data-aos="flip-up" data-aos-easing="linear" data-aos-duration="900"
-                                                class="card border-accordian mt-4">
-                                                <div class="card-header" id="heading-1-help">
-                                                    <h4 class="mb-0 faq-heading">
-                                                        <a role="button" data-toggle="collapse" href="#collapse-5-help"
-                                                            aria-expanded="false" aria-controls="collapse-5-help">
-                                                            What is popular in Apartment ?
-                                                        </a>
-                                                    </h4>
+                                                <div data-aos="flip-up" data-aos-easing="linear" data-aos-duration="900"
+                                                    class="card border-accordian mt-4 element-item-guest transition guestReservation"
+                                                    data-category="transition">
+                                                    <div class="card-header" id="heading-1-guest">
+                                                        <h4 class="mb-0 faq-heading">
+                                                            <a role="button" data-toggle="collapse"
+                                                                href="#collapse-5-guest" aria-expanded="false"
+                                                                aria-controls="collapse-5-guest">
+                                                                What is popular in Apartment ?
+                                                            </a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapse-5-guest" class="collapse"
+                                                        data-parent="#accordion-guest"
+                                                        aria-labelledby="heading-1-guest">
+                                                        <div class="card-body accordian-description">
+                                                            First, you need to know how much you can borrow, knowing how
+                                                            much home
+                                                            you can afford narrows down online apartment searching to
+                                                            suitable
+                                                            Properties , thus no time is Wasted considering apartment
+                                                            that
+                                                            are not
+                                                            within your dream and budget.
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div id="collapse-5-help" class="collapse" data-parent="#accordion2"
-                                                    aria-labelledby="heading-1">
-                                                    <div class="card-body accordian-description">
-                                                        First, you need to know how much you can borrow, knowing how
-                                                        much home
-                                                        you can afford narrows down online apartment searching to
-                                                        suitable
-                                                        Properties , thus no time is Wasted considering apartment that
-                                                        are not
-                                                        within your dream and budget.
+                                                <div data-aos="flip-down" data-aos-easing="linear"
+                                                    data-aos-duration="900"
+                                                    class="card border-accordian mt-4 element-item-guest transition guestRooms"
+                                                    data-category="transition">
+                                                    <div class="card-header" id="heading-1-guest">
+                                                        <h4 class="mb-0 faq-heading">
+                                                            <a role="button" data-toggle="collapse"
+                                                                href="#collapse-6-guest" aria-expanded="false"
+                                                                aria-controls="collapse-6-guest">
+                                                                What is popular in Apartment ?
+                                                            </a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapse-6-guest" class="collapse"
+                                                        data-parent="#accordion-guest"
+                                                        aria-labelledby="heading-1-guest">
+                                                        <div class="card-body accordian-description">
+                                                            First, you need to know how much you can borrow, knowing how
+                                                            much home
+                                                            you can afford narrows down online apartment searching to
+                                                            suitable
+                                                            Properties , thus no time is Wasted considering apartment
+                                                            that
+                                                            are not
+                                                            within your dream and budget.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div data-aos="flip-up" data-aos-easing="linear" data-aos-duration="900"
+                                                    class="card border-accordian mt-4 element-item-guest transition guestRooms"
+                                                    data-category="transition">
+                                                    <div class="card-header" id="heading-1-guest">
+                                                        <h4 class="mb-0 faq-heading">
+                                                            <a role="button" data-toggle="collapse"
+                                                                href="#collapse-7-guest" aria-expanded="false"
+                                                                aria-controls="collapse-7-guest">
+                                                                What is popular in Apartment ?
+                                                            </a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapse-7-guest" class="collapse"
+                                                        data-parent="#accordion-guest"
+                                                        aria-labelledby="heading-1-guest">
+                                                        <div class="card-body accordian-description">
+                                                            First, you need to know how much you can borrow, knowing how
+                                                            much home
+                                                            you can afford narrows down online apartment searching to
+                                                            suitable
+                                                            Properties , thus no time is Wasted considering apartment
+                                                            that
+                                                            are not
+                                                            within your dream and budget.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div data-aos="flip-down" data-aos-easing="linear"
+                                                    data-aos-duration="900"
+                                                    class="card border-accordian mt-4 element-item-guest transition guestHouses"
+                                                    data-category="transition">
+                                                    <div class="card-header" id="heading-1-guest">
+                                                        <h4 class="mb-0 faq-heading">
+                                                            <a role="button" data-toggle="collapse"
+                                                                href="#collapse-8-guest" aria-expanded="false"
+                                                                aria-controls="collapse-8-guest">
+                                                                What is popular in Apartment ?
+                                                            </a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapse-8-guest" class="collapse"
+                                                        data-parent="#accordion-guest"
+                                                        aria-labelledby="heading-1-guest">
+                                                        <div class="card-body accordian-description">
+                                                            First, you need to know how much you can borrow, knowing how
+                                                            much home
+                                                            you can afford narrows down online apartment searching to
+                                                            suitable
+                                                            Properties , thus no time is Wasted considering apartment
+                                                            that
+                                                            are not
+                                                            within your dream and budget.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div data-aos="flip-up" data-aos-easing="linear" data-aos-duration="900"
+                                                    class="card border-accordian mt-4 element-item-guest transition guestHouses"
+                                                    data-category="transition">
+                                                    <div class="card-header" id="heading-1-guest">
+                                                        <h4 class="mb-0 faq-heading">
+                                                            <a role="button" data-toggle="collapse"
+                                                                href="#collapse-9-guest" aria-expanded="false"
+                                                                aria-controls="collapse-9-guest">
+                                                                What is popular in Apartment ?
+                                                            </a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapse-9-guest" class="collapse"
+                                                        data-parent="#accordion-guest"
+                                                        aria-labelledby="heading-1-guest">
+                                                        <div class="card-body accordian-description">
+                                                            First, you need to know how much you can borrow, knowing how
+                                                            much home
+                                                            you can afford narrows down online apartment searching to
+                                                            suitable
+                                                            Properties , thus no time is Wasted considering apartment
+                                                            that
+                                                            are not
+                                                            within your dream and budget.
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
 
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
     <!-- Footer -->
     <footer class="footer background-color-gray-three mt-5 overflow-hidden">
@@ -542,6 +791,7 @@
                 reserved.</p>
         </div>
     </footer>
+    <script src="./helpCenter.js"></script>
     <script src="./functions.js"></script>
 </body>
 

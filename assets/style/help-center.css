@@ -125,24 +125,56 @@ header {
     border-color: transparent;
     outline: none;
 } */
-.help-section .questions-assist .filter-button .filter-button-single {
+.filter-button-single {
   background-color: #9d9d9d;
   outline: none;
   border: none;
   color: white;
   border-radius: 9px;
   padding: 7px 0px;
-  width: 150px;
+  width: 161px;
   font-weight: 200;
   cursor: pointer;
   transition: transform 0.2s;
 }
+.button.is-checked {
+  background: #40d0d3;
+  color: #fff;
+  outline: none;
+}
+/* .filter-host .element-item {
+  position: unset !important;
+} */
+.filter-host .transition {
+  position: unset !important;
+  height: unset !important;
+}
+.filter-host {
+  position: unset !important;
+  height: unset !important;
+}
+/* .filter-guest .element-item {
+  position: unset !important;
+} */
+.filter-guest .transition {
+  position: unset !important;
+}
+.filter-guest {
+  position: unset !important;
+  height: unset !important;
+}
 .help-section .questions-assist .filter-button .filter-button-single:hover {
   transform: scale(1.05);
 }
-.filter-button-active {
-  background-color: #40d0d3 !important;
+/* .filter-guest .element-item {
+  position: relative !important;
 }
+.filter-guest .transition {
+  position: relative !important;
+}
+.filter-guest {
+  position: unset !important;
+} */
 #host-section {
   display: none;
   animation: transform 0.5s;
@@ -282,10 +314,10 @@ header {
   .given-options .assist-button button {
     width: 70%;
   }
-  .help-section .questions-assist .filter-button {
+  .filter-button {
     width: 100%;
   }
-  .help-section .questions-assist .filter-button .filter-button-single {
+  .filter-button-single {
     width: 47%;
   }
   .questions-assist .border-accordian {
