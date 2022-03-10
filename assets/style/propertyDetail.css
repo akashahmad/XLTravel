@@ -118,8 +118,8 @@
 .carousel-inner .carousel-item-left {
   transform: translateX(0);
 }
-.carousel-control-next {
-  right: -6px !important;
+.slider-property .carousel-control-next {
+  right: -26px !important;
 }
 .carousel-item .card-body {
   padding: 14px 20px;
