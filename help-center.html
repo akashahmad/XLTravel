@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/images/logo2.png">
+    <!-- Style sheets link-->
+    <link rel="stylesheet" href="./assets/style/style.css" />
+    <link rel="stylesheet" href="./assets/style/help-center.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -23,10 +27,6 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Isotope FIlters -->
     <script src="https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
-    <!-- Css Files -->
-    <link rel="icon" type="image/x-icon" href="./assets/images/logo2.png">
-    <link rel="stylesheet" href="./assets/style/style.css" />
-    <link rel="stylesheet" href="./assets/style/help-center.css">
     <title>Help Center</title>
 </head>
 
@@ -156,7 +156,7 @@
                     <div class="filter-button w-60 mx-auto">
                         <div class="button-group filters-button-group w-100 d-flex justify-content-between flex-wrap">
                             <button class="button filter-button-single is-checked mt-4 mt-lg-0"
-                                data-filter=".hostGeneral">General</button>
+                                data-filter="*">General</button>
                             <button class="button filter-button-single  mt-4 mt-lg-0"
                                 data-filter=".hostReservation">Reservation</button>
                             <button class="button filter-button-single  mt-4 mt-lg-0"
@@ -173,7 +173,7 @@
                                         <div class="col-lg-12 px-0">
                                             <div id="accordion">
                                                 <div data-aos="flip-up" data-aos-easing="linear" data-aos-duration="900"
-                                                    class="card border-accordian element-item transition hostGeneral"
+                                                    class="card border-accordian element-item transition hostHouses"
                                                     data-category="transition">
                                                     <div class="card-header" id="heading-1">
                                                         <h4 class="mb-0 faq-heading">
@@ -197,7 +197,7 @@
                                                 </div>
                                                 <div data-aos="flip-down" data-aos-easing="linear"
                                                     data-aos-duration="900"
-                                                    class="card border-accordian mt-4 element-item transition hostGeneral"
+                                                    class="card border-accordian mt-4 element-item transition hostReservation"
                                                     data-category="transition">
                                                     <div class="card-header" id="heading-1">
                                                         <h4 class="mb-0 faq-heading">
@@ -222,7 +222,7 @@
                                                     </div>
                                                 </div>
                                                 <div data-aos="flip-up" data-aos-easing="linear" data-aos-duration="900"
-                                                    class="card border-accordian mt-4 element-item transition hostGeneral"
+                                                    class="card border-accordian mt-4 element-item transition hostRooms"
                                                     data-category="transition">
                                                     <div class="card-header" id="heading-1">
                                                         <h4 class="mb-0 faq-heading">
@@ -401,7 +401,6 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
@@ -413,7 +412,7 @@
                         <div
                             class="button-group-guest filters-button-group-guest w-100  d-flex justify-content-between flex-wrap">
                             <button class="button filter-button-single is-checked mt-4 mt-lg-0"
-                                data-filter-guest=".guestGeneral">General</button>
+                                data-filter-guest="*">General</button>
                             <button class="button filter-button-single mt-4 mt-lg-0"
                                 data-filter-guest=".guestReservation">Reservation</button>
                             <button class="button filter-button-single mt-4 mt-lg-0"
@@ -430,7 +429,7 @@
                                         <div class="col-lg-12 px-0">
                                             <div id="accordion-guest">
                                                 <div data-aos="flip-up" data-aos-easing="linear" data-aos-duration="900"
-                                                    class="card border-accordian element-item-guest transition guestGeneral"
+                                                    class="card border-accordian element-item-guest transition guestHouses"
                                                     data-category="transition">
                                                     <div class="card-header" id="heading-guest">
                                                         <h4 class="mb-0 faq-heading">
@@ -455,7 +454,7 @@
                                                 </div>
                                                 <div data-aos="flip-down" data-aos-easing="linear"
                                                     data-aos-duration="900"
-                                                    class="card border-accordian mt-4 element-item-guest transition guestGeneral"
+                                                    class="card border-accordian mt-4 element-item-guest transition guestRooms"
                                                     data-category="transition">
                                                     <div class="card-header" id="heading-guest">
                                                         <h4 class="mb-0 faq-heading">
@@ -482,7 +481,7 @@
                                                     </div>
                                                 </div>
                                                 <div data-aos="flip-up" data-aos-easing="linear" data-aos-duration="900"
-                                                    class="card border-accordian mt-4 element-item-guest transition guestGeneral"
+                                                    class="card border-accordian mt-4 element-item-guest transition guestReservation"
                                                     data-category="transition">
                                                     <div class="card-header" id="heading-1">
                                                         <h4 class="mb-0 faq-heading">
