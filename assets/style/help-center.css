@@ -153,9 +153,6 @@ header {
   position: unset !important;
   height: unset !important;
 }
-/* .filter-guest .element-item {
-  position: unset !important;
-} */
 .filter-guest .transition {
   position: unset !important;
 }
@@ -166,15 +163,12 @@ header {
 .help-section .questions-assist .filter-button .filter-button-single:hover {
   transform: scale(1.05);
 }
-/* .filter-guest .element-item {
-  position: relative !important;
+.questions-assist a {
+  text-decoration: none !important;
 }
-.filter-guest .transition {
-  position: relative !important;
+.questions-assist a:hover {
+  color: unset !important;
 }
-.filter-guest {
-  position: unset !important;
-} */
 #host-section {
   display: none;
   animation: transform 0.5s;
