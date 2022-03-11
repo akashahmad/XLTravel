@@ -259,7 +259,7 @@ header {
   }
 }
 .new-offers .something-for-you-card {
-  margin: 0px 10px !important;
+  margin: 0px 5px !important;
 }
 /* Top Destination */
 .top-destination .top-destination-card .top-destination-card-inner-one {
@@ -389,7 +389,6 @@ header {
   padding: 19px 26px;
   background-repeat: no-repeat;
   margin: 0;
-  left: -61px !important;
 }
 .swiper-button-next {
   position: relative !important;
@@ -408,7 +407,6 @@ header {
   background-size: 20px 20px;
   background-repeat: no-repeat;
   margin: 0;
-  right: -61px !important;
 }
 .swiper-button-next:after {
   display: none;
@@ -698,7 +696,10 @@ header {
     border: 1px solid black;
     border-radius: 10px;
     padding: 5px 14px;
-    width: 100px;
+    width:100%;
+  }
+  .search-box-mobile-view .next-button {
+    width:100%;
   }
   .search-box-mobile-view .mobile-circle-inc-dec {
     border-radius: 50%;
@@ -769,8 +770,8 @@ header {
     padding-right: 20px;
     margin-top: 10px;
   }
-  .new-offers .swiper-pointer-events {
-    min-height: 500px;
+  .new-offers .swiper .swiper-slide {
+    min-height: 525px;
   }
   .choice-of-the-day-main {
     padding-left: 20px;
