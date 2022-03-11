@@ -47,7 +47,7 @@ var txt2write = new Array(
 );
 
 // Variables
-var speed = 20; // You can set the speed here. + is slower
+var speed = 4; // You can set the speed here. + is slower
 var index = 0;
 text_pos = 0;
 var str_length = txt2write[0].length;
@@ -139,3 +139,40 @@ $('.carousel').on('touchstart', function(event){
       $(this).off('touchmove');
   });
 });
+
+
+// Header Place Holder Animation
+// your custome placeholder goes here!
+var ph = "Hey! Where do you want to go?",
+searchBar = $('#hero-search-mobile'),
+// placeholder loop counter
+phCount = 0;
+
+// function to return random number between
+// with min/max range
+function randDelay(min, max) {
+return Math.floor(Math.random() * (max-min+1)+min);
+}
+
+function printLetter(string, el) {
+var arr = string.split(''),
+input = el,
+origString = string,
+curPlace = $(input).attr("placeholder"),
+placeholder = curPlace + arr[phCount];
+
+setTimeout(function(){
+$(input).attr("placeholder", placeholder);
+phCount++;
+if (phCount < arr.length) {
+printLetter(origString, input);
+}
+}, randDelay(50, 90));
+}  
+
+// function to init animation
+  function placeholder() {
+    $(searchBar).attr("placeholder", "");
+    printLetter(ph, searchBar);
+    }
+  placeholder();

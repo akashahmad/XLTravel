@@ -99,48 +99,24 @@ video::-webkit-media-controls-panel {
 
 @keyframes animation {
   0% {
-    bottom: 0px;
-    transform: translate(-415px);
-    width: 30%;
-    opacity: 0.1;
-  }
-  10% {
-    bottom: 80px;
-    transform: translate(-415px);
-    width: 30%;
-    opacity: 0.1;
-  }
-  20% {
-    bottom: 130px;
-    transform: translate(-415px);
-    width: 30%;
-    opacity: 0.1;
-  }
-  30% {
-    bottom: 170px;
-    transform: translate(-415px);
-    width: 30%;
-    opacity: 0.3;
-  }
-  40% {
     bottom: 213px;
     transform: translate(-415px);
     width: 30%;
     opacity: 0.7;
   }
-  50% {
+  20% {
     bottom: 213px;
     transform: translate(-415px);
     width: 30%;
     opacity: 1;
   }
-  60% {
+  40% {
     bottom: 170px;
     transform: translate(-270px);
     width: 45%;
     opacity: 1;
   }
-  70% {
+  60% {
     bottom: 100px;
     transform: translate(-180px);
     width: 55%;
@@ -261,16 +237,19 @@ header {
   border-bottom-left-radius: 10px;
 }
 .something-for-you-image {
-  background-image: url("../images/something-foe-you.png");
+  background-image: url("../images/noborder-image.png");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 221px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
 }
 .something-for-you-image .image-inner-card {
   right: 10px;
   top: 12px;
   border-radius: 12px;
 }
+
 @keyframes carouselFirst {
   from {
     opacity: 0;
@@ -278,6 +257,9 @@ header {
   to {
     opacity: 1;
   }
+}
+.new-offers .something-for-you-card {
+  margin: 0px 10px !important;
 }
 /* Top Destination */
 .top-destination .top-destination-card .top-destination-card-inner-one {
@@ -301,7 +283,9 @@ header {
   background-size: cover;
   border-radius: 30px;
 }
-
+.top-destination .swiper-pointer-events {
+  min-height: 507px;
+}
 /* Choice of the day */
 
 .choice-of-the-day .carousel-inner {
@@ -332,18 +316,12 @@ header {
   border-radius: 41px;
 }
 /* New Offer */
-.wrapper {
-  overflow: hidden;
-}
 .swiper-pointer-events {
-  width: 110% !important;
   padding-top: 30px;
-  margin: 0 auto !important;
-  overflow: hidden !important;
   position: relative;
-  right: 6%;
   min-height: 570px;
 }
+
 .swiper .content-wrapper {
   position: relative;
   display: grid;
@@ -411,6 +389,7 @@ header {
   padding: 19px 26px;
   background-repeat: no-repeat;
   margin: 0;
+  left: -61px !important;
 }
 .swiper-button-next {
   position: relative !important;
@@ -429,6 +408,7 @@ header {
   background-size: 20px 20px;
   background-repeat: no-repeat;
   margin: 0;
+  right: -61px !important;
 }
 .swiper-button-next:after {
   display: none;
@@ -520,8 +500,8 @@ header {
   font-weight: 600;
 }
 .frequently-asked-question a {
-  color: unset;
-  text-decoration: none;
+  color: unset !important;
+  text-decoration: none !important;
   font-size: 16px;
   font-weight: 500;
   opacity: 0.9;
@@ -543,7 +523,6 @@ header {
   color: #8d9598;
   padding: 10px 0px !important;
 }
-
 .card-body {
   border: none !important;
 }
@@ -622,7 +601,7 @@ header {
     min-height: 550px;
     padding-top: 34px;
   }
-  
+
   .search-button-mobile-inner {
     border-color: white;
     background-color: #f7f7f7;
@@ -632,17 +611,10 @@ header {
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.11);
     width: 80% !important;
   }
-  .search-mobile-index {
-    animation: animation 3s linear;
+  .search-mobile-index input::placeholder {
+    font-size: 16px;
   }
-  @keyframes animation {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+
   .writeit {
     position: relative;
     left: 0;
@@ -668,12 +640,6 @@ header {
     font-size: 26px;
     line-height: 28px !important;
   }
-  /* .search-box-index {
-    bottom: -49px;
-    left: 0;
-    right: 0;
-    animation: unset;
-  } */
   #search-index {
     background-color: white;
     position: fixed;
@@ -685,7 +651,7 @@ header {
   }
   @keyframes transform {
     from {
-      transform: scaleY( 0);
+      transform: scaleY(0);
       transform-origin: bottom;
     }
     to {
@@ -693,33 +659,14 @@ header {
       transform-origin: top;
     }
   }
-  /* .search-box-index {
-    height: fit-content;
-    z-index: 99;
-    top: 20%;
-    border-radius: 20px;
-  }
-  .search-box-index div {
-    width: 100%;
-    border-right: none;
-  }
-  .search-box-index .search-box-inner {
-    border-bottom: 1px solid #dee2e6;
-    padding: 15px 0px;
-  }
-  .search-box-index .searchbutton-index {
-    width: 80%;
-    margin: 15px 0px;
-  }
-  .search-box-index .searchbutton-index:hover {
-    width: 80%;
-  } */
-
   .search-box-mobile-view .location-mobile-index .location-input-mobile {
     border-radius: 12px;
     padding: 10px 20px;
     border: 1px solid black;
     margin-top: 18px;
+  }
+  .search-box-mobile-view .location-mobile-index .location-input-mobile::placeholder{
+    font-size: 14px;
   }
   .search-box-mobile-view .location-mobile-index .autocomplete-items {
     top: 87px;
@@ -777,7 +724,7 @@ header {
   #search-guest-mobile-index {
     display: none;
   }
-  
+
   /* Props Section */
   .commission-pros .single-pros {
     width: 100%;
@@ -818,13 +765,13 @@ header {
   .choice-of-the-day-main .choice-of-the-day-inner {
     position: unset !important;
     width: 100%;
-    padding: 20px 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-top: 10px;
   }
-
-  /* .swiper-pointer-events{
-    width: 100% !important;
-  } */
+  .new-offers .swiper-pointer-events {
+    min-height: 500px;
+  }
   .choice-of-the-day-main {
     padding-left: 20px;
     padding-right: 20px;
@@ -873,13 +820,16 @@ header {
   }
   /* Frequently Asked Question */
   .frequently-asked-question .border-accordian {
-    padding: 20px 20px !important;
+    padding: 20px 30px !important;
   }
   .frequently-asked-question .accordian-description {
     width: 100%;
   }
   .frequently-asked-question {
     padding: 0px 20px;
+  }
+  .frequently-asked-question .faq-section .mb-0 > a:after {
+    right: -17px;
   }
   /* Footer */
   .footer {
@@ -920,6 +870,23 @@ header {
   .top-destination .arrows {
     top: 42% !important;
   }
+  /* Common Left right swipper button */
+  .swiper-button-next {
+    right: 0 !important;
+  }
+  .swiper-button-prev {
+    left: 0 !important;
+  }
+  /* Card Old Price and New Price Common */
+  .old-price-font {
+    font-size: 11px;
+  }
+  .price-font {
+    font-size: 13px;
+  }
+  .small-rectangel-mobile-font {
+    font-size: 10px;
+  }
 }
 /* Query for iPad */
 @media (max-width: 900px) and (min-width: 700px) {
@@ -935,7 +902,7 @@ header {
     overflow-y: scroll;
     padding-bottom: 152px;
   }
-  #searhBar-index-date-picker-inline{
+  #searhBar-index-date-picker-inline {
     top: -11px;
   }
 }

@@ -55,10 +55,9 @@
             <div class="d-block d-lg-none">
                 <div id="header-search-mobile" class="header-search-mobile hide" onclick="displayBlock(`search-index`)">
                     <div class="d-flex justify-content-center position-relative align-items-center">
-                        <input class="w-88 mobile-search-input-header mx-auto pl-5 pb-1" disabled
-                            placeholder="Hey! Where you want to go?">
-                        <svg style="left: 40px; top: 7px;" class="svg-icon position-absolute" fill="#00b2d3"
-                            aria-labelledby="title desc" height="15px" width="15px" role="img"
+                        <input  class="w-88 mobile-search-input-header mx-auto pl-4 pb-1"  disabled placeholder="Hey! Where do you want to go?">
+                        <svg style="left: 40px; top: 9px;" class="svg-icon position-absolute" fill="#00b2d3"
+                            aria-labelledby="title desc" height="13px" width="13px" role="img"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7">
                             <title id="title">Search Icon</title>
                             <desc id="desc"></desc>
@@ -134,22 +133,16 @@
                             <div class="writeit"></div>
                             <div id="search-button-mobile-view"
                                 class="search-mobile-index text-center d-block d-lg-none show">
-                                <div class="d-flex align-items-center mb-4 mx-auto">
-                                    <button style="bottom: 35px;"
+                                <div class="d-flex align-items-center mb-4 mx-auto" 
+                                onclick="displayBlock(`search-index`)">
+                                    <input
+                                    style="bottom: 35px;" 
+                                    id="hero-search-mobile"
+                                    placeholder="Hey! Where do you want to go?"
+                                    disabled
                                         class="search-button-mobile-inner text-black w-90 position-absolute left-0 right-0 mx-auto d-flex justify-content-center align-items-center"
-                                        onclick="displayBlock(`search-index`)">
-                                        <svg class="svg-icon mr-3" fill="#000000" aria-labelledby="title desc"
-                                            height="20px" width="20px" role="img" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 19.9 19.7">
-                                            <title id="title">Search Icon</title>
-                                            <desc id="desc"></desc>
-                                            <g class="search-path" fill="none" stroke="#000000">
-                                                <path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4" />
-                                                <circle cx="8" cy="8" r="7" />
-                                            </g>
-                                        </svg> Hey! Where you want to go?</button>
-
-                                </div>
+                                       /> 
+                                     </div>
                             </div>
                         </div>
                     </div>
@@ -177,7 +170,7 @@
                                     <div class="autocomplete border-right w-29 px-4 search-box-inner ">
                                         <p class="search-lable">Location</p>
                                         <input id="myInput" type="text" name="myCountry"
-                                            placeholder="Where are you going?">
+                                            placeholder="Hey! Where do you want to go?">
                                     </div>
                                     <div class="border-right w-29 px-4 position-relative search-box-inner">
                                         <p class="search-lable">Date</p>
@@ -252,8 +245,8 @@
             <div id="search-location-mobile-index" class="location-mobile-index mt-4 px-4">
                 <div class="autocomplete w-100 search-box-inner">
                     <p class="search-lable font-weight-500">Location</p>
-                    <input class="location-input-mobile" id="myInputMobile" type="text" name="myCountry"
-                        placeholder="Hey! Where you want to go?">
+                        <input class="location-input-mobile" id="myInputMobile" type="text" name="myCountry"
+                        placeholder="Hey! Where do you want to go?">
                 </div>
                 <p class="font-weight-500 pt-4">Location Nearby</p>
                 <div class="nearby-location-search-index">
@@ -949,7 +942,7 @@
                             </div>
                             <div class="w-48 listing-premium-center-card px-3 py-2">
                                 <p class="pb-4 font-weight-600 font-size-12 opacity-9 pt-4 pt-lg-0">A Grand Modern
-                                    Apartment
+                                    Apartment <br>
                                     <img class="mr-2" height="12px" src="./assets/images/icons/greenVerified.png"
                                         alt="verified" /><span
                                         class="color-tealish font-size-11 font-weight-500">Verified
@@ -1039,10 +1032,10 @@
                                 </div>
                                 <div>
                                     <p class="color-tealish text-lg-right text-left font-size-11 py-1">Location 8.1</p>
-                                    <p class="text-lg-right text-left font-size-14"><span
-                                            class="font-weight-700 font-size-21">149€</span>/per night</p>
-                                    <p class="text-left text-lg-right font-size-12 dark-gray py-1"><s>200€/per night</s>
+                                    <p class="old-price-font text-left text-lg-right font-size-12 dark-gray py-1"><s>200€/per night</s>
                                     </p>
+                                    <p class="price-font text-lg-right text-left font-size-14 mb-1"><span
+                                            class="font-weight-700 font-size-21">149€</span>/per night</p>
                                 </div>
                                 <div class="text-right d-none d-lg-block">
                                     <button class="yellow-button font-size-11">More Details</button>
@@ -1069,7 +1062,7 @@
                             </div>
                             <div class="w-48 listing-premium-center-card px-3 py-2">
                                 <p class="pb-4 font-weight-600 font-size-12 opacity-9 pt-4 pt-lg-0">A Grand Modern
-                                    Apartment
+                                    Apartment<br>
                                     <img class="mr-2" height="12px" src="./assets/images/icons/greenVerified.png"
                                         alt="verified" /><span
                                         class="color-tealish font-size-11 font-weight-500">Verified
@@ -1159,10 +1152,10 @@
                                 </div>
                                 <div>
                                     <p class="color-tealish text-lg-right text-left font-size-11 py-1">Location 8.1</p>
-                                    <p class="text-lg-right text-left font-size-14"><span
-                                            class="font-weight-700 font-size-21">149€</span>/per night</p>
-                                    <p class="text-left text-lg-right font-size-12 dark-gray py-1"><s>200€/per night</s>
+                                    <p class="old-price-font text-left text-lg-right font-size-12 dark-gray py-1"><s>200€/per night</s>
                                     </p>
+                                    <p class="price-font text-lg-right text-left font-size-14 mb-1"><span
+                                            class="font-weight-700 font-size-21">149€</span>/per night</p>
                                 </div>
                                 <div class="text-right d-none d-lg-block">
                                     <button class="yellow-button font-size-11">More Details</button>
@@ -1189,7 +1182,7 @@
                             </div>
                             <div class="w-48 listing-premium-center-card px-3 py-2">
                                 <p class="pb-4 font-weight-600 font-size-12 opacity-9 pt-4 pt-lg-0">A Grand Modern
-                                    Apartment
+                                    Apartment<br>
                                     <img class="mr-2" height="12px" src="./assets/images/icons/greenVerified.png"
                                         alt="verified" /><span
                                         class="color-tealish font-size-11 font-weight-500">Verified
@@ -1279,10 +1272,10 @@
                                 </div>
                                 <div>
                                     <p class="color-tealish text-lg-right text-left font-size-11 py-1">Location 8.1</p>
-                                    <p class="text-lg-right text-left font-size-14"><span
-                                            class="font-weight-700 font-size-21">149€</span>/per night</p>
-                                    <p class="text-left text-lg-right font-size-12 dark-gray py-1"><s>200€/per night</s>
+                                    <p class="old-price-font text-left text-lg-right font-size-12 dark-gray py-1"><s>200€/per night</s>
                                     </p>
+                                    <p class="price-font text-lg-right text-left font-size-14 mb-1"><span
+                                            class="font-weight-700 font-size-21">149€</span>/per night</p>
                                 </div>
                                 <div class="text-right d-none d-lg-block">
                                     <button class="yellow-button font-size-11">More Details</button>
@@ -1309,7 +1302,7 @@
                             </div>
                             <div class="w-48 listing-premium-center-card px-3 py-2">
                                 <p class="pb-4 font-weight-600 font-size-12 opacity-9 pt-4 pt-lg-0">A Grand Modern
-                                    Apartment
+                                    Apartment<br>
                                     <img class="mr-2" height="12px" src="./assets/images/icons/greenVerified.png"
                                         alt="verified" /><span
                                         class="color-tealish font-size-11 font-weight-500">Verified
@@ -1399,10 +1392,10 @@
                                 </div>
                                 <div>
                                     <p class="color-tealish text-lg-right text-left font-size-11 py-1">Location 8.1</p>
-                                    <p class="text-lg-right text-left font-size-14"><span
-                                            class="font-weight-700 font-size-21">149€</span>/per night</p>
-                                    <p class="text-left text-lg-right font-size-12 dark-gray py-1"><s>200€/per night</s>
+                                    <p class="old-price-font text-left text-lg-right font-size-12 dark-gray py-1"><s>200€/per night</s>
                                     </p>
+                                    <p class="price-font text-lg-right text-left font-size-14 mb-1"><span
+                                            class="font-weight-700 font-size-21">149€</span>/per night</p>
                                 </div>
                                 <div class="text-right d-none d-lg-block">
                                     <button class="yellow-button font-size-11">More Details</button>
@@ -1429,7 +1422,7 @@
                             </div>
                             <div class="w-48 listing-premium-center-card px-3 py-2">
                                 <p class="pb-4 font-weight-600 font-size-12 opacity-9 pt-4 pt-lg-0">A Grand Modern
-                                    Apartment
+                                    Apartment<br>
                                     <img class="mr-2" height="12px" src="./assets/images/icons/greenVerified.png"
                                         alt="verified" /><span
                                         class="color-tealish font-size-11 font-weight-500">Verified
@@ -1519,10 +1512,10 @@
                                 </div>
                                 <div>
                                     <p class="color-tealish text-lg-right text-left font-size-11 py-1">Location 8.1</p>
-                                    <p class="text-lg-right text-left font-size-14"><span
-                                            class="font-weight-700 font-size-21">149€</span>/per night</p>
-                                    <p class="text-left text-lg-right font-size-12 dark-gray py-1"><s>200€/per night</s>
+                                    <p class="old-price-font text-left text-lg-right font-size-12 dark-gray py-1"><s>200€/per night</s>
                                     </p>
+                                    <p class="price-font text-lg-right text-left font-size-14 mb-1"><span
+                                            class="font-weight-700 font-size-21">149€</span>/per night</p>
                                 </div>
                                 <div class="text-right d-none d-lg-block">
                                     <button class="yellow-button font-size-11">More Details</button>
@@ -1549,7 +1542,7 @@
                             </div>
                             <div class="w-48 listing-premium-center-card px-3 py-2">
                                 <p class="pb-4 font-weight-600 font-size-12 opacity-9 pt-4 pt-lg-0">A Grand Modern
-                                    Apartment
+                                    Apartment<br>
                                     <img class="mr-2" height="12px" src="./assets/images/icons/greenVerified.png"
                                         alt="verified" /><span
                                         class="color-tealish font-size-11 font-weight-500">Verified
@@ -1639,10 +1632,10 @@
                                 </div>
                                 <div>
                                     <p class="color-tealish text-lg-right text-left font-size-11 py-1">Location 8.1</p>
-                                    <p class="text-lg-right text-left font-size-14"><span
-                                            class="font-weight-700 font-size-21">149€</span>/per night</p>
-                                    <p class="text-left text-lg-right font-size-12 dark-gray py-1"><s>200€/per night</s>
+                                    <p class="old-price-font text-left text-lg-right font-size-12 dark-gray py-1"><s>200€/per night</s>
                                     </p>
+                                    <p class="price-font text-lg-right text-left font-size-14 mb-1"><span
+                                            class="font-weight-700 font-size-21">149€</span>/per night</p>
                                 </div>
                                 <div class="text-right d-none d-lg-block">
                                     <button class="yellow-button font-size-11">More Details</button>
@@ -1666,16 +1659,16 @@
                                 <img src="./assets/images/icons/heart.png" alt="heart" />
                                 <img style="height:33px" src="./assets/images/icons/swap_horiz_white.png" alt="arrow" />
                             </div>
-                            <div class="image-inner-card bg-white position-absolute pl-4 pr-3 py-2">
+                            <div class="image-inner-card bg-white position-absolute pl-1 pr-1 py-1">
                                 <div class="d-flex align-items-center">
                                     <div class="mr-3 d-flex flex-column align-items-end">
                                         <p class="font-weight-600 font-size-11">Very Good</p>
                                         <p class="font-size-11 dark-gray opacity-9">4,347 reviews</p>
                                     </div>
                                     <div class="position-relative d-flex justify-content-center align-items-center">
-                                        <img style="height: 37px" src="./assets/images/icons/Rectangle.png"
+                                        <img style="height: 21px" src="./assets/images/icons/Rectangle.png"
                                             alt="rectangle" />
-                                        <p class="property-image-slider-text-rectangle position-absolute text-white">
+                                        <p class="font-size-11 small-rectangel-mobile-font property-image-slider-text-rectangle position-absolute text-white">
                                             8.4
                                         </p>
                                     </div>
@@ -1751,9 +1744,9 @@
                                 </div>
                             </div>
                             <div class="text-right">
-                                <p class="text-right font-size-14"><span
+                              <p class="old-price-font text-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
+                                <p class="price-font text-right font-size-14"><span
                                         class="font-weight-700 font-size-21">149€</span>/per night</p>
-                                <p class="text-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
                                 <button class="yellow-button mt-4"> More Details</button>
                             </div>
                         </div>
@@ -1769,16 +1762,16 @@
                                 <img src="./assets/images/icons/heart.png" alt="heart" />
                                 <img style="height:33px" src="./assets/images/icons/swap_horiz_white.png" alt="arrow" />
                             </div>
-                            <div class="image-inner-card bg-white position-absolute pl-4 pr-3 py-2">
+                            <div class="image-inner-card bg-white position-absolute pl-1 pr-1 py-1">
                                 <div class="d-flex align-items-center">
                                     <div class="mr-3 d-flex flex-column align-items-end">
                                         <p class="font-weight-600 font-size-11">Very Good</p>
                                         <p class="font-size-11 dark-gray opacity-9">4,347 reviews</p>
                                     </div>
                                     <div class="position-relative d-flex justify-content-center align-items-center">
-                                        <img style="height: 37px" src="./assets/images/icons/Rectangle.png"
+                                        <img style="height: 27px" src="./assets/images/icons/Rectangle.png"
                                             alt="rectangle" />
-                                        <p class="property-image-slider-text-rectangle position-absolute text-white">
+                                        <p class="font-size-11 small-rectangel-mobile-font property-image-slider-text-rectangle position-absolute text-white">
                                             8.4
                                         </p>
                                     </div>
@@ -1854,9 +1847,9 @@
                                 </div>
                             </div>
                             <div class="text-right">
-                                <p class="text-right font-size-14"><span
+                                <p class="old-price-font text-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
+                                <p class="price-font text-right font-size-14"><span
                                         class="font-weight-700 font-size-21">149€</span>/per night</p>
-                                <p class="text-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
                                 <button class="yellow-button mt-4"> More Details</button>
                             </div>
                         </div>
@@ -1872,16 +1865,16 @@
                                 <img src="./assets/images/icons/heart.png" alt="heart" />
                                 <img style="height:33px" src="./assets/images/icons/swap_horiz_white.png" alt="arrow" />
                             </div>
-                            <div class="image-inner-card bg-white position-absolute pl-4 pr-3 py-2">
+                            <div class="image-inner-card bg-white position-absolute pl-1 pr-1 py-1">
                                 <div class="d-flex align-items-center">
                                     <div class="mr-3 d-flex flex-column align-items-end">
                                         <p class="font-weight-600 font-size-11">Very Good</p>
                                         <p class="font-size-11 dark-gray opacity-9">4,347 reviews</p>
                                     </div>
                                     <div class="position-relative d-flex justify-content-center align-items-center">
-                                        <img style="height: 37px" src="./assets/images/icons/Rectangle.png"
+                                        <img style="height: 27px" src="./assets/images/icons/Rectangle.png"
                                             alt="rectangle" />
-                                        <p class="property-image-slider-text-rectangle position-absolute text-white">
+                                        <p class="font-size-11 small-rectangel-mobile-font small-rectangel-mobile-font property-image-slider-text-rectangle position-absolute text-white">
                                             8.4
                                         </p>
                                     </div>
@@ -1957,9 +1950,9 @@
                                 </div>
                             </div>
                             <div class="text-right">
-                                <p class="text-right font-size-14"><span
+                                <p class="old-price-font text-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
+                                <p class="price-font text-right font-size-14"><span
                                         class="font-weight-700 font-size-21">149€</span>/per night</p>
-                                <p class="text-right font-size-12 dark-gray py-1"><s>200€/per night</s></p>
                                 <button class="yellow-button mt-4"> More Details</button>
                             </div>
                         </div>
@@ -1973,18 +1966,17 @@
     <section data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1100"
         class="top-destination overflow-hidden section-padding">
         <div class="container-main mx-auto pb-0">
-            <div class="d-flex flex-column align-items-center pt-3 pb-2">
+            <div class="d-flex flex-column align-items-center pt-3 pb-4">
                 <p class="color-blue font-weight-500 font-size-28 text-center text-capitalize">Explore Top Destination
                 </p>
                 <p class="color-gray pt-2 opacity-8">Top Destination</p>
             </div>
-        </div>
-        <div>
+                    <div>
             <div class="wrapper position-relative">
                 <!-- Arrows -->
                 <div style="top: 35%;" class="arrows d-flex justify-content-between position-absolute w-100">
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev box-shadow-lg"></div>
+                    <div class="swiper-button-next box-shadow-lg"></div>
                 </div>
                 <!-- Slider main container -->
                 <div class="swiper">
@@ -2057,12 +2049,14 @@
                 </div>
             </div>
         </div>
+        </div>
+
     </section>
     <!-- Top Destination Ends-->
 
     <!-- Choice of the day -->
     <section data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000"
-        class="choice-of-the-day-main overflow-hidden section-padding">
+        class="choice-of-the-day-main overflow-hidden pt-5">
         <div class="choice-of-the-day container-main mx-auto pb-5">
             <div class="d-flex flex-column align-items-center pt-3 pb-5">
                 <p class="color-blue font-weight-500 font-size-28 text-center text-capitalize">Choice Of The Day</p>
@@ -2471,14 +2465,12 @@
     <!-- Open Travel Zone Ends-->
     <!-- New Offers -->
     <section data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1100"
-        class="new-offers overflow-hidden section-padding">
-        <div class="container-main mx-auto pb-0">
-            <div class="d-flex flex-column align-items-center pt-3 pb-2">
+        class="new-offers section-padding">
+        <div class="container-main pb-0 px-0">
+            <div class="d-flex flex-column align-items-center pt-3 pb-4">
                 <p class="color-blue font-weight-500 font-size-28 text-center text-capitalize">Check Out New Offers</p>
                 <p class="color-gray pt-2 opacity-8">Check out our recent offers and Brand new deals</p>
             </div>
-        </div>
-        <div>
             <div class="wrapper position-relative">
                 <!-- Arrows -->
                 <div style="top: 180px;" class="d-flex justify-content-between position-absolute w-100">
@@ -2504,7 +2496,7 @@
                                                 <img style="height:33px"
                                                     src="./assets/images/icons/swap_horiz_white.png" alt="arrow" />
                                             </div>
-                                            <div class="image-inner-card bg-white position-absolute pl-4 pr-3 py-2">
+                                            <div class="image-inner-card bg-white position-absolute pl-1 pr-1 py-1">
                                                 <div class="d-flex align-items-center">
                                                     <div class="mr-3 d-flex flex-column align-items-end">
                                                         <p class="font-weight-600 font-size-11">Very Good</p>
@@ -2512,10 +2504,10 @@
                                                     </div>
                                                     <div
                                                         class="position-relative d-flex justify-content-center align-items-center">
-                                                        <img style="height: 37px"
+                                                        <img style="height: 26px"
                                                             src="./assets/images/icons/Rectangle.png" alt="rectangle" />
                                                         <p
-                                                            class="property-image-slider-text-rectangle position-absolute text-white">
+                                                            class="small-rectangel-mobile-font property-image-slider-text-rectangle position-absolute font-size-11 text-white">
                                                             8.4
                                                         </p>
                                                     </div>
@@ -2524,7 +2516,7 @@
                                             </div>
                                         </div>
                                         <div class="d-flex justify-content-between px-3 py-4">
-                                            <div>
+                                            <div class="w-68">
                                                 <p class="card-heading-right-side font-size-14 font-weight-600">Modern
                                                     and Luxury Apartment
                                                 </p>
@@ -2569,7 +2561,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="single-facality mr-4">
+                                                    <div class="single-facality">
                                                         <p class="font-weight-500 font-size-13 opacity-9">Guests</p>
                                                         <div class="d-flex align-items-center mt-2">
                                                             <div class="mr-2">
@@ -2596,11 +2588,11 @@
                                                 </div>
                                             </div>
                                             <div class="text-right">
-                                                <p class="text-right font-size-14"><span
-                                                        class="font-weight-700 font-size-21">149€</span>/per night</p>
-                                                <p class="text-right font-size-12 dark-gray py-1"><s>200€/per night</s>
+                                                <p class="old-price-font text-right font-size-12 dark-gray py-1"><s>200€/per night</s>
                                                 </p>
-                                                <button class="yellow-button mt-4"> More Details</button>
+                                                <p class="price-font text-right font-size-14"><span
+                                                        class="font-weight-700 font-size-21">149€</span>/per night</p>
+                                                <button class="yellow-button mt-4 px-2 font-size-11">More Details</button>
                                             </div>
                                         </div>
                                     </div>
@@ -2621,7 +2613,7 @@
                                                 <img style="height:33px"
                                                     src="./assets/images/icons/swap_horiz_white.png" alt="arrow" />
                                             </div>
-                                            <div class="image-inner-card bg-white position-absolute pl-4 pr-3 py-2">
+                                            <div class="image-inner-card bg-white position-absolute pl-1 pr-1 py-1">
                                                 <div class="d-flex align-items-center">
                                                     <div class="mr-3 d-flex flex-column align-items-end">
                                                         <p class="font-weight-600 font-size-11">Very Good</p>
@@ -2629,10 +2621,10 @@
                                                     </div>
                                                     <div
                                                         class="position-relative d-flex justify-content-center align-items-center">
-                                                        <img style="height: 37px"
+                                                        <img style="height: 26px"
                                                             src="./assets/images/icons/Rectangle.png" alt="rectangle" />
                                                         <p
-                                                            class="property-image-slider-text-rectangle position-absolute text-white">
+                                                            class="small-rectangel-mobile-font property-image-slider-text-rectangle position-absolute font-size-11 text-white">
                                                             8.4
                                                         </p>
                                                     </div>
@@ -2641,7 +2633,7 @@
                                             </div>
                                         </div>
                                         <div class="d-flex justify-content-between px-3 py-4">
-                                            <div>
+                                            <div class="w-68">
                                                 <p class="card-heading-right-side font-size-14 font-weight-600">Modern
                                                     and Luxury Apartment
                                                 </p>
@@ -2686,7 +2678,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="single-facality mr-4">
+                                                    <div class="single-facality">
                                                         <p class="font-weight-500 font-size-13 opacity-9">Guests</p>
                                                         <div class="d-flex align-items-center mt-2">
                                                             <div class="mr-2">
@@ -2713,11 +2705,11 @@
                                                 </div>
                                             </div>
                                             <div class="text-right">
-                                                <p class="text-right font-size-14"><span
-                                                        class="font-weight-700 font-size-21">149€</span>/per night</p>
-                                                <p class="text-right font-size-12 dark-gray py-1"><s>200€/per night</s>
+                                                <p class="old-price-font text-right font-size-12 dark-gray py-1"><s>200€/per night</s>
                                                 </p>
-                                                <button class="yellow-button mt-4"> More Details</button>
+                                                <p class="font-price text-right font-size-14"><span
+                                                        class="font-weight-700 font-size-21">149€</span>/per night</p>
+                                                <button class="yellow-button mt-4 px-2 font-size-11"> More Details</button>
                                             </div>
                                         </div>
                                     </div>
@@ -2738,7 +2730,7 @@
                                                 <img style="height:33px"
                                                     src="./assets/images/icons/swap_horiz_white.png" alt="arrow" />
                                             </div>
-                                            <div class="image-inner-card bg-white position-absolute pl-4 pr-3 py-2">
+                                            <div class="image-inner-card bg-white position-absolute pl-1 pr-1 py-1">
                                                 <div class="d-flex align-items-center">
                                                     <div class="mr-3 d-flex flex-column align-items-end">
                                                         <p class="font-weight-600 font-size-11">Very Good</p>
@@ -2746,10 +2738,10 @@
                                                     </div>
                                                     <div
                                                         class="position-relative d-flex justify-content-center align-items-center">
-                                                        <img style="height: 37px"
+                                                        <img style="height: 26px"
                                                             src="./assets/images/icons/Rectangle.png" alt="rectangle" />
                                                         <p
-                                                            class="property-image-slider-text-rectangle position-absolute text-white">
+                                                            class="small-rectangel-mobile-font property-image-slider-text-rectangle position-absolute font-size-11 text-white">
                                                             8.4
                                                         </p>
                                                     </div>
@@ -2758,7 +2750,7 @@
                                             </div>
                                         </div>
                                         <div class="d-flex justify-content-between px-3 py-4">
-                                            <div>
+                                            <div class="w-68">
                                                 <p class="card-heading-right-side font-size-14 font-weight-600">Modern
                                                     and Luxury Apartment
                                                 </p>
@@ -2803,7 +2795,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="single-facality mr-4">
+                                                    <div class="single-facality">
                                                         <p class="font-weight-500 font-size-13 opacity-9">Guests</p>
                                                         <div class="d-flex align-items-center mt-2">
                                                             <div class="mr-2">
@@ -2830,11 +2822,11 @@
                                                 </div>
                                             </div>
                                             <div class="text-right">
-                                                <p class="text-right font-size-14"><span
-                                                        class="font-weight-700 font-size-21">149€</span>/per night</p>
-                                                <p class="text-right font-size-12 dark-gray py-1"><s>200€/per night</s>
+                                                <p class="old-price-font text-right font-size-12 dark-gray py-1"><s>200€/per night</s>
                                                 </p>
-                                                <button class="yellow-button mt-4"> More Details</button>
+                                                <p class="price-fonttext-right font-size-14"><span
+                                                        class="font-weight-700 font-size-21">149€</span>/per night</p>
+                                                <button class="yellow-button mt-4 px-2 font-size-11"> More Details</button>
                                             </div>
                                         </div>
                                     </div>
@@ -2842,7 +2834,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- If we need pagination -->
                     <!-- If we need navigation buttons -->
                     <div class="swiper-nav-wrapper">
@@ -2855,7 +2846,7 @@
     <!-- New Offers Ends-->
     <!-- Join Us -->
     <section data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1100"
-        class="join-us section-padding overflow-hidden container-main mx-auto">
+        class="join-us pt-5 overflow-hidden container-main mx-auto">
         <div class="join-us-inner d-flex flex-column justify-content-center align-items-center">
             <p class="become-host-heading text-white font-weight-500 font-size-30 text-center">Become A Host On XL
                 Travel</p>
@@ -2870,16 +2861,14 @@
     <section data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1100"
         class="client-review overflow-hidden section-padding">
         <div class="container-main mx-auto pb-0">
-            <div class="d-flex flex-column align-items-center pt-3 pb-2">
+            <div class="d-flex flex-column align-items-center pt-3 pb-4">
                 <p class="color-blue font-weight-500 font-size-28 text-center text-capitalize">Client Reviews</p>
             </div>
-        </div>
-        <div>
-            <div class="wrapper position-relative">
+                        <div class="wrapper position-relative">
                 <!-- Arrows -->
                 <div style="top: 260px;" class="d-flex justify-content-between position-absolute w-100">
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev box-shadow-lg"></div>
+                    <div class="swiper-button-next box-shadow-lg"></div>
                 </div>
                 <!-- Slider main container -->
                 <div class="swiper">
@@ -3005,7 +2994,7 @@
                         </div>
                     </div>
                     <div
-                        class="client-review-bottom d-flex align-items-center bg-white rounded-lg box-shadow-xl w-19 mx-auto mt-4 mt-lg-5 px-4 py-3">
+                        class="client-review-bottom d-flex align-items-center bg-white rounded-lg box-shadow-xl w-24 mx-auto mt-4 mt-lg-5 px-4 py-3">
                         <div class="mr-3">
                             <img src="./assets/images/icons/google-icon.png" alt="google-icon" />
                         </div>
@@ -3039,9 +3028,9 @@
     </section>
     <!-- Client Review -->
     <!-- Frequently Asked Question -->
-    <section class="frequently-asked-question section-padding overflow-hidden">
+    <section class="frequently-asked-question pt-5 overflow-hidden">
         <div class="container-main mx-auto pb-0">
-            <div class="d-flex flex-column align-items-center pt-3 pb-2">
+            <div class="d-flex flex-column align-items-center pt-3 pb-4">
                 <p class="color-blue font-weight-500 font-size-28 text-center text-capitalize">Frequently Asked
                     Questions</p>
             </div>

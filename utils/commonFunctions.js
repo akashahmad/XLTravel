@@ -112,6 +112,7 @@ var countries = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Angu
 
 /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
 autocomplete(document.getElementById("myInput"), countries);
+autocomplete(document.getElementById("myInputMobile"), countries);
 
 // Save Location function
 function summation()
