@@ -579,32 +579,7 @@ header {
   .search-mobile-index input::placeholder {
     font-size: 16px;
   }
-
-  .writeit {
-    position: relative;
-    left: 0;
-    right: 0;
-    top: 100px;
-    color: white;
-    font-weight: 500;
-    text-align: left;
-    line-height: 25px;
-  }
-  .writeit h1 {
-    color: #ffc044;
-    line-height: 20px;
-    font-size: 48px;
-  }
-  .writeit h2 {
-    line-height: 20px;
-    font-size: 43px;
-    padding-top: 9px;
-    padding-bottom: 20px;
-  }
-  .writeit p {
-    font-size: 26px;
-    line-height: 28px !important;
-  }
+ 
   #search-index {
     background-color: white;
     position: fixed;
@@ -710,6 +685,12 @@ header {
     margin-top: 30px;
   }
   /* Hot Deals */
+  .card-heading-inner{
+    font-size: 18px;
+  }
+  .card-heading-right-side{
+    font-size: 18px;
+  }
   .hot-deals .hot-deals-left {
     width: 100%;
     padding: 0px 21px;

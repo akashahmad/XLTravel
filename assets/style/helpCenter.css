@@ -242,6 +242,9 @@ header {
 }
 
 @media (max-width: 1199px) and (min-width: 320px) {
+  .main-heading{
+    font-size: 30px;
+  }
   .help-section .help-section-inner {
     margin-top: 70px;
   }
