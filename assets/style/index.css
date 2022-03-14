@@ -248,6 +248,7 @@ header {
   right: 10px;
   top: 12px;
   border-radius: 12px;
+  background-color:white
 }
 
 @keyframes carouselFirst {
@@ -316,10 +317,8 @@ header {
   border-radius: 41px;
 }
 /* New Offer */
-.swiper-pointer-events {
-  padding-top: 30px;
-  position: relative;
-  min-height: 570px;
+.new-offers .swiper-pointer-events {
+  min-height: 507px;
 }
 
 .swiper .content-wrapper {
@@ -529,41 +528,7 @@ header {
   border: none;
   padding: 0px !important;
 }
-/* Footer */
-.footer {
-  padding-top: 52px;
-}
-.footer .footer-inner {
-  border-top: 2px solid #1a8f91;
-  padding: 54px 0px;
-  border-bottom: 2px solid #1a8f91;
-}
-.footer .footer-links ul li {
-  font-size: 12px;
-  font-weight: 200;
-  margin: 17px 0px;
-}
 
-.footer .footer-links ul li a:hover {
-  color: #1db3e1;
-  cursor: pointer;
-}
-.footer .footer-links ul {
-  padding: 0;
-}
-.footer .footer-border-line {
-  width: 26px;
-  border-bottom: 3px solid #1db3e1;
-  margin-top: 12px;
-  margin-bottom: 28px;
-}
-.footer .social-media-icon {
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-.footer .social-media-icon:hover {
-  transform: scale(1.07);
-}
 .tealish-border-button {
   background-color: transparent;
   color: white;
@@ -596,10 +561,12 @@ header {
   }
   .hero-section .hero-mobile {
     background-color: #35b1f8;
-    min-height: 550px;
+    min-height: 461px;
     padding-top: 34px;
   }
-
+  .hero-mobile .hero-mobile-inner{
+    padding-top: 100px;
+  }
   .search-button-mobile-inner {
     border-color: white;
     background-color: #f7f7f7;
@@ -736,6 +703,9 @@ header {
     padding-left: 20px;
     padding-right: 40px;
   }
+  .apartments .apartments-heading{
+ font-size: 24px;
+  }
   .carousel-animation {
     margin-top: 30px;
   }
@@ -772,6 +742,9 @@ header {
   }
   .new-offers .swiper .swiper-slide {
     min-height: 525px;
+  }
+  .new-offers .new-offers-slider-left{
+    width: 100%;
   }
   .choice-of-the-day-main {
     padding-left: 20px;
@@ -832,32 +805,21 @@ header {
   .frequently-asked-question .faq-section .mb-0 > a:after {
     right: -17px;
   }
-  /* Footer */
-  .footer {
-    padding: 54px 20px;
-  }
-  .footer .footer-single {
-    width: 100%;
-  }
-  .footer .logo-side {
-    text-align: center;
-  }
-  .footer .footer-border-line {
-    padding-top: 10px;
-  }
-  .footer .list-inner {
-    width: 100% !important;
-  }
-  .footer .footer-link-headings {
-    font-size: 13px;
-  }
+
   /* Facalities */
   .single-facality .facalities-number {
     font-size: 10px;
   }
   /* Swiper Wrapper */
-  .swiper .content-wrapper {
-    min-height: 479px;
+   .new-offers .swiper .content-wrapper {
+    min-height: 594px;
+    display: flex;
+    align-items: flex-start;
+  }
+  .top-destination .swiper .content-wrapper {
+      min-height: 450px;
+      display: flex;
+      align-items: flex-start;
   }
   .swiper .swiper-nav-wrapper {
     bottom: 3px;
@@ -880,10 +842,10 @@ header {
   }
   /* Card Old Price and New Price Common */
   .old-price-font {
-    font-size: 11px;
+    font-size: 13px;
   }
   .price-font {
-    font-size: 13px;
+    font-size: 14px;
   }
   .small-rectangel-mobile-font {
     font-size: 10px;

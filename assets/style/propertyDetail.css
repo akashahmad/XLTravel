@@ -346,6 +346,12 @@
     font-size: 15px;
     font-weight: bold;
   }
+  .heading{
+    font-size: 20px;
+  }
+  .sub-heading{
+    font-size: 13px;
+  }
   .rh_banner__cover {
     height: 66px;
   }
