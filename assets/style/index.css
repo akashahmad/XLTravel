@@ -285,7 +285,7 @@ header {
   border-radius: 30px;
 }
 .top-destination .swiper-pointer-events {
-  min-height: 507px;
+  min-height: 490px;
 }
 /* Choice of the day */
 
@@ -482,20 +482,6 @@ header {
   display: block;
   position: relative;
 }
-
-.faq-section .mb-0 > a:after {
-  content: "\f067";
-  font-family: "Font Awesome 5 Free";
-  position: absolute;
-  right: 0;
-  font-weight: 600;
-}
-
-.faq-section .mb-0 > a[aria-expanded="true"]:after {
-  content: "\f068";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 600;
-}
 .frequently-asked-question a {
   color: unset !important;
   text-decoration: none !important;
@@ -508,17 +494,40 @@ header {
   background-color: transparent;
   border: none;
 }
-.border-accordian {
+.frequently-asked-question .card-body a {
   box-shadow: 0 5px 13px 0 rgba(0, 0, 0, 16%);
   border-radius: 12px !important;
   padding: 30px 70px 30px 20px !important;
-  border: 1.2px solid transparent !important;
+  border: 1.2px solid transparent;
 }
+.frequently-asked-question a[aria-expanded="true"]{
+  width: 100%;
+  height: 100%;
+  border: 1.2px solid #40d0d3 !important;
+}
+.frequently-asked-question .card-body a::after {
+  content: "\f067";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  right: 0;
+  font-weight: 600;
+  top: 50%;
+  right: 21px;
+}
+.frequently-asked-question .card-body a[aria-expanded="true"]:after{
+content: "\f068";
+font-family: "Font Awesome 5 Free";
+font-weight: 600;
+top: 50%;
+right: 21px;
+}
+
 .frequently-asked-question .accordian-description {
   font-size: 12px;
   width: 70%;
   color: #8d9598;
   padding: 10px 0px !important;
+  font-weight: normal;
 }
 .card-body {
   border: none !important;
@@ -766,6 +775,10 @@ header {
     margin: 0px;
     padding: 0px 20px;
   }
+  .open-zone-left{
+   border-top-right-radius: 0px;
+   border-bottom-right-radius: 0px;
+  }
   .travel-zone .open-zone-right {
     position: unset !important;
     margin: 0px 20px;
@@ -774,17 +787,11 @@ header {
     width: 75%;
   }
   /* Frequently Asked Question */
-  .frequently-asked-question .border-accordian {
-    padding: 20px 30px !important;
-  }
   .frequently-asked-question .accordian-description {
     width: 100%;
   }
   .frequently-asked-question {
     padding: 0px 20px;
-  }
-  .frequently-asked-question .faq-section .mb-0 > a:after {
-    right: -17px;
   }
 
   /* Facalities */
