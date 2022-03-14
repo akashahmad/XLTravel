@@ -511,14 +511,14 @@ header {
   position: absolute;
   right: 0;
   font-weight: 600;
-  top: 50%;
+  top: 40%;
   right: 21px;
 }
 .frequently-asked-question .card-body a[aria-expanded="true"]:after{
 content: "\f068";
 font-family: "Font Awesome 5 Free";
 font-weight: 600;
-top: 50%;
+top: 40%;
 right: 21px;
 }
 
