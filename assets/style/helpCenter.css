@@ -243,7 +243,7 @@ header {
 
 @media (max-width: 1199px) and (min-width: 320px) {
   .main-heading{
-    font-size: 30px;
+    font-size: 26px;
   }
   .help-section .help-section-inner {
     margin-top: 70px;
@@ -253,7 +253,7 @@ header {
   }
   .help-section .search {
     width: 70%;
-    top: 213px;
+    top: 150px;
   }
   .help-section .search-txt {
     width: 80%;
