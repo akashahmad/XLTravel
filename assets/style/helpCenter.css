@@ -245,6 +245,9 @@ header {
   .main-heading{
     font-size: 26px;
   }
+  .help-section .need-help-text{
+    font-size: 28px;
+  }
   .help-section .help-section-inner {
     margin-top: 70px;
   }
