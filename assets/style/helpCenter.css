@@ -291,7 +291,7 @@ header {
 }
 
 @media (max-width: 900px) and (min-width: 600px) {
-  .help-section .search {
+  /* .help-section .search {
     top: 155px;
-  }
+  } */
 }
