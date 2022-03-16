@@ -52,7 +52,7 @@ body {
 /* listing-property-type-dropDown */
 .filter-section .filter-wrapper {
   width: 80%;
-  margin: 0 auto;
+  margin: 0 0;
 }
 .filter-section .filter-bar {
   border-radius: 10px;
@@ -356,7 +356,7 @@ input::-webkit-inner-spin-button {
 margin-top: 48px;
 }
 /* Responsive */
-@media (max-width: 1199px) and (min-width: 320px) {
+@media (max-width: 1023px) and (min-width: 320px) {
   .hero-section {
     min-height: 66px;
     position: relative;

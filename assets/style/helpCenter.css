@@ -1,35 +1,6 @@
 .section-padding {
   padding-top: 70px;
 }
-/* Header */
-header {
-  background-color: transparent;
-  box-shadow: unset;
-}
-.header-index .nav-bar ul {
-  list-style: none;
-  text-decoration: none;
-  font-size: 12px;
-  margin: 0;
-}
-.header-index .nav-bar ul li {
-  margin-right: 40px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-.header-index .nav-bar ul li a {
-  text-decoration: none;
-  list-style: none;
-  font-weight: 500;
-  color: unset;
-}
-.header-index .nav-bar ul li a:hover {
-  color: #40d0d3;
-}
-.index-active {
-  color: #40d0d3 !important;
-}
-
 /* Search Bar */
 .help-section .search {
   position: absolute;
@@ -232,7 +203,6 @@ font-weight: 600;
 top: 40%;
 right: 21px;
 }
-
 .questions-assist .accordian-description {
   font-size: 12px;
   width: 70%;
@@ -249,7 +219,7 @@ right: 21px;
   padding: 0px !important;
 }
 
-@media (max-width: 1199px) and (min-width: 320px) {
+@media (max-width: 1023px) and (min-width: 320px) {
   .main-heading{
     font-size: 26px;
   }
@@ -299,10 +269,4 @@ right: 21px;
   .questions-assist {
     padding: 0px 20px;
   }
-}
-
-@media (max-width: 900px) and (min-width: 600px) {
-  /* .help-section .search {
-    top: 155px;
-  } */
 }
