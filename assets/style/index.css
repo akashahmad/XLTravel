@@ -773,7 +773,7 @@ right: 21px;
   }
   /* Swiper Wrapper */
    .new-offers .swiper .content-wrapper {
-    min-height: 622px;
+    min-height: 580px;
     display: flex;
     align-items: flex-start;
   }
