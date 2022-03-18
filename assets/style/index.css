@@ -29,12 +29,12 @@ video::-webkit-media-controls-panel {
 .text-animation-mobile-paragraph .title span {
   font-size: 24px;
 }
-.left-animation-text-main span{
+.left-animation-text-main span {
   font-size: 39px;
 }
-.left-animation-text-main-yellow span{
-color: #fec657;
-font-size: 42px;
+.left-animation-text-main-yellow span {
+  color: #fec657;
+  font-size: 42px;
 }
 .autocomplete-items {
   top: 57px;
@@ -226,7 +226,7 @@ font-size: 42px;
   right: 10px;
   top: 12px;
   border-radius: 12px;
-  background-color:white
+  background-color: white;
 }
 
 @keyframes carouselFirst {
@@ -479,7 +479,7 @@ font-size: 42px;
   padding: 30px 70px 30px 20px !important;
   border: 1.2px solid transparent;
 }
-.frequently-asked-question a[aria-expanded="true"]{
+.frequently-asked-question a[aria-expanded="true"] {
   width: 100%;
   height: 100%;
   border: 1.2px solid #40d0d3 !important;
@@ -493,12 +493,12 @@ font-size: 42px;
   top: 40%;
   right: 21px;
 }
-.frequently-asked-question .card-body a[aria-expanded="true"]:after{
-content: "\f068";
-font-family: "Font Awesome 5 Free";
-font-weight: 600;
-top: 40%;
-right: 21px;
+.frequently-asked-question .card-body a[aria-expanded="true"]:after {
+  content: "\f068";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  top: 40%;
+  right: 21px;
 }
 
 .frequently-asked-question .accordian-description {
@@ -546,11 +546,11 @@ right: 21px;
   .hero-section .hero-mobile {
     min-height: 555px;
     padding-top: 34px;
-   background-image: url("../images/heromobileIndex.png");
-   background-size: cover;
-   background-repeat: no-repeat;
+    background-image: url("../images/heromobileIndex.png");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
-  .hero-mobile .hero-mobile-inner{
+  .hero-mobile .hero-mobile-inner {
     padding-top: 100px;
   }
   .search-button-mobile-inner {
@@ -559,16 +559,15 @@ right: 21px;
     border-radius: 25px;
     padding: 9px 5px;
     width: 90%;
-    z-index: 80;
     opacity: 1;
   }
   .search-mobile-index input::placeholder {
     font-size: 14px;
   }
- .header-search-mobile input::placeholder{
-   font-size: 11px;
-   margin-bottom: 2px;
- }
+  .header-search-mobile input::placeholder {
+    font-size: 11px;
+    margin-bottom: 2px;
+  }
   #search-index {
     background-color: white;
     position: fixed;
@@ -594,7 +593,9 @@ right: 21px;
     border: 1px solid black;
     margin-top: 18px;
   }
-  .search-box-mobile-view .location-mobile-index .location-input-mobile::placeholder{
+  .search-box-mobile-view
+    .location-mobile-index
+    .location-input-mobile::placeholder {
     font-size: 14px;
   }
   .search-box-mobile-view .location-mobile-index .autocomplete-items {
@@ -627,10 +628,10 @@ right: 21px;
     border: 1px solid black;
     border-radius: 10px;
     padding: 5px 14px;
-    width:100%;
+    width: 100%;
   }
   .search-box-mobile-view .next-button {
-    width:100%;
+    width: 100%;
   }
   .search-box-mobile-view .mobile-circle-inc-dec {
     border-radius: 50%;
@@ -667,17 +668,17 @@ right: 21px;
     padding-left: 20px;
     padding-right: 40px;
   }
-  .apartments .apartments-heading{
- font-size: 24px;
+  .apartments .apartments-heading {
+    font-size: 24px;
   }
   .carousel-animation {
     margin-top: 30px;
   }
   /* Hot Deals */
-  .card-heading-inner{
+  .card-heading-inner {
     font-size: 18px;
   }
-  .card-heading-right-side{
+  .card-heading-right-side {
     font-size: 18px;
   }
   .hot-deals .hot-deals-left {
@@ -713,7 +714,7 @@ right: 21px;
   .new-offers .swiper .swiper-slide {
     min-height: 525px;
   }
-  .new-offers .new-offers-slider-left{
+  .new-offers .new-offers-slider-left {
     width: 100%;
   }
   .choice-of-the-day-main {
@@ -755,9 +756,9 @@ right: 21px;
     margin: 0px;
     padding: 0px 20px;
   }
-  .open-zone-left{
-   border-top-right-radius: 0px;
-   border-bottom-right-radius: 0px;
+  .open-zone-left {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
   }
   .travel-zone .open-zone-right {
     position: unset !important;
@@ -779,15 +780,15 @@ right: 21px;
     font-size: 10px;
   }
   /* Swiper Wrapper */
-   .new-offers .swiper .content-wrapper {
+  .new-offers .swiper .content-wrapper {
     min-height: 580px;
     display: flex;
     align-items: flex-start;
   }
   .top-destination .swiper .content-wrapper {
-      min-height: 450px;
-      display: flex;
-      align-items: flex-start;
+    min-height: 450px;
+    display: flex;
+    align-items: flex-start;
   }
   .swiper .swiper-nav-wrapper {
     bottom: 3px;
@@ -840,4 +841,3 @@ right: 21px;
     top: -43vh;
   }
 }
-
