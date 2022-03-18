@@ -554,16 +554,16 @@ right: 21px;
     padding-top: 100px;
   }
   .search-button-mobile-inner {
-    border-color: white;
-    background-color: #f7f7f7 !important;
-    border: 2px solid transparent;
+    background-color: white;
+    border: none;
     border-radius: 25px;
     padding: 9px 5px;
-    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.11);
-    width: 80%;
+    width: 90%;
+    z-index: 80;
+    opacity: 1;
   }
   .search-mobile-index input::placeholder {
-    font-size: 16px;
+    font-size: 14px;
   }
  .header-search-mobile input::placeholder{
    font-size: 11px;
