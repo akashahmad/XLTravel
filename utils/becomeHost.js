@@ -73,7 +73,7 @@ function readURLChange(input) {
 $("#changeImageButton").change(function() {
     readURLChange(this);
 });
-function readURLChange(input) {
+function readURLSelfie(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
         reader.onload = function(e) {
@@ -85,5 +85,5 @@ function readURLChange(input) {
     }
 }
 $("#uploadSelifeButton").change(function() {
-    readURLChange(this);
+    readURLSelfie(this);
 });
