@@ -195,9 +195,20 @@ function closeDropDownFilter (value){
  function displayNone(value){
   document.getElementById(value).style.display = "none";
  }
- 
 //  Toggle Yellow color class
 function toggleClassBg(value) {
   var element = document.getElementById(value);
   element.classList.toggle("bg-yellow-focus");
 }
+
+// Ouside Click Form
+document.addEventListener('mouseup', function(e) {
+  var loginFormArea = document.getElementById('login-form-inner');
+  var SignUpForm = document.getElementById('signup-form-inner');
+  if (loginFormArea && !loginFormArea.contains(e.target)){
+    document.getElementById('login-form').style.display ="none";
+  }
+  if (SignUpForm && !SignUpForm.contains(e.target)){
+    document.getElementById('signup-form').style.display ="none";
+  }
+});

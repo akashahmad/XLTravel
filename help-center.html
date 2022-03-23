@@ -57,8 +57,9 @@
                         <li><a>Host Zone</a></li>
                         <li><a><button class="teaslih-text-button cursor-pointer"> List Your Property</button></a></li>
                         <li class="mr-0"><a> <button
-                                    class="tealish-gradient-button d-flex justify-content-center align-items-center cursor-pointer"><img
-                                        class="mr-2" height="13px" src="./assets/images/icons/lock.png" alt="lock" />
+                                    class="tealish-gradient-button d-flex justify-content-center align-items-center cursor-pointer"
+                                    onclick="displayBlock(`login-form`)"><img class="mr-2" height="13px"
+                                        src="./assets/images/icons/lock.png" alt="lock" />
                                     LOGIN / SIGN UP</button></a></li>
                     </ul>
                 </nav>
@@ -84,8 +85,9 @@
                             <div class="d-flex flex-column align-items-center pt-3 px-2">
                                 <button class="teaslih-text-button cursor-pointer"> List Your Property</button>
                                 <button
-                                    class="tealish-gradient-button mt-4 d-flex justify-content-center align-items-center cursor-pointer"><img
-                                        class="mr-2" height="13px" src="./assets/images/icons/lock.png" alt="lock" />
+                                    class="tealish-gradient-button mt-4 d-flex justify-content-center align-items-center cursor-pointer"
+                                    onclick="displayBlock(`login-form`)"><img class="mr-2" height="13px"
+                                        src="./assets/images/icons/lock.png" alt="lock" />
                                     LOGIN / SIGN UP</button>
                             </div>
                         </ul>
@@ -851,6 +853,122 @@
                 reserved.</p>
         </div>
     </footer>
+    <section id="login-form" class="logIn-signUp login w-100 ">
+        <form class="login container-main mx-auto">
+            <div id="login-form-inner" class="login-inner bg-white w-39 mx-auto py-4">
+                <div class="d-flex flex-column align-items-center w-100 px-4">
+                    <div class="d-flex justify-content-center pb-4">
+                        <img style="width: 70px;" src="./assets/images/logo.png" alt="logo" />
+                    </div>
+                    <h class="font-size-18 font-weight-500 text-center text-dark pb-5">Sign In</h>
+                    <div class="text-left d-flex flex-column w-100 pb-4">
+                        <label class="login-signUp-label  font-weight-500 pb-1">Email</label>
+                        <input type="email" required placeholder="mymail@mail.com" />
+                    </div>
+                    <div class="password text-left d-flex flex-column w-100 pb-4">
+                        <label class="login-signUp-label  font-weight-500 pb-1">Password</label>
+                        <input type="password" required placeholder="********" />
+                    </div>
+                    <div class="w-100 pb-4">
+                        <button type="submit" style="padding: 11px 0px;"
+                            class="yellow-button w-100 font-size-16 font-weight-500">Sign
+                            In</button>
+                    </div>
+                    <div class="w-100 d-flex justify-content-between pb-3">
+                        <div>
+                            <p class="color-tealish font-weight-400 font-size-16 cursor-pointer"
+                                onclick="displayBlock(`signup-form`) , displayNone(`login-form`)">Create account</p>
+                        </div>
+                        <div>
+                            <p class="color-tealish font-weight-400 font-size-16 cursor-pointer">Forget Password ?</p>
+                        </div>
+                    </div>
+                    <div class="d-flex w-100 align-items-center pb-4">
+                        <span class="border-bottom-gray w-29"></span>
+                        <p class="color-gray-two font-size-16 mx-2 mx-lg-4 ">Or Sign In With</p> <span
+                            class="border-bottom-gray w-29"></span>
+                    </div>
+                    <div class="w-100 d-flex justify-content-between align-items-center pb-3">
+                        <button
+                            class="form-button-bottom d-flex align-items-center justify-content-center font-weight-500 font-size-16">
+                            <img style="width: 30px;" class="mr-4" src="./assets/images/icons/facebookBlue.png"
+                                alt="facebook" />
+                            Facebook
+                        </button>
+                        <button
+                            class="form-button-bottom d-flex align-items-center justify-content-center font-weight-500 font-size-16">
+                            <img style="width: 30px;" class="mr-4" src="./assets/images/icons/google-icon.png"
+                                alt="facebook" />
+                            Google
+                        </button>
+                    </div>
+                    <div class="w-100">
+                        <p class="font-size-11 text-center">By signing in, I agree to Xl Travel
+                            <span class="color-tealish underline-text"><u>Terms of Use</u></span> and <span
+                                class="color-tealish underline-text"><u>GDPR.EU</u></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+    <section id="signup-form" class="logIn-signUp signup w-100 ">
+        <form class="login container-main mx-auto">
+            <div id="signup-form-inner" class="signup-inner bg-white w-39 mx-auto py-4">
+                <div class="d-flex flex-column align-items-center w-100 px-4">
+                    <div class="d-flex justify-content-center pb-4">
+                        <img style="width: 70px;" src="./assets/images/logo.png" alt="logo" />
+                    </div>
+                    <h class="font-size-18 font-weight-500 text-center text-dark pb-5">Sign Up</h>
+                    <div class="text-left d-flex flex-column w-100 pb-4">
+                        <label class="login-signUp-label  font-weight-500 pb-1">First Name</label>
+                        <input type="text" required placeholder="John" />
+                    </div>
+                    <div class="text-left d-flex flex-column w-100 pb-4">
+                        <label class="login-signUp-label  font-weight-500 pb-1">Last Name</label>
+                        <input type="text" required placeholder="Doe" />
+                    </div>
+                    <div class="text-left d-flex flex-column w-100 pb-4">
+                        <label class="login-signUp-label  font-weight-500 pb-1">Email</label>
+                        <input type="email" required placeholder="Mymail@mail.com" />
+                    </div>
+                    <div class="w-100 pb-4">
+                            <button style="padding: 11px 0px;" type="submit"
+                                class="yellow-button w-100 font-size-16 font-weight-500">Sign Up</button>
+                    </div>
+                    <div class="d-flex w-100 align-items-center pb-4">
+                        <span class="border-bottom-gray w-29"></span>
+                        <p class="color-gray-two font-size-16 mx-2 mx-lg-4">Or Sign Up With</p> <span
+                            class="border-bottom-gray w-29"></span>
+                    </div>
+                    <div class="w-100 d-flex justify-content-between align-items-center pb-4">
+                        <button
+                            class="form-button-bottom d-flex align-items-center justify-content-center font-weight-500 font-size-16">
+                            <img style="width: 30px;" class="mr-4" src="./assets/images/icons/facebookBlue.png"
+                                alt="facebook" />
+                            Facebook
+                        </button>
+                        <button
+                            class="form-button-bottom d-flex align-items-center justify-content-center font-weight-500 font-size-16">
+                            <img style="width: 30px;" class="mr-4" src="./assets/images/icons/google-icon.png"
+                                alt="facebook" />
+                            Google
+                        </button>
+                    </div>
+                    <div class="w-100 pb-4">
+                        <div class="border-bottom-gray w-100"></div>
+                    </div>
+                    <div class="w-100">
+                        <button
+                            class="form-button-bottom w-100 py-2 d-flex align-items-center justify-content-center font-weight-500 font-size-16 opacity-6"
+                            onclick="displayNone(`signup-form`) , displayBlock(`login-form`)">
+                            Already have account? Sign In
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
     <script src="./utils/helpCenter.js"></script>
     <script src="./utils/commonFunctions.js"></script>
 </body>
