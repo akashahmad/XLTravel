@@ -114,7 +114,7 @@ input[type="radio"] {
   padding: 18px 17px;
 }
 /* Ask For Property PopUp */
-.ask-for-property {
+.pop-up {
   background-color: rgba(0, 0, 0, 0.6);
   position: fixed;
   inset: 0;
@@ -149,10 +149,11 @@ input[type="radio"] {
   border-radius: 7px;
   outline: none;
   white-space: nowrap;
-  /* -webkit-user-select: none; */
   cursor: pointer;
-  padding: 10px 74px;
+  padding: 10px 0px;
+  width: 256px;
   transition: transform 0.2s;
+  text-align: center;
 }
 .changeImageButton::before {
   content: "Add / Change Photo" !important;
@@ -165,10 +166,20 @@ input[type="radio"] {
   transform: scale(1.07);
 }
 .image-button:active::before {
-  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+ display: none;
 }
 input[type=checkbox] {
   accent-color: #40d0d3;
+}
+/* Hide input number arrows */
+.verify-number-input input::-webkit-outer-spin-button,
+.verify-number-input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+.verify-number-input input[type=number] {
+  -moz-appearance: textfield;
 }
 #become-host-name {
   display: block;
@@ -195,5 +206,8 @@ input[type=checkbox] {
   display: none;
 }
 #ask-for-property {
+  display: none;
+}
+#verify-number{
   display: none;
 }

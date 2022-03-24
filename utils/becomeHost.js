@@ -30,7 +30,9 @@ function topFunction(event) {
     document.documentElement.scrollTop = 0;
     event.preventDefault()
   }
-//   Upload Image
+  
+//   Upload Image functions
+
 function readURLFront(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
@@ -87,3 +89,40 @@ function readURLSelfie(input) {
 $("#uploadSelifeButton").change(function() {
     readURLSelfie(this);
 });
+
+// Verify number Form
+function getCodeBoxElement(index) {
+    return document.getElementById('codeBox' + index);
+  }
+  function onKeyUpEvent(index, event) {
+    const eventCode = event.which || event.keyCode;
+    if (getCodeBoxElement(index).value.length === 1) {
+       if (index !== 4) {
+          getCodeBoxElement(index+ 1).focus();
+       } else {
+          getCodeBoxElement(index).blur();
+          // Submit code
+          console.log('submit code ');
+       }
+    }
+    if (eventCode === 8 && index !== 1) {
+       getCodeBoxElement(index - 1).focus();
+    }
+  }
+  function onFocusEvent(index) {
+    for (item = 1; item < index; item++) {
+       const currentElement = getCodeBoxElement(item);
+       if (!currentElement.value) {
+            currentElement.focus();
+            break;
+       }
+    }
+  }
+  
+// Ouside Click Verify Number
+document.addEventListener('mouseup', function(e) {
+    var VerifyOtp = document.getElementById('pop-up-inner');
+    if (VerifyOtp && !VerifyOtp.contains(e.target)){
+      document.getElementById('verify-number').style.display ="none";
+    }
+  });
