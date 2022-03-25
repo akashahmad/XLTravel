@@ -100,7 +100,6 @@ function onKeyUpEvent(index, event) {
             getCodeBoxElement(index + 1).focus();
         } else {
             getCodeBoxElement(index).blur();
-            // Submit code
             console.log('submit code ');
         }
     }
@@ -183,6 +182,7 @@ document.addEventListener('mouseup', function (e) {
 
 // verify Number OTP
 let verifyOtpForm = document.getElementById('verify-otp-form')
+
 verifyOtpForm.addEventListener('submit', (event) => {
     event.preventDefault()
     document.getElementById('verify-number').style.display = "none";

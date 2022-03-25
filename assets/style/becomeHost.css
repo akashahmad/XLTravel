@@ -182,9 +182,9 @@ input[type=checkbox] {
   margin: 0;
 }
 /* Firefox */
-.verify-number-input input[type=number] {
+/* .verify-number-input input[type=number] {
   -moz-appearance: textfield;
-}
+} */
 #become-host-name {
   display: block;
 }
