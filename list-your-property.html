@@ -50,7 +50,7 @@
       <div
         class="header-index header-wrapper d-flex justify-content-between align-items-center container-main py-3 px-3 px-xl-0"
       >
-        <div class="header-logo">
+        <div class="header-logo position-relative" style="z-index: 10000">
           <a href="/">
             <img
               loading="lazy"
@@ -201,13 +201,13 @@
           loading="lazy"
           data-aos="fade-up"
           data-aos-duration="1000"
-          class="dots top-down-animation"
+          class="dots top-down-animation d-none d-lg-block"
         />
         <div class="d-flex">
           <div
             data-aos="fade-up"
             data-aos-duration="1000"
-            class="w-50 hero-section-inner_text"
+            class="hero-section-inner_text"
           >
             <p class="text-white">
               Fill Your Accommodation with sky rocket speed
@@ -221,13 +221,13 @@
               Free
             </p>
             <button
-              class="yellow-button d-flex flex-column justify-content-center align-items-center text-white px-4 mt-1 top-down-animation"
+              class="hero-btn yellow-button d-flex flex-column justify-content-center align-items-center text-white px-2 px-sm-4 mt-1 top-down-animation"
             >
               <p class="font-size-16 font-weight-600">
                 LIST YOUR PROPERTY FOR FREE NOW
               </p>
               <p class="font-size-12">
-                Be Quick ! FREE Spot Are Almost Gone For March
+                Be Quick! FREE Spot Are Almost Gone For March
               </p>
             </button>
             <div class="d-flex align-items-center pt-3">
@@ -263,7 +263,7 @@
                   alt="start"
                 />
               </div>
-              <p class="rating-text text-white font-size-14 mr-2 ml-3">
+              <p class="rating-text text-white font-size-14 mr-1 mr-sm-2 ml-3">
                 4.6 stars out of 412 reviews
               </p>
               <img
@@ -277,7 +277,7 @@
           <figure
             data-aos="fade-down"
             data-aos-duration="1000"
-            class="hero-section-inner_image w-50"
+            class="hero-section-inner_image w-50 d-none d-lg-block"
           >
             <img
               src="./assets/images/home-5-main-banner@3x.webp"
@@ -296,7 +296,7 @@
     >
       <div class="d-flex justify-content-center align-items-center pt-3">
         <p
-          class="color-blue font-weight-500 font-size-28 text-center text-capitalize"
+          class="color-blue font-weight-500 font-size-28 text-center mx-2 text-capitalize"
         >
           Why You Should Be Part Of XL Travel
         </p>
@@ -314,18 +314,19 @@
                 src="./assets/images/icons/man-with-bag.webp"
               />
             </div>
-            <div class="feature-text ml-4">
+            <div class="feature-text ml-2 ml-md-4">
               <h class="font-weight-500 text-capitalize"
                 >150,000 visitors per month
               </h>
               <p
-                class="dark-gray text-capitalize line-height-38 pt-2 opacity-8 font-normal font-size-14 w-88"
+                class="feature-text__para dark-gray text-capitalize pt-2 opacity-8 font-normal font-size-14 w-88"
               >
                 We are taking care that every visitor experiences only the best
                 of our platform. Therefore people are returning to us all the
                 time and in most cases, XL-Travel became their first choice.
                 Like that we have gained 150.000 visitors per month and growing.
               </p>
+              <span class="read-more__text">Read More</span>
             </div>
           </div>
         </div>
@@ -339,18 +340,19 @@
                 src="./assets/images/icons/dollar-crossed.webp"
               />
             </div>
-            <div class="feature-text ml-4">
+            <div class="feature-text ml-2 ml-md-4">
               <h class="font-weight-500 text-capitalize"
                 >No additional fees for guests</h
               >
               <p
-                class="dark-gray text-capitalize line-height-38 pt-2 opacity-8 font-normal font-size-14 w-88"
+                class="feature-text__para dark-gray text-capitalize pt-2 opacity-8 font-normal font-size-14 w-88"
               >
                 We want to be fair to our hosts and guests and therefore we do
                 not charge any additional fees. That means that our hosts are
                 able to have the best prices on the internet and consequently
                 more reservations.
               </p>
+              <span class="read-more__text">Read More</span>
             </div>
           </div>
         </div>
@@ -361,18 +363,19 @@
             >
               <img loading="lazy" src="./assets/images/icons/two-hands.webp" />
             </div>
-            <div class="feature-text ml-4">
+            <div class="feature-text ml-2 ml-md-4">
               <h class="font-weight-500 text-capitalize"
                 >Bring true art of hosting to life
               </h>
               <p
-                class="dark-gray text-capitalize line-height-38 pt-2 opacity-8 font-normal font-size-14 w-88"
+                class="feature-text__para dark-gray text-capitalize pt-2 opacity-8 font-normal font-size-14 w-88"
               >
                 XL-Travel platform is not just an ordinary platform but much
                 more. Every host has an opportunity to grow and make their
                 accommodations better with our blog, support and XL-Travel
                 community of other hosts.
               </p>
+              <span class="read-more__text">Read More</span>
             </div>
           </div>
         </div>
@@ -383,10 +386,10 @@
             >
               <img loading="lazy" src="./assets/images/icons/owner.png" />
             </div>
-            <div class="feature-text ml-4">
+            <div class="feature-text ml-2 ml-md-4">
               <h class="font-weight-500 text-capitalize">+20,000 hosts</h>
               <p
-                class="dark-gray text-capitalize line-height-38 pt-2 opacity-8 font-normal font-size-14 w-88"
+                class="feature-text__para dark-gray text-capitalize pt-2 opacity-8 font-normal font-size-14 w-88"
               >
                 With our excellent support, great prices and low costs our
                 wonderful community is growing day by day. XL-Travel attracts
@@ -394,6 +397,7 @@
                 where people are looking for their perfect accommodations for
                 holidays, business trips or more.
               </p>
+              <span class="read-more__text">Read More</span>
             </div>
           </div>
         </div>
@@ -407,12 +411,12 @@
                 src="./assets/images/icons/three-homes.webp"
               />
             </div>
-            <div class="feature-text ml-4">
+            <div class="feature-text ml-2 ml-md-4">
               <h class="font-weight-500 text-capitalize"
                 >You can host anything/anywhere</h
               >
               <p
-                class="dark-gray text-capitalize line-height-38 pt-2 opacity-8 font-normal font-size-14 w-88"
+                class="feature-text__para dark-gray text-capitalize pt-2 opacity-8 font-normal font-size-14 w-88"
               >
                 The whole procedure of hosting is taking place on our platform
                 on the internet. That means that you can upload your real estate
@@ -420,6 +424,7 @@
                 business with XL-Travel even if you are out of town. Be free and
                 enjoy our platform.
               </p>
+              <span class="read-more__text">Read More</span>
             </div>
           </div>
         </div>
@@ -433,10 +438,10 @@
                 src="./assets/images/icons/man-with-headphone.webp"
               />
             </div>
-            <div class="feature-text ml-4">
+            <div class="feature-text ml-2 ml-md-4">
               <h class="font-weight-500 text-capitalize">24/7 support</h>
               <p
-                class="dark-gray text-capitalize line-height-38 pt-2 opacity-8 font-normal font-size-14 w-88"
+                class="feature-text__para dark-gray text-capitalize pt-2 opacity-8 font-normal font-size-14 w-88"
               >
                 We know that every beginning is hard and therefore we
                 established a great support team that will help you with any
@@ -444,6 +449,7 @@
                 you! Our support team works 24/7 and are ready to answer all
                 your questions and solve and difficulty.
               </p>
+              <span class="read-more__text">Read More</span>
             </div>
           </div>
         </div>
@@ -459,32 +465,34 @@
         <div class="listing-container__items text-white position-relative">
           <div class="vertical-line"></div>
           <div class="listing-container__item">
+            <div class="listing-container__item-triangle--line"></div>
             <div class="listing-container__item-triangle"></div>
+
             <div class="listing-container__item-text">
               <h5
                 data-aos="flip-up"
                 data-aos-duration="1000"
                 class="mb-4 font-size-20"
               >
-                Fill In the blanks on your booking calendar
+                Fill In the blanks on your booking calendar as fast as possible
               </h5>
               <p
                 data-aos="flip-up"
                 data-aos-duration="1000"
                 class="font-size-14 invisible"
               >
-                fast as possible.XL-Travel platform reaches millions of
-                travelers from more than 50 countries.We love to travel and
-                therefore we understand exactly what every guest needs for an
-                unforgettable trip. This is why we created a travel zone where
-                guests can find everything about your accommodation and it helps
-                you bring more and more guests to book your property every
-                single day!
+                XL-Travel platform reaches millions of travelers from more than
+                50 countries.We love to travel and therefore we understand
+                exactly what every guest needs for an unforgettable trip. This
+                is why we created a travel zone where guests can find everything
+                about your accommodation and it helps you bring more and more
+                guests to book your property every single day!
               </p>
             </div>
           </div>
 
           <div class="listing-container__item">
+            <div class="listing-container__item-triangle--line"></div>
             <div
               class="listing-container__item-triangle"
               style="transform: rotate(0) scale(1.3); background-color: #fec657"
@@ -513,6 +521,7 @@
           </div>
 
           <div class="listing-container__item">
+            <div class="listing-container__item-triangle--line"></div>
             <div class="listing-container__item-triangle"></div>
             <div class="listing-container__item-text">
               <h5
@@ -574,7 +583,7 @@
         <figure
           data-aos="zoom-in"
           data-aos-duration="1000"
-          class="accommodation-container__image w-57"
+          class="accommodation-container__image w-57 d-lg-block"
         >
           <img
             src="./assets/images/dots.png"
@@ -592,7 +601,7 @@
         <div
           data-aos="zoom-out"
           data-aos-duration="1000"
-          class="accommodation-container__text p-5"
+          class="accommodation-container__text p-3 p-md-5"
         >
           <p>Fill Your Accommodation with sky rocket speed</p>
           <h2 class="w-48 line-height-54 mt-3 mb-4 font-weight-500">
@@ -607,14 +616,15 @@
                   src="./assets//images/icons/book.webp"
                   alt="Book"
                   loading="lazy"
-                  class="w-88"
+                  class="w-88 h-75"
                 />
               </figure>
               <div class="accommodation-container__step-text">
                 <h4 class="font-size-17">Register On XL Travel as a Host</h4>
                 <p class="font-size-14">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                  Join our big family on XL-Travel platform! Our hosts come all
+                  over the world and we are growing daily. Join the community
+                  and let's make memories together!
                 </p>
               </div>
             </div>
@@ -635,8 +645,10 @@
                   Follow Easy Steps to setup your account & add property
                 </h4>
                 <p class="font-size-14">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                  We know that every beginning is hard and therefore we
+                  developed the platform in a way that everyone can use easily
+                  and with pleasure. We will lead you step by step to achieve
+                  your goals!
                 </p>
               </div>
             </div>
@@ -657,8 +669,10 @@
                   Add property , set prices & Available dates
                 </h4>
                 <p class="font-size-14">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                  Adding property on XL-Travel is super easy. Our system is
+                  leading you through the procedure step by step but if you have
+                  any question, don't worry ,our support team is there for you
+                  24/7.
                 </p>
               </div>
             </div>
@@ -676,11 +690,11 @@
               </figure>
               <div class="accommodation-container__step-text">
                 <h4 class="font-size-17">
-                  See your listing go live infront of millions of travellers
+                  See your listing go live in front of millions of travellers
                 </h4>
                 <p class="font-size-14">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                  We will take care of everything! Now is the time to sit back,
+                  enjoy and watch how your business is growing !
                 </p>
               </div>
             </div>
@@ -697,7 +711,7 @@
           class="d-flex flex-column justify-content-center align-items-center"
         >
           <button
-            class="yellow-button d-flex flex-column justify-content-center align-items-center text-white px-4 top-down-animation"
+            class="options-btn yellow-button d-flex flex-column justify-content-center align-items-center text-white px-4 top-down-animation"
           >
             <p class="font-size-25 font-weight-600">
               LIST YOUR PROPERTY FOR FREE NOW
@@ -765,18 +779,19 @@
           </p>
         </div>
 
-        <div class="d-flex justify-content-center position-relative">
+        <div
+          class="options-zigzag__text d-flex justify-content-center position-relative"
+        >
           <p
             data-aos="flip-right"
             data-aos-duration="1000"
             class="font-weight-500 position-absolute w-48 font-size-22"
-            style="top: 18%; right: 8%"
           >
             We know growing a business is hard and a lot of things trends
             changes overnight , but we can make it a whole lot easier, quicker,
             more predictable, less stressful and fun.
           </p>
-          <figure class="w-35" style="height: 600px">
+          <figure class="w-35">
             <img
               src="./assets/images/zig-zag-1.svg"
               alt="ZigZag"
@@ -790,7 +805,6 @@
             data-aos="flip-left"
             data-aos-duration="1000"
             class="font-weight-500 position-absolute w-48 font-size-22"
-            style="bottom: 30%; left: 11%"
           >
             Let me present you next holy grail for travel business front of you
             is game changer in this industry
@@ -833,7 +847,11 @@
               </p>
 
               <p class="font-size-35 text-uppercase font-weight-600"></p>
-              <p data-aos="flip-down" data-aos-duration="2500">
+              <p
+                data-aos="flip-down"
+                data-aos-duration="2500"
+                id="laptop-text3"
+              >
                 With the most effective platform for rapidly scaling business on
                 the planet
               </p>
@@ -979,8 +997,8 @@
       <div class="more-container">
         <div class="d-flex justify-content-between">
           <div
-            data-aos="fade-up-left"
-            data-aos-duration="1000"
+            data-aos="fade-right"
+            data-aos-duration="1500"
             class="more-container__text w-47"
           >
             <h2 class="text-uppercase font-weight-500 color-tealish pb-2">
@@ -1013,16 +1031,16 @@
                 which we believe is the reason for stable and constant growth.
               </p>
             </div>
-            <button
+            <!-- <button
               class="read-more-btn invisible yellow-button text-white px-4 mt-3"
             >
               Read More
-            </button>
+            </button> -->
           </div>
 
           <div
-            data-aos="fade-up-right"
-            data-aos-duration="1000"
+            data-aos="fade-left"
+            data-aos-duration="1500"
             class="more-container__img w-47 position-relative"
           >
             <div class="more-container__img-gradient"></div>
@@ -1038,8 +1056,8 @@
 
         <div class="d-flex flex-row-reverse justify-content-between">
           <div
-            data-aos="fade-up-left"
-            data-aos-duration="1000"
+            data-aos="fade-left"
+            data-aos-duration="1500"
             class="more-container__text w-47"
             style="padding-left: 0"
           >
@@ -1249,8 +1267,8 @@
           </div>
 
           <div
-            data-aos="fade-up-right"
-            data-aos-duration="1000"
+            data-aos="fade-right"
+            data-aos-duration="1500"
             class="more-container__img w-47 position-relative"
           >
             <div
@@ -1276,8 +1294,8 @@
 
         <div class="d-flex justify-content-between">
           <div
-            data-aos="fade-up-left"
-            data-aos-duration="1000"
+            data-aos="fade-right"
+            data-aos-duration="1500"
             class="more-container__text w-47"
           >
             <h2 class="text-uppercase font-weight-500 color-tealish pb-2">
@@ -1313,16 +1331,16 @@
                 engines.
               </p>
             </div>
-            <button
+            <!-- <button
               class="read-more-btn invisible yellow-button text-white px-4 mt-3"
             >
               Read More
-            </button>
+            </button> -->
           </div>
 
           <div
-            data-aos="fade-up-right"
-            data-aos-duration="1000"
+            data-aos="fade-left"
+            data-aos-duration="1500"
             class="more-container__img w-47 position-relative"
           >
             <div class="more-container__img-gradient position-relative"></div>
@@ -1338,8 +1356,8 @@
 
         <div class="d-flex flex-row-reverse justify-content-between">
           <div
-            data-aos="fade-up-left"
-            data-aos-duration="1000"
+            data-aos="fade-left"
+            data-aos-duration="1500"
             class="more-container__text w-47"
             style="padding-left: 0"
           >
@@ -1379,8 +1397,8 @@
           </div>
 
           <div
-            data-aos="fade-up-right"
-            data-aos-duration="1000"
+            data-aos="fade-right"
+            data-aos-duration="1500"
             class="more-container__img w-47 position-relative"
           >
             <div
@@ -1406,8 +1424,8 @@
 
         <div class="d-flex justify-content-between">
           <div
-            data-aos="fade-up-left"
-            data-aos-duration="1000"
+            data-aos="fade-right"
+            data-aos-duration="1500"
             class="more-container__text w-47"
           >
             <h2 class="text-uppercase font-weight-500 color-tealish pb-2">
@@ -1444,8 +1462,8 @@
           </div>
 
           <div
-            data-aos="fade-up-right"
-            data-aos-duration="1000"
+            data-aos="fade-left"
+            data-aos-duration="1500"
             class="more-container__img w-47 position-relative"
           >
             <div class="more-container__img-gradient position-relative"></div>
@@ -1461,8 +1479,8 @@
 
         <div class="d-flex flex-row-reverse justify-content-between">
           <div
-            data-aos="fade-up-left"
-            data-aos-duration="1000"
+            data-aos="fade-left"
+            data-aos-duration="1500"
             class="more-container__text w-47"
             style="padding-left: 0"
           >
@@ -1471,7 +1489,7 @@
             </h2>
             <h5 class="text-capitalize font-size-19">your virtual office!</h5>
             <div class="more-container__text--paras font-size-19 mr-5">
-              <p class="font-weight-300 line-height-29">
+              <p class="font-weight-300 line-height-29 mt-4">
                 We designed a special web office - a host zone, from which you
                 can control everything.In real time you can see who makes
                 reservations and when. Then when they check in, check out, how
@@ -1491,8 +1509,8 @@
           </div>
 
           <div
-            data-aos="fade-up-right"
-            data-aos-duration="1000"
+            data-aos="fade-right"
+            data-aos-duration="1500"
             class="more-container__img w-47 position-relative"
           >
             <div
@@ -1518,7 +1536,7 @@
 
         <div
           data-aos="zoom-out"
-          data-aos-duration="1000"
+          data-aos-duration="1500"
           class="container-main d-flex mt-2"
           style="transform: scale(1.1)"
         >
@@ -1561,7 +1579,9 @@
               >
                 So not to waste any time, use this limited time offer to join
                 and Fill in the blanks on your booking calendar
-                <span class="text-capitalize" style="color: #40d0d3"
+                <span
+                  class="text-capitalize d-block text-center"
+                  style="color: #40d0d3"
                   >right now !</span
                 >
               </p>
@@ -1660,7 +1680,7 @@
 
     <!-- Frequently Asked Question -->
     <section class="frequently-asked-question pt-5 overflow-hidden">
-      <div class="container-main mx-auto pb-0">
+      <div class="container-main mx-auto pb-0 w-95">
         <div
           class="d-flex flex-column align-items-center pt-3 pb-4 px-3 px-lg-0"
         >
@@ -1842,7 +1862,7 @@
       <div
         data-aos="flip-up"
         data-aos-duration="400"
-        class="footer-inner container-main mx-auto d-flex flex-column flex-lg-row"
+        class="footer-inner container-main mx-auto d-flex flex-column flex-lg-row w-95"
       >
         <div class="footer-single logo-side w-26">
           <div class="cursor-pointer">
@@ -2171,6 +2191,7 @@
         </div>
       </form>
     </section>
+
     <section id="signup-form" class="logIn-signUp signup w-100">
       <form class="login container-main mx-auto">
         <div

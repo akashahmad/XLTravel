@@ -1,4 +1,29 @@
-////////// LISTING SECTION FUNCTIONALITY
+////////// FEATURE SECTION READ MORE FUNCTIONALITY ///////////////
+const readMoreTexts = document.querySelectorAll(`.read-more__text`);
+const featureTextParas = document.querySelectorAll(`.feature-text__para`);
+
+const featureTexts = [];
+
+featureTextParas.forEach((para) => {
+  featureTexts.push(para.textContent);
+
+  para.textContent = para.textContent.substring(0, 160) + `...`;
+});
+
+readMoreTexts.forEach((text, index) => {
+  text.addEventListener(`click`, (e) => {
+    if (e.target.textContent.trim() === `Read More`) {
+      e.target.previousElementSibling.textContent = featureTexts[index];
+      e.target.textContent = `Read Less`;
+    } else {
+      e.target.previousElementSibling.textContent =
+        featureTexts[index].substring(0, 150) + `...`;
+      e.target.textContent = `Read More`;
+    }
+  });
+});
+
+////////// LISTING SECTION FUNCTIONALITY ///////////////
 const triangleSign = document.querySelectorAll(
   `.listing-container__item-triangle`
 );
@@ -24,6 +49,8 @@ function showAdjacentContent() {
   this.nextElementSibling.children[0].style.color = `#fec657`;
   this.nextElementSibling.children[0].style.fontWeight = `600`;
 }
+
+/////////////// FEATURES READ MORE SECTION FUNCTIONALITY ////////////
 
 /////////////// ABOUT MORE SECTION FUNCTIONALITY ////////////
 // const readMoreBtn = document.querySelectorAll(`.read-more-btn`);
@@ -70,12 +97,17 @@ function showAdjacentContent() {
 window.addEventListener(`scroll`, () => {
   const text1 = document.querySelector(`#laptop-text1 span`);
   const text2 = document.querySelector(`#laptop-text2 span`);
+  const text3 = document.querySelector(`#laptop-text3`);
   if (elementInViewport(text1)) {
     text1.style.animation = `typing 2s linear .3s forwards`;
     text2.style.animation = `typing 2s linear 2s forwards`;
+    setTimeout(() => {
+      text3.style.opacity = `1`;
+    }, 4000);
   } else {
     text1.style.animation = `none`;
     text2.style.animation = `none`;
+    text3.style.opacity = `0`;
   }
 });
 
