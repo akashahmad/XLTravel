@@ -1,4 +1,4 @@
-////////// FEATURE SECTION READ MORE FUNCTIONALITY ///////////////
+////////// FEATURE SECTION FUNCTIONALITY ///////////////
 const readMoreTexts = document.querySelectorAll(`.read-more__text`);
 const featureTextParas = document.querySelectorAll(`.feature-text__para`);
 
@@ -98,16 +98,14 @@ window.addEventListener(`scroll`, () => {
   const text1 = document.querySelector(`#laptop-text1 span`);
   const text2 = document.querySelector(`#laptop-text2 span`);
   const text3 = document.querySelector(`#laptop-text3`);
-  if (elementInViewport(text1)) {
+  if (elementInViewport(text3)) {
     text1.style.animation = `typing 2s linear .3s forwards`;
     text2.style.animation = `typing 2s linear 2s forwards`;
-    setTimeout(() => {
-      text3.style.opacity = `1`;
-    }, 4000);
+    text3.style.animation = `showText 1s linear 4s forwards`;
   } else {
     text1.style.animation = `none`;
     text2.style.animation = `none`;
-    text3.style.opacity = `0`;
+    text3.style.animation = `none`;
   }
 });
 
