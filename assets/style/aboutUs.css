@@ -34,6 +34,16 @@
   margin-top: 20px;
 }
 
+@media (max-width: 576px) {
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text h3 {
+    font-size: 1.5rem;
+  }
+}
+
 /*//////////////// MEMORIES & JOURNEY SECTIONS STYLING ////////////*/
 .row {
   margin-right: 0;
