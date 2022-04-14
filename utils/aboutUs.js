@@ -17,3 +17,19 @@ listItem.forEach((item, index) => {
     itemsContent[index].classList.remove(`d-none`);
   });
 });
+
+/////////// TYPING ANIMATION ///////////////////
+const aboutUsTitle = document.getElementById(`about-us_title`);
+
+let i = 0;
+let text = `Welcome To Xl Travel`;
+
+function typing() {
+  if (i < text.length) {
+    aboutUsTitle.textContent += text.charAt(i);
+    i++;
+    setTimeout(typing, 80);
+  }
+}
+
+typing();
