@@ -31,10 +31,10 @@
   font-weight: 500;
   margin-top: 20px;
   opacity: 0;
-  animation: showText 1s linear 2s forwards;
+  animation: showSubHeading 1s linear 2s forwards;
 }
 
-@keyframes showText {
+@keyframes showSubHeading {
   to {
     opacity: 1;
   }

@@ -182,15 +182,6 @@
 .listing-container__item-text p {
 }
 
-/* .vertical-line {
-  position: absolute;
-  top: 4%;
-  left: 1.7%;
-  height: 80%;
-  width: 5px;
-  background-color: #e1e1e168;
-} */
-
 /* X-Large devices (large desktops, less than or equal to 1400px) */
 @media (max-width: 1400px) {
 }
@@ -516,11 +507,9 @@
 @keyframes typing {
   from {
     width: 0;
-    /* text-shadow: -5px -2px 3px rgba(0, 0, 0, 0.53); */
   }
   to {
     width: 100%;
-    /* text-shadow: -5px -2px 3px rgba(0, 0, 0, 0.53); */
   }
 }
 

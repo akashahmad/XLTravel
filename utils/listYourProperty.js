@@ -50,55 +50,19 @@ function showAdjacentContent() {
   this.nextElementSibling.children[0].style.fontWeight = `600`;
 }
 
-/////////////// FEATURES READ MORE SECTION FUNCTIONALITY ////////////
+const text1 = document.querySelector(`#laptop-text1 span`);
+const text2 = document.querySelector(`#laptop-text2 span`);
+const text3 = document.querySelector(`#laptop-text3`);
+console.log(text1, text2, text3);
 
-/////////////// ABOUT MORE SECTION FUNCTIONALITY ////////////
-// const readMoreBtn = document.querySelectorAll(`.read-more-btn`);
-// const overflowParas = document.querySelectorAll(`.more-container__text--paras`);
-// const paras = [];
-
-// overflowParas.forEach((para) => {
-//   paras.push(para.innerHTML);
-
-//   if (para.innerHTML.length >= 900) {
-//     para.innerHTML = para.innerHTML.substring(0, 900) + `...`;
-//     para.nextElementSibling.classList.remove(`invisible`);
-//   }
-// });
-
-// console.log(paras);
-
-// readMoreBtn.forEach((btn, index) => {
-//   btn.addEventListener(`click`, () => {
-//     if (btn.textContent.trim() === `Read More`) {
-//       btn.previousElementSibling.innerHTML = paras[index];
-//       btn.innerText = `Read Less`;
-//     } else {
-//       btn.previousElementSibling.innerHTML =
-//         paras[index].substring(0, 900) + `...`;
-//       btn.innerText = `Read More`;
-//     }
-//   });
-// });
-
-/// MARKETING PARA READ MORE FUNCTIONALITY
-// const readMore = document.getElementById(`read-more`);
-
-// readMore.addEventListener(`click`, () => {
-//   if (readMore.textContent.trim() === `Read More`) {
-//     readMore.previousElementSibling.style.display = `block`;
-//     readMore.textContent = `Read Less`;
-//   } else {
-//     readMore.previousElementSibling.style.display = `none`;
-//     readMore.textContent = `Read More`;
-//   }
-// });
-
+/////////////// BANNER SECTION TYPING FUNCTIONALITY ////////////
 window.addEventListener(`scroll`, () => {
   const text1 = document.querySelector(`#laptop-text1 span`);
   const text2 = document.querySelector(`#laptop-text2 span`);
   const text3 = document.querySelector(`#laptop-text3`);
+  console.log(text1, text2, text3);
   if (elementInViewport(text3)) {
+    console.log(text3);
     text1.style.animation = `typing 2s linear .3s forwards`;
     text2.style.animation = `typing 2s linear 2s forwards`;
     text3.style.animation = `showText 1s linear 4s forwards`;
@@ -115,13 +79,11 @@ function elementInViewport(el) {
   var left = el.offsetLeft;
   var width = el.offsetWidth;
   var height = el.offsetHeight;
-
   while (el.offsetParent) {
     el = el.offsetParent;
     top += el.offsetTop;
     left += el.offsetLeft;
   }
-
   return (
     top < window.pageYOffset + window.innerHeight &&
     left < window.pageXOffset + window.innerWidth &&
