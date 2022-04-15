@@ -50,19 +50,12 @@ function showAdjacentContent() {
   this.nextElementSibling.children[0].style.fontWeight = `600`;
 }
 
-const text1 = document.querySelector(`#laptop-text1 span`);
-const text2 = document.querySelector(`#laptop-text2 span`);
-const text3 = document.querySelector(`#laptop-text3`);
-console.log(text1, text2, text3);
-
 /////////////// BANNER SECTION TYPING FUNCTIONALITY ////////////
 window.addEventListener(`scroll`, () => {
   const text1 = document.querySelector(`#laptop-text1 span`);
   const text2 = document.querySelector(`#laptop-text2 span`);
   const text3 = document.querySelector(`#laptop-text3`);
-  console.log(text1, text2, text3);
   if (elementInViewport(text3)) {
-    console.log(text3);
     text1.style.animation = `typing 2s linear .3s forwards`;
     text2.style.animation = `typing 2s linear 2s forwards`;
     text3.style.animation = `showText 1s linear 4s forwards`;
