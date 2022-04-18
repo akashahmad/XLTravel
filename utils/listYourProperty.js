@@ -34,8 +34,8 @@ triangleSign.forEach((sign) => {
 
 function showAdjacentContent() {
   triangleSign.forEach((sign) => {
-    if (!sign.nextElementSibling.children[1].classList.contains(`invisible`)) {
-      sign.nextElementSibling.children[1].classList.add(`invisible`);
+    if (!sign.nextElementSibling.children[1].classList.contains(`hidden`)) {
+      sign.nextElementSibling.children[1].classList.add(`hidden`);
       sign.style.transform = `rotate(45deg) scale(1)`;
       sign.style.backgroundColor = `#40d0d3`;
       sign.nextElementSibling.children[0].style.color = `#fff`;
@@ -43,7 +43,7 @@ function showAdjacentContent() {
     }
   });
 
-  this.nextElementSibling.children[1].classList.remove(`invisible`);
+  this.nextElementSibling.children[1].classList.remove(`hidden`);
   this.style.transform = `rotate(0) scale(1.3)`;
   this.style.backgroundColor = `#fec657`;
   this.nextElementSibling.children[0].style.color = `#fec657`;

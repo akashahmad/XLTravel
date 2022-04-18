@@ -119,12 +119,16 @@
 }
 
 @media (max-width: 992px) {
+  .memories-section .row {
+    padding-top: 1.6rem;
+  }
+
   .memories__image,
   .journey__image {
     width: 60%;
     display: flex;
     justify-content: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
 
   .memories__text,
@@ -135,14 +139,10 @@
   }
 
   .journey__text {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
-  .memories__text p {
-    padding-left: 4%;
-    padding-right: 4%;
-  }
-
+  .memories__text p,
   .memories__text h2 {
     padding-left: 4%;
     padding-right: 4%;
@@ -164,7 +164,7 @@
 }
 
 .quote__text p:first-child {
-  font-size: 3rem;
+  font-size: 4.5rem;
   text-align: center;
   font-family: signPainter;
   font-weight: 600;
@@ -172,11 +172,22 @@
 }
 
 .quote__text p:nth-child(2) {
-  font-size: 3rem;
+  font-size: 3.6rem;
   text-align: center;
   width: 80%;
   font-family: signPainter;
   text-transform: uppercase;
+}
+
+@media (max-width: 576px) {
+  .quote__text p:first-child {
+    font-size: 10vmin;
+  }
+
+  .quote__text p:nth-child(2) {
+    font-size: 8vmin;
+    width: 90%;
+  }
 }
 
 /* ////////////////////// TEAM SECTION ///////////////////// */
@@ -192,7 +203,7 @@
 
 .team-section .container-main h3 {
   color: #14395b;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .team-section .container-main .main-para {
@@ -212,6 +223,15 @@
   .team__text {
     margin-left: 0;
   }
+
+  .team-section {
+    padding-top: 2rem;
+  }
+
+  .team-section .container-main h3 {
+    color: #14395b;
+    font-size: 2rem;
+  }
 }
 
 /* ////////////////////// STRENGTHS SECTION ///////////////////// */
@@ -227,7 +247,7 @@
 }
 
 .strengths-content {
-  min-height: 26rem;
+  min-height: 22rem;
 }
 
 .strengths-content .col-lists {
@@ -258,16 +278,12 @@
   color: #40d0d3;
 }
 
-.strengths-content .col-content {
-}
-
-.strengths-content .col-content .box {
+.strengths-content .col-content .box .item-content {
   width: 80%;
   padding: 2rem 3vmin;
   border-radius: 6px;
   box-shadow: 0 32px 64px 0 rgba(57, 20, 0, 0.04);
   background-color: #00000030;
-  /* margin-left: auto; */
 }
 
 .strengths-content .col-content h5 {
@@ -286,12 +302,10 @@
 @media (max-width: 992px) {
   .strengths-content {
     width: 100%;
-    margin: 4rem 0;
-    min-height: 31rem;
   }
 
-  .strengths-content .col-content .box {
-    padding: 1.4rem 4vmin;
+  .strengths-content .col-content .box .item-content {
+    padding: 1.5rem 5vmin;
     width: 100%;
   }
 
@@ -301,9 +315,23 @@
 }
 
 @media (max-width: 576px) {
+  .strengths-section {
+    background-image: url("../images/bg-strenghts.png");
+    margin: 2rem 0;
+  }
+
   .strengths-content {
-    min-height: 47rem;
-    margin: 12rem 0;
+    padding: 2rem 1.5rem;
+    min-height: 22rem;
+  }
+
+  .strengths-content h3 {
+    font-size: 1.8rem;
+  }
+
+  .strengths-content .col-content .box .item-content {
+    width: 107%;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -314,31 +342,25 @@
   justify-items: center;
 }
 
-.invitation > * {
-  /* border: 1px solid; */
-}
-
 .invitation h3 {
   color: #14395b;
-  font-size: 3rem;
-  width: 40rem;
-  margin-bottom: 4rem;
-}
-
-.invitation h2 {
-  color: #14395b;
   font-size: 4rem;
-  font-weight: normal;
-  text-align: center;
+  width: min(95%, 50rem);
+  margin-bottom: 2rem;
 }
 
-.invitation h5 {
-  font-size: 1.7rem;
-  font-weight: normal;
-  text-align: center;
-  margin-bottom: 1.4rem;
+.invitation-btn {
+  padding: 1.6rem 2rem;
+}
+
+.invitation-btn p:first-child {
+  font-size: 3rem;
   text-transform: uppercase;
-  color: #14395b;
+}
+
+.invitation-btn p:last-child {
+  font-size: 1.5rem;
+  text-transform: capitalize;
 }
 
 .invitation__para {
@@ -348,18 +370,35 @@
   color: #40d0d3;
 }
 
+@media (max-width: 992px) {
+  .invitation-btn p:first-child {
+    font-size: 4.8vmin;
+  }
+
+  .invitation-btn p:last-child {
+    font-size: 4vmin;
+  }
+
+  .invitation__para {
+    font-size: 6vmin;
+  }
+}
+
 @media (max-width: 576px) {
   .invitation h3 {
-    width: 90%;
-    font-size: 1.6rem;
+    font-size: 7vmin;
   }
 
-  .invitation h2 {
-    font-size: 1.5rem;
+  .invitation-btn {
+    padding: 1rem;
   }
 
-  .invitation h5 {
-    font-size: 1.3rem;
+  .invitation-btn p:first-child {
+    font-size: 4.5vmin;
+  }
+
+  .invitation-btn p:last-child {
+    font-size: 3.5vmin;
   }
 
   .invitation__para {
