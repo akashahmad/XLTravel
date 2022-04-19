@@ -9,12 +9,12 @@ listItem.forEach((item, index) => {
 
     e.target.style.color = `#40d0d3`;
     itemsContent.forEach((content) => {
-      if (!content.classList.contains(`d-none`)) {
-        content.classList.add(`d-none`);
+      if (!content.classList.contains(`d-sm-none`)) {
+        content.classList.add(`d-sm-none`);
       }
     });
 
-    itemsContent[index].classList.remove(`d-none`);
+    itemsContent[index].classList.remove(`d-sm-none`);
   });
 });
 

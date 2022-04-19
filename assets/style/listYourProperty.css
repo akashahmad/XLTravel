@@ -293,7 +293,7 @@
 
 .options-zigzag__text figure p:last-child {
   width: 35rem;
-  bottom: 25%;
+  bottom: 23%;
   right: 15%;
 }
 
@@ -632,6 +632,7 @@
   padding-top: 80px;
 }
 
+/* utility class for positioning second paragraph of zigzag/vector figure */
 .u-mb {
   margin-bottom: -1rem;
 }
@@ -653,6 +654,10 @@
   .more-container__box:nth-child(even) .more-container__text {
     width: 100%;
     padding: 0 5%;
+  }
+
+  .u-mb {
+    margin-bottom: 0;
   }
 }
 
@@ -685,6 +690,22 @@
 
   .more-options__btn {
     width: 100%;
+  }
+
+  .u-mb {
+    margin-bottom: -1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .u-mb {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 365px) {
+  .u-mb {
+    margin-bottom: -1.4rem;
   }
 }
 
