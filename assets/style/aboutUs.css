@@ -297,6 +297,10 @@
   .strengths-content .col-content .box {
     width: 100%;
   }
+
+  .strengths-content .col-lists h3 {
+    font-size: 4vmin;
+  }
 }
 
 @media (max-width: 992px) {
@@ -325,7 +329,8 @@
     min-height: 22rem;
   }
 
-  .strengths-content h3 {
+  .strengths-content .col-lists h3 {
+    width: 102%;
     font-size: 1.8rem;
   }
 
@@ -344,43 +349,52 @@
 
 .invitation h3 {
   color: #14395b;
-  font-size: 4rem;
-  width: min(95%, 50rem);
-  margin-bottom: 2rem;
+  font-size: 2.8rem;
+  width: min(95%, 40rem);
+  margin-bottom: 3rem;
 }
 
 .invitation-btn {
-  padding: 1.6rem 2rem;
+  padding: 1rem 2rem;
 }
 
 .invitation-btn p:first-child {
-  font-size: 3rem;
+  font-size: 2rem;
   text-transform: uppercase;
 }
 
 .invitation-btn p:last-child {
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-transform: capitalize;
 }
 
 .invitation__para {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   padding: 2rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #40d0d3;
 }
 
 @media (max-width: 992px) {
+  .invitation h3 {
+    width: 90%;
+  }
+
+  .invitation-btn {
+    width: 90%;
+    padding: 1rem;
+  }
+
   .invitation-btn p:first-child {
-    font-size: 4.8vmin;
+    font-size: 4.5vmin;
   }
 
   .invitation-btn p:last-child {
-    font-size: 4vmin;
+    font-size: 3.5vmin;
   }
 
   .invitation__para {
-    font-size: 6vmin;
+    font-size: 5vmin;
   }
 }
 
@@ -391,10 +405,11 @@
 
   .invitation-btn {
     padding: 1rem;
+    width: 100%;
   }
 
   .invitation-btn p:first-child {
-    font-size: 4.5vmin;
+    font-size: 4.3vmin;
   }
 
   .invitation-btn p:last-child {
