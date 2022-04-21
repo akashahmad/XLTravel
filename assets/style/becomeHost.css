@@ -166,13 +166,13 @@ input[type="radio"] {
   transform: scale(1.07);
 }
 .image-button:active::before {
- display: none;
+  display: none;
 }
-input[type=checkbox] {
+input[type="checkbox"] {
   accent-color: #40d0d3;
 }
 /* Mobile number input */
-.intl-tel-input{
+.intl-tel-input {
   width: 100%;
 }
 /* Hide input number arrows */
@@ -209,9 +209,39 @@ input[type=checkbox] {
 #ask-for-property {
   display: none;
 }
-#verify-number{
+#verify-number {
   display: none;
 }
-#dont-own-comapny{
+#dont-own-comapny {
   display: none;
+}
+
+/* //////////////// Media Queries ///////////////// */
+@media (max-width: 1200px) {
+  .become-host__form {
+    margin-bottom: -4rem;
+  }
+
+  .become-host__form-content {
+    width: 100%;
+  }
+
+  .verify-button {
+    width: 80%;
+  }
+}
+
+@media (max-width: 576px) {
+  .become-host__form-input {
+    width: 100%;
+  }
+
+  .verify-button {
+    margin-top: -2rem;
+    width: 35%;
+  }
+
+  .verify-button ~ p {
+    margin-top: -2rem;
+  }
 }
