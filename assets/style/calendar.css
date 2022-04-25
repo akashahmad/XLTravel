@@ -51,10 +51,11 @@
     overflow-y: scroll;
     width: 100%;
   }
-  .daterangepicker .calendar td, .daterangepicker .calendar th{
+  .daterangepicker .calendar td,
+  .daterangepicker .calendar th {
     min-width: 50px !important;
   }
-  .daterangepicker.dropdown-menu{
+  .daterangepicker.dropdown-menu {
     width: 100%;
   }
   .daterangepicker .calendar td,

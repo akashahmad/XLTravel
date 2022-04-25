@@ -35,6 +35,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Merienda:wght@700&family=Open+Sans:ital,wght@1,600;1,800&display=swap"
+      rel="stylesheet"
+    />
     <!-- Typing Animation -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
@@ -112,7 +116,7 @@
         <div>
           <nav class="nav-bar d-none d-lg-block">
             <ul class="d-flex align-items-center list-unstyled">
-              <li><a href="./home.html">Home</a></li>
+              <li><a href="/home.html">Home</a></li>
               <li>
                 <a
                   class="hot-deail-text position-relative d-flex align-items-center justify-content-center"
@@ -135,10 +139,10 @@
                   </button></a
                 >
               </li>
-              <li class="mr-0" onclick="displayBlock(`login-form`)">
+              <li class="mr-0">
                 <a>
                   <button
-                    class="tealish-gradient-button d-flex justify-content-center align-items-center cursor-pointer"
+                    class="login-signup_btn tealish-gradient-button d-flex justify-content-center align-items-center cursor-pointer"
                   >
                     <img
                       class="mr-2"
@@ -186,8 +190,7 @@
                     </button>
                   </a>
                   <button
-                    class="tealish-gradient-button mt-4 d-flex justify-content-center align-items-center cursor-pointer"
-                    onclick="displayBlock(`login-form`)"
+                    class="login-signup_btn tealish-gradient-button mt-4 d-flex justify-content-center align-items-center cursor-pointer"
                   >
                     <img
                       class="mr-2"
@@ -6157,11 +6160,106 @@
         </p>
       </div>
     </footer>
-    <section id="login-form" class="logIn-signUp login w-100">
-      <form class="login container-main mx-auto">
+
+    <!-- SIGNUP/LOGIN FORM -->
+    <section class="login_signup" id="login_signup-form">
+      <div class="login-signup_container">
+        <div class="form_container">
+          <div class="form_text d-none d-sm-block">
+            <p>
+              “ What is there more kindly the feelings between host & guest ?
+            </p>
+            <div class="form_date">
+              <p id="form_date">23/4/2022</p>
+              <p id="form_day">Friday</p>
+            </div>
+          </div>
+
+          <form class="login-signup_form">
+            <img src="./assets/images/logo.png" alt="logo" loading="lazy" />
+            <h5 id="login-signup_form-heading">Sign In</h5>
+
+            <div class="form_input-group d-none" id="first_name">
+              <label>First Name</label>
+              <input type="text" placeholder="John" required />
+            </div>
+
+            <div class="form_input-group d-none" id="last_name">
+              <label>Last Name</label>
+              <input type="text" placeholder="Doe" required />
+            </div>
+
+            <div class="form_input-group">
+              <label>Email</label>
+              <input type="email" placeholder="Mymail@gmail.com" required />
+            </div>
+
+            <div class="form_input-group" id="login_password">
+              <label>Password</label>
+              <input type="password" placeholder="*********" required />
+            </div>
+
+            <a href="./become-host.html" class="w-100">
+              <button class="form_btn" type="button" id="form_btn">
+                Sign In
+              </button>
+            </a>
+
+            <div class="form_links" id="form_links">
+              <span class="form_link-one" id="create-account_link"
+                >Create Account</span
+              >
+              <span class="form_link-two" id="forget-password_link"
+                >Forget Password?</span
+              >
+            </div>
+
+            <div class="social-login_links" id="social-login_links">
+              <p id="social-login_title">Or Sign in With</p>
+              <div class="social_login-btns">
+                <button type="button">
+                  <img
+                    src="./assets/images/icons/facebookBlue.png"
+                    alt="facebook"
+                    loading="lazy"
+                  />
+                  Facebook
+                </button>
+                <button type="button">
+                  <img
+                    src="./assets/images/icons/google-icon.png"
+                    alt="facebook"
+                    loading="lazy"
+                  />
+                  Google
+                </button>
+              </div>
+            </div>
+
+            <div class="form_line d-none" id="form_line"></div>
+
+            <p
+              class="already_sign-btn d-none font-size-14 mt-3 border w-100 rounded-md text-center p-2 cursor-pointer"
+              id="already_sign-btn"
+            >
+              Already have account? Sign In
+            </p>
+
+            <p class="font-size-11 mt-3" id="login-policy">
+              By signing in, I agree to Xl Travel
+              <a href="">Terms of Use</a> and
+              <a href="">GDPR.EU</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section id="login-form" class="logIn-signUp login w-100">
+      <form class="login container-main mx-auto" style="transform: scale(0.8)">
         <div
           id="login-form-inner"
-          class="login-inner bg-white w-39 mx-auto py-4"
+          class="login-inner bg-white w-39 mx-auto py-2"
         >
           <div class="d-flex flex-column align-items-center w-100 px-4">
             <div class="d-flex justify-content-center pb-4">
@@ -6260,15 +6358,17 @@
           </div>
         </div>
       </form>
-    </section>
-    <section id="signup-form" class="logIn-signUp signup w-100">
-      <form class="login container-main mx-auto">
+    </section> -->
+
+    <!-- Signup Form -->
+    <!-- <section id="signup-form" class="logIn-signUp signup w-100">
+      <form class="login container-main mx-auto" style="transform: scale(0.8)">
         <div
           id="signup-form-inner"
-          class="signup-inner bg-white w-39 mx-auto py-4"
+          class="signup-inner bg-white w-39 mx-auto py-2"
         >
           <div class="d-flex flex-column align-items-center w-100 px-4">
-            <div class="d-flex justify-content-center pb-4">
+            <div class="d-flex justify-content-center pb-2">
               <img
                 style="width: 70px"
                 src="./assets/images/logo.png"
@@ -6354,7 +6454,7 @@
           </div>
         </div>
       </form>
-    </section>
+    </section> -->
     <script src="./utils/index.js"></script>
     <script src="./utils/commonFunctions.js"></script>
     <script src="./utils/calender.js"></script>

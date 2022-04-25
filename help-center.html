@@ -124,10 +124,10 @@
                   </button></a
                 >
               </li>
-              <li class="mr-0" onclick="displayBlock(`login-form`)">
+              <li class="mr-0">
                 <a>
                   <button
-                    class="tealish-gradient-button d-flex justify-content-center align-items-center cursor-pointer"
+                    class="login-signup_btn tealish-gradient-button d-flex justify-content-center align-items-center cursor-pointer"
                   >
                     <img
                       class="mr-2"
@@ -175,8 +175,7 @@
                     </button>
                   </a>
                   <button
-                    class="tealish-gradient-button mt-4 d-flex justify-content-center align-items-center cursor-pointer"
-                    onclick="displayBlock(`login-form`)"
+                    class="login-signup_btn tealish-gradient-button mt-4 d-flex justify-content-center align-items-center cursor-pointer"
                   >
                     <img
                       class="mr-2"
@@ -1281,7 +1280,102 @@
         </p>
       </div>
     </footer>
-    <section id="login-form" class="logIn-signUp login w-100">
+
+    <!-- SIGNUP/LOGIN FORM -->
+    <section class="login_signup" id="login_signup-form">
+      <div class="login-signup_container">
+        <div class="form_container">
+          <div class="form_text d-none d-sm-block">
+            <p>
+              “ What is there more kindly the feelings between host & guest ?
+            </p>
+            <div class="form_date">
+              <p id="form_date">23/4/2022</p>
+              <p id="form_day">Friday</p>
+            </div>
+          </div>
+
+          <form class="login-signup_form">
+            <img src="./assets/images/logo.png" alt="logo" loading="lazy" />
+            <h5 id="login-signup_form-heading">Sign In</h5>
+
+            <div class="form_input-group d-none" id="first_name">
+              <label>First Name</label>
+              <input type="text" placeholder="John" required />
+            </div>
+
+            <div class="form_input-group d-none" id="last_name">
+              <label>Last Name</label>
+              <input type="text" placeholder="Doe" required />
+            </div>
+
+            <div class="form_input-group">
+              <label>Email</label>
+              <input type="email" placeholder="Mymail@gmail.com" required />
+            </div>
+
+            <div class="form_input-group" id="login_password">
+              <label>Password</label>
+              <input type="password" placeholder="*********" required />
+            </div>
+
+            <a href="./become-host.html" class="w-100">
+              <button class="form_btn" type="button" id="form_btn">
+                Sign In
+              </button>
+            </a>
+
+            <div class="form_links" id="form_links">
+              <span class="form_link-one" id="create-account_link"
+                >Create Account</span
+              >
+              <span class="form_link-two" id="forget-password_link"
+                >Forget Password?</span
+              >
+            </div>
+
+            <div class="social-login_links" id="social-login_links">
+              <p id="social-login_title">Or Sign in With</p>
+              <div class="social_login-btns">
+                <button type="button">
+                  <img
+                    src="./assets/images/icons/facebookBlue.png"
+                    alt="facebook"
+                    loading="lazy"
+                  />
+                  Facebook
+                </button>
+                <button type="button">
+                  <img
+                    src="./assets/images/icons/google-icon.png"
+                    alt="facebook"
+                    loading="lazy"
+                  />
+                  Google
+                </button>
+              </div>
+            </div>
+
+            <div class="form_line d-none" id="form_line"></div>
+
+            <p
+              class="already_sign-btn d-none font-size-14 mt-3 border w-100 rounded-md text-center p-2 cursor-pointer"
+              id="already_sign-btn"
+            >
+              Already have account? Sign In
+            </p>
+
+            <p class="font-size-11 mt-3" id="login-policy">
+              By signing in, I agree to Xl Travel
+              <a href="">Terms of Use</a> and
+              <a href="">GDPR.EU</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section id="login-form" class="logIn-signUp login w-100">
       <form class="login container-main mx-auto">
         <div
           id="login-form-inner"
@@ -1478,7 +1572,7 @@
           </div>
         </div>
       </form>
-    </section>
+    </section> -->
     <script src="./utils/helpCenter.js"></script>
     <script src="./utils/commonFunctions.js"></script>
   </body>
