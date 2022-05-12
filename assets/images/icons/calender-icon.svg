@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15.17" height="16.209" viewBox="0 0 15.17 16.209">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #40d0d3;
+      }
+    </style>
+  </defs>
+  <g id="calendar-interface-symbol-tool" transform="translate(-1.974)">
+    <g id="Group_40005" data-name="Group 40005" transform="translate(1.974)">
+      <path id="Path_75843" data-name="Path 75843" class="cls-1" d="M15.161,1.756h-.513V1.223a1.247,1.247,0,0,0-2.493,0v.532H10.877V1.223a1.247,1.247,0,0,0-2.493,0v.532H7.1V1.223a1.247,1.247,0,0,0-2.493,0v.532H3.958a1.941,1.941,0,0,0-1.984,1.89V14.319a1.941,1.941,0,0,0,1.984,1.89h11.2a1.941,1.941,0,0,0,1.984-1.89V3.645A1.941,1.941,0,0,0,15.161,1.756Zm-2.3-.533a.546.546,0,1,1,1.092,0V3.4a.546.546,0,1,1-1.092,0Zm-3.772,0a.546.546,0,1,1,1.092,0V3.4a.546.546,0,1,1-1.092,0Zm-3.772,0a.546.546,0,1,1,1.092,0V3.4a.546.546,0,1,1-1.092,0Zm10.666,13.1a.8.8,0,0,1-.817.778H3.958a.8.8,0,0,1-.817-.778V4.535H15.978Z" transform="translate(-1.974)"/>
+      <rect id="Rectangle_23" data-name="Rectangle 23" class="cls-1" width="2.145" height="1.818" transform="translate(2.217 6.505)"/>
+      <rect id="Rectangle_24" data-name="Rectangle 24" class="cls-1" width="2.145" height="1.818" transform="translate(5.08 6.505)"/>
+      <rect id="Rectangle_25" data-name="Rectangle 25" class="cls-1" width="2.145" height="1.818" transform="translate(7.945 6.505)"/>
+      <rect id="Rectangle_26" data-name="Rectangle 26" class="cls-1" width="2.145" height="1.818" transform="translate(10.808 6.505)"/>
+      <rect id="Rectangle_27" data-name="Rectangle 27" class="cls-1" width="2.145" height="1.817" transform="translate(2.217 8.932)"/>
+      <rect id="Rectangle_28" data-name="Rectangle 28" class="cls-1" width="2.145" height="1.817" transform="translate(5.08 8.932)"/>
+      <rect id="Rectangle_29" data-name="Rectangle 29" class="cls-1" width="2.145" height="1.817" transform="translate(7.945 8.932)"/>
+      <rect id="Rectangle_30" data-name="Rectangle 30" class="cls-1" width="2.145" height="1.817" transform="translate(10.808 8.932)"/>
+      <rect id="Rectangle_31" data-name="Rectangle 31" class="cls-1" width="2.145" height="1.817" transform="translate(2.217 11.358)"/>
+      <rect id="Rectangle_32" data-name="Rectangle 32" class="cls-1" width="2.145" height="1.817" transform="translate(5.08 11.358)"/>
+      <rect id="Rectangle_33" data-name="Rectangle 33" class="cls-1" width="2.145" height="1.817" transform="translate(7.945 11.358)"/>
+      <rect id="Rectangle_34" data-name="Rectangle 34" class="cls-1" width="2.145" height="1.817" transform="translate(10.808 11.358)"/>
+    </g>
+  </g>
+</svg>

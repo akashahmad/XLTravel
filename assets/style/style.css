@@ -297,6 +297,9 @@ header {
 .color-yellow {
   color: #fec657;
 }
+.bg-yellow {
+  background-color: #fec657;
+}
 .background-color-tealish {
   background-color: #40d0d3;
 }
@@ -348,6 +351,9 @@ header {
 .w-26 {
   width: 26%;
 }
+.w-28{
+  width: 28%;
+}
 .w-29 {
   width: 29%;
 }
@@ -362,6 +368,9 @@ header {
 }
 .w-35 {
   width: 35%;
+}
+.w-38{
+  width: 38%;
 }
 .w-39 {
   width: 39.85%;
@@ -399,6 +408,9 @@ header {
 }
 .w-70 {
   width: 70%;
+}
+.w-73 {
+  width: 73%;
 }
 .w-78 {
   width: 78%;
@@ -1450,4 +1462,36 @@ input::-webkit-input-placeholder {
     min-height: 0;
     padding: 0;
   }
+}
+
+/* review css */
+.gray-bg {
+  background-color: #efefef;
+  border-radius: 12px;
+}
+.email-btn-bg {
+  background-color: #40d0d3;
+  border-radius: 12px;
+  border: none;
+  padding: 10px 35px 10px 35px;
+  font-size: 14px;
+  font-family: Rubik;
+  font-weight: 500;
+}
+.font-small{
+  font-size: 13px;
+}
+.font-sm{
+  font-size: 14px;
+}
+.font-size-10{
+  font-size: 10px;
+}
+/* extra category css */
+.fs-ex-sm{
+  font-size: 7px;
+}
+/* public-review */
+.textarea-bg{
+  background-color: #cfcfcf;
 }

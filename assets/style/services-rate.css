@@ -1,0 +1,53 @@
+.services-padding {
+  padding: 30px 40px;
+}
+
+.rating {
+  display: flex;
+  transform: rotate(180deg);
+}
+.rating input {
+  display: none;
+}
+.rating label {
+  display: block;
+  transform: rotate(180deg);
+}
+label {
+  display: inline-block;
+  margin-bottom: 0 !important;
+}
+.rating label::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\2605";
+  font-size: 1rem;
+  color: #808080;
+  cursor: pointer;
+}
+.rating label:hover::before,
+.rating label:hover ~ label::before {
+  color: #ffc224;
+}
+input:checked ~ label::before {
+  color: #ffc224;
+}
+/* media queries */
+@media (min-width: 320px) {
+  .w-38 {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .w-38 {
+    width: 75%;
+  }
+}
+
+@media (min-width: 992px) {
+  .w-38 {
+    width: 45%;
+  }
+}

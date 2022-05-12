@@ -1,0 +1,12 @@
+textarea{
+    border: none;
+    outline: none;
+    resize: none !important;
+    border-radius: 6px;
+}
+.review-padding {
+    padding: 30px 40px;
+  }
+
+
+  

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 8">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #707070;
+        opacity: 0.6;
+      }
+    </style>
+  </defs>
+  <path id="Polygon_60" data-name="Polygon 60" class="cls-1" d="M6.5,0,13,8H0Z" transform="translate(13 8) rotate(180)"/>
+</svg>
