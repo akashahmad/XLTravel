@@ -351,7 +351,7 @@ header {
 .w-26 {
   width: 26%;
 }
-.w-28{
+.w-28 {
   width: 28%;
 }
 .w-29 {
@@ -369,7 +369,7 @@ header {
 .w-35 {
   width: 35%;
 }
-.w-38{
+.w-38 {
   width: 38%;
 }
 .w-39 {
@@ -1477,21 +1477,25 @@ input::-webkit-input-placeholder {
   font-size: 14px;
   font-family: Rubik;
   font-weight: 500;
+  transition: transform 0.2s;
 }
-.font-small{
+.email-btn-bg:hover{
+  transform: scale(1.07);
+}
+.font-small {
   font-size: 13px;
 }
-.font-sm{
+.font-sm {
   font-size: 14px;
 }
-.font-size-10{
+.font-size-10 {
   font-size: 10px;
 }
 /* extra category css */
-.fs-ex-sm{
+.fs-ex-sm {
   font-size: 7px;
 }
 /* public-review */
-.textarea-bg{
+.textarea-bg {
   background-color: #cfcfcf;
 }

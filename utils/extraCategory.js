@@ -10,3 +10,16 @@ const activeBorder = (id) => {
     console.log("else");
   }
 };
+
+const selectAllCicle = () => {
+  active = document.querySelectorAll(".active");
+  for (i = 0; i <= active.length; i++) {
+    if (active[i].classList.contains("border-2", "border")) {
+      active[i].classList.remove("border-2", "border");
+      active[i].classList.add("border-blue");
+    } else {
+      active[i].classList.remove("border-blue");
+      active[i].classList.add("border-2", "border");
+    }
+  }
+};

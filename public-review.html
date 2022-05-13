@@ -40,7 +40,7 @@
     <title>Help Center</title>
 </head>
 
-<body>
+<body class="">
     <!-- Header -->
     <header>
         <div
@@ -142,8 +142,9 @@
     </header>
     <!-- Header End -->
     <!-- hero section-->
+
     <div
-        class="w-45 review-padding rounded bg-white my-5  d-flex flex-column mx-auto justify-content-center align-items-center">
+        class="w-45 review-padding rounded bg-white my-5  d-flex flex-column mx-auto justify-content-center align-items-center ">
         <div class="pb-3">
             <img loading="lazy" style="height: 65px" class="cursor-pointer logo-margin pb-2"
                 src="assets/images/xl-s-logo.png" alt="xlTravel-Logo" />
@@ -160,26 +161,31 @@
                 <h6 class="ml-2 font-small font-fam fst-italic fw-bold">Check Out Review Tips</h6>
             </div>
             <div>
-                <div class="w-73 position-relative mx-auto" id="popup">
-                    <div class="background-color-tealish p-4" style="border-radius: 10px;">
-                        <h6 class="font-fam fst-italic fw-bold font-size-14 m-0 text-white">Thanks For Your Review</h6>
-                        <p class="font-fam fst-italic font-size-11 py-3 text-white">Lorem ipsum dolor sit amet,
-                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                            aliqua</p>
-                        <p class="font-fam fst-italic text-right font-size-12 text-white cursor-pointer">Done></p>
-                    </div>
-                </div>
+
                 <div class="d-flex justify-content-center mt-3">
                     <button type="button" value="submit" class="email-btn-bg   text-white px-5 mr-3 "
                         style="background-color: #808080;">
                         BACK
                     </button>
-                    <button type="button" value="submit" class="email-btn-bg  text-white px-5 " onclick="myFunction()">
+                    <button type="button" value="submit" class="email-btn-bg  text-white px-5" role="button" data-bs-toggle="modal" onclick="showModal()">
                         Publish Review
                     </button>
+                    
                 </div>
             </div>
         </form>
+
+        <div class="review-popup d-none hidden" id="popup">
+            <div class=" w-29 mx-auto popup-animate " >
+                <div class="background-color-tealish p-4" style="border-radius: 10px;">
+                    <h6 class="font-fam fst-italic fw-bold font-size-14 m-0 text-white">Thanks For Your Review</h6>
+                    <p class="font-fam fst-italic font-size-11 py-3 text-white">Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua</p>
+                    <p class="font-fam fst-italic text-right font-size-12 text-white cursor-pointer" id="btn-done" onclick="hideModal()">Done></p>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Footer -->
 
