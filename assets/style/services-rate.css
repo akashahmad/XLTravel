@@ -32,11 +32,26 @@ label {
 input:checked ~ label::before {
   color: #ffc224;
 }
+.star-margin {
+  margin-right: 70px;
+}
 /* media queries */
 @media (min-width: 320px) {
   .w-38 {
     width: 100%;
     margin-top: 20px;
+  }
+  .services-padding {
+    padding: 30px 6px;
+  }
+  .star-margin {
+    margin: unset;
+  }
+}
+@media (min-width: 540px) {
+ 
+  .star-margin {
+    margin-right: 44px;
   }
 }
 
@@ -44,10 +59,48 @@ input:checked ~ label::before {
   .w-38 {
     width: 75%;
   }
+  .star-margin {
+    margin-right: 56px;
+  }
 }
-
+@media (min-width: 912px) {
+ 
+  .star-margin {
+    margin-right: 40px;
+  }
+}
+@media (min-width: 820px) {
+ 
+  .star-margin {
+    margin-right: 48px;
+  }
+  .services-padding {
+    padding: 30px 40px;
+  }
+}
 @media (min-width: 992px) {
   .w-38 {
-    width: 45%;
+    width: 52%;
+  }
+  .services-padding {
+    padding: 30px 40px;
+  }
+}
+@media (min-width: 1024px) {
+ 
+  .star-margin {
+    margin-right: 22px;
+  }
+  .services-padding {
+    padding: 30px 40px;
+  }
+}
+@media (min-width: 1280px) {
+ 
+  .star-margin {
+    margin-right: 62px;
+  }
+  .services-padding {
+    padding: 30px 40px;
   }
 }

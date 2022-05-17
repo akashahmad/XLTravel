@@ -28,16 +28,25 @@ input[type="checkbox"] {
   .w-38 {
     width: 100%;
   }
+  .trips-padding {
+    padding: 30px 6px;
+  }
 }
 
 @media (min-width: 768px) {
   .w-38 {
     width: 75%;
   }
+  .trips-padding {
+    padding: 30px 40px;
+  }
 }
 
 @media (min-width: 992px) {
   .w-38 {
-    width: 45%;
+    width: 52%;
+  }
+  .trips-padding {
+    padding: 30px 40px;
   }
 }

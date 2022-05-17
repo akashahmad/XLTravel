@@ -12,6 +12,7 @@ header {
 .category-padding {
   padding: 30px 40px;
 }
+
 .border-blue {
   border: 2px solid #40d0d3 !important;
 }
@@ -20,16 +21,218 @@ header {
   .w-33 {
     width: 100%;
   }
+  .category-padding {
+    padding: 30px 40px;
+  }
+
+  .circle-one-padding {
+    padding: 0px 27px;
+  }
+  .circle-two-padding {
+    padding: 20px 28px;
+  }
+  .circle-three-padding {
+    padding: 0px 26px;
+  }
+  .circle-four-padding {
+    padding: 0px 26px;
+  }
+  .circle-five-padding {
+    padding: 20px 33px;
+  }
+  .circle-six-padding {
+    padding: 0px 31px;
+  }
+  .circle-seven-padding {
+    padding: 0px 32px;
+  }
+  .circle-eight-padding {
+    padding: 20px 31px;
+  }
+  .circle-nine-padding {
+    padding: 0px 31px;
+  }
+}
+
+@media (min-width: 375px) {
+  .circle-one-padding {
+    padding: 0px 27px;
+  }
+  .circle-two-padding {
+    padding: 20px 28px;
+  }
+  .circle-three-padding {
+    padding: 0px 26px;
+  }
+  .circle-four-padding {
+    padding: 0px 26px;
+  }
+  .circle-five-padding {
+    padding: 20px 33px;
+  }
+  .circle-six-padding {
+    padding: 0px 31px;
+  }
+  .circle-seven-padding {
+    padding: 0px 32px;
+  }
+  .circle-eight-padding {
+    padding: 20px 31px;
+  }
+  .circle-nine-padding {
+    padding: 0px 31px;
+  }
+}
+@media (min-width: 465px) {
+  .circle-one-padding {
+    padding: 0px 15px;
+  }
+  .circle-two-padding {
+    padding: 30px 23px;
+  }
+  .circle-three-padding {
+    padding: 0px 28px;
+  }
+  .circle-four-padding {
+    padding: 0px 27px;
+  }
+  .circle-five-padding {
+    padding: 29px 36px;
+  }
+  .circle-six-padding {
+    padding: 0px 36px;
+  }
+  .circle-seven-padding {
+    padding: 0px 41px;
+  }
+  .circle-eight-padding {
+    padding: 30px 28px;
+  }
+  .circle-nine-padding {
+    padding: 0px 31px;
+  }
+}
+@media (min-width: 511px) {
+  .circle-one-padding {
+    padding: 0px 15px;
+  }
+  .circle-two-padding {
+    padding: 30px 23px;
+  }
+  .circle-three-padding {
+    padding: 0px 28px;
+  }
+  .circle-four-padding {
+    padding: 0px 24px;
+  }
+  .circle-five-padding {
+    padding: 36px 32px;
+  }
+  .circle-six-padding {
+    padding: 0px 30px;
+  }
+  .circle-seven-padding {
+    padding: 0px 41px;
+  }
+  .circle-eight-padding {
+    padding: 30px 28px;
+  }
+  .circle-nine-padding {
+    padding: 0px 31px;
+  }
+}
+@media (min-width: 540px) {
+  .circle-one-padding {
+    padding: 0px 15px;
+  }
+  .circle-two-padding {
+    padding: 30px 23px;
+  }
+  .circle-three-padding {
+    padding: 0px 28px;
+  }
+  .circle-four-padding {
+    padding: 0px 24px;
+  }
+  .circle-five-padding {
+    padding: 36px 32px;
+  }
+  .circle-six-padding {
+    padding: 0px 30px;
+  }
+  .circle-seven-padding {
+    padding: 0px 41px;
+  }
+  .circle-eight-padding {
+    padding: 30px 28px;
+  }
+  .circle-nine-padding {
+    padding: 0px 31px;
+  }
 }
 
 @media (min-width: 768px) {
   .w-33 {
     width: 75%;
   }
+  .circle-one-padding {
+    padding: 27px 15px;
+  }
+  .circle-two-padding {
+    padding: 31px 25px;
+  }
+  .circle-three-padding {
+    padding: 35px 28px;
+  }
+  .circle-four-padding {
+    padding: 30px 24px;
+  }
+  .circle-five-padding {
+    padding: 35px 33px;
+  }
+  .circle-six-padding {
+    padding: 27px 33px;
+  }
+  .circle-seven-padding {
+    padding: 0px 40px;
+  }
+  .circle-eight-padding {
+    padding: 31px 27px;
+  }
+  .circle-nine-padding {
+    padding: 0px 30px;
+  }
 }
 
 @media (min-width: 992px) {
   .w-33 {
-    width: 45%;
+    width: 50%;
+  }
+  .circle-one-padding {
+    padding: 27px 15px;
+  }
+  .circle-two-padding {
+    padding: 31px 25px;
+  }
+  .circle-three-padding {
+    padding: 35px 28px;
+  }
+  .circle-four-padding {
+    padding: 30px 24px;
+  }
+  .circle-five-padding {
+    padding: 35px 33px;
+  }
+  .circle-six-padding {
+    padding: 27px 33px;
+  }
+  .circle-seven-padding {
+    padding: 0px 40px;
+  }
+  .circle-eight-padding {
+    padding: 31px 27px;
+  }
+  .circle-nine-padding {
+    padding: 0px 30px;
   }
 }

@@ -153,36 +153,36 @@
         <p class="font-fam fst-italic font-sm text-center w-100 pb-4">Tell the next guests what you loved and anything
             else they should know about <span class="fw-bold"> Anna’s place</span></p>
         <form class="w-100">
-            <textarea name="comment" form="usrform" class="font-size-10 font-fam textarea-bg w-100 py-3 px-3 fst-italic"
-                style="min-height:150px; color: #808080;">Write a public review</textarea>
+            <textarea name="comment" form="usrform" placeholder="Write a public review"
+                class="font-size-10 font-fam textarea-bg w-100 py-3 px-3 fst-italic"
+                style="min-height:190px; color: #808080;"></textarea>
             <div class="d-flex justify-content-center mt-4">
                 <img loading="lazy" style="height: 25px" class="cursor-pointer logo-margin pb-2"
                     src="assets/images/icons/exclam.png" alt="xlTravel-exclam" />
                 <h6 class="ml-2 font-small font-fam fst-italic fw-bold">Check Out Review Tips</h6>
             </div>
             <div>
-
                 <div class="d-flex justify-content-center mt-3">
                     <button type="button" value="submit" class="email-btn-bg   text-white px-5 mr-3 "
                         style="background-color: #808080;">
                         BACK
                     </button>
-                    <button type="button" value="submit" class="email-btn-bg  text-white px-5" role="button" data-bs-toggle="modal" onclick="showModal()">
+                    <button type="button" value="submit" class="email-btn-bg  text-white px-5" role="button"
+                        data-bs-toggle="modal" onclick="showModal()">
                         Publish Review
                     </button>
-                    
                 </div>
             </div>
         </form>
-
         <div class="review-popup d-none hidden" id="popup">
-            <div class=" w-29 mx-auto popup-animate " >
+            <div class=" w-29 mx-auto popup-animate ">
                 <div class="background-color-tealish p-4" style="border-radius: 10px;">
                     <h6 class="font-fam fst-italic fw-bold font-size-14 m-0 text-white">Thanks For Your Review</h6>
                     <p class="font-fam fst-italic font-size-11 py-3 text-white">Lorem ipsum dolor sit amet,
                         consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                         aliqua</p>
-                    <p class="font-fam fst-italic text-right font-size-12 text-white cursor-pointer" id="btn-done" onclick="hideModal()">Done></p>
+                    <p class="font-fam fst-italic text-right font-size-12 text-white cursor-pointer" id="btn-done"
+                        onclick="hideModal()">Done></p>
                 </div>
             </div>
         </div>

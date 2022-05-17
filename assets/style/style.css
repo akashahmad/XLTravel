@@ -357,6 +357,9 @@ header {
 .w-29 {
   width: 29%;
 }
+.w-30 {
+  width: 30%;
+}
 .w-31 {
   width: 31%;
 }
@@ -1479,7 +1482,7 @@ input::-webkit-input-placeholder {
   font-weight: 500;
   transition: transform 0.2s;
 }
-.email-btn-bg:hover{
+.email-btn-bg:hover {
   transform: scale(1.07);
 }
 .font-small {
@@ -1489,11 +1492,11 @@ input::-webkit-input-placeholder {
   font-size: 14px;
 }
 .font-size-10 {
-  font-size: 10px;
+  font-size: 12px;
 }
 /* extra category css */
 .fs-ex-sm {
-  font-size: 7px;
+  font-size: 8px;
 }
 /* public-review */
 .textarea-bg {
