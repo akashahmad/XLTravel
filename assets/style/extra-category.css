@@ -21,6 +21,9 @@ header {
   .w-33 {
     width: 100%;
   }
+  .fs-ex-sm {
+    font-size: 8px;
+  }
   .category-padding {
     padding: 30px 40px;
   }
@@ -53,8 +56,18 @@ header {
     padding: 0px 31px;
   }
 }
-
+@media (min-width: 360px) {
+  .fs-ex-sm {
+    font-size: 8px;
+  }
+}
 @media (min-width: 375px) {
+  .category-padding {
+    padding: 30px 40px;
+  }
+  .fs-ex-sm {
+    font-size: 8px;
+  }
   .circle-one-padding {
     padding: 0px 27px;
   }
@@ -86,6 +99,9 @@ header {
 @media (min-width: 465px) {
   .circle-one-padding {
     padding: 0px 15px;
+  }
+  .fs-ex-sm {
+    font-size: 8px;
   }
   .circle-two-padding {
     padding: 30px 23px;
@@ -145,6 +161,9 @@ header {
   .circle-one-padding {
     padding: 0px 15px;
   }
+  .fs-ex-sm {
+    font-size: 11px;
+  }
   .circle-two-padding {
     padding: 30px 23px;
   }
@@ -175,6 +194,9 @@ header {
   .w-33 {
     width: 75%;
   }
+  .fs-ex-sm {
+    font-size: 9px;
+  }
   .circle-one-padding {
     padding: 27px 15px;
   }
@@ -204,21 +226,27 @@ header {
   }
 }
 
+@media (min-width: 820px) {
+  .fs-ex-sm {
+    font-size: 9px;
+  }
+}
+
 @media (min-width: 992px) {
   .w-33 {
     width: 50%;
   }
   .circle-one-padding {
-    padding: 27px 15px;
+    padding: 29px 3px;
   }
   .circle-two-padding {
-    padding: 31px 25px;
+    padding: 30px 17px;
   }
   .circle-three-padding {
-    padding: 35px 28px;
+    padding: 33px 21px;
   }
   .circle-four-padding {
-    padding: 30px 24px;
+    padding: 30px 15px;
   }
   .circle-five-padding {
     padding: 35px 33px;
@@ -227,12 +255,78 @@ header {
     padding: 27px 33px;
   }
   .circle-seven-padding {
-    padding: 0px 40px;
+    padding: 0px 39px;
   }
   .circle-eight-padding {
-    padding: 31px 27px;
+    padding: 30px 20px;
   }
   .circle-nine-padding {
-    padding: 0px 30px;
+    padding: 0px 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .fs-ex-sm {
+    font-size: 11px;
+  }
+  .circle-one-padding {
+    padding: 26px 18px;
+  }
+  .circle-two-padding {
+    padding: 0px 24px;
+  }
+  .circle-three-padding {
+    padding: 30px 28px;
+  }
+  .circle-four-padding {
+    padding: 0px 28px;
+  }
+  .circle-five-padding {
+    padding: 30px 33px;
+  }
+  .circle-six-padding {
+    padding: 27px 33px;
+  }
+  .circle-seven-padding {
+    padding: 0px 39px;
+  }
+  .circle-eight-padding {
+    padding: 30px 20px;
+  }
+  .circle-nine-padding {
+    padding: 0px 24px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .fs-ex-sm {
+    font-size: 11px;
+  }
+  .circle-one-padding {
+    padding: 45px 15px;
+  }
+  .circle-two-padding {
+    padding: 0px 27px;
+  }
+  .circle-three-padding {
+    padding: 37px 35px;
+  }
+  .circle-four-padding {
+    padding: 0px 25px;
+  }
+  .circle-five-padding {
+    padding: 48px 40px;
+  }
+  .circle-six-padding {
+    padding: 27px 38px;
+  }
+  .circle-seven-padding {
+    padding: 0px 51px;
+  }
+  .circle-eight-padding {
+    padding: 45px 33px;
+  }
+  .circle-nine-padding {
+    padding: 0px 35px;
   }
 }
