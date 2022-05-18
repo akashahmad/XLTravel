@@ -20,6 +20,7 @@ const selectAllCicle = () => {
     } else {
       active[i].classList.remove("border-blue");
       active[i].classList.add("border-2", "border");
+      active[i].classList.add("border-blue");
     }
   }
 };
