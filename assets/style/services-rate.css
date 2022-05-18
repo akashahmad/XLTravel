@@ -42,14 +42,16 @@ input:checked ~ label::before {
     margin-top: 20px;
   }
   .services-padding {
-    padding: 30px 6px;
+    padding: 30px 18px;
+  }
+  .w-30 {
+    width: 100%;
   }
   .star-margin {
     margin: unset;
   }
 }
 @media (min-width: 540px) {
- 
   .star-margin {
     margin-right: 44px;
   }
@@ -62,15 +64,19 @@ input:checked ~ label::before {
   .star-margin {
     margin-right: 56px;
   }
+  .w-30 {
+    width: 30%;
+  }
 }
 @media (min-width: 912px) {
- 
   .star-margin {
     margin-right: 40px;
   }
+  .w-30 {
+    width: 30%;
+  }
 }
 @media (min-width: 820px) {
- 
   .star-margin {
     margin-right: 48px;
   }
@@ -85,9 +91,11 @@ input:checked ~ label::before {
   .services-padding {
     padding: 30px 40px;
   }
+  .w-30 {
+    width: 30%;
+  }
 }
 @media (min-width: 1024px) {
- 
   .star-margin {
     margin-right: 22px;
   }
@@ -96,7 +104,6 @@ input:checked ~ label::before {
   }
 }
 @media (min-width: 1280px) {
- 
   .star-margin {
     margin-right: 62px;
   }

@@ -29,7 +29,10 @@ input[type="checkbox"] {
     width: 100%;
   }
   .trips-padding {
-    padding: 30px 6px;
+    padding: 30px 18px;
+  }
+  .w-48 {
+    width: 100%;
   }
 }
 
@@ -40,6 +43,9 @@ input[type="checkbox"] {
   .trips-padding {
     padding: 30px 40px;
   }
+  .w-48 {
+    width: 48%;
+  }
 }
 
 @media (min-width: 992px) {
@@ -48,5 +54,8 @@ input[type="checkbox"] {
   }
   .trips-padding {
     padding: 30px 40px;
+  }
+  .w-48 {
+    width: 48%;
   }
 }
