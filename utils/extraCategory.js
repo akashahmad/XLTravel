@@ -13,14 +13,23 @@ const activeBorder = (id) => {
 
 const selectAllCicle = () => {
   active = document.querySelectorAll(".active");
-  for (i = 0; i <= active.length; i++) {
-    if (active[i].classList.contains("border-2", "border")) {
-      active[i].classList.remove("border-2", "border");
-      active[i].classList.add("border-blue");
-    } else {
-      active[i].classList.remove("border-blue");
-      active[i].classList.add("border-2", "border");
-      active[i].classList.add("border-blue");
+  let bool = [];
+
+  active.forEach((el) => {
+    if (el.classList.contains("border-2", "border")) {
+      bool.push(true);
     }
+  });
+
+  if (bool.includes(true)) {
+    active.forEach((el) => {
+      el.classList.remove("border-2", "border");
+      el.classList.add("border-blue");
+    });
+  } else {
+    active.forEach((el) => {
+      el.classList.add("border-2", "border");
+      el.classList.remove("border-blue");
+    });
   }
 };

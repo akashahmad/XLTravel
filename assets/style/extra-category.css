@@ -363,7 +363,6 @@ header {
     padding: 36px 30px;
   }
 }
-
 @media (min-width: 1280px) {
   .fs-ex-sm {
     font-size: 11px;
